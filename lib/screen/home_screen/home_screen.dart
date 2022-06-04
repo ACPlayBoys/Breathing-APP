@@ -101,7 +101,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
                 isPlaying
                     ? controller.stop()
                     : controller.repeat(
-                        min: 0, max: 9, period: Duration(milliseconds: speed));
+                        min: 0, max: 3, period: Duration(milliseconds: speed));
                 isPlaying = !isPlaying;
               });
             }).p8()),
