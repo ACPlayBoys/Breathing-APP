@@ -1,3 +1,4 @@
+import 'package:breathing_app/dummy.dart';
 import 'package:breathing_app/screen/Shopping/music_page.dart';
 import 'package:breathing_app/screen/Shopping/shopping.dart';
 import 'package:breathing_app/screen/Shopping/wishlist.dart';
@@ -31,7 +32,8 @@ class Routes {
 
   static Route createLoginOtpScreen(String email) {
     return PageRouteBuilder(
-      pageBuilder: (context, animation, secondaryAnimation) => LoginOTPScreen(email),
+      pageBuilder: (context, animation, secondaryAnimation) =>
+          LoginOTPScreen(email),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         const begin = Offset(0.0, 1.0);
         const end = Offset.zero;
@@ -172,6 +174,23 @@ class Routes {
   static Route createWishlistRoute() {
     return PageRouteBuilder(
       pageBuilder: (context, animation, secondaryAnimation) => WishList(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        const begin = Offset(0.0, 1.0);
+        const end = Offset.zero;
+        final tween = Tween(begin: begin, end: end);
+        final offsetAnimation = animation.drive(tween);
+
+        return SlideTransition(
+          position: offsetAnimation,
+          child: child,
+        );
+      },
+    );
+  }
+
+  static Route createDummy(BuildContext context) {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => Dummy(),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         const begin = Offset(0.0, 1.0);
         const end = Offset.zero;

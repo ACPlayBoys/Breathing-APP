@@ -1,41 +1,46 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
 class MusicModel {
-  String name;
-  String duration;
-  String image;
+  final String duration;
+  final String name;
+  final String image;
+  final String link;
   MusicModel({
-    required this.name,
     required this.duration,
+    required this.name,
     required this.image,
+    required this.link,
   });
 
   MusicModel copyWith({
-    String? name,
     String? duration,
+    String? name,
     String? image,
+    String? link,
   }) {
     return MusicModel(
-      name: name ?? this.name,
       duration: duration ?? this.duration,
+      name: name ?? this.name,
       image: image ?? this.image,
+      link: link ?? this.link,
     );
   }
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      'name': name,
       'duration': duration,
+      'name': name,
       'image': image,
+      'link': link,
     };
   }
 
   factory MusicModel.fromMap(Map<String, dynamic> map) {
     return MusicModel(
-      name: map['name'] as String,
       duration: map['duration'] as String,
+      name: map['name'] as String,
       image: map['image'] as String,
+      link: map['link'] as String,
     );
   }
 
@@ -44,18 +49,26 @@ class MusicModel {
   factory MusicModel.fromJson(String source) => MusicModel.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
-  String toString() => 'MusicModel(name: $name, duration: $duration, image: $image)';
+  String toString() {
+    return 'MusicModel(duration: $duration, name: $name, image: $image, link: $link)';
+  }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
   
     return other is MusicModel &&
-      other.name == name &&
       other.duration == duration &&
-      other.image == image;
+      other.name == name &&
+      other.image == image &&
+      other.link == link;
   }
 
   @override
-  int get hashCode => name.hashCode ^ duration.hashCode ^ image.hashCode;
+  int get hashCode {
+    return duration.hashCode ^
+      name.hashCode ^
+      image.hashCode ^
+      link.hashCode;
+  }
 }

@@ -1,6 +1,8 @@
 import 'package:breathing_app/models/musicmodel.dart';
 import 'package:breathing_app/screen/home_screen/mdrawer.dart';
+import 'package:breathing_app/util/Storage.dart';
 import 'package:breathing_app/util/constants.dart';
+import 'package:breathing_app/util/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -18,13 +20,16 @@ class _WishListState extends State<WishList> {
   @override
   void initState() {
     MusicModel m = MusicModel(
-        duration: "300", name: "Rajashtan Mist", image: path + "rajasthan.png");
+        link: "mal",
+        duration: "300",
+        name: "Rajashtan Mist",
+        image: path + "rajasthan.png");
     list.add(m);
     list.add(m);
     list.add(m);
     list.add(m);
-
     super.initState();
+    Storage.getWishlist();
   }
 
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -71,41 +76,57 @@ class _WishListState extends State<WishList> {
             ),
           ),
         ).px(x / 16),
-        ListView.separated(
-                itemBuilder: ((context, index) {
-                  MusicModel m = list[index];
-                  return Container(
-                    child: Row(
-                      children: [
-                        buildContainer(
-                          child: Image.asset(
-                            m.image,
-                            width: 60,
-                          ).p4(),
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            m.name.text.extraBold.make(),
-                            m.duration.text.extraBold.make(),
-                          ],
-                        ).px(x / 32),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Image.asset(path + "play.png"),
-                          ],
-                        ).expand()
-                      ],
-                    ),
-                  ).px(x / 16).py(y / 128);
-                }),
-                separatorBuilder: (context, index) {
-                  return Divider(thickness: 1).px16();
-                },
-                itemCount: list.length)
-            .py(y / 64)
-            .expand(),
+        ValueListenableBuilder(
+          builder: (context, value, child) {
+            List<MusicModel> list = Storage.whishlist.value;
+            if (Storage.whishlist.value.isEmpty) {
+              return CircularProgressIndicator().centered().py24();
+            } else {
+              return ListView.separated(
+                      itemBuilder: ((context, index) {
+                        MusicModel m = list[index];
+                        return Container(
+                          child: Row(
+                            children: [
+                              buildContainer(
+                                child: Image.network(
+                                  m.image,
+                                  width: 60,
+                                ).p4(),
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  m.name.text.extraBold.make(),
+                                  m.duration.text.extraBold.make(),
+                                ],
+                              ).px(x / 32),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Image.asset(path + "play.png"),
+                                ],
+                              ).expand()
+                            ],
+                          ),
+                        )
+                            .onInkTap(() {
+                              Navigator.of(context)
+                                  .push(Routes.createMusicRoute(m));
+                            })
+                            .px(x / 16)
+                            .py(y / 128);
+                      }),
+                      separatorBuilder: (context, index) {
+                        return Divider(thickness: 1).px16();
+                      },
+                      itemCount: list.length)
+                  .py(y / 64)
+                  .expand();
+            }
+          },
+          valueListenable: Storage.whishlist,
+        )
       ])),
     );
   }

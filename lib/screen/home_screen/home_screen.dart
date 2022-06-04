@@ -19,6 +19,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
   MusicModel m = MusicModel(
       duration: "300",
       name: "Rajashtan Mist",
+      link: "mal",
       image: "asset/images/home/" + "rajasthan.png");
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   List<MusicModel> list = [];

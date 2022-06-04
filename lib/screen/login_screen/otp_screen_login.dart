@@ -107,7 +107,7 @@ class _LoginOTPScreenState extends State<LoginOTPScreen> {
                 print('Data not present in Database..');
               }
             });
-            Navigator.of(context).push(Routes.createSchedulingRoute());
+            Navigator.of(context).push(Routes.createHomeRoute());
             print(FirebaseAuth.instance.currentUser);
             Storage.getGif();
           } on FirebaseAuthException catch (e) {
