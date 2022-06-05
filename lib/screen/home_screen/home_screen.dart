@@ -23,7 +23,7 @@ class HomeSCreen extends StatefulWidget {
 class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
   final _firestore = FirebaseFirestore.instance;
   final _auth = FirebaseAuth.instance;
-  String currentUid = '';
+
   final String path = "asset/images/home/";
   MusicModel m = MusicModel(
       duration: "300",
@@ -33,16 +33,19 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   List<MusicModel> list = [];
 
-  bool isPlaying = false;
+  String currentUid = '';
 
-  bool canPlay = false;
+  bool isPlaying = false;
+  bool canPlay = true;
   bool isMute = true;
   bool docExist = false;
   bool checkdone = false;
 
-  AudioPlayer audioPlayer = AudioPlayer();
-
+  int breatheTime = 0;
   int time = 0;
+  late int playedTime;
+
+  AudioPlayer audioPlayer = AudioPlayer();
 
   String url =
       'https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/breathe.mp3?alt=media&token=36329fe1-4243-46f5-ba62-cdb9a2055f55';
@@ -51,92 +54,17 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
   int speed = 1000;
   @override
   void initState() {
-    currentUid = _auth.currentUser!.uid;
-    getAudio();
-
+    playedTime = 1;
     controller = GifController(vsync: this);
     list.add(m);
     list.add(m);
     list.add(m);
     list.add(m);
-
-    // checkDoc();
+    currentUid = _auth.currentUser!.uid;
+    getReportData();
+    getAudio();
     super.initState();
   }
-
-  getAudio() async {
-    var snap = await _firestore
-        .collection('Users')
-        .doc('15OX5wUmgcUU5r2NxpIHUdXYsZl1')
-        .get();
-    var audioType = snap['audioType'];
-    print('audioType $audioType');
-    if (audioType == 'default') {
-      setState(() {
-        url =
-            'https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/breathe.mp3?alt=media&token=36329fe1-4243-46f5-ba62-cdb9a2055f55';
-      });
-    } else if (audioType == 'userAudio') {
-      var snapshot = await _firestore
-          .collection('Users')
-          .doc('15OX5wUmgcUU5r2NxpIHUdXYsZl1')
-          .collection('audioCollection')
-          .orderBy('timeStamp', descending: false)
-          .get();
-      print(snapshot.docs.length);
-      var reqdoc = snapshot.docs.length - 1;
-      print(snapshot.docs[reqdoc].data()['link']);
-      setState(() {
-        if (url != null) {
-          url = snapshot.docs[reqdoc].data()['link'];
-        } else {
-          url =
-              'https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/breathe.mp3?alt=media&token=36329fe1-4243-46f5-ba62-cdb9a2055f55';
-        }
-        print('url $url');
-      });
-    }
-    audioPlayer.setReleaseMode(ReleaseMode.LOOP);
-    audioPlayer.setUrl(url).then((value) => setState(() {
-          canPlay = true;
-        }));
-  }
-
-  onPause() async {
-    controller.stop();
-    // pauseHandler();
-    await audioPlayer.pause();
-    print('audio Paused');
-  }
-
-  onPlay() async {
-    controller.repeat(min: 0, max: 9, period: Duration(milliseconds: speed));
-    // playHandler();
-    await audioPlayer.resume();
-
-    print('audio Playing');
-  }
-
-  onMute() async {
-    await audioPlayer.setVolume(0);
-  }
-
-  timer() {
-    Timer.periodic(Duration(seconds: 1), (timer) {
-      if (isPlaying == true) {
-        setState(() {
-          time = time + 1;
-        });
-      } else {
-        timer.cancel();
-        // addTime();
-      }
-    });
-  }
-
-  // addTime()async{
-  //   _firestore.collection('collectionPath').doc('').collection('collectionPath').doc
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -156,7 +84,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
               Spacer(),
               "Breathe In".text.xl3.bold.make(),
               Spacer(),
-              buildContainer(child: Icon(CupertinoIcons.volume_off).p4())
+              buildContainerOnTap(child: Icon(CupertinoIcons.volume_off).p4())
             ],
           ).pOnly(top: y / 24, bottom: y / 8).px(x / 24),
           GifImage(
@@ -194,30 +122,183 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
           ).pOnly(bottom: y / 32),
           Container(
             child: buildContainer(
-                child: Image.asset(
-                        !isPlaying ? path + "play.png" : path + "pause.png")
-                    .onInkTap(() {
-              setState(() {
-                isPlaying ? onPause() : onPlay();
-                isPlaying = !isPlaying;
-              });
-            }).p8()),
+                child: playedTime == 1
+                    ? canPlay
+                        ? Image.asset(!isPlaying
+                                ? path + "play.png"
+                                : path + "pause.png")
+                            .onInkTap(() {
+                            setState(() {
+                              isPlaying ? onPause() : onPlay();
+                              isPlaying = !isPlaying;
+                            });
+                          }).p8()
+                        : CircularProgressIndicator()
+                    : Image.asset(
+                            !isPlaying ? path + "play.png" : path + "pause.png")
+                        .onInkTap(() {
+                        setState(() {
+                          isPlaying ? onPause() : onPlay();
+                          isPlaying = !isPlaying;
+                        });
+                      }).p8()),
           ).centered()
         ])));
   }
 
-  addReport() {
-    // _firestore.collection('report').doc(currentUid).set({
-    //   'previousBreatheDate': DateFormat.yMd().format(DateTime.now()),
-    //   'streak': 0,
-    //   'todayTotal': 0,
-    //   'totalTime': 5
-    // });
-    String actDoc = currentUid + DateFormat.yMd().format(DateTime.now());
+  onPause() {
+    controller.stop();
+    // pauseHandler();
+    audioPlayer.pause();
+    timer();
+    print('audio Paused');
+  }
 
+  onPlay() {
+    print('depalyed playedtime $playedTime');
+    controller.repeat(min: 0, max: 9, period: Duration(milliseconds: speed));
+    // playHandler();
+
+    audioPlayer.resume();
+    setState(() {
+      canPlay = false;
+      print('depalyed caplay $canPlay');
+    });
+    Timer(Duration(seconds: 5), () {
+      setState(() {
+        canPlay = true;
+        print('depalyed caplay $canPlay');
+      });
+    });
+    timer();
+    setState(() {
+      playedTime += 1;
+    });
+    print('depalyed playedtime $playedTime');
+
+    print('audio Playing');
+  }
+
+  onMute() {
+    if (isMute) {
+      audioPlayer.setVolume(0);
+      isMute = !isMute;
+    } else {
+      audioPlayer.setVolume(1);
+      isMute = !isMute;
+    }
+  }
+
+  timer() {
+    Timer.periodic(Duration(seconds: 1), (timer) {
+      print('timerStarted');
+      if (isPlaying == true) {
+        setState(() {
+          time = time + 1;
+          print(time);
+        });
+      } else {
+        print('timerStopped $time');
+        addReport();
+        timer.cancel();
+        time = 0;
+      }
+    });
+  }
+
+  getAudio() async {
+    var snap = await _firestore
+        .collection('Users')
+        .doc('15OX5wUmgcUU5r2NxpIHUdXYsZl1')
+        .get();
+    var audioType = snap['audioType'];
+    print('audioType $audioType');
+    if (audioType == 'default') {
+      setState(() {
+        url =
+            'https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/breathe.mp3?alt=media&token=36329fe1-4243-46f5-ba62-cdb9a2055f55';
+      });
+    } else if (audioType == 'userAudio') {
+      var snapshot = await _firestore
+          .collection('Users')
+          .doc('15OX5wUmgcUU5r2NxpIHUdXYsZl1')
+          .collection('audioCollection')
+          .orderBy('timeStamp', descending: false)
+          .get();
+      print('await complete');
+      print(snapshot.docs.length);
+      var reqdoc = snapshot.docs.length - 1;
+      print(snapshot.docs[reqdoc].data()['link']);
+      setState(() {
+        if (url != null) {
+          url = snapshot.docs[reqdoc].data()['link'];
+          print('got url ');
+        } else {
+          url =
+              'https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/breathe.mp3?alt=media&token=36329fe1-4243-46f5-ba62-cdb9a2055f55';
+          print('got url ');
+        }
+        print('url $url');
+      });
+    }
+    audioPlayer.setReleaseMode(ReleaseMode.LOOP);
+    audioPlayer.setUrl(url);
+    print('audioSet');
+  }
+
+  Widget buildContainerOnTap({child}) {
+    return ClipOval(
+      clipBehavior: Clip.antiAlias,
+      child: Container(
+        child: Padding(
+          padding: const EdgeInsets.all(2.0), //width of the border
+          child: ClipOval(
+            clipBehavior: Clip.antiAlias,
+            child: GestureDetector(
+              onTap: () => onMute(),
+              child: Container(
+                // this height forces the container to be a circle
+                child: child,
+
+                decoration: kInnerDecoration,
+              ),
+            ),
+          ),
+        ),
+        decoration: kGradientBoxDecoration,
+      ),
+    );
+  }
+
+  getReportData() async {
+    print(' got report data');
+    var data = await _firestore.collection('report').doc(currentUid).get();
+    setState(() {
+      breatheTime = data['todayTotal'];
+      print('breatheTime $breatheTime');
+    });
+  }
+
+  addReport() {
+    print('adding report');
+    String actDoc = currentUid +
+        DateFormat.y().format(DateTime.now()) +
+        DateFormat.M().format(DateTime.now()) +
+        DateFormat.d().format(DateTime.now());
+
+    breatheTime = breatheTime + time;
     _firestore
         .collection('report')
         .doc(currentUid)
-        .collection('everydayActivity');
+        .collection('everydayActivity')
+        .doc(actDoc)
+        .set({
+      'breatheTime': breatheTime,
+      'timeStamp': DateTime.now(),
+      'date': DateFormat.yMd().format(DateTime.now())
+    }, SetOptions(merge: true));
+    _firestore.collection('report').doc(currentUid).set({
+      'todayTotal': breatheTime,
+    }, SetOptions(merge: true));
   }
 }
