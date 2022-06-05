@@ -181,7 +181,9 @@ class Storage {
     whishlist.value = [];
     whishlist.notifyListeners();
     FirebaseFirestore.instance
-        .collection("allMusic")
+        .collection("Users")
+        .doc(FirebaseAuth.instance.currentUser!.uid)
+        .collection('Wishlist')
         .get()
         .then((var docSnapshot) {
       print(docSnapshot.docs);
