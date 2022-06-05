@@ -13,6 +13,8 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:intl/intl.dart';
 
+import '../util/Storage.dart';
+
 class Reports extends StatefulWidget {
   @override
   State<Reports> createState() => _ReportsState();
@@ -24,7 +26,7 @@ class _ReportsState extends State<Reports> {
   final String path = "asset/images/shopping/";
 
   String currentUid = '';
-
+  String actDoc = '';
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   List<Map<String, dynamic>> reportMap = [];
@@ -37,6 +39,11 @@ class _ReportsState extends State<Reports> {
     // TODO: implement initState
     currentUid = _auth.currentUser!.uid;
     print(currentUid);
+    actDoc = currentUid +
+        DateFormat.y().format(DateTime.now()) +
+        DateFormat.M().format(DateTime.now()) +
+        DateFormat.d().format(DateTime.now());
+
     getStreamDetails();
     super.initState();
   }
@@ -63,7 +70,7 @@ class _ReportsState extends State<Reports> {
           dayBreatheTime = 0;
           day = weekDay.day;
           print('else wala day of date ${reportMap[i]['date']}: $day');
-          totalTime = 5;
+          totalTime = 300;
         }
       }
       return {
@@ -85,10 +92,13 @@ class _ReportsState extends State<Reports> {
             AsyncSnapshot<DocumentSnapshot<Map<String, dynamic>>> snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(
-              child: CircularProgressIndicator(),
+              child: Container(),
             );
           }
           var snap = snapshot.data!.data()!;
+          int todayTotalMinutes = (snap['todayTotal'] / 60).truncate();
+          int totalTimeMinutes = (snap['totalTime'] / 60).truncate();
+
           print('snap : $snap');
           var percent = snap['todayTotal'] / snap['totalTime'] * 100;
           var days = snap['streak'];
@@ -154,7 +164,7 @@ class _ReportsState extends State<Reports> {
                             "You have taken a breathe for ".text.bold.make(),
                             Row(
                               children: [
-                                "${snap['todayTotal'].toString()} out of ${snap['totalTime'].toString()} Minutes today"
+                                "${todayTotalMinutes} out of ${totalTimeMinutes} Minutes today"
                                     .text
                                     .bold
                                     .make(),
@@ -191,15 +201,16 @@ class _ReportsState extends State<Reports> {
                       children: weekReportDetails.map((data) {
                         print('chart row widget started');
                         if (data.isNotEmpty && dataRetrieved == true) {
+                          double percentage = ((data['breatheTime'] ?? 0.0) /
+                              (snap['totalTime'] ?? 1));
+                          print('breatheTime ${data['breatheTime']}');
+                          print('percent $percent');
                           return Flexible(
                             fit: FlexFit.tight,
-                            child: ChartBar(
-                                data['day'].toString(),
-                                (((data['breatheTime'] ?? 0.0)) /
-                                    ((data['totalTime'] ?? 1)))),
+                            child: ChartBar(data['day'].toString(), percentage),
                           );
                         }
-                        return CircularProgressIndicator();
+                        return Container();
                       }).toList(),
                     ).px(x / 16),
                   ),
@@ -267,21 +278,22 @@ class ChartBar extends StatelessWidget {
         children: [
           Container(
             height: constraints.maxHeight * 0.7,
-            width: 11,
+            width: 10,
             child: Stack(
               children: [
                 Container(
+                  width: 11,
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey, width: 1),
                       borderRadius: BorderRadius.circular(10),
-                      color: Color.fromRGBO(220, 220, 220, 1)),
+                      color: Colors.blue),
                 ),
                 FractionallySizedBox(
-                  heightFactor: percentage,
+                  heightFactor: 1 - percentage,
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.circular(10),
+                      color: Color.fromRGBO(220, 220, 220, 1),
+                      borderRadius: BorderRadius.circular(-500),
                     ),
                   ),
                 ),
