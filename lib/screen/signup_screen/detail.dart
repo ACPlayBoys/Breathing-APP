@@ -3,7 +3,8 @@
 import 'package:breathing_app/util/constants.dart';
 import 'package:breathing_app/util/routes.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
+import 'package:velocity_x/velocity_x.dart';import 'package:intl/intl.dart';
+
 
 class Details extends StatefulWidget {
   PageController pageController;
@@ -183,7 +184,10 @@ class _DetailsState extends State<Details> {
                       "name": name,
                       "age": age,
                       "country": countryname,
-                      "gender": gender
+                      "gender": gender,
+                      "uid": "",
+                      "time":DateFormat.yMd().format(DateTime.now()),
+                      "email":""
                     };
                     userDetails = r;
                     widget.pageController.animateToPage(

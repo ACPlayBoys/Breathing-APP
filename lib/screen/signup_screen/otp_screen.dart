@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_new, dead_code_on_catch_subtype
 
 import 'dart:convert';
-
+import 'package:intl/intl.dart';
 import 'package:breathing_app/models/userdetails.dart';
 import 'package:breathing_app/util/constants.dart';
 import 'package:breathing_app/util/routes.dart';
@@ -99,8 +99,19 @@ class _OTPScreenState extends State<OTPScreen> {
             );
             CollectionReference users =
                 FirebaseFirestore.instance.collection('Users');
+            userDetails.uid = credential.user!.uid;
+            userDetails.email = credential.user!.email;
             users.doc(credential.user!.uid);
             users.doc(credential.user!.uid).set(userDetails);
+            FirebaseFirestore.instance
+                .collection('report')
+                .doc(credential.user!.uid)
+                .set({
+              'previousBreatheDate': DateFormat.yMd().format(DateTime.now()),
+              'streak': 0,
+              'todayTotal': 0,
+              'totalTime': 300
+            });
             _first = true;
             setState(() {});
             await Future.delayed(Duration(seconds: 2));

@@ -3,6 +3,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+//import 'package:breathing_app/models/gifdata.dart';
 import 'package:breathing_app/models/gifdata.dart';
 import 'package:breathing_app/models/musicmodel.dart';
 import 'package:file_picker/file_picker.dart';
@@ -20,9 +21,14 @@ List<XFile> gifFiles = [];
 String image1 = "", image2 = "", image3 = "", image4 = "";
 
 class Storage {
-  static String gifUrl =
-      "https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/images%2Fdefault.gif?alt=media&token=3f062989-ba7f-414c-8098-b29da240fc5a";
-  static void uploadGIf(File mal, context) {
+  static List<String> gifPath = ["", "", "", "", "", "", "", "", "", ""];
+  static GifData gifUrl = GifData(
+      name: "default",
+      link:
+          "https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/images%2Fdefault.gif?alt=media&token=3f062989-ba7f-414c-8098-b29da240fc5a",
+      frames: 3);
+
+  static void uploadGIf(File mal, context, frames) {
     var uuid = Uuid();
     final _firebaseStorage = FirebaseStorage.instance.ref();
     //thumb
@@ -36,12 +42,9 @@ class Storage {
     snapshot1.whenComplete((() async {
       var thumbUrl = await snapshot1.snapshot.ref.getDownloadURL();
 
-      var gif = {
-        "name": name,
-        "link": thumbUrl,
-      };
+      GifData gif = GifData(frames: frames, link: thumbUrl, name: name);
       giff.doc(FirebaseAuth.instance.currentUser!.uid).set(gif);
-      gifUrl = thumbUrl;
+      gifUrl = gif;
 
       showToast(context, "Gif Uploaded");
     }));
@@ -57,7 +60,7 @@ class Storage {
         print(docSnapshot.data());
         var json = jsonEncode(docSnapshot.data()); // I am getting stuck here
         GifData details = GifData.fromJson(json) as GifData;
-        gifUrl = details.link;
+        gifUrl = details;
         print(details);
       } else {
         print('Data not present in Database..');

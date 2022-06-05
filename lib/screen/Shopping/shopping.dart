@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:breathing_app/models/musicmodel.dart';
 import 'package:breathing_app/screen/home_screen/mdrawer.dart';
 import 'package:breathing_app/util/Storage.dart';
@@ -16,10 +17,10 @@ class Shopping extends StatefulWidget {
 
 class _ShoppingState extends State<Shopping> {
   final String path = "asset/images/shopping/";
-
+  bool playing = false;
   bool chipRecnt = false;
   bool chipPopular = false;
-
+  final AudioPlayer player = AudioPlayer();
   var searchShow = false;
   @override
   void initState() {
@@ -174,7 +175,17 @@ class _ShoppingState extends State<Shopping> {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-                                    Image.asset(path + "play.png"),
+                                    Image.asset(!playing
+                                            ? (path + "play.png")
+                                            : (path + "pause.png"))
+                                        .onInkTap(() {
+                                      playing = !playing;
+                                      //setState(() {});
+                                      if (playing)
+                                        player.play(m.link);
+                                      else
+                                        player.pause();
+                                    }),
                                   ],
                                 ).expand()
                               ],

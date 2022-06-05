@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:breathing_app/models/musicmodel.dart';
 import 'package:breathing_app/screen/home_screen/mdrawer.dart';
 import 'package:breathing_app/util/Storage.dart';
@@ -15,6 +16,8 @@ class WishList extends StatefulWidget {
 class _WishListState extends State<WishList> {
   final String path = "asset/images/shopping/";
 
+  bool playing = false;
+  AudioPlayer player = AudioPlayer(mode: PlayerMode.MEDIA_PLAYER);
   List<MusicModel> list = [];
 
   @override
@@ -104,7 +107,17 @@ class _WishListState extends State<WishList> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset(path + "play.png"),
+                                 Image.asset(!playing
+                                            ? (path + "play.png")
+                                            : (path + "pause.png"))
+                                        .onInkTap(() {
+                                      playing = !playing;
+                                     // setState(() {});
+                                      if (!playing)
+                                        player.play(m.link);
+                                      else
+                                        player.pause();
+                                    }),
                                 ],
                               ).expand()
                             ],

@@ -62,7 +62,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
           ).pOnly(top: y / 24, bottom: y / 8).px(x / 24),
           GifImage(
             height: y / 4,
-            image: NetworkImage(Storage.gifUrl),
+            image: NetworkImage(Storage.gifUrl.link),
             controller: controller,
           ).centered().pOnly(bottom: y / 8),
           "Breathing Rate"
@@ -81,7 +81,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
               ).onInkTap(() {
                 speed > 200 ? speed -= 200 : speed = 200;
                 controller.repeat(
-                    min: 0, max: 3, period: Duration(milliseconds: speed));
+                    min: 0, max:Storage.gifUrl.frames, period: Duration(milliseconds: speed));
               }).pOnly(right: x / 32),
               Container(
                 child:
@@ -89,20 +89,20 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
               ).onInkTap(() {
                 speed < 2000 ? speed += 200 : speed = 2000;
                 controller.repeat(
-                    min: 0, max: 3, period: Duration(milliseconds: speed));
+                    min: 0, max:Storage.gifUrl.frames, period: Duration(milliseconds: speed));
               }).pOnly(left: x / 32)
             ],
           ).pOnly(bottom: y / 32),
           Container(
             child: buildContainer(
                 child: Image.asset(
-                        !isPlaying ? path + "play.png" : path + "pause.png")
+                        !isPlaying ? path + "playdeep.png" : path + "pausedeep.png")
                     .onInkTap(() {
               setState(() {
                 isPlaying
                     ? controller.stop()
                     : controller.repeat(
-                        min: 0, max: 3, period: Duration(milliseconds: speed));
+                        min: 0, max:Storage.gifUrl.frames, period: Duration(milliseconds: speed));
                 isPlaying = !isPlaying;
               });
             }).p8()),
