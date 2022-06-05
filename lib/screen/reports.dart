@@ -4,212 +4,296 @@ import 'package:breathing_app/models/musicmodel.dart';
 import 'package:breathing_app/screen/home_screen/mdrawer.dart';
 import 'package:breathing_app/util/constants.dart';
 import 'package:breathing_app/util/routes.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:intl/intl.dart';
 
-class Reports extends StatelessWidget {
+class Reports extends StatefulWidget {
+  @override
+  State<Reports> createState() => _ReportsState();
+}
+
+class _ReportsState extends State<Reports> {
+  final _firestore = FirebaseFirestore.instance;
+  final _auth = FirebaseAuth.instance;
   final String path = "asset/images/shopping/";
 
+  String currentUid = '';
+
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  var days = 22;
+
+  List<Map<String, dynamic>> reportMap = [];
+  List weekDayBreatheTime = [];
+
+  bool dataRetrieved = false;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    currentUid = _auth.currentUser!.uid;
+    print(currentUid);
+    getStreamDetails();
+    super.initState();
+  }
+
+  List<Map<String, dynamic>> get weekReportDetails {
+    return List.generate(7, (index) {
+      var dayBreatheTime;
+      var totalTime;
+      var day;
+
+      final weekDay = DateTime.now().subtract(
+        Duration(days: index),
+      );
+      print(DateFormat.yMd().format(weekDay));
+      for (int i = 0; i < reportMap.length; i++) {
+        if (reportMap[i]['date'] == DateFormat.yMd().format(weekDay)) {
+          weekDayBreatheTime.add(reportMap[i]['breatheTime']);
+          dayBreatheTime = reportMap[i]['breatheTime'];
+          day = reportMap[i]['day'];
+          totalTime = reportMap[i]['totalTime'];
+          print('if wala day of date ${reportMap[i]['date']}: $dayBreatheTime');
+          break;
+        } else {
+          dayBreatheTime = 0;
+          day = weekDay.day;
+          print('else wala day of date ${reportMap[i]['date']}: $day');
+          totalTime = 5;
+        }
+      }
+      return {
+        'day': DateFormat.E().format(weekDay).substring(0, 3),
+        'breatheTime': dayBreatheTime,
+        'totalTime': totalTime
+      };
+    }).reversed.toList();
+  }
+
   @override
   Widget build(BuildContext context) {
+    Map<String, dynamic> reportMap = {};
     var y = MediaQuery.of(context).size.height;
     var x = MediaQuery.of(context).size.width;
-    return Material(
-      child: SafeArea(
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Row(
-          children: [
-            Image.asset(path + "back.png").onInkTap(() {
-              Navigator.of(context).pop();
-            }),
-            Spacer(),
-            "Reports".text.xl3.bold.make(),
-            Spacer(),
-            Container()
-          ],
-        ).pOnly(top: y / 25, bottom: y / 32).px(x / 24),
-        "Your Consistency Steak : "
-            .text
-            .bold
-            .xl
-            .makeCentered()
-            .pOnly(bottom: y / 64),
-        buildContainer(
-                child: Container(
-          height: y / 8,
-          width: y / 8,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              days.text.xl3.bold.color(Colors.white).make(),
-              "Days".text.xl2.bold.color(Colors.white).make(),
-            ],
-          ),
-          decoration: BoxDecoration(
-              gradient: RadialGradient(
-                  radius: 1, colors: [Color(0xff2C6AE4), Color(0xffC4C4C4)]),
-              borderRadius: BorderRadius.circular(y / 8)),
-        ).p8())
-            .centered()
-            .pOnly(bottom: y / 64),
-        "Activity Tracker"
-            .text
-            .bold
-            .color(borderColor)
-            .make()
-            .px(x / 32)
-            .pOnly(bottom: y / 64),
-        Container(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  "You have taken a breathe for ".text.bold.make(),
+    return StreamBuilder(
+        stream: _firestore.collection('report').doc(currentUid).snapshots(),
+        builder: (context,
+            AsyncSnapshot<DocumentSnapshot<Map<String, dynamic>>> snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+          var snap = snapshot.data!.data()!;
+          print('snap : $snap');
+          var percent = snap['todayTotal'] / snap['totalTime'] * 100;
+          var days = snap['streak'];
+          return Material(
+            child: SafeArea(
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
                   Row(
                     children: [
-                      "3 out of 5 Minutes ".text.bold.make(),
-                      "today".text.bold.make(),
+                      Image.asset(path + "back.png").onInkTap(() {
+                        Navigator.of(context).pop();
+                      }),
+                      Spacer(),
+                      "Reports".text.xl3.bold.make(),
+                      Spacer(),
+                      Container()
                     ],
+                  ).pOnly(top: y / 25, bottom: y / 32).px(x / 24),
+                  "Your Consistency Steak : "
+                      .text
+                      .bold
+                      .xl
+                      .makeCentered()
+                      .pOnly(bottom: y / 64),
+                  buildContainer(
+                          child: Container(
+                    height: y / 8,
+                    width: y / 8,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          days.toString(),
+                          style: TextStyle(color: Colors.white),
+                          textScaleFactor: 1.875,
+                        ),
+                        "Days".text.xl2.bold.color(Colors.white).make(),
+                      ],
+                    ),
+                    decoration: BoxDecoration(
+                        gradient: RadialGradient(
+                            radius: 1,
+                            colors: [Color(0xff2C6AE4), Color(0xffC4C4C4)]),
+                        borderRadius: BorderRadius.circular(y / 8)),
+                  ).p8())
+                      .centered()
+                      .pOnly(bottom: y / 64),
+                  "Activity Tracker"
+                      .text
+                      .bold
+                      .color(borderColor)
+                      .make()
+                      .px(x / 32)
+                      .pOnly(bottom: y / 64),
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            "You have taken a breathe for ".text.bold.make(),
+                            Row(
+                              children: [
+                                "${snap['todayTotal'].toString()} out of ${snap['totalTime'].toString()} Minutes today"
+                                    .text
+                                    .bold
+                                    .make(),
+                              ],
+                            ),
+                          ],
+                        ),
+                        buildContainer(
+                            child: Container(
+                                width: x / 8,
+                                height: x / 8,
+                                child: "${percent.toStringAsFixed(0)}%"
+                                    .text
+                                    .makeCentered()
+                                    .p8()))
+                      ],
+                    ).px(x / 32).py(y / 128),
+                    decoration: BoxDecoration(
+                        border: Border.all(color: borderColor),
+                        borderRadius: BorderRadius.circular(50)),
+                  ).px(x / 32).pOnly(bottom: y / 64),
+                  "Performance of last 7 days"
+                      .text
+                      .bold
+                      .color(borderColor)
+                      .make()
+                      .px(x / 32)
+                      .pOnly(bottom: y / 64),
+                  Container(
+                    height: 150,
+                    width: 500,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: weekReportDetails.map((data) {
+                        print('chart row widget started');
+                        if (data.isNotEmpty && dataRetrieved == true) {
+                          return Flexible(
+                            fit: FlexFit.tight,
+                            child: ChartBar(
+                                data['day'].toString(),
+                                (((data['breatheTime'] ?? 0.0)) /
+                                    ((data['totalTime'] ?? 1)))),
+                          );
+                        }
+                        return CircularProgressIndicator();
+                      }).toList(),
+                    ).px(x / 16),
                   ),
-                ],
-              ),
-              buildContainer(
-                  child: Container(
-                      width: x / 8,
-                      height: x / 8,
-                      child: "71%".text.makeCentered().p8()))
-            ],
-          ).px(x / 32).py(y / 128),
-          decoration: BoxDecoration(
-              border: Border.all(color: borderColor),
-              borderRadius: BorderRadius.circular(50)),
-        ).px(x / 32).pOnly(bottom: y / 64),
-        "Performance of last 7 days"
-            .text
-            .bold
-            .color(borderColor)
-            .make()
-            .px(x / 32)
-            .pOnly(bottom: y / 64),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            RotatedBox(
-              quarterTurns: -1,
-              child: LinearPercentIndicator(
-                width: 140.0,
-                lineHeight: 14.0,
-                percent: 0.5,
-                barRadius: Radius.circular(120),
-                linearStrokeCap: LinearStrokeCap.roundAll,
-                backgroundColor: borderColor.withOpacity(0.4),
-                progressColor: borderColor,
-              ),
-            ),
-            RotatedBox(
-              quarterTurns: -1,
-              child: LinearPercentIndicator(
-                width: 140.0,
-                lineHeight: 14.0,
-                percent: 0.5,
-                barRadius: Radius.circular(120),
-                linearStrokeCap: LinearStrokeCap.roundAll,
-                backgroundColor: borderColor.withOpacity(0.4),
-                progressColor: borderColor,
-              ),
-            ),
-            RotatedBox(
-              quarterTurns: -1,
-              child: LinearPercentIndicator(
-                width: 140.0,
-                lineHeight: 14.0,
-                percent: 0.5,
-                barRadius: Radius.circular(120),
-                linearStrokeCap: LinearStrokeCap.roundAll,
-                backgroundColor: borderColor.withOpacity(0.4),
-                progressColor: borderColor,
-              ),
-            ),
-            RotatedBox(
-              quarterTurns: -1,
-              child: LinearPercentIndicator(
-                width: 140.0,
-                lineHeight: 14.0,
-                percent: 0.5,
-                barRadius: Radius.circular(120),
-                linearStrokeCap: LinearStrokeCap.roundAll,
-                backgroundColor: borderColor.withOpacity(0.4),
-                progressColor: borderColor,
-              ),
-            ),
-            RotatedBox(
-              quarterTurns: -1,
-              child: LinearPercentIndicator(
-                width: 140.0,
-                lineHeight: 14.0,
-                percent: 0.5,
-                barRadius: Radius.circular(120),
-                linearStrokeCap: LinearStrokeCap.roundAll,
-                backgroundColor: borderColor.withOpacity(0.4),
-                progressColor: borderColor,
-              ),
-            ),
-            RotatedBox(
-              quarterTurns: -1,
-              child: LinearPercentIndicator(
-                width: 140.0,
-                lineHeight: 14.0,
-                percent: 0.5,
-                barRadius: Radius.circular(120),
-                linearStrokeCap: LinearStrokeCap.roundAll,
-                backgroundColor: borderColor.withOpacity(0.4),
-                progressColor: borderColor,
-              ),
-            ),
-            RotatedBox(
-              quarterTurns: -1,
-              child: LinearPercentIndicator(
-                width: 140.0,
-                lineHeight: 14.0,
-                percent: 0.5,
-                barRadius: Radius.circular(120),
-                linearStrokeCap: LinearStrokeCap.roundAll,
-                backgroundColor: borderColor.withOpacity(0.4),
-                progressColor: borderColor,
-              ),
-            ),
-          ],
-        ).px(x / 16),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            "Sun".text.make(),
-            "Mon".text.make(),
-            "Tue".text.make(),
-            "Wed".text.make(),
-            "Thu".text.make(),
-            "Fri".text.make(),
-            "Sat".text.make(),
-          ],
-        ).px(x / 16).pOnly(bottom: y / 32),
-        Container(
-          width: x / 2.5,
-          height: y / 16,
-          child: "Earned Rewards".text.lg.bold.makeCentered().px16(),
-          decoration: BoxDecoration(
-              border: Border.all(color: Colors.blue),
-              borderRadius: BorderRadius.circular(y / 16)),
-        ).onInkTap(() {
-          Navigator.of(context).push(Routes.createRewardRoute());
-        }).centered(),
-      ])),
+                  Container(
+                    width: x / 2.5,
+                    height: y / 16,
+                    child: "Earned Rewards".text.lg.bold.makeCentered().px16(),
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.blue),
+                        borderRadius: BorderRadius.circular(y / 16)),
+                  ).onInkTap(() {
+                    Navigator.of(context).push(Routes.createRewardRoute());
+                  }).centered(),
+                ])),
+          );
+        });
+  }
+
+  getStreamDetails() async {
+    print('getStreamdetails started');
+    QuerySnapshot query = await _firestore
+        .collection('report')
+        .doc(currentUid)
+        .collection('everydayActivity')
+        .get();
+    final allData =
+        query.docs.map((doc) => doc.data() as Map<String, dynamic>).toList();
+    setState(() {
+      reportMap = allData;
+      print('reportMap: $reportMap');
+      setState(() {
+        if (reportMap.isNotEmpty) {
+          dataRetrieved = true;
+        }
+      });
+    });
+  }
+
+  Widget getChartBar() {
+    return RotatedBox(
+      quarterTurns: -1,
+      child: LinearPercentIndicator(
+        width: 140.0,
+        lineHeight: 14.0,
+        percent: 0.5,
+        barRadius: Radius.circular(120),
+        linearStrokeCap: LinearStrokeCap.roundAll,
+        backgroundColor: borderColor.withOpacity(0.4),
+        progressColor: borderColor,
+      ),
     );
+  }
+}
+
+class ChartBar extends StatelessWidget {
+  final String day;
+  final double percentage;
+
+  ChartBar(this.day, this.percentage);
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (ctx, constraints) {
+      return Column(
+        children: [
+          Container(
+            height: constraints.maxHeight * 0.7,
+            width: 11,
+            child: Stack(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey, width: 1),
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color.fromRGBO(220, 220, 220, 1)),
+                ),
+                FractionallySizedBox(
+                  heightFactor: percentage,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: constraints.maxHeight * 0.1,
+          ),
+          Container(height: constraints.maxHeight * 0.15, child: Text(day)),
+        ],
+      );
+    });
   }
 }
