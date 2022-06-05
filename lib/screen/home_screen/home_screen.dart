@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:audioplayers/audioplayers.dart';
 import 'package:breathing_app/models/musicmodel.dart';
 import 'package:breathing_app/screen/home_screen/mdrawer.dart';
 import 'package:breathing_app/util/Storage.dart';
@@ -6,6 +9,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter_gifimage/flutter_gifimage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:intl/intl.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class HomeSCreen extends StatefulWidget {
   const HomeSCreen({Key? key}) : super(key: key);
@@ -15,6 +21,9 @@ class HomeSCreen extends StatefulWidget {
 }
 
 class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
+  final _firestore = FirebaseFirestore.instance;
+  final _auth = FirebaseAuth.instance;
+  String currentUid = '';
   final String path = "asset/images/home/";
   MusicModel m = MusicModel(
       duration: "300",
@@ -26,18 +35,108 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
 
   bool isPlaying = false;
 
+  bool canPlay = false;
+  bool isMute = true;
+  bool docExist = false;
+  bool checkdone = false;
+
+  AudioPlayer audioPlayer = AudioPlayer();
+
+  int time = 0;
+
+  String url =
+      'https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/breathe.mp3?alt=media&token=36329fe1-4243-46f5-ba62-cdb9a2055f55';
+
   late GifController controller;
   int speed = 1000;
   @override
   void initState() {
+    currentUid = _auth.currentUser!.uid;
+    getAudio();
+
     controller = GifController(vsync: this);
     list.add(m);
     list.add(m);
     list.add(m);
     list.add(m);
 
+    // checkDoc();
     super.initState();
   }
+
+  getAudio() async {
+    var snap = await _firestore
+        .collection('Users')
+        .doc('15OX5wUmgcUU5r2NxpIHUdXYsZl1')
+        .get();
+    var audioType = snap['audioType'];
+    print('audioType $audioType');
+    if (audioType == 'default') {
+      setState(() {
+        url =
+            'https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/breathe.mp3?alt=media&token=36329fe1-4243-46f5-ba62-cdb9a2055f55';
+      });
+    } else if (audioType == 'userAudio') {
+      var snapshot = await _firestore
+          .collection('Users')
+          .doc('15OX5wUmgcUU5r2NxpIHUdXYsZl1')
+          .collection('audioCollection')
+          .orderBy('timeStamp', descending: false)
+          .get();
+      print(snapshot.docs.length);
+      var reqdoc = snapshot.docs.length - 1;
+      print(snapshot.docs[reqdoc].data()['link']);
+      setState(() {
+        if (url != null) {
+          url = snapshot.docs[reqdoc].data()['link'];
+        } else {
+          url =
+              'https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/breathe.mp3?alt=media&token=36329fe1-4243-46f5-ba62-cdb9a2055f55';
+        }
+        print('url $url');
+      });
+    }
+    audioPlayer.setReleaseMode(ReleaseMode.LOOP);
+    audioPlayer.setUrl(url).then((value) => setState(() {
+          canPlay = true;
+        }));
+  }
+
+  onPause() async {
+    controller.stop();
+    // pauseHandler();
+    await audioPlayer.pause();
+    print('audio Paused');
+  }
+
+  onPlay() async {
+    controller.repeat(min: 0, max: 9, period: Duration(milliseconds: speed));
+    // playHandler();
+    await audioPlayer.resume();
+
+    print('audio Playing');
+  }
+
+  onMute() async {
+    await audioPlayer.setVolume(0);
+  }
+
+  timer() {
+    Timer.periodic(Duration(seconds: 1), (timer) {
+      if (isPlaying == true) {
+        setState(() {
+          time = time + 1;
+        });
+      } else {
+        timer.cancel();
+        // addTime();
+      }
+    });
+  }
+
+  // addTime()async{
+  //   _firestore.collection('collectionPath').doc('').collection('collectionPath').doc
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -99,14 +198,26 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
                         !isPlaying ? path + "play.png" : path + "pause.png")
                     .onInkTap(() {
               setState(() {
-                isPlaying
-                    ? controller.stop()
-                    : controller.repeat(
-                        min: 0, max: 3, period: Duration(milliseconds: speed));
+                isPlaying ? onPause() : onPlay();
                 isPlaying = !isPlaying;
               });
             }).p8()),
           ).centered()
         ])));
+  }
+
+  addReport() {
+    // _firestore.collection('report').doc(currentUid).set({
+    //   'previousBreatheDate': DateFormat.yMd().format(DateTime.now()),
+    //   'streak': 0,
+    //   'todayTotal': 0,
+    //   'totalTime': 5
+    // });
+    String actDoc = currentUid + DateFormat.yMd().format(DateTime.now());
+
+    _firestore
+        .collection('report')
+        .doc(currentUid)
+        .collection('everydayActivity');
   }
 }
