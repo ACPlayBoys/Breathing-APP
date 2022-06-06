@@ -77,7 +77,7 @@ class _WishListState extends State<WishList> {
           builder: (context, value, child) {
             List<MusicModel> list = Storage.whishlist.value;
             if (Storage.whishlist.value.isEmpty) {
-              return CircularProgressIndicator().centered().py24();
+              return "There is Nothing Here".text.make().centered().py24();
             } else {
               return ListView.separated(
                       itemBuilder: ((context, index) {

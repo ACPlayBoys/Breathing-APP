@@ -17,6 +17,7 @@ class Upload extends StatelessWidget {
   var selectedValue;
 
   int framecount = 3;
+  
 
   Upload({Key? key}) : super(key: key);
   final String path = "asset/images/schedule/";
@@ -283,7 +284,11 @@ class Upload extends StatelessWidget {
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.blue),
                     borderRadius: BorderRadius.circular(y / 16)),
-              ),
+              ).onInkTap(() {
+                Storage.userGif = "default";
+
+                print(Storage.userGif);
+              }),
               Container(
                 width: x / 3,
                 height: y / 16,
@@ -291,7 +296,20 @@ class Upload extends StatelessWidget {
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.blue),
                     borderRadius: BorderRadius.circular(y / 16)),
-              ),
+              ).onInkTap(() {
+                if (Storage.userGif.isEmptyOrNull) {
+                  showToast(context, "Select Dif or Use Default");
+                  return;
+                }
+                if (Storage.userGif == "default") {
+                  print("defualt");
+                  Storage.setDeafultGif(context);
+                } else {
+                  print(Storage.userGif);
+                  Storage.uploadGIf(File(Storage.userGif), context, framecount);
+                  print(framecount);
+                }
+              }),
             ],
           ).px(x / 10).pOnly(bottom: y / 45)
         ],
@@ -313,7 +331,7 @@ class Upload extends StatelessWidget {
     showGeneralDialog(
       context: context,
       barrierLabel: "Barrier",
-      barrierDismissible: true,
+      barrierDismissible: false,
       barrierColor: Colors.black.withOpacity(0.5),
       transitionDuration: Duration(milliseconds: 700),
       pageBuilder: (_, __, ___) {
@@ -362,7 +380,9 @@ class Upload extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(y / 20),
                                 border: Border.all(color: Colors.blue)),
                           ).onInkTap(() {
-                            Storage.uploadGIf(gifPath, context, framecount);
+                            Storage.userGif = gifPath.path;
+                            showToast(context, "Gif Added");
+                            Navigator.of(context).pop();
                           })
                         ],
                       );

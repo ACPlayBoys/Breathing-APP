@@ -138,7 +138,7 @@ class _OTPScreenState extends State<OTPScreen> {
               'todayTotal': 0,
               'totalTime': 300
             });
-            Storage.setDeafultGif();
+            Storage.setDeafultGif(context);
             _first = true;
             setState(() {
               chngBtn2 = 2;

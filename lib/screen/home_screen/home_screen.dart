@@ -25,11 +25,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
   final _auth = FirebaseAuth.instance;
 
   final String path = "asset/images/home/";
-  MusicModel m = MusicModel(
-      duration: "300",
-      name: "Rajashtan Mist",
-      link: "mal",
-      image: "asset/images/home/" + "rajasthan.png");
+
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   List<MusicModel> list = [];
 
@@ -60,14 +56,12 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
   void initState() {
     playedTime = 1;
     controller = GifController(vsync: this);
-    list.add(m);
-    list.add(m);
-    list.add(m);
-    list.add(m);
+
     currentUid = _auth.currentUser!.uid;
     getReportData();
     // addStreak();
     getAudio();
+    Storage.getGif();
     super.initState();
   }
 
@@ -75,82 +69,103 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     var y = MediaQuery.of(context).size.height;
     var x = MediaQuery.of(context).size.width;
-    return Scaffold(
-        key: _scaffoldKey,
-        drawer: MDrawer(),
-        body: SafeArea(
-            child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Row(
-            children: [
-              Image.asset(path + "menu.png").onInkTap(() {
-                _scaffoldKey.currentState?.openDrawer();
-              }),
-              Spacer(),
-              "Breathe In".text.xl3.bold.make(),
-              Spacer(),
-              buildContainerOnTap(child: Icon(CupertinoIcons.volume_off).p4())
-            ],
-          ).pOnly(top: y / 24, bottom: y / 8).px(x / 24),
-          GifImage(
-            height: y / 4,
-            image: NetworkImage(Storage.gifUrl),
-            controller: controller,
-          ).centered().pOnly(bottom: y / 8),
-          "Breathing Rate"
-              .text
-              .xl2
-              .bold
-              .make()
-              .pOnly(bottom: y / 64)
-              .centered(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                child:
-                    buildContainer(child: Image.asset(path + "add.png").p2()),
-              ).onInkTap(() {
-                speed > 200 ? speed -= 200 : speed = 200;
-                controller.repeat(
-                    min: 0, max: 3, period: Duration(milliseconds: speed));
-                onSpeedInc();
-              }).pOnly(right: x / 32),
-              Container(
-                child:
-                    buildContainer(child: Image.asset(path + "minus.png").p2()),
-              ).onInkTap(() {
-                speed < 2000 ? speed += 200 : speed = 2000;
-                controller.repeat(
-                    min: 0, max: 3, period: Duration(milliseconds: speed));
-                onSpeedDec();
-              }).pOnly(left: x / 32)
-            ],
-          ).pOnly(bottom: y / 32),
-          Container(
-            child: buildContainer(
-                child: playedTime == 1
-                    ? canPlay
-                        ? Image.asset(!isPlaying
-                                ? path + "play.png"
-                                : path + "pause.png")
-                            .onInkTap(() {
-                            setState(() {
-                              isPlaying ? onPause() : onPlay();
-                              isPlaying = !isPlaying;
-                            });
-                          }).p8()
-                        : CircularProgressIndicator()
-                    : Image.asset(
-                            !isPlaying ? path + "play.png" : path + "pause.png")
-                        .onInkTap(() {
-                        setState(() {
-                          isPlaying ? onPause() : onPlay();
-                          isPlaying = !isPlaying;
-                        });
-                      }).p8()),
-          ).centered()
-        ])));
+    return WillPopScope(
+      onWillPop: () async {
+        return false;
+      },
+      child: Scaffold(
+          key: _scaffoldKey,
+          drawer: MDrawer(),
+          body: SafeArea(
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                Row(
+                  children: [
+                    Image.asset(path + "menu.png").onInkTap(() {
+                      _scaffoldKey.currentState?.openDrawer();
+                    }),
+                    Spacer(),
+                    "Breathe In".text.xl3.bold.make(),
+                    Spacer(),
+                    buildContainerOnTap(
+                        child: Icon(CupertinoIcons.volume_off).p4())
+                  ],
+                ).pOnly(top: y / 24, bottom: y / 8).px(x / 24),
+                ValueListenableBuilder(
+                    valueListenable: Storage.giffer,
+                    builder: (context, value, child) {
+                      return value == 0
+                          ? Container(
+                              height: y / 4,
+                              width: y / 4,
+                              child: CircularProgressIndicator())
+                          : GifImage(
+                              height: y / 4,
+                              image: NetworkImage(Storage.gifUrl.link),
+                              controller: controller,
+                            );
+                    }).centered().pOnly(bottom: y / 8),
+                "Breathing Rate"
+                    .text
+                    .xl2
+                    .bold
+                    .make()
+                    .pOnly(bottom: y / 64)
+                    .centered(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      child: buildContainer(
+                          child: Image.asset(path + "add.png").p2()),
+                    ).onInkTap(() {
+                      speed > 200 ? speed -= 200 : speed = 200;
+                      controller.repeat(
+                          min: 0,
+                          max: Storage.gifUrl.frames,
+                          period: Duration(milliseconds: speed));
+                      onSpeedInc();
+                    }).pOnly(right: x / 32),
+                    Container(
+                      child: buildContainer(
+                          child: Image.asset(path + "minus.png").p2()),
+                    ).onInkTap(() {
+                      speed < 2000 ? speed += 200 : speed = 2000;
+                      controller.repeat(
+                          min: 0,
+                          max: Storage.gifUrl.frames,
+                          period: Duration(milliseconds: speed));
+                      onSpeedDec();
+                    }).pOnly(left: x / 32)
+                  ],
+                ).pOnly(bottom: y / 32),
+                Container(
+                  child: buildContainer(
+                      child: playedTime == 1
+                          ? canPlay
+                              ? Image.asset(!isPlaying
+                                      ? path + "playdeep.png"
+                                      : path + "pausedeep.png")
+                                  .onInkTap(() {
+                                  setState(() {
+                                    isPlaying ? onPause() : onPlay();
+                                    isPlaying = !isPlaying;
+                                  });
+                                }).p8()
+                              : CircularProgressIndicator()
+                          : Image.asset(!isPlaying
+                                  ? path + "playdeep.png"
+                                  : path + "pausedeep.png")
+                              .onInkTap(() {
+                              setState(() {
+                                isPlaying ? onPause() : onPlay();
+                                isPlaying = !isPlaying;
+                              });
+                            }).p8()),
+                ).centered()
+              ]))),
+    );
   }
 
   onSpeedInc() {
@@ -177,7 +192,10 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
 
   onPlay() {
     print('depalyed playedtime $playedTime');
-    controller.repeat(min: 0, max: 9, period: Duration(milliseconds: speed));
+    controller.repeat(
+        min: 0,
+        max: Storage.gifUrl.frames,
+        period: Duration(milliseconds: speed));
     // playHandler();
 
     audioPlayer.resume();

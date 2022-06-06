@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
 class MusicModel {
@@ -5,11 +6,13 @@ class MusicModel {
   final String name;
   final String image;
   final String link;
+  final int price;
   MusicModel({
     required this.duration,
     required this.name,
     required this.image,
     required this.link,
+    required this.price,
   });
 
   MusicModel copyWith({
@@ -17,12 +20,14 @@ class MusicModel {
     String? name,
     String? image,
     String? link,
+    int? price,
   }) {
     return MusicModel(
       duration: duration ?? this.duration,
       name: name ?? this.name,
       image: image ?? this.image,
       link: link ?? this.link,
+      price: price ?? this.price,
     );
   }
 
@@ -32,6 +37,7 @@ class MusicModel {
       'name': name,
       'image': image,
       'link': link,
+      'price': price,
     };
   }
 
@@ -41,6 +47,7 @@ class MusicModel {
       name: map['name'] as String,
       image: map['image'] as String,
       link: map['link'] as String,
+      price: map['price'] as int,
     );
   }
 
@@ -50,7 +57,7 @@ class MusicModel {
 
   @override
   String toString() {
-    return 'MusicModel(duration: $duration, name: $name, image: $image, link: $link)';
+    return 'MusicModel(duration: $duration, name: $name, image: $image, link: $link, price: $price)';
   }
 
   @override
@@ -61,7 +68,8 @@ class MusicModel {
       other.duration == duration &&
       other.name == name &&
       other.image == image &&
-      other.link == link;
+      other.link == link &&
+      other.price == price;
   }
 
   @override
@@ -69,6 +77,7 @@ class MusicModel {
     return duration.hashCode ^
       name.hashCode ^
       image.hashCode ^
-      link.hashCode;
+      link.hashCode ^
+      price.hashCode;
   }
 }

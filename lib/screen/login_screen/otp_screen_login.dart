@@ -112,7 +112,6 @@ class _LoginOTPScreenState extends State<LoginOTPScreen> {
             chngBtn2 = 2;
             setState(() {});
             await Future.delayed(Duration(milliseconds: 2000));
-            Storage.getGif();
             await Navigator.of(context).push(Routes.createSchedulingRoute());
             print(FirebaseAuth.instance.currentUser);
           } on FirebaseAuthException catch (e) {

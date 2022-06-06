@@ -30,7 +30,7 @@ class _SchedulingState extends State<Scheduling> {
 
   double height = 100;
 
-  var _timer;
+  late Timer _timer;
 
   double _progressValue = 0;
 
@@ -44,6 +44,12 @@ class _SchedulingState extends State<Scheduling> {
       });
     });
     // TODO: implement initState
+  }
+
+  @override
+  void dispose() {
+    _timer.cancel(); // TODO: implement dispose
+    super.dispose();
   }
 
   @override

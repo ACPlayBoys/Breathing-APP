@@ -21,6 +21,7 @@ List<XFile> gifFiles = [];
 String image1 = "", image2 = "", image3 = "", image4 = "";
 
 class Storage {
+  static String userGif = "";
   static List<String> gifPath = ["", "", "", "", "", "", "", "", "", ""];
   static GifData gifUrl = GifData(
       name: "default",
@@ -28,7 +29,7 @@ class Storage {
           "https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/images%2Fdefault.gif?alt=media&token=3f062989-ba7f-414c-8098-b29da240fc5a",
       frames: 3);
 
-  static void setDeafultGif() {
+  static void setDeafultGif(BuildContext context) {
     GifData gif = GifData(
         name: "default",
         link:
@@ -37,7 +38,8 @@ class Storage {
     FirebaseFirestore.instance
         .collection("Gif")
         .doc(FirebaseAuth.instance.currentUser!.uid)
-        .set(gif.toMap());
+        .set(gif.toMap())
+        .then((value) => showToast(context, "Default Gif Added"));
   }
 
   static void uploadGIf(File mal, context, frames) {
@@ -60,10 +62,12 @@ class Storage {
       gifUrl = gif;
 
       showToast(context, "Gif Uploaded");
+      Navigator.of(context).pop();
     }));
   }
 
-  static void getGif() {
+  static ValueNotifier giffer = ValueNotifier<int>(0);
+  static void getGif() async {
     CollectionReference giff = FirebaseFirestore.instance.collection("Gif");
     giff
         .doc(FirebaseAuth.instance.currentUser!.uid)
@@ -75,6 +79,7 @@ class Storage {
         GifData details = GifData.fromJson(json) as GifData;
         gifUrl = details;
         print(details);
+        giffer.value = 1;
       } else {
         print('Data not present in Database..');
       }
@@ -82,54 +87,61 @@ class Storage {
   }
 
   static Future<void> addDummy(context) async {
-    // List<String> names = [
-    //   "Rajsthan mist",
-    //   "Kashmiri Snow",
-    //   "Marathi Rain",
-    //   "Punjabi Thand",
-    //   "Chennai Express",
-    //   "Bihari Chai"
-    // ];
+    List<String> names = [
+      "Rajsthan mist",
+      "Kashmiri Snow",
+      "Marathi Rain",
+      "Punjabi Thand",
+      "Chennai Express",
+      "Bihari Chai"
+    ];
 
-    // FilePickerResult? result = await FilePicker.platform
-    //     .pickFiles(allowMultiple: true, type: FileType.audio);
-    // if (result != null) {
-    //   List<File> files = result.paths.map((path) => File(path!)).toList();
-    //   int i = 0;
-    //   for (File file in files) {
-    //     Uuid uid = Uuid();
-    //     String name = names[i];
-    //     DocumentReference audioo =
-    //         FirebaseFirestore.instance.collection("popular").doc(name);
+    FilePickerResult? result = await FilePicker.platform
+        .pickFiles(allowMultiple: true, type: FileType.audio);
+    if (result != null) {
+      List<File> files = result.paths.map((path) => File(path!)).toList();
+      int i = 0;
+      for (File file in files) {
+        Uuid uid = Uuid();
+        String name = names[i];
+        DocumentReference audioo =
+            FirebaseFirestore.instance.collection("allMusic").doc(name);
 
-    //     final _firebaseStorage = FirebaseStorage.instance.ref();
+        final _firebaseStorage = FirebaseStorage.instance.ref();
 
-    //     final snapshot1 =
-    //         _firebaseStorage.child('shoppingAudio/${name}.mp3').putFile(file);
-    //     showToast(context, "Uplaoding music $i");
-    //     snapshot1.whenComplete((() async {
-    //       var audio = await snapshot1.snapshot.ref.getDownloadURL();
-    //       String thumb =
-    //           "https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/shoppingImage%2Frajasthan.png?alt=media&token=427e1a1a-6c6b-499c-a649-3af2f0b5fafe";
-    //       MusicModel m = MusicModel(
-    //           link: audio, duration: "300", name: name, image: thumb);
+        final snapshot1 =
+            _firebaseStorage.child('shoppingAudio/${name}.mp3').putFile(file);
+        showToast(context, "Uplaoding music $i");
+        snapshot1.whenComplete((() async {
+          var audio = await snapshot1.snapshot.ref.getDownloadURL();
+          String thumb =
+              "https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/shoppingImage%2Frajasthan.png?alt=media&token=427e1a1a-6c6b-499c-a649-3af2f0b5fafe";
+          MusicModel m = MusicModel(
+              link: audio,
+              duration: "300",
+              name: name,
+              image: thumb,
+              price: 300);
 
-    //       audioo.set(m.toMap());
-    //     }));
-    //     i++;
-    //     //
-    //   }
-    // } else {
-    //   // User canceled the picker
+          audioo.set(m.toMap());
+        }));
+        i++;
+        //
+      }
+    } else {
+      // User canceled the picker
 
-    // }
+    }
   }
 
   static final audios = ValueNotifier<List<MusicModel>>([]);
   static List<MusicModel> allmusic = [];
-  static void getAllMusic() async {
-    audios.value = [];
-    audios.notifyListeners();
+  static void getAllMusic([bool bula = true]) async {
+    if (bula) {
+      audios.value = [];
+      allmusic = [];
+      audios.notifyListeners();
+    }
     FirebaseFirestore.instance
         .collection("allMusic")
         .get()
@@ -198,7 +210,7 @@ class Storage {
     FirebaseFirestore.instance
         .collection("Users")
         .doc(FirebaseAuth.instance.currentUser!.uid)
-        .collection('Wishlist')
+        .collection('wishlist')
         .get()
         .then((var docSnapshot) {
       print(docSnapshot.docs);

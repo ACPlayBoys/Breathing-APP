@@ -108,6 +108,24 @@ class _MDrawerState extends State<MDrawer> {
                 left: x / 10,
                 top: y / 64,
               ),
+              Row(
+                children: [
+                  Icon(
+                    Icons.exit_to_app_sharp,
+                    size: x / 16,
+                    color: Colors.blue[600],
+                  ),
+                  "Log Out".text.xl2.bold.make().pOnly(left: x / 16),
+                ],
+              ).onInkTap(() {
+                FirebaseAuth.instance.signOut();
+                showToast(context, "Logged Out");
+                Navigator.of(context).pushAndRemoveUntil(
+                    Routes.createLoginRoute(), (Route<dynamic> route) => false);
+              }).pOnly(
+                left: x / 10,
+                top: y / 64,
+              ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,

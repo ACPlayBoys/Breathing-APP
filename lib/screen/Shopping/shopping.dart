@@ -25,8 +25,10 @@ class _ShoppingState extends State<Shopping> {
   @override
   void initState() {
     // Storage.getAllMusic();
+    if (Storage.audios.value.isEmpty) {
+      Storage.getAllMusic(false);
+    }
     super.initState();
-    Storage.getAllMusic();
   }
 
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -115,6 +117,7 @@ class _ShoppingState extends State<Shopping> {
                 ],
               ).px(x / 16),
               secondChild: TextFormField(
+                autofocus: true,
                 onChanged: (value) {
                   Storage.getSearch(value.toString());
                 },
@@ -203,7 +206,7 @@ class _ShoppingState extends State<Shopping> {
                         separatorBuilder: (context, index) {
                           return Divider(thickness: 1).px16();
                         },
-                        itemCount: list.length)
+                        itemCount: Storage.audios.value.length)
                     .py(y / 64)
                     .expand();
               }
