@@ -25,11 +25,16 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
   final _auth = FirebaseAuth.instance;
 
   final String path = "asset/images/home/";
-
+  MusicModel m = MusicModel(
+      duration: "300",
+      name: "Rajashtan Mist",
+      link: "mal",
+      image: "asset/images/home/" + "rajasthan.png");
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   List<MusicModel> list = [];
 
   String currentUid = '';
+  String prevDbDate = '';
 
   bool isPlaying = false;
   bool canPlay = true;
@@ -39,6 +44,8 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
 
   int breatheTime = 0;
   int time = 0;
+  int streak = 0;
+  double playbackSpeed = 1.0;
   late int playedTime;
 
   AudioPlayer audioPlayer = AudioPlayer();
@@ -48,12 +55,18 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
 
   late GifController controller;
   int speed = 1000;
+
   @override
   void initState() {
     playedTime = 1;
-    controller = GifController(vsync: this, value: 3);
+    controller = GifController(vsync: this);
+    list.add(m);
+    list.add(m);
+    list.add(m);
+    list.add(m);
     currentUid = _auth.currentUser!.uid;
     getReportData();
+    // addStreak();
     getAudio();
     super.initState();
   }
@@ -81,10 +94,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
           ).pOnly(top: y / 24, bottom: y / 8).px(x / 24),
           GifImage(
             height: y / 4,
-            image: FadeInImage.assetNetwork(
-                    placeholder: 'asset/images/home/logo.gif',
-                    image: Storage.gifUrl.link)
-                .image,
+            image: NetworkImage(Storage.gifUrl),
             controller: controller,
           ).centered().pOnly(bottom: y / 8),
           "Breathing Rate"
@@ -112,9 +122,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
               ).onInkTap(() {
                 speed < 2000 ? speed += 200 : speed = 2000;
                 controller.repeat(
-                    min: 0,
-                    max: Storage.gifUrl.frames,
-                    period: Duration(milliseconds: speed));
+                    min: 0, max: 3, period: Duration(milliseconds: speed));
                 onSpeedDec();
               }).pOnly(left: x / 32)
             ],
@@ -124,8 +132,8 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
                 child: playedTime == 1
                     ? canPlay
                         ? Image.asset(!isPlaying
-                                ? path + "playdeep.png"
-                                : path + "pausedeep.png")
+                                ? path + "play.png"
+                                : path + "pause.png")
                             .onInkTap(() {
                             setState(() {
                               isPlaying ? onPause() : onPlay();
@@ -133,9 +141,8 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
                             });
                           }).p8()
                         : CircularProgressIndicator()
-                    : Image.asset(!isPlaying
-                            ? path + "playdeep.png"
-                            : path + "pausedeep.png")
+                    : Image.asset(
+                            !isPlaying ? path + "play.png" : path + "pause.png")
                         .onInkTap(() {
                         setState(() {
                           isPlaying ? onPause() : onPlay();
@@ -145,8 +152,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
           ).centered()
         ])));
   }
-  
-  
+
   onSpeedInc() {
     setState(() {
       playbackSpeed += 0.5;
@@ -171,10 +177,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
 
   onPlay() {
     print('depalyed playedtime $playedTime');
-    controller.repeat(
-        min: 0,
-        max: Storage.gifUrl.frames,
-        period: Duration(milliseconds: speed));
+    controller.repeat(min: 0, max: 9, period: Duration(milliseconds: speed));
     // playHandler();
 
     audioPlayer.resume();
@@ -290,10 +293,18 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
 
   getReportData() async {
     print(' got report data');
-    var data = await _firestore.collection('report').doc(currentUid).get();
-    setState(() {
-      breatheTime = data['todayTotal'];
-      print('breatheTime $breatheTime');
+    var data = await _firestore
+        .collection('report')
+        .doc(currentUid)
+        .get()
+        .then((data) {
+      setState(() {
+        breatheTime = data['todayTotal'];
+        prevDbDate = data['previousBreatheDate'];
+        streak = data['streak'];
+        print('breatheTime $breatheTime preDate $prevDbDate streak $streak');
+      });
+      addStreak();
     });
   }
 
@@ -318,5 +329,24 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
     _firestore.collection('report').doc(currentUid).set({
       'todayTotal': breatheTime,
     }, SetOptions(merge: true));
+  }
+
+  addStreak() {
+    final prevDate =
+        DateFormat.yMd().format(DateTime.now().subtract(Duration(days: 1)));
+    final todayDate = DateFormat.yMd().format(DateTime.now());
+
+    print('$prevDbDate && $prevDate && $todayDate');
+
+    final stream = _firestore.collection('report').doc(currentUid);
+    streak += 1;
+
+    if (prevDbDate == prevDate) {
+      stream.set({'previousBreatheDate': todayDate, 'streak': streak},
+          SetOptions(merge: true));
+    } else if (prevDbDate != prevDate && prevDbDate != todayDate) {
+      stream.set({'previousBreatheDate': todayDate, 'streak': 0},
+          SetOptions(merge: true));
+    }
   }
 }
