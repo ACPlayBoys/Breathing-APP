@@ -65,6 +65,10 @@ class _MusicState extends State<Music> {
           children: [
             GestureDetector(
               onTap: () {
+                  _firestore
+                    .collection('Users')
+                    .doc(currentUid)
+                    .set({'audioType': 'default'}, SetOptions(merge: true));
                 showToast(context, 'Default Audio Selected');
               },
               child: Container(
