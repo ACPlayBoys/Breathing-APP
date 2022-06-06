@@ -104,6 +104,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
                 speed > 200 ? speed -= 200 : speed = 200;
                 controller.repeat(
                     min: 0, max: 3, period: Duration(milliseconds: speed));
+                onSpeedInc();
               }).pOnly(right: x / 32),
               Container(
                 child:
@@ -114,6 +115,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
                     min: 0,
                     max: Storage.gifUrl.frames,
                     period: Duration(milliseconds: speed));
+                onSpeedDec();
               }).pOnly(left: x / 32)
             ],
           ).pOnly(bottom: y / 32),
@@ -142,6 +144,21 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
                       }).p8()),
           ).centered()
         ])));
+  }
+  
+  
+  onSpeedInc() {
+    setState(() {
+      playbackSpeed += 0.5;
+    });
+    audioPlayer.setPlaybackRate(playbackSpeed);
+  }
+
+  onSpeedDec() {
+    setState(() {
+      playbackSpeed -= 0.5;
+    });
+    audioPlayer.setPlaybackRate(playbackSpeed);
   }
 
   onPause() {
