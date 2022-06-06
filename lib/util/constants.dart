@@ -48,4 +48,4 @@ void showToast(BuildContext context, String msg) {
   );
 }
 
-var userDetails;
+Map userDetails=Map();

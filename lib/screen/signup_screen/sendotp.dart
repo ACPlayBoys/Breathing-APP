@@ -7,15 +7,23 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:email_auth/email_auth.dart';
 
-class SendOTP extends StatelessWidget {
-  var selectedValue;
+class SendOTP extends StatefulWidget {
   PageController pageController;
   EmailAuth emailAuth;
+
+  SendOTP(this.pageController, this.emailAuth, {Key? key}) : super(key: key);
+
+  @override
+  State<SendOTP> createState() => _SendOTPState();
+}
+
+class _SendOTPState extends State<SendOTP> {
+  var selectedValue;
 
   String cnfEmail = "";
 
   String curemail = "";
-  SendOTP(this.pageController, this.emailAuth, {Key? key}) : super(key: key);
+
   final String path = "asset/images/signup/";
 
   @override
@@ -77,29 +85,34 @@ class SendOTP extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        width: x / 2.5,
-                        height: y / 16,
-                        child: Image.asset(path + "otp.png"),
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                color: Color.fromARGB(255, 38, 101, 228),
-                                width: 1),
-                            gradient: RadialGradient(
-                                radius: 4,
-                                colors: [Color(0xff2C6AE4), Color(0xffC4C4C4)]),
-                            borderRadius: BorderRadius.circular(y / 16)),
-                      ).onInkTap(() {
-                        if (cnfEmail != curemail) return;
-                        if (!curemail.isValidEmail()) return;
-                        email = curemail;
-                        sendotp();
-                      })
-                    ],
-                  ),
+                  AnimatedContainer(
+                    duration: Duration(seconds: 1),
+                    width: chngBtn2 == 1 ? 50 : 150,
+                    height: y / 16,
+                    alignment: Alignment.center,
+                    child: buildButton1(), // Image.asset(path + "otp.png"),
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                            color: Color.fromARGB(255, 38, 101, 228), width: 1),
+                        gradient: RadialGradient(
+                            radius: 4,
+                            colors: [Color(0xff2C6AE4), Color(0xffC4C4C4)]),
+                        borderRadius: BorderRadius.circular(y / 16)),
+                  ).onInkTap(() {
+                    if (cnfEmail != curemail) {
+                      showToast(context, "Email MisMatch");
+                      return;
+                    }
+                    if (!curemail.isValidEmail()) {
+                      showToast(context, "Invalid Email");
+                      return;
+                    }
+                    email = curemail;
+                    setState(() {
+                      chngBtn2 = 1;
+                    });
+                    sendotp(context);
+                  }),
                   Row(children: <Widget>[
                     Expanded(
                       child: new Container(
@@ -169,11 +182,21 @@ class SendOTP extends StatelessWidget {
     return menuItems;
   }
 
-  Future<void> sendotp() async {
+  Future<void> sendotp(context) async {
     try {
-      bool result = await emailAuth.sendOtp(recipientMail: email, otpLength: 4);
-      pageController.animateToPage(pageController.page!.toInt() + 1,
-          duration: Duration(milliseconds: 400), curve: Curves.easeIn);
+      bool result =
+          await widget.emailAuth.sendOtp(recipientMail: email, otpLength: 4);
+      if (result) {
+        setState(() {
+          chngBtn2 = 2;
+        });
+        showToast(context, "Otp Sent");
+        await Future.delayed(Duration(milliseconds: 2000));
+        widget.pageController.animateToPage(
+            widget.pageController.page!.toInt() + 1,
+            duration: Duration(milliseconds: 400),
+            curve: Curves.easeIn);
+      }
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
         print('The password provided is too weak.');
@@ -182,6 +205,27 @@ class SendOTP extends StatelessWidget {
       }
     } catch (e) {
       print(e);
+    }
+  }
+
+  int chngBtn2 = 55;
+
+  Container buildButton1() {
+    if (chngBtn2 == 1) {
+      return Container(
+          child: CircularProgressIndicator(
+        color: Colors.white,
+      ));
+    } else if (chngBtn2 == 2) {
+      return Container(
+        child: Icon(
+          Icons.done,
+        ),
+      );
+    } else {
+      return Container(
+        child: Image.asset(path + "otp.png"),
+      );
     }
   }
 }

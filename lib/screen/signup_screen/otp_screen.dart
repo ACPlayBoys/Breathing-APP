@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_new, dead_code_on_catch_subtype
 
 import 'dart:convert';
+import 'dart:io';
+import 'package:breathing_app/util/Storage.dart';
 import 'package:intl/intl.dart';
 import 'package:breathing_app/models/userdetails.dart';
 import 'package:breathing_app/util/constants.dart';
@@ -42,7 +44,33 @@ class _OTPScreenState extends State<OTPScreen> {
               ).expand(),
             ],
           ).pOnly(top: 64),
-          "Enter OTP"
+          AnimatedContainer(
+                  color: Colors.white60,
+                  duration: Duration(seconds: 1),
+                  width: chngBtn2 == 0 ? 50 : 100,
+                  height: 50,
+                  alignment: Alignment.center,
+                  child: buildButton1())
+              .pOnly(bottom: 32),
+          buildPinPut(context).px4(),
+        ]),
+      ),
+    );
+  }
+
+  int chngBtn2 = 55;
+  Container buildButton1() {
+    if (chngBtn2 == 1) {
+      return Container(child: CircularProgressIndicator());
+    } else if (chngBtn2 == 2) {
+      return Container(
+        child: Icon(
+          Icons.done,
+        ),
+      );
+    } else {
+      return Container(
+          child: "Enter OTP"
               .text
               .fontFamily("Poppins")
               .bold
@@ -50,22 +78,8 @@ class _OTPScreenState extends State<OTPScreen> {
               .fontWeight(FontWeight.w700)
               .center
               .make()
-              .centered()
-              .pOnly(bottom: 32),
-          buildPinPut(context).px4(),
-          AnimatedCrossFade(
-            duration: const Duration(seconds: 1),
-            firstChild: const Icon(
-              Icons.done,
-              size: 50,
-            ),
-            secondChild: Container(),
-            crossFadeState:
-                _first ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-          ).py16()
-        ]),
-      ),
-    );
+              .centered());
+    }
   }
 
   Widget buildPinPut(BuildContext context) {
@@ -92,6 +106,9 @@ class _OTPScreenState extends State<OTPScreen> {
 
         if (shit) {
           try {
+            setState(() {
+              chngBtn2 = 1;
+            });
             final credential =
                 await FirebaseAuth.instance.createUserWithEmailAndPassword(
               email: email,
@@ -99,10 +116,19 @@ class _OTPScreenState extends State<OTPScreen> {
             );
             CollectionReference users =
                 FirebaseFirestore.instance.collection('Users');
-            userDetails.uid = credential.user!.uid;
-            userDetails.email = credential.user!.email;
-            users.doc(credential.user!.uid);
-            users.doc(credential.user!.uid).set(userDetails);
+            UserDetails dr = UserDetails(
+                name: userDetails["name"],
+                age: userDetails["age"],
+                gender: userDetails["gender"],
+                country: userDetails["country"],
+                uid: credential.user!.uid,
+                time: DateTime.now().toIso8601String(),
+                email: userDetails["email"]);
+            users.doc(credential.user!.uid).set(dr.toMap());
+
+            credential.user!.updateDisplayName(userDetails["name"]);
+            credential.user!.updatePhotoURL(
+                "https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/profile.png?alt=media&token=b631601b-b247-493b-a228-55d2c4b8ac3a");
             FirebaseFirestore.instance
                 .collection('report')
                 .doc(credential.user!.uid)
@@ -112,11 +138,18 @@ class _OTPScreenState extends State<OTPScreen> {
               'todayTotal': 0,
               'totalTime': 300
             });
+            Storage.setDeafultGif();
             _first = true;
-            setState(() {});
+            setState(() {
+              chngBtn2 = 2;
+            });
+
             await Future.delayed(Duration(seconds: 2));
             await Navigator.of(context).push(Routes.createLoginRoute());
           } on FirebaseAuthException catch (e) {
+            setState(() {
+              chngBtn2 = 55;
+            });
             if (e.code == 'weak-password') {
               showToast(context, 'The password provided is too weak.');
               print('The password provided is too weak.');
@@ -126,6 +159,9 @@ class _OTPScreenState extends State<OTPScreen> {
               print('The account already exists for that email.');
             }
           } on FirebaseAuthException catch (e) {
+            setState(() {
+              chngBtn2 = 55;
+            });
             if (e.code == 'user-not-found') {
               showToast(context, 'No user found for that email.');
               print('No user found for that email.');

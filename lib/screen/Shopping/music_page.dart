@@ -2,10 +2,11 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:breathing_app/util/Storage.dart';
 import 'package:breathing_app/util/routes.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:breathing_app/models/musicmodel.dart';
 import 'package:breathing_app/screen/home_screen/mdrawer.dart';
 import 'package:breathing_app/util/constants.dart';
@@ -35,6 +36,7 @@ class _MusicScreenState extends State<MusicScreen> {
     audioPlayer.setUrl(widget.m.link);
 
     super.initState();
+    addToRecent();
   }
 
   @override
@@ -63,7 +65,7 @@ class _MusicScreenState extends State<MusicScreen> {
                 Navigator.of(context).pop();
               }),
             ],
-          ).pOnly(top: y / 25, bottom: y / 30).px(x / 24),
+          ).pOnly(top: y / 25, bottom: y / 24).px(x / 24),
           buildContainer(child: Image.network(m.image).p8()).centered(),
           m.name.text.xl2.bold.makeCentered(),
           "${m.duration} Mins".text.lg.makeCentered(),
@@ -73,7 +75,7 @@ class _MusicScreenState extends State<MusicScreen> {
               buildContainer(
                   child: Image.asset(!isplaying
                           ? path + "playdeep.png"
-                          : path + "pause.png")
+                          : path + "pausedeep.png")
                       .onInkTap(() {
                 isplaying = !isplaying;
                 if (isplaying) {
@@ -113,7 +115,7 @@ class _MusicScreenState extends State<MusicScreen> {
                                       : (path + "pause.png"))
                                   .onInkTap(() {
                                 playing = !playing;
-                               // setState(() {});
+                                // setState(() {});
                                 if (!playing)
                                   player.play(m.link);
                                 else
@@ -154,7 +156,9 @@ class _MusicScreenState extends State<MusicScreen> {
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.blue),
                           borderRadius: BorderRadius.circular(y / 16)),
-                    ),
+                    ).onInkTap(() {
+                      addToWishlist(context);
+                    }),
                     Container(
                       width: x / 2.5,
                       height: y / 16,
@@ -181,5 +185,31 @@ class _MusicScreenState extends State<MusicScreen> {
             ],
           )
         ])));
+  }
+
+  addToRecent() {
+    FirebaseFirestore.instance
+        .collection("Users")
+        .doc(FirebaseAuth.instance.currentUser!.uid)
+        .collection("recents")
+        .doc(m.name)
+        .set(m.toMap())
+        .then((value) => FirebaseFirestore.instance
+            .collection("Users")
+            .doc(FirebaseAuth.instance.currentUser!.uid)
+            .collection("recents")
+            .doc(m.name)
+            .set({"time": DateTime.now().toIso8601String()},
+                SetOptions(merge: true)));
+  }
+
+  addToWishlist(BuildContext context) {
+    FirebaseFirestore.instance
+        .collection("Users")
+        .doc(FirebaseAuth.instance.currentUser!.uid)
+        .collection("Wishlist")
+        .doc(m.name)
+        .set(m.toMap())
+        .then((value) => showToast(context, "Added to WishList"));
   }
 }

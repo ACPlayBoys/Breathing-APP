@@ -24,17 +24,17 @@ class _ShoppingState extends State<Shopping> {
   var searchShow = false;
   @override
   void initState() {
-    MusicModel mu = MusicModel(
-        link: "mal",
-        duration: "300",
-        name: "Rajashtan Mist",
-        image: path + "rajasthan.png");
     // Storage.getAllMusic();
     super.initState();
     Storage.getAllMusic();
   }
 
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -192,6 +192,8 @@ class _ShoppingState extends State<Shopping> {
                             ),
                           )
                               .onInkTap(() {
+                                playing = false;
+                                player.pause();
                                 Navigator.of(context)
                                     .push(Routes.createMusicRoute(m));
                               })

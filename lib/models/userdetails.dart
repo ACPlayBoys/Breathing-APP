@@ -8,6 +8,7 @@ class UserDetails {
   final String country;
   final String uid;
   final String time;
+  final String email;
   UserDetails({
     required this.name,
     required this.age,
@@ -15,6 +16,7 @@ class UserDetails {
     required this.country,
     required this.uid,
     required this.time,
+    required this.email,
   });
 
   UserDetails copyWith({
@@ -24,6 +26,7 @@ class UserDetails {
     String? country,
     String? uid,
     String? time,
+    String? email,
   }) {
     return UserDetails(
       name: name ?? this.name,
@@ -32,6 +35,7 @@ class UserDetails {
       country: country ?? this.country,
       uid: uid ?? this.uid,
       time: time ?? this.time,
+      email: email ?? this.email,
     );
   }
 
@@ -43,6 +47,7 @@ class UserDetails {
       'country': country,
       'uid': uid,
       'time': time,
+      'email': email,
     };
   }
 
@@ -54,6 +59,7 @@ class UserDetails {
       country: map['country'] as String,
       uid: map['uid'] as String,
       time: map['time'] as String,
+      email: map['email'] as String,
     );
   }
 
@@ -63,7 +69,7 @@ class UserDetails {
 
   @override
   String toString() {
-    return 'UserDetails(name: $name, age: $age, gender: $gender, country: $country, uid: $uid, time: $time)';
+    return 'UserDetails(name: $name, age: $age, gender: $gender, country: $country, uid: $uid, time: $time, email: $email)';
   }
 
   @override
@@ -76,7 +82,8 @@ class UserDetails {
       other.gender == gender &&
       other.country == country &&
       other.uid == uid &&
-      other.time == time;
+      other.time == time &&
+      other.email == email;
   }
 
   @override
@@ -86,6 +93,7 @@ class UserDetails {
       gender.hashCode ^
       country.hashCode ^
       uid.hashCode ^
-      time.hashCode;
+      time.hashCode ^
+      email.hashCode;
   }
 }

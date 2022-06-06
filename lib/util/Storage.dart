@@ -28,6 +28,18 @@ class Storage {
           "https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/images%2Fdefault.gif?alt=media&token=3f062989-ba7f-414c-8098-b29da240fc5a",
       frames: 3);
 
+  static void setDeafultGif() {
+    GifData gif = GifData(
+        name: "default",
+        link:
+            "https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/images%2Fdefault.gif?alt=media&token=3f062989-ba7f-414c-8098-b29da240fc5a",
+        frames: 3);
+    FirebaseFirestore.instance
+        .collection("Gif")
+        .doc(FirebaseAuth.instance.currentUser!.uid)
+        .set(gif.toMap());
+  }
+
   static void uploadGIf(File mal, context, frames) {
     var uuid = Uuid();
     final _firebaseStorage = FirebaseStorage.instance.ref();
@@ -36,14 +48,15 @@ class Storage {
 
     var firestore = FirebaseFirestore.instance;
     CollectionReference giff = firestore.collection("Gif");
-    String name = uuid.v4();
+    String name = FirebaseAuth.instance.currentUser!.uid;
     print(mal.exists());
     final snapshot1 = _firebaseStorage.child('images/$name').putFile(mal);
     snapshot1.whenComplete((() async {
       var thumbUrl = await snapshot1.snapshot.ref.getDownloadURL();
 
-      GifData gif = GifData(frames: frames, link: thumbUrl, name: name);
-      giff.doc(FirebaseAuth.instance.currentUser!.uid).set(gif);
+      GifData gif = GifData(
+          frames: double.parse(frames.toString()), link: thumbUrl, name: name);
+      giff.doc(FirebaseAuth.instance.currentUser!.uid).set(gif.toMap());
       gifUrl = gif;
 
       showToast(context, "Gif Uploaded");
@@ -113,6 +126,7 @@ class Storage {
   }
 
   static final audios = ValueNotifier<List<MusicModel>>([]);
+  static List<MusicModel> allmusic = [];
   static void getAllMusic() async {
     audios.value = [];
     audios.notifyListeners();
@@ -123,7 +137,9 @@ class Storage {
       print(docSnapshot.docs);
       for (var b in docSnapshot.docs) {
         audios.value.add(MusicModel.fromJson(jsonEncode(b.data())));
+        allmusic.add(MusicModel.fromJson(jsonEncode(b.data())));
       }
+
       audios.notifyListeners();
     });
   }
@@ -132,13 +148,15 @@ class Storage {
     audios.value = [];
     audios.notifyListeners();
     FirebaseFirestore.instance
-        .collection("allMusic")
-        .orderBy("uploadTime", descending: true)
-        .limitToLast(3)
+        .collection("Users")
+        .doc(FirebaseAuth.instance.currentUser!.uid)
+        .collection("recents")
+        .orderBy("time")
         .get()
         .then((var docSnapshot) {
       print(docSnapshot.docs);
       for (var b in docSnapshot.docs) {
+        print(jsonEncode(b.data()));
         audios.value.add(MusicModel.fromJson(jsonEncode(b.data())));
       }
       audios.notifyListeners();
@@ -163,32 +181,42 @@ class Storage {
   static void getSearch(String name) async {
     audios.value = [];
     audios.notifyListeners();
-    FirebaseFirestore.instance
-        .collection("allMusic")
-        .where("name", isEqualTo: name)
-        .get()
-        .then((var docSnapshot) {
-      print(docSnapshot.docs);
-      for (var b in docSnapshot.docs) {
-        audios.value.add(MusicModel.fromJson(jsonEncode(b.data())));
-      }
-      audios.notifyListeners();
+
+    allmusic.forEach((music) {
+      if (music.name.toLowerCase().contains(name.toLowerCase()))
+        audios.value.add(music);
     });
+    audios.notifyListeners();
   }
 
   static final whishlist = ValueNotifier<List<MusicModel>>([]);
+  static List<MusicModel> allwhishlist = [];
   static void getWishlist() async {
     whishlist.value = [];
     whishlist.notifyListeners();
+    allwhishlist = [];
     FirebaseFirestore.instance
-        .collection("allMusic")
+        .collection("Users")
+        .doc(FirebaseAuth.instance.currentUser!.uid)
+        .collection('Wishlist')
         .get()
         .then((var docSnapshot) {
       print(docSnapshot.docs);
       for (var b in docSnapshot.docs) {
         whishlist.value.add(MusicModel.fromJson(jsonEncode(b.data())));
+        allwhishlist.add(MusicModel.fromJson(jsonEncode(b.data())));
       }
       whishlist.notifyListeners();
     });
+  }
+
+  static void searchWishlist(String name) {
+    whishlist.value = [];
+    whishlist.notifyListeners();
+    allwhishlist.forEach((music) {
+      if (music.name.toLowerCase().contains(name.toLowerCase()))
+        whishlist.value.add(music);
+    });
+    whishlist.notifyListeners();
   }
 }

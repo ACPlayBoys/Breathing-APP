@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "G:\\Flutter\\test\\Breathing App\\breathing_app\\build\\smart_auth\\intermediates\\res\\merged\\release\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml",
+        "source": "C:\\Users\\MY PlayPC\\.gradle\\caches\\transforms-2\\files-2.1\\ebb93529c6187a959788b4e7289bc4ef\\jetified-play-services-auth-20.1.0\\res\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "G:\\Flutter\\test\\Breathing App\\breathing_app\\build\\smart_auth\\intermediates\\res\\merged\\release\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml",
+        "source": "C:\\Users\\MY PlayPC\\.gradle\\caches\\transforms-2\\files-2.1\\ebb93529c6187a959788b4e7289bc4ef\\jetified-play-services-auth-20.1.0\\res\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "G:\\Flutter\\test\\Breathing App\\breathing_app\\build\\smart_auth\\intermediates\\res\\merged\\release\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml",
+        "source": "C:\\Users\\MY PlayPC\\.gradle\\caches\\transforms-2\\files-2.1\\ebb93529c6187a959788b4e7289bc4ef\\jetified-play-services-auth-20.1.0\\res\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml"
+    }
+]

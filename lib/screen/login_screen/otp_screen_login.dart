@@ -13,8 +13,9 @@ import 'package:velocity_x/velocity_x.dart';
 import 'package:email_auth/email_auth.dart';
 
 class LoginOTPScreen extends StatefulWidget {
-  String email;
-  LoginOTPScreen(this.email, {Key? key}) : super(key: key);
+  EmailAuth emailAuth;
+  String userEmail;
+  LoginOTPScreen(this.emailAuth, this.userEmail, {Key? key}) : super(key: key);
 
   @override
   State<LoginOTPScreen> createState() => _LoginOTPScreenState();
@@ -25,20 +26,17 @@ class _LoginOTPScreenState extends State<LoginOTPScreen> {
 
   final String path = "asset/images/signup/";
 
-  var emailAuth;
+  int chngBtn2 = 55;
 
   @override
   initState() {
     super.initState();
     // TODO: implement initState
-
-    emailAuth = new EmailAuth(sessionName: "Breathing App Login");
-    sendotp();
   }
 
   sendotp() async {
-    bool result =
-        await emailAuth.sendOtp(recipientMail: widget.email, otpLength: 4);
+    bool result = await widget.emailAuth
+        .sendOtp(recipientMail: widget.userEmail, otpLength: 4);
   }
 
   @override
@@ -54,17 +52,15 @@ class _LoginOTPScreenState extends State<LoginOTPScreen> {
             ).expand(),
           ],
         ).pOnly(top: 64),
-        "Enter OTP"
-            .text
-            .fontFamily("Poppins")
-            .bold
-            .size(25)
-            .fontWeight(FontWeight.w700)
-            .center
-            .make()
-            .centered()
+        AnimatedContainer(
+                color: Colors.white60,
+                duration: Duration(seconds: 1),
+                width: chngBtn2 == 0 ? 50 : 100,
+                height: 50,
+                alignment: Alignment.center,
+                child: buildButton1())
             .pOnly(bottom: 32),
-        buildPinPut(context)
+        buildPinPut(context),
       ]),
     );
   }
@@ -87,9 +83,14 @@ class _LoginOTPScreenState extends State<LoginOTPScreen> {
       length: 6,
       defaultPinTheme: defaultPinTheme,
       onCompleted: (pin) async {
-        //bool shit =            emailAuth.validateOtp(recipientMail: widget.email, userOtp: pin);
-        if (true) {
+        print(email);
+        bool shit = widget.emailAuth
+            .validateOtp(recipientMail: widget.userEmail, userOtp: pin);
+        if (shit) {
           try {
+            chngBtn2 = 0;
+            setState(() {});
+            await Future.delayed(Duration(milliseconds: 5000));
             final credential = FirebaseAuth.instance.currentUser;
             CollectionReference users =
                 FirebaseFirestore.instance.collection('Users');
@@ -102,15 +103,22 @@ class _LoginOTPScreenState extends State<LoginOTPScreen> {
                 var json =
                     jsonEncode(docSnapshot.data()); // I am getting stuck here
                 var details = UserDetails.fromJson(json) as UserDetails;
+
                 print(details);
               } else {
                 print('Data not present in Database..');
               }
             });
-            Navigator.of(context).push(Routes.createHomeRoute());
-            print(FirebaseAuth.instance.currentUser);
+            chngBtn2 = 2;
+            setState(() {});
+            await Future.delayed(Duration(milliseconds: 2000));
             Storage.getGif();
+            await Navigator.of(context).push(Routes.createSchedulingRoute());
+            print(FirebaseAuth.instance.currentUser);
           } on FirebaseAuthException catch (e) {
+            setState(() {
+              chngBtn2 = 55;
+            });
             if (e.code == 'user-not-found') {
               showToast(context, 'No user found for that email.');
               print('No user found for that email.');
@@ -122,5 +130,28 @@ class _LoginOTPScreenState extends State<LoginOTPScreen> {
         }
       },
     );
+  }
+
+  Container buildButton1() {
+    if (chngBtn2 == 0) {
+      return Container(child: CircularProgressIndicator());
+    } else if (chngBtn2 == 2) {
+      return Container(
+        child: Icon(
+          Icons.done,
+        ),
+      );
+    } else {
+      return Container(
+          child: "Enter OTP"
+              .text
+              .fontFamily("Poppins")
+              .bold
+              .size(25)
+              .fontWeight(FontWeight.w700)
+              .center
+              .make()
+              .centered());
+    }
   }
 }

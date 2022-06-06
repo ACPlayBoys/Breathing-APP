@@ -5,16 +5,45 @@ import 'package:breathing_app/util/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:email_auth/email_auth.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
+  Login({Key? key}) : super(key: key);
+
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
   var selectedValue;
 
   String curemail = "";
 
   String cnfemail = "";
 
-  Login({Key? key}) : super(key: key);
   final String path = "asset/images/signup/";
+
+  EmailAuth emailAuth = new EmailAuth(sessionName: "Breathing App Login");
+
+  int chngBtn2 = 55;
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  sendotp(useremail, BuildContext context) async {
+    bool result =
+        await emailAuth.sendOtp(recipientMail: useremail, otpLength: 4);
+    if (result) {
+      showToast(context, "Otp sent Successfully");
+      setState(() {
+        chngBtn2 = 2;
+      });
+      await Future.delayed(Duration(milliseconds: 500));
+      await Navigator.of(context).push(Routes.createLoginOtpScreen(emailAuth,useremail));
+    } else
+      showToast(context, "Failed To send Otp");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -81,23 +110,12 @@ class Login extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    width: x / 2,
+                  AnimatedContainer(
+                    duration: Duration(seconds: 1),
+                    width: chngBtn2 == 1 ? 50 : 150,
                     height: y / 16,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        "Send OTP"
-                            .text
-                            .fontFamily("Poppins")
-                            .normal
-                            .size(25)
-                            .fontWeight(FontWeight.w500)
-                            .center
-                            .color(Colors.white)
-                            .make(),
-                      ],
-                    ).px12(),
+                    alignment: Alignment.center,
+                    child: buildButton1(),
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromARGB(255, 38, 101, 228), width: 1),
@@ -105,7 +123,7 @@ class Login extends StatelessWidget {
                             radius: 4,
                             colors: [Color(0xff2C6AE4), Color(0xffC4C4C4)]),
                         borderRadius: BorderRadius.circular(50)),
-                  ).onInkTap(() async {
+                  ).px12().onInkTap(() async {
                     if (cnfemail != curemail) {
                       showToast(context, "Email not mathing");
                       return;
@@ -117,11 +135,14 @@ class Login extends StatelessWidget {
 
                     var email = this.curemail;
                     try {
+                      chngBtn2 = 1;
+                      setState(() {});
                       final credential = await FirebaseAuth.instance
                           .signInWithEmailAndPassword(
                               email: email, password: email);
-                      Navigator.of(context).push(
-                          Routes.createLoginOtpScreen(email.toLowerCase()));
+                      showToast(context, "Sending Otp");
+                      sendotp(email, context);
+                      await Future.delayed(Duration(seconds: 1));
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'user-not-found') {
                         showToast(context, 'No user found for that email.');
@@ -204,6 +225,33 @@ class Login extends StatelessWidget {
       DropdownMenuItem(child: Text("England"), value: "England"),
     ];
     return menuItems;
+  }
+
+  Container buildButton1() {
+    if (chngBtn2 == 1) {
+      return Container(
+          child: CircularProgressIndicator(
+        color: Colors.white,
+      ));
+    } else if (chngBtn2 == 2) {
+      return Container(
+        child: Icon(
+          Icons.done,
+        ),
+      );
+    } else {
+      return Container(
+        child: "Send OTP"
+            .text
+            .fontFamily("Poppins")
+            .normal
+            .size(25)
+            .fontWeight(FontWeight.w500)
+            .center
+            .color(Colors.white)
+            .make(),
+      );
+    }
   }
 }
 

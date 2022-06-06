@@ -3,6 +3,7 @@ import 'package:breathing_app/util/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class MDrawer extends StatefulWidget {
   const MDrawer({Key? key}) : super(key: key);
@@ -28,18 +29,21 @@ class _MDrawerState extends State<MDrawer> {
               Row(
                 children: [
                   buildContainer(
-                      child: Image.asset(
-                    path + "profile.png",
+                      child: Image.network(
+                    FirebaseAuth.instance.currentUser!.photoURL.isEmptyOrNull
+                        ? path + "profile.png"
+                        : FirebaseAuth.instance.currentUser!.photoURL!,
                     width: x / 8,
                   )),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      "Aniket Chaudhary".text.bold.lg.make(),
+                      FirebaseAuth
+                          .instance.currentUser!.displayName!.text.bold.lg
+                          .make(),
                       SizedBox(
                           width: x - x / 3,
-                          child: "aniketchaudharyjavaprog@gmail.com"
-                              .text
+                          child: FirebaseAuth.instance.currentUser!.email!.text
                               .maxLines(1)
                               .overflow(TextOverflow.ellipsis)
                               .size(10)
@@ -98,7 +102,9 @@ class _MDrawerState extends State<MDrawer> {
                   ),
                   "Settings".text.xl2.bold.make().pOnly(left: x / 16),
                 ],
-              ).pOnly(
+              ).onInkTap(() {
+                Navigator.of(context).push(Routes.createSchedulingRoute());
+              }).pOnly(
                 left: x / 10,
                 top: y / 64,
               ),

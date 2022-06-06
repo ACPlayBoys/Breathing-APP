@@ -22,15 +22,6 @@ class _WishListState extends State<WishList> {
 
   @override
   void initState() {
-    MusicModel m = MusicModel(
-        link: "mal",
-        duration: "300",
-        name: "Rajashtan Mist",
-        image: path + "rajasthan.png");
-    list.add(m);
-    list.add(m);
-    list.add(m);
-    list.add(m);
     super.initState();
     Storage.getWishlist();
   }
@@ -58,6 +49,9 @@ class _WishListState extends State<WishList> {
         Container(
           height: y / 20,
           child: TextField(
+            onChanged: (value) {
+              Storage.searchWishlist(value);
+            },
             decoration: InputDecoration(
               label: Row(
                 children: [
@@ -107,17 +101,17 @@ class _WishListState extends State<WishList> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                 Image.asset(!playing
-                                            ? (path + "play.png")
-                                            : (path + "pause.png"))
-                                        .onInkTap(() {
-                                      playing = !playing;
-                                     // setState(() {});
-                                      if (!playing)
-                                        player.play(m.link);
-                                      else
-                                        player.pause();
-                                    }),
+                                  Image.asset(!playing
+                                          ? (path + "play.png")
+                                          : (path + "pause.png"))
+                                      .onInkTap(() {
+                                    playing = !playing;
+                                    // setState(() {});
+                                    if (!playing)
+                                      player.play(m.link);
+                                    else
+                                      player.pause();
+                                  }),
                                 ],
                               ).expand()
                             ],
