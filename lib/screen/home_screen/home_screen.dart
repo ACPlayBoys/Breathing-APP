@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:breathing_app/models/musicmodel.dart';
@@ -33,7 +34,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
   String prevDbDate = '';
 
   bool isPlaying = false;
-  bool canPlay = true;
+  bool canPlay = false;
   bool isMute = true;
   bool docExist = false;
   bool checkdone = false;
@@ -55,6 +56,12 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
   @override
   void initState() {
     playedTime = 1;
+    audioPlayer.onPlayerStateChanged.listen((event) {
+      log(
+        "check +${event.toString()}",
+        error: event.toString(),
+      );
+    });
     controller = GifController(vsync: this);
 
     currentUid = _auth.currentUser!.uid;
@@ -246,6 +253,9 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
   }
 
   getAudio() async {
+    setState(() {
+      canPlay = false;
+    });
     var snap = await _firestore
         .collection('Users')
         .doc('15OX5wUmgcUU5r2NxpIHUdXYsZl1')
@@ -281,7 +291,10 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
       });
     }
     audioPlayer.setReleaseMode(ReleaseMode.LOOP);
-    audioPlayer.setUrl(url);
+    audioPlayer.setUrl(url).then((value) => setState(() {
+          canPlay = true;
+        }));
+    ;
     print('audioSet');
   }
 

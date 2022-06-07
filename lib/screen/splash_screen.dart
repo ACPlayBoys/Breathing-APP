@@ -28,7 +28,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void checkUser() async {
     var v = (FirebaseAuth.instance.currentUser);
-    print(v!.uid);
     if (v != null) {
       await Future.delayed(Duration(seconds: 3));
       await Navigator.of(context).push(Routes.createHomeRoute());
