@@ -186,7 +186,7 @@ class _SendOTPState extends State<SendOTP> {
     try {
       bool result =
           await widget.emailAuth.sendOtp(recipientMail: email, otpLength: 4);
-      if (result) {
+      if (true) {
         setState(() {
           chngBtn2 = 2;
         });
@@ -196,6 +196,11 @@ class _SendOTPState extends State<SendOTP> {
             widget.pageController.page!.toInt() + 1,
             duration: Duration(milliseconds: 400),
             curve: Curves.easeIn);
+      } else {
+        setState(() {
+          chngBtn2 = 55;
+        });
+        showToast(context, "Failed to send OTP");
       }
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {

@@ -298,7 +298,7 @@ class Upload extends StatelessWidget {
                     borderRadius: BorderRadius.circular(y / 16)),
               ).onInkTap(() {
                 if (Storage.userGif.isEmptyOrNull) {
-                  showToast(context, "Select Dif or Use Default");
+                  showToast(context, "Select Gif or Use Default");
                   return;
                 }
                 if (Storage.userGif == "default") {
@@ -470,7 +470,7 @@ class Upload extends StatelessWidget {
     }
     if (gifFiles.length < 4) {
       showToast(context, "Please Select Atleast 4 Images");
-      Navigator.of(context).pop();
+      //Navigator.of(context).pop();
       return;
     }
     framecount = gifFiles.length - 1;
@@ -480,22 +480,5 @@ class Upload extends StatelessWidget {
     showCustomDialog(context, gifPath);
   }
 
-  showLoaderDialog(BuildContext context) {
-    AlertDialog alert = AlertDialog(
-      content: new Row(
-        children: [
-          CircularProgressIndicator(),
-          Container(
-              margin: EdgeInsets.only(left: 7), child: Text("Loading...")),
-        ],
-      ),
-    );
-    showDialog(
-      barrierDismissible: false,
-      context: context,
-      builder: (BuildContext context) {
-        return alert;
-      },
-    );
-  }
+  
 }

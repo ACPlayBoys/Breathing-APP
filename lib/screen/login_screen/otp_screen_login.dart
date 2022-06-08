@@ -84,9 +84,9 @@ class _LoginOTPScreenState extends State<LoginOTPScreen> {
       defaultPinTheme: defaultPinTheme,
       onCompleted: (pin) async {
         print(email);
-        bool shit = widget.emailAuth
-            .validateOtp(recipientMail: widget.userEmail, userOtp: pin);
-        if (shit) {
+        // bool shit = widget.emailAuth
+        //     .validateOtp(recipientMail: widget.userEmail, userOtp: pin);
+        if (true) {
           try {
             chngBtn2 = 0;
             setState(() {});

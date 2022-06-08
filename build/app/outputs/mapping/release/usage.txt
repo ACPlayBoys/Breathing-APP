@@ -25654,9 +25654,9 @@ kotlin.KotlinVersion:
     public static final kotlin.KotlinVersion$Companion Companion
 io.grpc.ClientInterceptors:
     private static final io.grpc.ClientCall NOOP_CALL
-io.flutter.view.TextureRegistry$SurfaceTextureEntry$-CC
+io.flutter.plugin.platform.PlatformView$-CC
+androidx.lifecycle.DefaultLifecycleObserver$-CC
 io.flutter.plugin.common.BinaryMessenger$-CC:
     public static io.flutter.plugin.common.BinaryMessenger$TaskQueue $default$makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger,io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
     public static void $default$setMessageHandler(io.flutter.plugin.common.BinaryMessenger,java.lang.String,io.flutter.plugin.common.BinaryMessenger$BinaryMessageHandler,io.flutter.plugin.common.BinaryMessenger$TaskQueue)
-io.flutter.plugin.platform.PlatformView$-CC
-androidx.lifecycle.DefaultLifecycleObserver$-CC
+io.flutter.view.TextureRegistry$SurfaceTextureEntry$-CC

@@ -65,7 +65,7 @@ class _MusicState extends State<Music> {
           children: [
             GestureDetector(
               onTap: () {
-                  _firestore
+                _firestore
                     .collection('Users')
                     .doc(currentUid)
                     .set({'audioType': 'default'}, SetOptions(merge: true));
@@ -113,6 +113,8 @@ class _MusicState extends State<Music> {
     setState(() {
       pickedFile = result.files.single;
     });
+    showToast(context, 'Uploading File Selected : ${pickedFile!.name}');
+    showLoaderDialog(context);
     final path = 'files/$currentUid/${pickedFile!.name}';
     final file = File(pickedFile!.path!);
 
@@ -126,10 +128,20 @@ class _MusicState extends State<Music> {
       audioUrl = urlDownload;
       print(audioUrl);
     });
-    _firestore.collection('Users').doc(currentUid).collection('audioCollection').add({
-      'link':urlDownload,
-      'timeStamp': DateTime.now()
+    //
+    _firestore
+        .collection('Users')
+        .doc(currentUid)
+        .set({'audioType': 'userAudio'}, SetOptions(merge: true));
+    _firestore
+        .collection('Users')
+        .doc(currentUid)
+        .collection('audioCollection')
+        .add({
+      'link': urlDownload,
+      'timeStamp': DateTime.now(),
     });
+    Navigator.of(context).pop();
     showToast(context, 'File Selected : ${pickedFile!.name}');
   }
 }

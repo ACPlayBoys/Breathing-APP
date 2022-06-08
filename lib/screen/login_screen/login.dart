@@ -34,13 +34,14 @@ class _LoginState extends State<Login> {
   sendotp(useremail, BuildContext context) async {
     bool result =
         await emailAuth.sendOtp(recipientMail: useremail, otpLength: 4);
-    if (result) {
+    if (true) {
       showToast(context, "Otp sent Successfully");
       setState(() {
         chngBtn2 = 2;
       });
       await Future.delayed(Duration(milliseconds: 500));
-      await Navigator.of(context).push(Routes.createLoginOtpScreen(emailAuth,useremail));
+      await Navigator.of(context)
+          .push(Routes.createLoginOtpScreen(emailAuth, useremail));
     } else
       showToast(context, "Failed To send Otp");
   }

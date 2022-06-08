@@ -258,7 +258,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
     });
     var snap = await _firestore
         .collection('Users')
-        .doc('15OX5wUmgcUU5r2NxpIHUdXYsZl1')
+        .doc(FirebaseAuth.instance.currentUser!.uid)
         .get();
     var audioType = snap['audioType'];
     print('audioType $audioType');
@@ -270,7 +270,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
     } else if (audioType == 'userAudio') {
       var snapshot = await _firestore
           .collection('Users')
-          .doc('15OX5wUmgcUU5r2NxpIHUdXYsZl1')
+          .doc(FirebaseAuth.instance.currentUser!.uid)
           .collection('audioCollection')
           .orderBy('timeStamp', descending: false)
           .get();

@@ -1,4 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:convert';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:breathing_app/util/Storage.dart';
 import 'package:breathing_app/util/routes.dart';
@@ -42,7 +44,7 @@ class _MusicScreenState extends State<MusicScreen> {
     razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, handlerSucess);
     razorpay.on(Razorpay.EVENT_PAYMENT_ERROR, handlerError);
     razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, handlerExtWallet);
-    
+    //razorpay.on("error", handlerError);
 
     m = widget.m;
     list.add(m);
@@ -84,15 +86,25 @@ class _MusicScreenState extends State<MusicScreen> {
     }
   }
 
-  handlerSucess() {
+  handlerSucess(response) {
     showToast(context, 'Payment Sucessful');
   }
 
-  handlerError() {
-    showToast(context, 'Payment Failed');
+  handlerError(PaymentFailureResponse response) {
+    var message = response.message;
+    Map res = json.decode(message!);
+    Map reason = res["error"];
+    String finalReason = reason["reason"];
+    if (finalReason == "payment_cancelled") {
+      razorpay.clear();
+    } else if (finalReason == "payment_failed") {
+      // Navigator.pushReplacementNamed(context, Routes.PaymentFailure,
+      //     arguments: response);
+      razorpay.clear();
+    }
   }
 
-  handlerExtWallet() {
+  handlerExtWallet(response) {
     showToast(context, 'External Wallet');
   }
 

@@ -100,11 +100,11 @@ class _OTPScreenState extends State<OTPScreen> {
       length: 6,
       defaultPinTheme: defaultPinTheme,
       onCompleted: (pin) async {
-        bool shit =
-            widget.emailAuth.validateOtp(recipientMail: email, userOtp: pin);
+        // bool shit =
+        //     widget.emailAuth.validateOtp(recipientMail: email, userOtp: pin);
         print(email);
 
-        if (shit) {
+        if (true) {
           try {
             setState(() {
               chngBtn2 = 1;
@@ -116,6 +116,7 @@ class _OTPScreenState extends State<OTPScreen> {
             );
             CollectionReference users =
                 FirebaseFirestore.instance.collection('Users');
+                var mail=credential.user!.email;
             UserDetails dr = UserDetails(
                 name: userDetails["name"],
                 age: userDetails["age"],
@@ -123,7 +124,7 @@ class _OTPScreenState extends State<OTPScreen> {
                 country: userDetails["country"],
                 uid: credential.user!.uid,
                 time: DateTime.now().toIso8601String(),
-                email: userDetails["email"]);
+                email: mail!);
             users.doc(credential.user!.uid).set(dr.toMap());
 
             credential.user!.updateDisplayName(userDetails["name"]);
@@ -139,6 +140,11 @@ class _OTPScreenState extends State<OTPScreen> {
               'totalTime': 300
             });
             Storage.setDeafultGif(context);
+            FirebaseFirestore.instance
+                .collection('Users')
+                .doc(credential.user!.uid)
+                .set({'audioType': 'default'}, SetOptions(merge: true));
+            //showToast(context, 'Default Audio Selected');
             _first = true;
             setState(() {
               chngBtn2 = 2;

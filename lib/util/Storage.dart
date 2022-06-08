@@ -62,7 +62,7 @@ class Storage {
       gifUrl = gif;
 
       showToast(context, "Gif Uploaded");
-      Navigator.of(context).pop();
+      //Navigator.of(context).pop();
     }));
   }
 
