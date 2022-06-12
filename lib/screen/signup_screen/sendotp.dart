@@ -59,6 +59,7 @@ class _SendOTPState extends State<SendOTP> {
                 child: TextFormField(
                   onChanged: ((value) {
                     curemail = value;
+                    cnfEmail = value;
                   }),
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.only(left: 10, right: 20),
@@ -68,20 +69,9 @@ class _SendOTPState extends State<SendOTP> {
                   ),
                 ),
               ).pOnly(bottom: y / 32, left: x / 16, right: x / 16),
-              Container(
+              SizedBox(
                 height: y / 16,
-                child: TextField(
-                  onChanged: ((value) {
-                    cnfEmail = value;
-                  }),
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.only(left: 10, right: 20),
-                    label: "Confirm Your Email ID".text.make().px8(),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(y / 20)),
-                  ),
-                ),
-              ).pOnly(bottom: y / 32, left: x / 16, right: x / 16),
+              ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -113,6 +103,10 @@ class _SendOTPState extends State<SendOTP> {
                     });
                     sendotp(context);
                   }),
+                  
+                    SizedBox(
+                      height: y / 16,
+                    ),
                   Row(children: <Widget>[
                     Expanded(
                       child: new Container(

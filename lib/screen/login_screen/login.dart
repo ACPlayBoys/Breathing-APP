@@ -83,6 +83,7 @@ class _LoginState extends State<Login> {
                     child: TextField(
                       onChanged: (value) {
                         curemail = value.toLowerCase().trim();
+                        cnfemail = value.toLowerCase().trim();
                       },
                       decoration: InputDecoration(
                         contentPadding: EdgeInsets.only(left: 10, right: 20),
@@ -92,20 +93,6 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                   ).pOnly(bottom: y / 32, left: x / 16, right: x / 16),
-                  Container(
-                    height: y / 16,
-                    child: TextField(
-                      onChanged: (value) {
-                        cnfemail = value.toLowerCase().trim();
-                      },
-                      decoration: InputDecoration(
-                        contentPadding: EdgeInsets.only(left: 10, right: 20),
-                        label: "Confirm Your Email Address".text.make().px8(),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(y / 20)),
-                      ),
-                    ),
-                  ).pOnly(left: x / 16, right: x / 16),
                 ],
               ).pOnly(bottom: y / 16),
               Row(

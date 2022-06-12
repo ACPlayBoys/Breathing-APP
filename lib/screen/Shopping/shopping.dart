@@ -100,7 +100,47 @@ class _ShoppingState extends State<Shopping> {
                           else
                             Storage.getAllMusic();
                         },
-                        label: "Popular".text.extraBold.make()),
+                        label: "Pictures".text.extraBold.make()),
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.blue),
+                        borderRadius: BorderRadius.circular(y / 16)),
+                  ),
+                  Container(
+                    width: x / 5,
+                    height: y / 25,
+                    child: FilterChip(
+                        selected: chipPopular,
+                        selectedColor: borderColor,
+                        onSelected: (bool value) {
+                          chipPopular = value;
+                          if (chipRecnt) chipRecnt = !value;
+                          setState(() {});
+                          if (chipPopular)
+                            Storage.getPouplar();
+                          else
+                            Storage.getAllMusic();
+                        },
+                        label: "Musics".text.extraBold.make()),
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.blue),
+                        borderRadius: BorderRadius.circular(y / 16)),
+                  ),
+                  Container(
+                    width: x / 5,
+                    height: y / 25,
+                    child: FilterChip(
+                        selected: chipPopular,
+                        selectedColor: borderColor,
+                        onSelected: (bool value) {
+                          chipPopular = value;
+                          if (chipRecnt) chipRecnt = !value;
+                          setState(() {});
+                          if (chipPopular)
+                            Storage.getPouplar();
+                          else
+                            Storage.getAllMusic();
+                        },
+                        label: "Animations".text.extraBold.make()),
                     decoration: BoxDecoration(
                         border: Border.all(color: Colors.blue),
                         borderRadius: BorderRadius.circular(y / 16)),

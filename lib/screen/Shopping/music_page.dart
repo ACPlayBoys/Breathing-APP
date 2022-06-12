@@ -5,6 +5,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:breathing_app/util/Storage.dart';
 import 'package:breathing_app/util/routes.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
@@ -26,7 +27,7 @@ class MusicScreen extends StatefulWidget {
 
 class _MusicScreenState extends State<MusicScreen> {
   late Razorpay razorpay;
-
+  late User u;
   final String path = "asset/images/shopping/";
   late MusicModel m;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -86,8 +87,22 @@ class _MusicScreenState extends State<MusicScreen> {
     }
   }
 
-  handlerSucess(response) {
+  handlerSucess(PaymentSuccessResponse response) {
     showToast(context, 'Payment Sucessful');
+    Map<String, dynamic> paymentMap = {
+      'orderId': response.orderId,
+      'customer name': u.displayName,
+      'payer id': u.uid,
+      'payment id': response.paymentId,
+      'Total amount': m.price,
+      'product name': m.name,
+      'time': DateTime.now().millisecondsSinceEpoch,
+      'status': 'Success'
+    };
+    FirebaseFirestore.instance
+        .collection('payments')
+        .doc(response.orderId)
+        .set(paymentMap, SetOptions(merge: true));
   }
 
   handlerError(PaymentFailureResponse response) {
@@ -104,7 +119,7 @@ class _MusicScreenState extends State<MusicScreen> {
     }
   }
 
-  handlerExtWallet(response) {
+  handlerExtWallet(ExternalWalletResponse response) {
     showToast(context, 'External Wallet');
   }
 

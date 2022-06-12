@@ -132,7 +132,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
                           min: 0,
                           max: Storage.gifUrl.frames,
                           period: Duration(milliseconds: speed));
-                      onSpeedInc();
+                      // onSpeedInc();
                     }).pOnly(right: x / 32),
                     Container(
                       child: buildContainer(
@@ -143,7 +143,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
                           min: 0,
                           max: Storage.gifUrl.frames,
                           period: Duration(milliseconds: speed));
-                      onSpeedDec();
+                      // onSpeedDec();
                     }).pOnly(left: x / 32)
                   ],
                 ).pOnly(bottom: y / 32),
@@ -175,19 +175,19 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
     );
   }
 
-  onSpeedInc() {
-    setState(() {
-      playbackSpeed += 0.5;
-    });
-    audioPlayer.setPlaybackRate(playbackSpeed);
-  }
+  // onSpeedInc() {
+  //   setState(() {
+  //     playbackSpeed += 0.5;
+  //   });
+  //   audioPlayer.setPlaybackRate(playbackSpeed);
+  // }
 
-  onSpeedDec() {
-    setState(() {
-      playbackSpeed -= 0.5;
-    });
-    audioPlayer.setPlaybackRate(playbackSpeed);
-  }
+  // onSpeedDec() {
+  //   setState(() {
+  //     playbackSpeed -= 0.5;
+  //   });
+  //   audioPlayer.setPlaybackRate(playbackSpeed);
+  // }
 
   onPause() {
     controller.stop();

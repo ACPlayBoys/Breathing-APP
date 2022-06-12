@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "G:\\Flutter\\test\\Breathing App\\breathing_app\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "outputFile": "C:\\Users\\rai09\\Android_ShellCode\\breathebreathe\\Breathing-App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\MY PlayPC\\.gradle\\caches\\transforms-2\\files-2.1\\fd1b40863fa5efb4757257466e4f771c\\jetified-checkout-1.6.19\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\rai09\\.gradle\\caches\\transforms-2\\files-2.1\\fd1b40863fa5efb4757257466e4f771c\\jetified-checkout-1.6.19\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

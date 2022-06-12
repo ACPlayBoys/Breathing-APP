@@ -88,7 +88,7 @@ class _MusicState extends State<Music> {
               child: Container(
                 width: x / 3,
                 height: y / 16,
-                child: "Submit".text.lg.bold.makeCentered().px16(),
+                child: "Add Your Music".text.lg.bold.makeCentered().px16(),
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.blue),
                     borderRadius: BorderRadius.circular(y / 16)),
@@ -113,7 +113,6 @@ class _MusicState extends State<Music> {
     setState(() {
       pickedFile = result.files.single;
     });
-    showToast(context, 'Uploading File Selected : ${pickedFile!.name}');
     showLoaderDialog(context);
     final path = 'files/$currentUid/${pickedFile!.name}';
     final file = File(pickedFile!.path!);
@@ -142,6 +141,5 @@ class _MusicState extends State<Music> {
       'timeStamp': DateTime.now(),
     });
     Navigator.of(context).pop();
-    showToast(context, 'File Selected : ${pickedFile!.name}');
   }
 }

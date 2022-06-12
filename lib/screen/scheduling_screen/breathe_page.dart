@@ -54,7 +54,7 @@ class Breathe extends StatelessWidget {
                 isDense: true,
                 isExpanded: true,
                 value: selectedValue,
-                items: gender,
+                items: drop1,
                 onChanged: (Object? value) {},
               ).centered(),
             ),
@@ -70,7 +70,7 @@ class Breathe extends StatelessWidget {
                 isDense: true,
                 isExpanded: true,
                 value: selectedValue,
-                items: gender,
+                items: drop2,
                 onChanged: (Object? value) {},
               ).centered(),
             ),
@@ -84,10 +84,24 @@ class Breathe extends StatelessWidget {
     ));
   }
 
-  List<DropdownMenuItem<String>> get gender {
+  List<DropdownMenuItem<String>> get drop1 {
     List<DropdownMenuItem<String>> menuItems = [
-      DropdownMenuItem(child: Text("Male"), value: "male"),
-      DropdownMenuItem(child: Text("Female"), value: "female"),
+      DropdownMenuItem(child: Text("100"), value: "100"),
+      DropdownMenuItem(child: Text("80"), value: "80"),
+      DropdownMenuItem(child: Text("60"), value: "60"),
+      DropdownMenuItem(child: Text("40"), value: "40"),
+      DropdownMenuItem(child: Text("20"), value: "20"),
+    ];
+    return menuItems;
+  }
+
+  List<DropdownMenuItem<String>> get drop2 {
+    List<DropdownMenuItem<String>> menuItems = [
+      DropdownMenuItem(child: Text("20"), value: "20"),
+      DropdownMenuItem(child: Text("40"), value: "40"),
+      DropdownMenuItem(child: Text("60"), value: "60"),
+      DropdownMenuItem(child: Text("80"), value: "80"),
+      DropdownMenuItem(child: Text("100"), value: "100"),
     ];
     return menuItems;
   }
