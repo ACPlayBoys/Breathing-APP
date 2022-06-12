@@ -18,6 +18,7 @@ class Shopping extends StatefulWidget {
 class _ShoppingState extends State<Shopping> {
   final String path = "asset/images/shopping/";
   bool playing = false;
+  List<bool> chips = [false, false, false, false, false, false, false];
   bool chipRecnt = false;
   bool chipPopular = false;
   final AudioPlayer player = AudioPlayer();
@@ -62,100 +63,123 @@ class _ShoppingState extends State<Shopping> {
             ],
           ).pOnly(top: y / 25, bottom: y / 30).px(x / 24),
           AnimatedCrossFade(
-              firstChild: Row(
-                children: [
-                  Container(
-                    width: x / 5,
-                    height: y / 25,
-                    child: FilterChip(
-                        selected: chipRecnt,
-                        selectedColor: borderColor,
-                        onSelected: (bool value) {
-                          chipRecnt = value;
-
-                          if (chipPopular) chipPopular = !value;
+              firstChild: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      width: x / 5,
+                      height: y / 25,
+                      child: FilterChip(
+                          selected: chips[0],
+                          selectedColor: borderColor,
+                          onSelected: (bool value) {
+                            for (int u = 0; u < chips.length; u++) {
+                              if (u == 0) {
+                                chips[0] = value;
+                              } else {
+                                chips[u] = false;
+                              }
+                            }
+                            setState(() {});
+                            if (chips[0])
+                              Storage.getRecent();
+                            else
+                              Storage.getAllMusic();
+                          },
+                          label: "Recent".text.extraBold.make()),
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.blue),
+                          borderRadius: BorderRadius.circular(y / 16)),
+                    ).onInkTap(() {}).pOnly(right: x / 64),
+                    Container(
+                      width: x / 5,
+                      height: y / 25,
+                      child: FilterChip(
+                          selected: chips[1],
+                          selectedColor: borderColor,
+                          onSelected: (bool value) {
+                            for (int u = 0; u < chips.length; u++) {
+                              if (u == 1) {
+                                chips[1] = value;
+                              } else {
+                                chips[u] = false;
+                              }
+                            }
+                            setState(() {});
+                            if (chips[1])
+                              Storage.getPictures();
+                            else
+                              Storage.getAllMusic();
+                          },
+                          label: "Pictures".text.extraBold.make()),
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.blue),
+                          borderRadius: BorderRadius.circular(y / 16)),
+                    ).pOnly(right: x / 64),
+                    Container(
+                      width: x / 5,
+                      height: y / 25,
+                      child: FilterChip(
+                          selected: chips[2],
+                          selectedColor: borderColor,
+                          onSelected: (bool value) {
+                            for (int u = 0; u < chips.length; u++) {
+                              if (u == 2) {
+                                chips[2] = value;
+                              } else {
+                                chips[u] = false;
+                              }
+                            }
+                            setState(() {});
+                            if (chips[2])
+                              Storage.getPouplar();
+                            else
+                              Storage.getAllMusic();
+                          },
+                          label: "Musics".text.extraBold.make()),
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.blue),
+                          borderRadius: BorderRadius.circular(y / 16)),
+                    ).pOnly(right: x / 64),
+                    Container(
+                      width: x / 5,
+                      height: y / 25,
+                      child: FilterChip(
+                          selected: chips[3],
+                          selectedColor: borderColor,
+                          onSelected: (bool value) {
+                            chipPopular = value;
+                            for (int u = 0; u < chips.length; u++) {
+                              if (u == 3) {
+                                chips[3] = value;
+                              } else {
+                                chips[u] = false;
+                              }
+                            }
+                            setState(() {});
+                            if (chips[3])
+                              Storage.getAnimation();
+                            else
+                              Storage.getAllMusic();
+                          },
+                          label: "Animations".text.extraBold.make()),
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.blue),
+                          borderRadius: BorderRadius.circular(y / 16)),
+                    ).pOnly(right: x / 64),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Image.asset(path + "search.png").onInkTap(() {
+                          searchShow = true;
                           setState(() {});
-                          if (chipRecnt)
-                            Storage.getRecent();
-                          else
-                            Storage.getAllMusic();
-                        },
-                        label: "Recent".text.extraBold.make()),
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.blue),
-                        borderRadius: BorderRadius.circular(y / 16)),
-                  ).onInkTap(() {}).pOnly(right: x / 32),
-                  Container(
-                    width: x / 5,
-                    height: y / 25,
-                    child: FilterChip(
-                        selected: chipPopular,
-                        selectedColor: borderColor,
-                        onSelected: (bool value) {
-                          chipPopular = value;
-                          if (chipRecnt) chipRecnt = !value;
-                          setState(() {});
-                          if (chipPopular)
-                            Storage.getPouplar();
-                          else
-                            Storage.getAllMusic();
-                        },
-                        label: "Pictures".text.extraBold.make()),
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.blue),
-                        borderRadius: BorderRadius.circular(y / 16)),
-                  ),
-                  Container(
-                    width: x / 5,
-                    height: y / 25,
-                    child: FilterChip(
-                        selected: chipPopular,
-                        selectedColor: borderColor,
-                        onSelected: (bool value) {
-                          chipPopular = value;
-                          if (chipRecnt) chipRecnt = !value;
-                          setState(() {});
-                          if (chipPopular)
-                            Storage.getPouplar();
-                          else
-                            Storage.getAllMusic();
-                        },
-                        label: "Musics".text.extraBold.make()),
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.blue),
-                        borderRadius: BorderRadius.circular(y / 16)),
-                  ),
-                  Container(
-                    width: x / 5,
-                    height: y / 25,
-                    child: FilterChip(
-                        selected: chipPopular,
-                        selectedColor: borderColor,
-                        onSelected: (bool value) {
-                          chipPopular = value;
-                          if (chipRecnt) chipRecnt = !value;
-                          setState(() {});
-                          if (chipPopular)
-                            Storage.getPouplar();
-                          else
-                            Storage.getAllMusic();
-                        },
-                        label: "Animations".text.extraBold.make()),
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.blue),
-                        borderRadius: BorderRadius.circular(y / 16)),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Image.asset(path + "search.png").onInkTap(() {
-                        searchShow = true;
-                        setState(() {});
-                      }),
-                    ],
-                  ).expand()
-                ],
-              ).px(x / 16),
+                        }),
+                      ],
+                    )
+                  ],
+                ).px(x / 16),
+              ),
               secondChild: TextFormField(
                 autofocus: true,
                 onChanged: (value) {
@@ -203,9 +227,9 @@ class _ShoppingState extends State<Shopping> {
                             child: Row(
                               children: [
                                 buildContainer(
-                                  child: Image.network(
-                                    m.image,
-                                    width: 60,
+                                  child: CircleAvatar(
+                                    backgroundImage: NetworkImage(m.image),
+                                    radius: 30,
                                   ).p4(),
                                 ),
                                 Column(

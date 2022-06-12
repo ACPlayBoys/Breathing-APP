@@ -6,12 +6,14 @@ class MusicModel {
   final String name;
   final String image;
   final String link;
+  final String type;
   final int price;
   MusicModel({
     required this.duration,
     required this.name,
     required this.image,
     required this.link,
+    required this.type,
     required this.price,
   });
 
@@ -20,6 +22,7 @@ class MusicModel {
     String? name,
     String? image,
     String? link,
+    String? type,
     int? price,
   }) {
     return MusicModel(
@@ -27,6 +30,7 @@ class MusicModel {
       name: name ?? this.name,
       image: image ?? this.image,
       link: link ?? this.link,
+      type: type ?? this.type,
       price: price ?? this.price,
     );
   }
@@ -37,6 +41,7 @@ class MusicModel {
       'name': name,
       'image': image,
       'link': link,
+      'type': type,
       'price': price,
     };
   }
@@ -47,6 +52,7 @@ class MusicModel {
       name: map['name'] as String,
       image: map['image'] as String,
       link: map['link'] as String,
+      type: map['type'] as String,
       price: map['price'] as int,
     );
   }
@@ -57,7 +63,7 @@ class MusicModel {
 
   @override
   String toString() {
-    return 'MusicModel(duration: $duration, name: $name, image: $image, link: $link, price: $price)';
+    return 'MusicModel(duration: $duration, name: $name, image: $image, link: $link, type: $type, price: $price)';
   }
 
   @override
@@ -69,6 +75,7 @@ class MusicModel {
       other.name == name &&
       other.image == image &&
       other.link == link &&
+      other.type == type &&
       other.price == price;
   }
 
@@ -78,6 +85,7 @@ class MusicModel {
       name.hashCode ^
       image.hashCode ^
       link.hashCode ^
+      type.hashCode ^
       price.hashCode;
   }
 }

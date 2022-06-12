@@ -1,3 +1,4 @@
+import 'package:breathing_app/dummy.dart';
 import 'package:breathing_app/screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

@@ -87,17 +87,10 @@ class Storage {
   }
 
   static Future<void> addDummy(context) async {
-    List<String> names = [
-      "Rajsthan mist",
-      "Kashmiri Snow",
-      "Marathi Rain",
-      "Punjabi Thand",
-      "Chennai Express",
-      "Bihari Chai"
-    ];
+    List<String> names = ["ny", "downtown", "tokyo", "shanghai"];
 
     FilePickerResult? result = await FilePicker.platform
-        .pickFiles(allowMultiple: true, type: FileType.audio);
+        .pickFiles(allowMultiple: true, type: FileType.any);
     if (result != null) {
       List<File> files = result.paths.map((path) => File(path!)).toList();
       int i = 0;
@@ -114,9 +107,9 @@ class Storage {
         showToast(context, "Uplaoding music $i");
         snapshot1.whenComplete((() async {
           var audio = await snapshot1.snapshot.ref.getDownloadURL();
-          String thumb =
-              "https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/shoppingImage%2Frajasthan.png?alt=media&token=427e1a1a-6c6b-499c-a649-3af2f0b5fafe";
+          String thumb = audio;
           MusicModel m = MusicModel(
+              type: "animation",
               link: audio,
               duration: "300",
               name: name,
@@ -154,6 +147,30 @@ class Storage {
 
       audios.notifyListeners();
     });
+  }
+
+  static void getPictures([bool bula = true]) async {
+    audios.value = [];
+    allmusic.forEach((element) {
+      if (element.type == "picture") audios.value.add(element);
+    });
+    audios.notifyListeners();
+  }
+
+  static void getAnimation([bool bula = true]) async {
+    audios.value = [];
+    allmusic.forEach((element) {
+      if (element.type == "animation") audios.value.add(element);
+    });
+    audios.notifyListeners();
+  }
+
+  static void getMusic([bool bula = true]) async {
+    audios.value = [];
+    allmusic.forEach((element) {
+      if (element.type == "music") audios.value.add(element);
+    });
+    audios.notifyListeners();
   }
 
   static void getRecent() async {

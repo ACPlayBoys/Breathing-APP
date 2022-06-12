@@ -8,6 +8,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gifimage/flutter_gifimage.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -154,7 +155,12 @@ class _MusicScreenState extends State<MusicScreen> {
                   }),
                 ],
               ).pOnly(top: y / 25, bottom: y / 30).px(x / 24),
-              buildContainer(child: Image.network(m.image).p8()).centered(),
+              buildContainer(
+                      child: CircleAvatar(
+                backgroundImage: NetworkImage(m.image),
+                radius: y / 8,
+              ).p8())
+                  .centered(),
               m.name.text.xl2.bold.makeCentered(),
               "${m.duration} Mins".text.lg.makeCentered(),
               Row(
