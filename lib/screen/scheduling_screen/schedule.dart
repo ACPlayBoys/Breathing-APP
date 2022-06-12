@@ -142,7 +142,7 @@ class _SchedulingState extends State<Scheduling> {
       Navigator.of(context).push(Routes.createHomeRoute());
     } else {
       _pageController.animateToPage(_pageController.page!.toInt() + 1,
-          duration: Duration(milliseconds: 400), curve: Curves.easeIn);
+          duration: Duration(milliseconds: 200), curve: Curves.easeIn);
 
       setState(() {
         next = false;
@@ -153,7 +153,7 @@ class _SchedulingState extends State<Scheduling> {
   void previousPage() {
     if (_pageController.page! > 0) {
       _pageController.animateToPage(_pageController.page!.toInt() - 1,
-          duration: Duration(milliseconds: 400), curve: Curves.easeIn);
+          duration: Duration(milliseconds: 200), curve: Curves.easeIn);
       setState(() {
         next = false;
       });

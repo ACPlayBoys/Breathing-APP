@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 import 'dart:io';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:breathing_app/util/constants.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:file_picker/file_picker.dart';
@@ -28,6 +29,9 @@ class _MusicState extends State<Music> {
   UploadTask? uploadTask;
   final String path = "asset/images/schedule/";
   String currentUid = '';
+  AudioPlayer player = AudioPlayer();
+
+  bool playing = false;
 
   @override
   void initState() {
@@ -96,6 +100,43 @@ class _MusicState extends State<Music> {
             ),
           ],
         ).px(x / 10).pOnly(top: y / 32, bottom: y / 45),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Row(
+              children: [
+                "Preview"
+                    .text
+                    .size(15)
+                    .color(Color(0xff2C6AE4))
+                    .make()
+                    .pOnly(right: x / 64),
+                Container(
+                  width: 34,
+                  height: 34,
+                  child: Icon(
+                    playing ? Icons.pause : Icons.play_arrow,
+                    color: Colors.white,
+                  ).onInkTap(() async {
+                    if (pickedFile == null) {
+                      showToast(context, "Please Select File");
+                      return;
+                    }
+                    if (playing)
+                      player.pause();
+                    else
+                      player.play(pickedFile!.path!, isLocal: true);
+
+                    playing = !playing;
+                  }),
+                  decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(20)),
+                )
+              ],
+            ),
+          ],
+        ).px(x / 8).pOnly(bottom: y / 45),
         Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: ["Almost There".text.bold.lg.makeCentered()],

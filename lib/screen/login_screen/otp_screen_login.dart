@@ -54,7 +54,7 @@ class _LoginOTPScreenState extends State<LoginOTPScreen> {
         ).pOnly(top: 64),
         AnimatedContainer(
                 color: Colors.white60,
-                duration: Duration(seconds: 1),
+                duration: Duration(milliseconds: 500),
                 width: chngBtn2 == 0 ? 50 : 100,
                 height: 50,
                 alignment: Alignment.center,
@@ -90,7 +90,7 @@ class _LoginOTPScreenState extends State<LoginOTPScreen> {
           try {
             chngBtn2 = 0;
             setState(() {});
-            await Future.delayed(Duration(milliseconds: 5000));
+            await Future.delayed(Duration(milliseconds: 500));
             final credential = FirebaseAuth.instance.currentUser;
             CollectionReference users =
                 FirebaseFirestore.instance.collection('Users');
@@ -111,7 +111,7 @@ class _LoginOTPScreenState extends State<LoginOTPScreen> {
             });
             chngBtn2 = 2;
             setState(() {});
-            await Future.delayed(Duration(milliseconds: 2000));
+            await Future.delayed(Duration(milliseconds: 1000));
             await Navigator.of(context).push(Routes.createSchedulingRoute());
             print(FirebaseAuth.instance.currentUser);
           } on FirebaseAuthException catch (e) {
@@ -126,8 +126,8 @@ class _LoginOTPScreenState extends State<LoginOTPScreen> {
               print('Wrong password provided for that user.');
             }
           }
-        }
-        else showToast(context, "Incorrect Otp:Please Enter correct Otp ");
+        } else
+          showToast(context, "Incorrect Otp:Please Enter correct Otp ");
       },
     );
   }

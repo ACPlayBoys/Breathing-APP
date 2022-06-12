@@ -76,7 +76,7 @@ class _SendOTPState extends State<SendOTP> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   AnimatedContainer(
-                    duration: Duration(seconds: 1),
+                    duration: Duration(milliseconds: 500),
                     width: chngBtn2 == 1 ? 50 : 150,
                     height: y / 16,
                     alignment: Alignment.center,
@@ -185,10 +185,10 @@ class _SendOTPState extends State<SendOTP> {
           chngBtn2 = 2;
         });
         showToast(context, "Otp Sent");
-        await Future.delayed(Duration(milliseconds: 2000));
+        await Future.delayed(Duration(milliseconds: 500));
         widget.pageController.animateToPage(
             widget.pageController.page!.toInt() + 1,
-            duration: Duration(milliseconds: 400),
+            duration: Duration(milliseconds: 200),
             curve: Curves.easeIn);
       } else {
         setState(() {

@@ -121,7 +121,7 @@ class _OnBoardingState extends State<OnBoarding> {
       Navigator.of(context).push(Routes.createSignUpRoute());
     } else {
       _pageController.animateToPage(_pageController.page!.toInt() + 1,
-          duration: Duration(milliseconds: 400), curve: Curves.easeIn);
+          duration: Duration(milliseconds: 200), curve: Curves.easeIn);
 
       setState(() {
         next = false;
@@ -131,6 +131,6 @@ class _OnBoardingState extends State<OnBoarding> {
 
   void previousPage() {
     _pageController.animateToPage(_pageController.page!.toInt() - 1,
-        duration: Duration(milliseconds: 400), curve: Curves.easeIn);
+        duration: Duration(milliseconds: 200), curve: Curves.easeIn);
   }
 }

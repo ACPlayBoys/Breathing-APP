@@ -62,6 +62,10 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
         error: event.toString(),
       );
     });
+    audioPlayer.onDurationChanged.listen((Duration d) {
+      print('Max duration: $d');
+      setState(() => canPlay = true);
+    });
     controller = GifController(vsync: this);
 
     currentUid = _auth.currentUser!.uid;
@@ -128,10 +132,12 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
                           child: Image.asset(path + "add.png").p2()),
                     ).onInkTap(() {
                       speed > 200 ? speed -= 200 : speed = 200;
-                      controller.repeat(
-                          min: 0,
-                          max: Storage.gifUrl.frames,
-                          period: Duration(milliseconds: speed));
+                      if (isPlaying) {
+                        controller.repeat(
+                            min: 0,
+                            max: Storage.gifUrl.frames,
+                            period: Duration(milliseconds: speed));
+                      }
                       // onSpeedInc();
                     }).pOnly(right: x / 32),
                     Container(
@@ -139,10 +145,12 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
                           child: Image.asset(path + "minus.png").p2()),
                     ).onInkTap(() {
                       speed < 2000 ? speed += 200 : speed = 2000;
-                      controller.repeat(
-                          min: 0,
-                          max: Storage.gifUrl.frames,
-                          period: Duration(milliseconds: speed));
+                      if (isPlaying) {
+                        controller.repeat(
+                            min: 0,
+                            max: Storage.gifUrl.frames,
+                            period: Duration(milliseconds: speed));
+                      }
                       // onSpeedDec();
                     }).pOnly(left: x / 32)
                   ],

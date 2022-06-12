@@ -99,7 +99,7 @@ class _LoginState extends State<Login> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   AnimatedContainer(
-                    duration: Duration(seconds: 1),
+                    duration: Duration(milliseconds: 500),
                     width: chngBtn2 == 1 ? 50 : 150,
                     height: y / 16,
                     alignment: Alignment.center,
@@ -130,7 +130,7 @@ class _LoginState extends State<Login> {
                               email: email, password: email);
                       showToast(context, "Sending Otp");
                       sendotp(email, context);
-                      await Future.delayed(Duration(seconds: 1));
+                      await Future.delayed(Duration(milliseconds: 500));
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'user-not-found') {
                         showToast(context, 'No user found for that email.');
@@ -143,7 +143,7 @@ class _LoginState extends State<Login> {
                     }
                   }),
                 ],
-              ),
+              ).pOnly(bottom: y / 16),
               Row(children: <Widget>[
                 Expanded(
                   child: new Container(
@@ -163,21 +163,21 @@ class _LoginState extends State<Login> {
                       )),
                 ),
               ]).pOnly(top: y / 64, bottom: y / 128),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  "Login Using".text.lg.bold.makeCentered(),
-                ],
-              ).pOnly(bottom: y / 128),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(path + "apple.png").px8(),
-                  Image.asset(path + "google.png").p8(),
-                  Image.asset(path + "fb.png").px8(),
-                  Image.asset(path + "twitter.png").px8(),
-                ],
-              ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+              //     "Login Using".text.lg.bold.makeCentered(),
+              //   ],
+              // ).pOnly(bottom: y / 128),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+              //     Image.asset(path + "apple.png").px8(),
+              //     Image.asset(path + "google.png").p8(),
+              //     Image.asset(path + "fb.png").px8(),
+              //     Image.asset(path + "twitter.png").px8(),
+              //   ],
+              // ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

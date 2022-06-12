@@ -17,7 +17,7 @@ class Upload extends StatelessWidget {
   var selectedValue;
 
   int framecount = 3;
-  
+  bool selected = false;
 
   Upload({Key? key}) : super(key: key);
   final String path = "asset/images/schedule/";
@@ -62,7 +62,10 @@ class Upload extends StatelessWidget {
                     border: Border.all(color: Colors.blue),
                     borderRadius: BorderRadius.circular(x / 6)),
               ).onInkTap(() {
-                showPicker(context, 0);
+                if (selected)
+                  showPicker(context, 0);
+                else
+                  _getMultiFromGallery(0);
               }),
               Container(
                 width: x / 8,
@@ -460,6 +463,56 @@ class Upload extends StatelessWidget {
     }
   }
 
+  showMultiPicker(context, int i) {
+    showModalBottomSheet(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(10))),
+        context: context,
+        builder: (context) {
+          return Container(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                "Please Pick an Image".text.make(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton(
+                        onPressed: (() {
+                          Navigator.of(context).pop();
+                          _getFromGallery(true, i);
+                        }),
+                        child: "Camera".text.make()),
+                    TextButton(
+                        onPressed: (() {
+                          Navigator.of(context).pop();
+                          _getFromGallery(false, i);
+                        }),
+                        child: "Gallery".text.make()),
+                  ],
+                )
+              ],
+            ).p8(),
+          );
+        });
+  }
+
+  _getMultiFromGallery(int i) async {
+    List<XFile>? pickedFile = await ImagePicker().pickMultiImage(
+      maxWidth: 800,
+      maxHeight: 800,
+    );
+    if (pickedFile != null) {
+      int i = 0;
+      for (XFile file in pickedFile) {
+        Storage.gifPath[i] = file.path;
+        i++;
+      }
+      selected = true;
+    }
+  }
+
   makegif(context) async {
     showLoaderDialog(context);
     gifFiles = [];
@@ -479,6 +532,4 @@ class Upload extends StatelessWidget {
     print(gifPath);
     showCustomDialog(context, gifPath);
   }
-
-  
 }

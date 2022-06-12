@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\rai09\\Android_ShellCode\\breathebreathe\\Breathing-App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
+            "outputFile": "K:\\Aniket\\Flutter\\Projects\\Breathing-App-1\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\rai09\\.gradle\\caches\\transforms-2\\files-2.1\\14b93615368c2249f1830e26ca064ab5\\core-1.6.0\\res\\values-en-rAU\\values-en-rAU.xml",
+                    "source": "C:\\Users\\MY PlayPC\\.gradle\\caches\\transforms-2\\files-2.1\\14b93615368c2249f1830e26ca064ab5\\core-1.6.0\\res\\values-en-rAU\\values-en-rAU.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\rai09\\.gradle\\caches\\transforms-2\\files-2.1\\41d4be5eb5378188ab6b2a373d6a5fe7\\jetified-play-services-wallet-18.1.3\\res\\values-en-rAU\\values.xml",
+                    "source": "C:\\Users\\MY PlayPC\\.gradle\\caches\\transforms-2\\files-2.1\\41d4be5eb5378188ab6b2a373d6a5fe7\\jetified-play-services-wallet-18.1.3\\res\\values-en-rAU\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

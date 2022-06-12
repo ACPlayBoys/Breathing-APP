@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\rai09\\Android_ShellCode\\breathebreathe\\Breathing-App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rIN\\values-en-rIN.xml",
+            "outputFile": "K:\\Aniket\\Flutter\\Projects\\Breathing-App-1\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rIN\\values-en-rIN.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\rai09\\.gradle\\caches\\transforms-2\\files-2.1\\41d4be5eb5378188ab6b2a373d6a5fe7\\jetified-play-services-wallet-18.1.3\\res\\values-en-rIN\\values.xml",
+                    "source": "C:\\Users\\MY PlayPC\\.gradle\\caches\\transforms-2\\files-2.1\\14b93615368c2249f1830e26ca064ab5\\core-1.6.0\\res\\values-en-rIN\\values-en-rIN.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\MY PlayPC\\.gradle\\caches\\transforms-2\\files-2.1\\41d4be5eb5378188ab6b2a373d6a5fe7\\jetified-play-services-wallet-18.1.3\\res\\values-en-rIN\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -18,16 +28,6 @@
                         "startOffsets": "156",
                         "endColumns": "74",
                         "endOffsets": "226"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\rai09\\.gradle\\caches\\transforms-2\\files-2.1\\14b93615368c2249f1830e26ca064ab5\\core-1.6.0\\res\\values-en-rIN\\values-en-rIN.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
                     }
                 }
             ]

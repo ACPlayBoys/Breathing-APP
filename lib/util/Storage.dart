@@ -27,14 +27,14 @@ class Storage {
       name: "default",
       link:
           "https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/images%2Fdefault.gif?alt=media&token=3f062989-ba7f-414c-8098-b29da240fc5a",
-      frames: 3);
+      frames: 19);
 
   static void setDeafultGif(BuildContext context) {
     GifData gif = GifData(
         name: "default",
         link:
             "https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/images%2Fdefault.gif?alt=media&token=3f062989-ba7f-414c-8098-b29da240fc5a",
-        frames: 3);
+        frames: 19);
     FirebaseFirestore.instance
         .collection("Gif")
         .doc(FirebaseAuth.instance.currentUser!.uid)
@@ -46,7 +46,7 @@ class Storage {
     var uuid = Uuid();
     final _firebaseStorage = FirebaseStorage.instance.ref();
     //thumb
-    showToast(context, "uploading Gif");
+    //showToast(context, "uploading Gif");
 
     var firestore = FirebaseFirestore.instance;
     CollectionReference giff = firestore.collection("Gif");
@@ -61,7 +61,7 @@ class Storage {
       giff.doc(FirebaseAuth.instance.currentUser!.uid).set(gif.toMap());
       gifUrl = gif;
 
-      showToast(context, "Gif Uploaded");
+      //showToast(context, "Gif Uploaded");
       //Navigator.of(context).pop();
     }));
   }

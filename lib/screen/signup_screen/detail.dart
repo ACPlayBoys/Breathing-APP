@@ -219,16 +219,18 @@ class _DetailsState extends State<Details> {
                             thickness: 1,
                           )),
                     ),
-                  ]).pOnly(top: y / 64),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(path + "apple.png").p8(),
-                      Image.asset(path + "google.png").p8(),
-                      Image.asset(path + "fb.png").p8(),
-                      Image.asset(path + "twitter.png").p8(),
-                    ],
-                  ).pOnly(bottom: y / 64),
+                  ])
+                      .pOnly(top: y / 64)
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.center,
+                      //   children: [
+                      //     Image.asset(path + "apple.png").p8(),
+                      //     Image.asset(path + "google.png").p8(),
+                      //     Image.asset(path + "fb.png").p8(),
+                      //     Image.asset(path + "twitter.png").p8(),
+                      //   ],
+                      // )
+                      .pOnly(bottom: y / 64),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

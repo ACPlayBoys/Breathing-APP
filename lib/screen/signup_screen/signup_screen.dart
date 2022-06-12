@@ -14,7 +14,7 @@ class Signup extends StatefulWidget {
 
 class _SignupState extends State<Signup> {
   PageController _pageController = PageController();
-EmailAuth emailAuth =  new EmailAuth(sessionName: "Breathing App");
+  EmailAuth emailAuth = new EmailAuth(sessionName: "Breathing App");
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -29,8 +29,8 @@ EmailAuth emailAuth =  new EmailAuth(sessionName: "Breathing App");
           controller: _pageController,
           children: <Widget>[
             Details(_pageController),
-            SendOTP(_pageController,emailAuth),
-            OTPScreen(_pageController,emailAuth),
+            SendOTP(_pageController, emailAuth),
+            OTPScreen(_pageController, emailAuth),
           ],
         ).expand(),
       ])),
@@ -39,7 +39,7 @@ EmailAuth emailAuth =  new EmailAuth(sessionName: "Breathing App");
 
   void nextPage() {
     _pageController.animateToPage(_pageController.page!.toInt() + 1,
-        duration: Duration(milliseconds: 400), curve: Curves.easeIn);
+        duration: Duration(milliseconds: 200), curve: Curves.easeIn);
 
     setState(() {});
   }
@@ -47,7 +47,7 @@ EmailAuth emailAuth =  new EmailAuth(sessionName: "Breathing App");
   void previousPage() {
     if (_pageController.page! > 0) {
       _pageController.animateToPage(_pageController.page!.toInt() - 1,
-          duration: Duration(milliseconds: 400), curve: Curves.easeIn);
+          duration: Duration(milliseconds: 200), curve: Curves.easeIn);
       setState(() {});
     }
   }

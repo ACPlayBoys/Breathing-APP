@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\rai09\\Android_ShellCode\\breathebreathe\\Breathing-App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "K:\\Aniket\\Flutter\\Projects\\Breathing-App-1\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\rai09\\Android_ShellCode\\breathebreathe\\Breathing-App\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "K:\\Aniket\\Flutter\\Projects\\Breathing-App-1\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
