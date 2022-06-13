@@ -1,6 +1,11 @@
 import 'dart:async';
 import 'dart:developer';
-
+import 'dart:io';
+import 'package:breathing_app/models/gifdata.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:breathing_app/models/musicmodel.dart';
 import 'package:breathing_app/screen/home_screen/mdrawer.dart';
@@ -72,8 +77,21 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
     getReportData();
     // addStreak();
     getAudio();
-    Storage.getGif();
+    getGif();
     super.initState();
+  }
+
+  getGif() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+
+    bool CheckValue = prefs.containsKey('gifData');
+    if (CheckValue) {
+      Storage.gifUrl = (GifData.fromJson(prefs.getString("gifData")!));
+      Storage.giffer.value = 2;
+      print(Storage.gifUrl);
+    } else {
+      Storage.getGif();
+    }
   }
 
   @override
@@ -113,7 +131,11 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
                               child: CircularProgressIndicator())
                           : GifImage(
                               height: y / 4,
-                              image: NetworkImage(Storage.gifUrl.link),
+                              image: value == 1
+                                  ? NetworkImage(Storage.gifUrl.link)
+                                      as ImageProvider
+                                  : FileImage(File(Storage.gifUrl.link))
+                                      as ImageProvider,
                               controller: controller,
                             );
                     }).centered().pOnly(bottom: y / 8),
@@ -289,6 +311,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
       setState(() {
         if (url != null) {
           url = snapshot.docs[reqdoc].data()['link'];
+          print(url);
           print('got url ');
         } else {
           url =
@@ -298,13 +321,29 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
         print('url $url');
       });
     }
-    audioPlayer.setReleaseMode(ReleaseMode.LOOP);
-    audioPlayer.setUrl(url).then((value) => setState(() {
-          canPlay = true;
-        }));
-    ;
+
+    print(url);
+
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+
+    bool CheckValue = prefs.containsKey('audioUrl');
+    if (CheckValue) {
+      audioPlayer
+          .setUrl(prefs.getString("audioUrl")!, isLocal: true)
+          .then((value) => setState(() {
+                // canPlay = true;
+              }));
+    } else {
+      audioPlayer.setReleaseMode(ReleaseMode.LOOP);
+      audioPlayer.setUrl(url).then((value) => setState(() {
+            // canPlay = true;
+          }));
+      Storage.downloadMusic(url, prefs);
+    }
     print('audioSet');
   }
+
+  
 
   Widget buildContainerOnTap({child}) {
     return ClipOval(

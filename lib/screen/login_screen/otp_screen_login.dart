@@ -97,23 +97,27 @@ class _LoginOTPScreenState extends State<LoginOTPScreen> {
             users
                 .doc(credential!.uid)
                 .get()
-                .then((DocumentSnapshot docSnapshot) {
+                .then((DocumentSnapshot docSnapshot) async {
               if (docSnapshot.exists) {
                 print(docSnapshot.data());
                 var json =
                     jsonEncode(docSnapshot.data()); // I am getting stuck here
                 var details = UserDetails.fromJson(json) as UserDetails;
-
+                chngBtn2 = 2;
+                setState(() {});
+                await Future.delayed(Duration(milliseconds: 1000));
+                if (DateTime.now().millisecondsSinceEpoch < details.endDate)
+                  await Navigator.of(context)
+                      .push(Routes.createSchedulingRoute());
+                else
+                  await Navigator.of(context)
+                      .push(Routes.createSubscriptionRoute());
+                print(FirebaseAuth.instance.currentUser);
                 print(details);
               } else {
                 print('Data not present in Database..');
               }
             });
-            chngBtn2 = 2;
-            setState(() {});
-            await Future.delayed(Duration(milliseconds: 1000));
-            await Navigator.of(context).push(Routes.createSchedulingRoute());
-            print(FirebaseAuth.instance.currentUser);
           } on FirebaseAuthException catch (e) {
             setState(() {
               chngBtn2 = 55;

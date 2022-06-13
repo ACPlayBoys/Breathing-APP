@@ -9,6 +9,7 @@ import 'package:breathing_app/screen/reports.dart';
 import 'package:breathing_app/screen/rewards.dart';
 import 'package:breathing_app/screen/scheduling_screen/schedule.dart';
 import 'package:breathing_app/screen/signup_screen/signup_screen.dart';
+import 'package:breathing_app/screen/subscription_screen.dart';
 import 'package:flutter/material.dart';
 
 class Routes {
@@ -30,10 +31,10 @@ class Routes {
     );
   }
 
-  static Route createLoginOtpScreen( emailAuth, useremail) {
+  static Route createLoginOtpScreen(emailAuth, useremail) {
     return PageRouteBuilder(
       pageBuilder: (context, animation, secondaryAnimation) =>
-          LoginOTPScreen(emailAuth,useremail),
+          LoginOTPScreen(emailAuth, useremail),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         const begin = Offset(0.0, 1.0);
         const end = Offset.zero;
@@ -51,6 +52,23 @@ class Routes {
   static Route createLoginRoute() {
     return PageRouteBuilder(
       pageBuilder: (context, animation, secondaryAnimation) => Login(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        const begin = Offset(0.0, 1.0);
+        const end = Offset.zero;
+        final tween = Tween(begin: begin, end: end);
+        final offsetAnimation = animation.drive(tween);
+
+        return SlideTransition(
+          position: offsetAnimation,
+          child: child,
+        );
+      },
+    );
+  }
+
+  static Route createSubscriptionRoute() {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => Subscription(),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         const begin = Offset(0.0, 1.0);
         const end = Offset.zero;

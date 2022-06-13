@@ -67,6 +67,7 @@ MERGED from [:flutter_plugin_android_lifecycle] K:\Aniket\Flutter\Projects\Breat
 MERGED from [:smart_auth] K:\Aniket\Flutter\Projects\Breathing-App-1\build\smart_auth\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:permission_handler_android] K:\Aniket\Flutter\Projects\Breathing-App-1\build\permission_handler_android\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:cloud_firestore] K:\Aniket\Flutter\Projects\Breathing-App-1\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [:shared_preferences_android] K:\Aniket\Flutter\Projects\Breathing-App-1\build\shared_preferences_android\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:firebase_auth] K:\Aniket\Flutter\Projects\Breathing-App-1\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_core] K:\Aniket\Flutter\Projects\Breathing-App-1\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:path_provider_android] K:\Aniket\Flutter\Projects\Breathing-App-1\build\path_provider_android\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
@@ -174,6 +175,8 @@ MERGED from [:permission_handler_android] K:\Aniket\Flutter\Projects\Breathing-A
 MERGED from [:permission_handler_android] K:\Aniket\Flutter\Projects\Breathing-App-1\build\permission_handler_android\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:cloud_firestore] K:\Aniket\Flutter\Projects\Breathing-App-1\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:cloud_firestore] K:\Aniket\Flutter\Projects\Breathing-App-1\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences_android] K:\Aniket\Flutter\Projects\Breathing-App-1\build\shared_preferences_android\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences_android] K:\Aniket\Flutter\Projects\Breathing-App-1\build\shared_preferences_android\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] K:\Aniket\Flutter\Projects\Breathing-App-1\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] K:\Aniket\Flutter\Projects\Breathing-App-1\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] K:\Aniket\Flutter\Projects\Breathing-App-1\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44

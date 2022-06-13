@@ -3,6 +3,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:path_provider/path_provider.dart';
 //import 'package:breathing_app/models/gifdata.dart';
 import 'package:breathing_app/models/gifdata.dart';
 import 'package:breathing_app/models/musicmodel.dart';
@@ -12,6 +13,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 
 import 'constants.dart';
@@ -40,6 +43,8 @@ class Storage {
         .doc(FirebaseAuth.instance.currentUser!.uid)
         .set(gif.toMap())
         .then((value) => showToast(context, "Default Gif Added"));
+
+    downloadGif(gif);
   }
 
   static void uploadGIf(File mal, context, frames) {
@@ -60,6 +65,7 @@ class Storage {
           frames: double.parse(frames.toString()), link: thumbUrl, name: name);
       giff.doc(FirebaseAuth.instance.currentUser!.uid).set(gif.toMap());
       gifUrl = gif;
+      downloadGif(gif);
 
       //showToast(context, "Gif Uploaded");
       //Navigator.of(context).pop();
@@ -72,16 +78,52 @@ class Storage {
     giff
         .doc(FirebaseAuth.instance.currentUser!.uid)
         .get()
-        .then((DocumentSnapshot docSnapshot) {
+        .then((DocumentSnapshot docSnapshot) async {
       if (docSnapshot.exists) {
         print(docSnapshot.data());
         var json = jsonEncode(docSnapshot.data()); // I am getting stuck here
         GifData details = GifData.fromJson(json) as GifData;
         gifUrl = details;
+
         print(details);
         giffer.value = 1;
+        downloadGif(details);
       } else {
         print('Data not present in Database..');
+      }
+    });
+  }
+
+  static downloadGif(GifData details) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    print(await Permission.storage.request());
+    final gsReference = FirebaseStorage.instance.refFromURL(details.link);
+    Directory? appDocDirectory = await getExternalStorageDirectory();
+    String path = appDocDirectory!.path + "/currentgif.gif";
+    final file = File(path);
+    final downloadTask = gsReference.writeToFile(file);
+    downloadTask.snapshotEvents.listen((taskSnapshot) {
+      switch (taskSnapshot.state) {
+        case TaskState.running:
+          // TODO: Handle this case.
+          break;
+        case TaskState.paused:
+          // TODO: Handle this case.
+          break;
+        case TaskState.success:
+          GifData local = GifData(
+              name: details.name, link: file.path, frames: details.frames);
+
+          prefs.setString('gifData', local.toJson());
+          break;
+          // TODO: Handle this case.
+          break;
+        case TaskState.canceled:
+          // TODO: Handle this case.
+          break;
+        case TaskState.error:
+          // TODO: Handle this case.
+          break;
       }
     });
   }
@@ -247,5 +289,37 @@ class Storage {
         whishlist.value.add(music);
     });
     whishlist.notifyListeners();
+  }
+
+  static downloadMusic(String Url, SharedPreferences prefs) async {
+    final gsReference = FirebaseStorage.instance.refFromURL(Url);
+    print(await Permission.storage.request());
+    Directory? appDocDirectory = await getExternalStorageDirectory();
+    String path = appDocDirectory!.path + "/currentMusic.mp3";
+    final file = File(path);
+    final downloadTask = gsReference.writeToFile(file);
+    downloadTask.snapshotEvents.listen((taskSnapshot) {
+      switch (taskSnapshot.state) {
+        case TaskState.running:
+          // TODO: Handle this case.
+          break;
+        case TaskState.paused:
+          // TODO: Handle this case.
+          break;
+        case TaskState.success:
+          print(file.path);
+
+          prefs.setString('audioUrl', file.path);
+          break;
+          // TODO: Handle this case.
+          break;
+        case TaskState.canceled:
+          // TODO: Handle this case.
+          break;
+        case TaskState.error:
+          // TODO: Handle this case.
+          break;
+      }
+    });
   }
 }

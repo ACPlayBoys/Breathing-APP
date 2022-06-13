@@ -1,11 +1,13 @@
 // ignore_for_file: prefer_const_constructors
 import 'dart:io';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:breathing_app/util/Storage.dart';
 import 'package:breathing_app/util/constants.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
 
@@ -181,6 +183,9 @@ class _MusicState extends State<Music> {
       'link': urlDownload,
       'timeStamp': DateTime.now(),
     });
+
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    Storage.downloadMusic(urlDownload, prefs);
     Navigator.of(context).pop();
   }
 }

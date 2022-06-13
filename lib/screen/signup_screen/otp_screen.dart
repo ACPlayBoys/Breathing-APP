@@ -116,7 +116,7 @@ class _OTPScreenState extends State<OTPScreen> {
             );
             CollectionReference users =
                 FirebaseFirestore.instance.collection('Users');
-                var mail=credential.user!.email;
+            var mail = credential.user!.email;
             UserDetails dr = UserDetails(
                 name: userDetails["name"],
                 age: userDetails["age"],
@@ -124,7 +124,17 @@ class _OTPScreenState extends State<OTPScreen> {
                 country: userDetails["country"],
                 uid: credential.user!.uid,
                 time: DateTime.now().toIso8601String(),
-                email: mail!);
+                email: email,
+                adminSubscription: false,
+                audioType: '',
+                block: false,
+                buyDate: 0,
+                buyMonth: '',
+                endDate: 0,
+                expMonth: '',
+                rewards: false,
+                subMonths: 0,
+                subscription: false);
             users.doc(credential.user!.uid).set(dr.toMap());
 
             credential.user!.updateDisplayName(userDetails["name"]);

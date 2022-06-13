@@ -1,65 +1,124 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
 class UserDetails {
-  final String name;
+  final int endDate;
+  final bool adminSubscription;
   final String age;
-  final String gender;
+  final String audioType;
+  final bool block;
+  final int buyDate;
+  final String buyMonth;
   final String country;
-  final String uid;
-  final String time;
   final String email;
+  final String expMonth;
+  final String gender;
+  final String name;
+  final bool rewards;
+  final int subMonths;
+  final bool subscription;
+  final String time;
+  final String uid;
   UserDetails({
-    required this.name,
+    required this.endDate,
+    required this.adminSubscription,
     required this.age,
-    required this.gender,
+    required this.audioType,
+    required this.block,
+    required this.buyDate,
+    required this.buyMonth,
     required this.country,
-    required this.uid,
-    required this.time,
     required this.email,
+    required this.expMonth,
+    required this.gender,
+    required this.name,
+    required this.rewards,
+    required this.subMonths,
+    required this.subscription,
+    required this.time,
+    required this.uid,
   });
 
   UserDetails copyWith({
-    String? name,
+    int? endDate,
+    bool? adminSubscription,
     String? age,
-    String? gender,
+    String? audioType,
+    bool? block,
+    int? buyDate,
+    String? buyMonth,
     String? country,
-    String? uid,
-    String? time,
     String? email,
+    String? expMonth,
+    String? gender,
+    String? name,
+    bool? rewards,
+    int? subMonths,
+    bool? subscription,
+    String? time,
+    String? uid,
   }) {
     return UserDetails(
-      name: name ?? this.name,
+      endDate: endDate ?? this.endDate,
+      adminSubscription: adminSubscription ?? this.adminSubscription,
       age: age ?? this.age,
-      gender: gender ?? this.gender,
+      audioType: audioType ?? this.audioType,
+      block: block ?? this.block,
+      buyDate: buyDate ?? this.buyDate,
+      buyMonth: buyMonth ?? this.buyMonth,
       country: country ?? this.country,
-      uid: uid ?? this.uid,
-      time: time ?? this.time,
       email: email ?? this.email,
+      expMonth: expMonth ?? this.expMonth,
+      gender: gender ?? this.gender,
+      name: name ?? this.name,
+      rewards: rewards ?? this.rewards,
+      subMonths: subMonths ?? this.subMonths,
+      subscription: subscription ?? this.subscription,
+      time: time ?? this.time,
+      uid: uid ?? this.uid,
     );
   }
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      'name': name,
+      'endDate': endDate,
+      'adminSubscription': adminSubscription,
       'age': age,
-      'gender': gender,
+      'audioType': audioType,
+      'block': block,
+      'buyDate': buyDate,
+      'buyMonth': buyMonth,
       'country': country,
-      'uid': uid,
-      'time': time,
       'email': email,
+      'expMonth': expMonth,
+      'gender': gender,
+      'name': name,
+      'rewards': rewards,
+      'subMonths': subMonths,
+      'subscription': subscription,
+      'time': time,
+      'uid': uid,
     };
   }
 
   factory UserDetails.fromMap(Map<String, dynamic> map) {
     return UserDetails(
-      name: map['name'] as String,
+      endDate: map['endDate'].toInt() as int,
+      adminSubscription: map['adminSubscription'] as bool,
       age: map['age'] as String,
-      gender: map['gender'] as String,
+      audioType: map['audioType'] as String,
+      block: map['block'] as bool,
+      buyDate: map['buyDate'].toInt() as int,
+      buyMonth: map['buyMonth'] as String,
       country: map['country'] as String,
-      uid: map['uid'] as String,
-      time: map['time'] as String,
       email: map['email'] as String,
+      expMonth: map['expMonth'] as String,
+      gender: map['gender'] as String,
+      name: map['name'] as String,
+      rewards: map['rewards'] as bool,
+      subMonths: map['subMonths'].toInt() as int,
+      subscription: map['subscription'] as bool,
+      time: map['time'] as String,
+      uid: map['uid'] as String,
     );
   }
 
@@ -69,7 +128,7 @@ class UserDetails {
 
   @override
   String toString() {
-    return 'UserDetails(name: $name, age: $age, gender: $gender, country: $country, uid: $uid, time: $time, email: $email)';
+    return 'UserDetails(endDate: $endDate, adminSubscription: $adminSubscription, age: $age, audioType: $audioType, block: $block, buyDate: $buyDate, buyMonth: $buyMonth, country: $country, email: $email, expMonth: $expMonth, gender: $gender, name: $name, rewards: $rewards, subMonths: $subMonths, subscription: $subscription, time: $time, uid: $uid)';
   }
 
   @override
@@ -77,23 +136,43 @@ class UserDetails {
     if (identical(this, other)) return true;
   
     return other is UserDetails &&
-      other.name == name &&
+      other.endDate == endDate &&
+      other.adminSubscription == adminSubscription &&
       other.age == age &&
-      other.gender == gender &&
+      other.audioType == audioType &&
+      other.block == block &&
+      other.buyDate == buyDate &&
+      other.buyMonth == buyMonth &&
       other.country == country &&
-      other.uid == uid &&
+      other.email == email &&
+      other.expMonth == expMonth &&
+      other.gender == gender &&
+      other.name == name &&
+      other.rewards == rewards &&
+      other.subMonths == subMonths &&
+      other.subscription == subscription &&
       other.time == time &&
-      other.email == email;
+      other.uid == uid;
   }
 
   @override
   int get hashCode {
-    return name.hashCode ^
+    return endDate.hashCode ^
+      adminSubscription.hashCode ^
       age.hashCode ^
-      gender.hashCode ^
+      audioType.hashCode ^
+      block.hashCode ^
+      buyDate.hashCode ^
+      buyMonth.hashCode ^
       country.hashCode ^
-      uid.hashCode ^
+      email.hashCode ^
+      expMonth.hashCode ^
+      gender.hashCode ^
+      name.hashCode ^
+      rewards.hashCode ^
+      subMonths.hashCode ^
+      subscription.hashCode ^
       time.hashCode ^
-      email.hashCode;
+      uid.hashCode;
   }
 }
