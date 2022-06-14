@@ -25,7 +25,7 @@ String image1 = "", image2 = "", image3 = "", image4 = "";
 
 class Storage {
   static String userGif = "";
-  static List<String> gifPath = ["", "", "", "", "", "", "", "", "", ""];
+  static List<String> gifPath = [];
   static GifData gifUrl = GifData(
       name: "default",
       link:
