@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\rai09\\Android_ShellCode\\Breathing-App\\build\\stripe_android\\intermediates\\res\\merged\\release\\drawable-night-xxhdpi-v8\\googlepay_button_no_shadow_background_image.9.png",
+        "source": "C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\stripe_android-3.1.1\\android\\src\\main\\res\\drawable-night-xxhdpi\\googlepay_button_no_shadow_background_image.9.png"
+    },
+    {
+        "merged": "C:\\Users\\rai09\\Android_ShellCode\\Breathing-App\\build\\stripe_android\\intermediates\\res\\merged\\release\\drawable-night-xxhdpi-v8\\googlepay_button_background_image.9.png",
+        "source": "C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\stripe_android-3.1.1\\android\\src\\main\\res\\drawable-night-xxhdpi\\googlepay_button_background_image.9.png"
+    }
+]

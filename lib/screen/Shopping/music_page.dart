@@ -27,7 +27,6 @@ class MusicScreen extends StatefulWidget {
 }
 
 class _MusicScreenState extends State<MusicScreen> {
-  late Razorpay razorpay;
   late User u;
   final String path = "asset/images/shopping/";
   late MusicModel m;
@@ -41,11 +40,6 @@ class _MusicScreenState extends State<MusicScreen> {
 
   @override
   void initState() {
-    razorpay = new Razorpay();
-
-    razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, handlerSucess);
-    razorpay.on(Razorpay.EVENT_PAYMENT_ERROR, handlerError);
-    razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, handlerExtWallet);
     //razorpay.on("error", handlerError);
 
     m = widget.m;
@@ -69,60 +63,6 @@ class _MusicScreenState extends State<MusicScreen> {
     super.initState();
   }
 
-  void openCheckout() {
-    var options = {
-      "key": "rzp_test_ERMWIEMeuGzC4C",
-      "amount": m.price, //m.price (add price to music model)
-      "name": "Breathe App",
-      "description": "Payment for ${m.name}",
-      "prefill": {"contact": "2323232323", "email": "shdjsdh@gmail.com"},
-      "external": {
-        "wallets": ["paytm"]
-      }
-    };
-
-    try {
-      razorpay.open(options);
-    } catch (e) {
-      print(e.toString());
-    }
-  }
-
-  handlerSucess(PaymentSuccessResponse response) {
-    showToast(context, 'Payment Sucessful');
-    Map<String, dynamic> paymentMap = {
-      'orderId': response.orderId,
-      'customer name': u.displayName,
-      'payer id': u.uid,
-      'payment id': response.paymentId,
-      'Total amount': m.price,
-      'product name': m.name,
-      'time': DateTime.now().millisecondsSinceEpoch,
-      'status': 'Success'
-    };
-    FirebaseFirestore.instance
-        .collection('payments')
-        .doc(response.orderId)
-        .set(paymentMap, SetOptions(merge: true));
-  }
-
-  handlerError(PaymentFailureResponse response) {
-    var message = response.message;
-    Map res = json.decode(message!);
-    Map reason = res["error"];
-    String finalReason = reason["reason"];
-    if (finalReason == "payment_cancelled") {
-      razorpay.clear();
-    } else if (finalReason == "payment_failed") {
-      // Navigator.pushReplacementNamed(context, Routes.PaymentFailure,
-      //     arguments: response);
-      razorpay.clear();
-    }
-  }
-
-  handlerExtWallet(ExternalWalletResponse response) {
-    showToast(context, 'External Wallet');
-  }
 
   @override
   void dispose() {
@@ -130,7 +70,6 @@ class _MusicScreenState extends State<MusicScreen> {
     player.dispose();
     mainPlayer.dispose();
     super.dispose();
-    razorpay.clear();
   }
 
   @override
@@ -265,7 +204,8 @@ class _MusicScreenState extends State<MusicScreen> {
                       }),
                       GestureDetector(
                         onTap: () {
-                          openCheckout();
+                          Navigator.of(context)
+                              .push(Routes.createPaypalRoute(m,'buy'));
                         },
                         child: Container(
                           width: x / 2.5,

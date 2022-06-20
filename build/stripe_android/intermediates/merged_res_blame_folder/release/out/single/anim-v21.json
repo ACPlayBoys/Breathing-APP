@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\rai09\\Android_ShellCode\\Breathing-App\\build\\stripe_android\\intermediates\\res\\merged\\release\\anim-v21\\mtrl_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\rai09\\.gradle\\caches\\transforms-2\\files-2.1\\9e5ab0dc38c95b277739423156facf3e\\material-1.6.0\\res\\anim-v21\\mtrl_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\rai09\\Android_ShellCode\\Breathing-App\\build\\stripe_android\\intermediates\\res\\merged\\release\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\rai09\\.gradle\\caches\\transforms-2\\files-2.1\\9e5ab0dc38c95b277739423156facf3e\\material-1.6.0\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\rai09\\Android_ShellCode\\Breathing-App\\build\\stripe_android\\intermediates\\res\\merged\\release\\anim-v21\\fragment_fast_out_extra_slow_in.xml",
+        "source": "C:\\Users\\rai09\\.gradle\\caches\\transforms-2\\files-2.1\\e4025dd0f56b8e23c5ab12fcdac1ab02\\fragment-1.4.1\\res\\anim-v21\\fragment_fast_out_extra_slow_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\rai09\\Android_ShellCode\\Breathing-App\\build\\stripe_android\\intermediates\\res\\merged\\release\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\rai09\\.gradle\\caches\\transforms-2\\files-2.1\\9e5ab0dc38c95b277739423156facf3e\\material-1.6.0\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\rai09\\Android_ShellCode\\Breathing-App\\build\\stripe_android\\intermediates\\res\\merged\\release\\anim-v21\\mtrl_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\rai09\\.gradle\\caches\\transforms-2\\files-2.1\\9e5ab0dc38c95b277739423156facf3e\\material-1.6.0\\res\\anim-v21\\mtrl_bottom_sheet_slide_out.xml"
+    }
+]

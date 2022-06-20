@@ -43,6 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
         if (docSnapshot.exists) {
           print(docSnapshot.data());
           var json = jsonEncode(docSnapshot.data()); // I am getting stuck here
+          print(json);
           var details = UserDetails.fromJson(json) as UserDetails;
           await Future.delayed(Duration(milliseconds: 1000));
           if (DateTime.now().millisecondsSinceEpoch < details.endDate)

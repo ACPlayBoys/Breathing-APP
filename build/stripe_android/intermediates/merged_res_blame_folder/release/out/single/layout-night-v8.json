@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\rai09\\Android_ShellCode\\Breathing-App\\build\\stripe_android\\intermediates\\res\\merged\\release\\layout-night-v8\\pay_with_googlepay_button.xml",
+        "source": "C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\stripe_android-3.1.1\\android\\src\\main\\res\\layout-night\\pay_with_googlepay_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\rai09\\Android_ShellCode\\Breathing-App\\build\\stripe_android\\intermediates\\res\\merged\\release\\layout-night-v8\\googlepay_button.xml",
+        "source": "C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\stripe_android-3.1.1\\android\\src\\main\\res\\layout-night\\googlepay_button.xml"
+    }
+]

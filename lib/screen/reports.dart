@@ -101,6 +101,8 @@ class _ReportsState extends State<Reports> {
 
           print('snap : $snap');
           var percent = snap['todayTotal'] / snap['totalTime'] * 100;
+          percent >= 100 ? percent = 100 : percent = percent;
+
           var days = snap['streak'];
           return Material(
             child: SafeArea(
@@ -289,7 +291,7 @@ class ChartBar extends StatelessWidget {
                       color: Colors.blue),
                 ),
                 FractionallySizedBox(
-                  heightFactor: 1 - percentage,
+                  heightFactor: 1 - (percentage >= 1 ? 1 : percentage),
                   child: Container(
                     decoration: BoxDecoration(
                       color: Color.fromRGBO(220, 220, 220, 1),

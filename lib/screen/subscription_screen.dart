@@ -1,3 +1,4 @@
+import 'package:breathing_app/models/musicmodel.dart';
 import 'package:breathing_app/screen/home_screen/mdrawer.dart';
 import 'package:breathing_app/util/constants.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -5,11 +6,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
+import '../util/routes.dart';
+import 'payments/Paypal.dart';
+
 class Subscription extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   final List<String> plans = ["3 Months Plan", "6 Months Plan", "1 Year Plan"];
-  final List<String> price = ["\$99", "\$299", "\$699"];
+  final List<String> price = ["99", "299", "699"];
   final String path = "asset/images/shopping/";
+
   @override
   Widget build(BuildContext context) {
     var y = MediaQuery.of(context).size.height;
@@ -43,6 +48,13 @@ class Subscription extends StatelessWidget {
                 enlargeCenterPage: true,
                 itemCount: 3,
                 itemBuilder: (context, i) {
+                  MusicModel m = MusicModel(
+                      duration: '',
+                      name: plans[i],
+                      image: '',
+                      link: '',
+                      type: '',
+                      price: int.parse(price[i]));
                   return Container(
                           child: Column(
                             children: [
@@ -84,7 +96,9 @@ class Subscription extends StatelessWidget {
                                       children: [
                                         GestureDetector(
                                           onTap: () {
-                                            // openCheckout();
+                                            Navigator.of(context).push(
+                                                Routes.createPaypalRoute(
+                                                    m, 'subscribe'));
                                           },
                                           child: Container(
                                             clipBehavior: Clip.antiAlias,
@@ -104,7 +118,7 @@ class Subscription extends StatelessWidget {
                                                         y / 16)),
                                           ),
                                         ),
-                                        price[i].text.xl.make()
+                                        '\$${price[i]}'.text.xl.make()
                                       ],
                                     ),
                                     decoration: BoxDecoration(

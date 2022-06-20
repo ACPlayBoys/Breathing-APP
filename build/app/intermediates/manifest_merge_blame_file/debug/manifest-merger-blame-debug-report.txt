@@ -6,385 +6,673 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-9        android:targetSdkVersion="31" />
+9        android:targetSdkVersion="32" />
 10    <!--
 11         Flutter needs it to communicate with the running application
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->K:\Aniket\Flutter\Projects\Breathing-App-1\android\app\src\debug\AndroidManifest.xml:6:5-66
-14-->K:\Aniket\Flutter\Projects\Breathing-App-1\android\app\src\debug\AndroidManifest.xml:6:22-64
+14-->C:\Users\rai09\Android_ShellCode\Breathing-App\android\app\src\debug\AndroidManifest.xml:6:5-66
+14-->C:\Users\rai09\Android_ShellCode\Breathing-App\android\app\src\debug\AndroidManifest.xml:6:22-64
 15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-15-->K:\Aniket\Flutter\Projects\Breathing-App-1\android\app\src\main\AndroidManifest.xml:3:5-80
-15-->K:\Aniket\Flutter\Projects\Breathing-App-1\android\app\src\main\AndroidManifest.xml:3:22-78
+15-->C:\Users\rai09\Android_ShellCode\Breathing-App\android\app\src\main\AndroidManifest.xml:3:5-80
+15-->C:\Users\rai09\Android_ShellCode\Breathing-App\android\app\src\main\AndroidManifest.xml:3:22-78
 16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-16-->K:\Aniket\Flutter\Projects\Breathing-App-1\android\app\src\main\AndroidManifest.xml:4:5-79
-16-->K:\Aniket\Flutter\Projects\Breathing-App-1\android\app\src\main\AndroidManifest.xml:4:22-77
+16-->C:\Users\rai09\Android_ShellCode\Breathing-App\android\app\src\main\AndroidManifest.xml:4:5-79
+16-->C:\Users\rai09\Android_ShellCode\Breathing-App\android\app\src\main\AndroidManifest.xml:4:22-77
 17
 18    <queries>
-18-->[:file_picker] K:\Aniket\Flutter\Projects\Breathing-App-1\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-15:15
+18-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-15:15
 19        <intent>
-19-->[:file_picker] K:\Aniket\Flutter\Projects\Breathing-App-1\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-14:18
+19-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-14:18
 20            <action android:name="android.intent.action.GET_CONTENT" />
-20-->[:file_picker] K:\Aniket\Flutter\Projects\Breathing-App-1\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-72
-20-->[:file_picker] K:\Aniket\Flutter\Projects\Breathing-App-1\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:21-69
+20-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-72
+20-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:21-69
 21
 22            <data android:mimeType="*/*" />
-22-->[:file_picker] K:\Aniket\Flutter\Projects\Breathing-App-1\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
-22-->[:file_picker] K:\Aniket\Flutter\Projects\Breathing-App-1\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:19-41
+22-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
+22-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:19-41
 23        </intent>
-24        <intent>
-24-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:12:9-18:18
-25            <action android:name="android.intent.action.VIEW" />
-25-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:13:13-65
-25-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:13:21-62
-26
-27            <data
-27-->[:file_picker] K:\Aniket\Flutter\Projects\Breathing-App-1\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
-28                android:mimeType="*/*"
-28-->[:file_picker] K:\Aniket\Flutter\Projects\Breathing-App-1\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:19-41
-29                android:scheme="*" />
-30        </intent>
-31        <intent>
-31-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:19:9-28:18
-32            <action android:name="android.intent.action.VIEW" />
-32-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:13:13-65
-32-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:13:21-62
-33
-34            <category android:name="android.intent.category.BROWSABLE" />
-34-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:22:13-74
-34-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:22:23-71
-35
-36            <data
-36-->[:file_picker] K:\Aniket\Flutter\Projects\Breathing-App-1\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
-37                android:host="pay"
-38                android:mimeType="*/*"
-38-->[:file_picker] K:\Aniket\Flutter\Projects\Breathing-App-1\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:19-41
-39                android:scheme="upi" />
-40        </intent>
-41        <intent>
-41-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:29:9-31:18
-42            <action android:name="android.intent.action.MAIN" />
-42-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:30:13-65
-42-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:30:21-62
-43        </intent>
-44        <intent>
-44-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:32:9-36:18
-45            <action android:name="android.intent.action.SEND" />
-45-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:33:13-65
-45-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:33:21-62
-46
-47            <data android:mimeType="*/*" />
-47-->[:file_picker] K:\Aniket\Flutter\Projects\Breathing-App-1\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
-47-->[:file_picker] K:\Aniket\Flutter\Projects\Breathing-App-1\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:19-41
+24        <!-- Added to check the default browser that will host the AuthFlow. -->
+25        <intent>
+25-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:15:9-19:18
+26            <action android:name="android.intent.action.VIEW" />
+26-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:16:13-65
+26-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:16:21-62
+27
+28            <data android:scheme="http" />
+28-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
+29        </intent> <!-- Added to check if Chrome is installed for browser-based payment authentication (e.g. 3DS1). -->
+30        <package android:name="com.android.chrome" />
+30-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:13:9-54
+30-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:13:18-51
+31
+32        <intent>
+32-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:12:9-18:18
+33            <action android:name="android.intent.action.VIEW" />
+33-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:16:13-65
+33-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:16:21-62
+34
+35            <data
+35-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
+36                android:mimeType="*/*"
+36-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:19-41
+37                android:scheme="*" />
+38        </intent>
+39        <intent>
+39-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:19:9-28:18
+40            <action android:name="android.intent.action.VIEW" />
+40-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:16:13-65
+40-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:16:21-62
+41
+42            <category android:name="android.intent.category.BROWSABLE" />
+42-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:30:17-78
+42-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:30:27-75
+43
+44            <data
+44-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
+45                android:host="pay"
+46                android:mimeType="*/*"
+46-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:19-41
+47                android:scheme="upi" />
 48        </intent>
-49    </queries>
-50
-51    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-51-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:24:5-79
-51-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:24:22-76
-52
-53    <uses-feature
-53-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
-54        android:glEsVersion="0x00020000"
-54-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
-55        android:required="true" />
-55-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
-56
-57    <application
-58        android:name="android.app.Application"
-59        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-59-->[androidx.core:core:1.6.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\14b93615368c2249f1830e26ca064ab5\core-1.6.0\AndroidManifest.xml:24:18-86
-60        android:debuggable="true"
-61        android:icon="@mipmap/ic_launcher"
-62        android:label="breathing_app"
-63        android:requestLegacyExternalStorage="true" >
-64        <activity
-65            android:name="com.example.breathing_app.MainActivity"
-66            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-67            android:exported="true"
-68            android:hardwareAccelerated="true"
-69            android:launchMode="singleTop"
-70            android:theme="@style/LaunchTheme"
-71            android:windowSoftInputMode="adjustResize" >
-72
-73            <!--
-74                 Specifies an Android theme to apply to this Activity as soon as
-75                 the Android process has started. This theme is visible to the user
-76                 while the Flutter UI initializes. After that, this theme continues
-77                 to determine the Window background behind the Flutter UI.
-78            -->
-79            <meta-data
-80                android:name="io.flutter.embedding.android.NormalTheme"
-81                android:resource="@style/NormalTheme" />
-82
-83            <intent-filter>
-84                <action android:name="android.intent.action.MAIN" />
-84-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:30:13-65
-84-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:30:21-62
-85
-86                <category android:name="android.intent.category.LAUNCHER" />
-87            </intent-filter>
-88        </activity>
-89        <!--
-90             Don't delete the meta-data below.
-91             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-92        -->
-93        <meta-data
-94            android:name="flutterEmbedding"
-95            android:value="2" />
-96
-97        <service
-97-->[:firebase_storage] K:\Aniket\Flutter\Projects\Breathing-App-1\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
-98            android:name="com.google.firebase.components.ComponentDiscoveryService"
-98-->[:firebase_storage] K:\Aniket\Flutter\Projects\Breathing-App-1\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:8:18-89
-99            android:directBootAware="true"
-99-->[com.google.firebase:firebase-common:20.1.1] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0f67b2d2737c37bf1274c8f8df4996b1\jetified-firebase-common-20.1.1\AndroidManifest.xml:35:13-43
-100            android:exported="false" >
-100-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:66:13-37
-101            <meta-data
-101-->[:firebase_storage] K:\Aniket\Flutter\Projects\Breathing-App-1\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
-102                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
-102-->[:firebase_storage] K:\Aniket\Flutter\Projects\Breathing-App-1\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-126
-103                android:value="com.google.firebase.components.ComponentRegistrar" />
-103-->[:firebase_storage] K:\Aniket\Flutter\Projects\Breathing-App-1\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
-104            <meta-data
-104-->[:cloud_firestore] K:\Aniket\Flutter\Projects\Breathing-App-1\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
-105                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
-105-->[:cloud_firestore] K:\Aniket\Flutter\Projects\Breathing-App-1\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-134
-106                android:value="com.google.firebase.components.ComponentRegistrar" />
-106-->[:cloud_firestore] K:\Aniket\Flutter\Projects\Breathing-App-1\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
-107            <meta-data
-107-->[:firebase_auth] K:\Aniket\Flutter\Projects\Breathing-App-1\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
-108                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
-108-->[:firebase_auth] K:\Aniket\Flutter\Projects\Breathing-App-1\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
-109                android:value="com.google.firebase.components.ComponentRegistrar" />
-109-->[:firebase_auth] K:\Aniket\Flutter\Projects\Breathing-App-1\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+49        <intent>
+49-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:29:9-31:18
+50            <action android:name="android.intent.action.MAIN" />
+50-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:30:13-65
+50-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:30:21-62
+51        </intent>
+52        <intent>
+52-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:32:9-36:18
+53            <action android:name="android.intent.action.SEND" />
+53-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:33:13-65
+53-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:33:21-62
+54
+55            <data android:mimeType="*/*" />
+55-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
+55-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:19-41
+56        </intent> <!-- Needs to be explicitly declared on Android R+ -->
+57        <package android:name="com.google.android.apps.maps" />
+57-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\f1f5361683c579cbb2410275e350d5a6\jetified-play-services-maps-18.0.2\AndroidManifest.xml:33:9-64
+57-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\f1f5361683c579cbb2410275e350d5a6\jetified-play-services-maps-18.0.2\AndroidManifest.xml:33:18-61
+58    </queries>
+59
+60    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+60-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:24:5-79
+60-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:24:22-76
+61
+62    <uses-feature
+62-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\f1f5361683c579cbb2410275e350d5a6\jetified-play-services-maps-18.0.2\AndroidManifest.xml:26:5-28:35
+63        android:glEsVersion="0x00020000"
+63-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\f1f5361683c579cbb2410275e350d5a6\jetified-play-services-maps-18.0.2\AndroidManifest.xml:27:9-41
+64        android:required="true" />
+64-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\f1f5361683c579cbb2410275e350d5a6\jetified-play-services-maps-18.0.2\AndroidManifest.xml:28:9-32
+65
+66    <application
+67        android:name="android.app.Application"
+68        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+68-->[androidx.core:core:1.7.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\3f6d9ef3b65bfee01861f2e5d3bab0bd\core-1.7.0\AndroidManifest.xml:24:18-86
+69        android:debuggable="true"
+70        android:icon="@mipmap/ic_launcher"
+71        android:label="breathing_app"
+72        android:requestLegacyExternalStorage="true" >
+73        <activity
+74            android:name="com.example.breathing_app.MainActivity"
+75            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+76            android:exported="true"
+77            android:hardwareAccelerated="true"
+78            android:launchMode="singleTop"
+79            android:theme="@style/LaunchTheme"
+80            android:windowSoftInputMode="adjustResize" >
+81
+82            <!--
+83                 Specifies an Android theme to apply to this Activity as soon as
+84                 the Android process has started. This theme is visible to the user
+85                 while the Flutter UI initializes. After that, this theme continues
+86                 to determine the Window background behind the Flutter UI.
+87            -->
+88            <meta-data
+89                android:name="io.flutter.embedding.android.NormalTheme"
+90                android:resource="@style/NormalTheme" />
+91
+92            <intent-filter>
+93                <action android:name="android.intent.action.MAIN" />
+93-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:30:13-65
+93-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:30:21-62
+94
+95                <category android:name="android.intent.category.LAUNCHER" />
+96            </intent-filter>
+97        </activity>
+98        <!--
+99             Don't delete the meta-data below.
+100             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+101        -->
+102        <meta-data
+103            android:name="flutterEmbedding"
+104            android:value="2" />
+105
+106        <service
+106-->[:cloud_firestore] C:\Users\rai09\Android_ShellCode\Breathing-App\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+107            android:name="com.google.firebase.components.ComponentDiscoveryService"
+107-->[:cloud_firestore] C:\Users\rai09\Android_ShellCode\Breathing-App\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:8:18-89
+108            android:directBootAware="true"
+108-->[com.google.firebase:firebase-common:20.1.1] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0f67b2d2737c37bf1274c8f8df4996b1\jetified-firebase-common-20.1.1\AndroidManifest.xml:35:13-43
+109            android:exported="false" >
+109-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:66:13-37
 110            <meta-data
-110-->[:firebase_core] K:\Aniket\Flutter\Projects\Breathing-App-1\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
-111                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-111-->[:firebase_core] K:\Aniket\Flutter\Projects\Breathing-App-1\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+110-->[:cloud_firestore] C:\Users\rai09\Android_ShellCode\Breathing-App\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+111                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+111-->[:cloud_firestore] C:\Users\rai09\Android_ShellCode\Breathing-App\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-134
 112                android:value="com.google.firebase.components.ComponentRegistrar" />
-112-->[:firebase_core] K:\Aniket\Flutter\Projects\Breathing-App-1\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+112-->[:cloud_firestore] C:\Users\rai09\Android_ShellCode\Breathing-App\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 113            <meta-data
-113-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:67:13-69:85
-114                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-114-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:68:17-109
+113-->[:firebase_auth] C:\Users\rai09\Android_ShellCode\Breathing-App\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+114                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+114-->[:firebase_auth] C:\Users\rai09\Android_ShellCode\Breathing-App\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
 115                android:value="com.google.firebase.components.ComponentRegistrar" />
-115-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:69:17-82
+115-->[:firebase_auth] C:\Users\rai09\Android_ShellCode\Breathing-App\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 116            <meta-data
-116-->[com.google.firebase:firebase-firestore:24.1.2] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\f5bbed170b360fd19b200a85558d3766\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:20:13-22:85
-117                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-117-->[com.google.firebase:firebase-firestore:24.1.2] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\f5bbed170b360fd19b200a85558d3766\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:21:17-111
+116-->[:firebase_storage] C:\Users\rai09\Android_ShellCode\Breathing-App\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+117                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
+117-->[:firebase_storage] C:\Users\rai09\Android_ShellCode\Breathing-App\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-126
 118                android:value="com.google.firebase.components.ComponentRegistrar" />
-118-->[com.google.firebase:firebase-firestore:24.1.2] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\f5bbed170b360fd19b200a85558d3766\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:22:17-82
+118-->[:firebase_storage] C:\Users\rai09\Android_ShellCode\Breathing-App\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 119            <meta-data
-119-->[com.google.firebase:firebase-storage:20.0.1] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:33:13-35:85
-120                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
-120-->[com.google.firebase:firebase-storage:20.0.1] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:34:17-107
+119-->[:firebase_core] C:\Users\rai09\Android_ShellCode\Breathing-App\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+120                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+120-->[:firebase_core] C:\Users\rai09\Android_ShellCode\Breathing-App\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
 121                android:value="com.google.firebase.components.ComponentRegistrar" />
-121-->[com.google.firebase:firebase-storage:20.0.1] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:35:17-82
-122        </service>
-123
-124        <provider
-124-->[:image_picker_android] K:\Aniket\Flutter\Projects\Breathing-App-1\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
-125            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-125-->[:image_picker_android] K:\Aniket\Flutter\Projects\Breathing-App-1\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-82
-126            android:authorities="com.example.breathing_app.flutter.image_provider"
-126-->[:image_picker_android] K:\Aniket\Flutter\Projects\Breathing-App-1\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-74
-127            android:exported="false"
-127-->[:image_picker_android] K:\Aniket\Flutter\Projects\Breathing-App-1\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-37
-128            android:grantUriPermissions="true" >
-128-->[:image_picker_android] K:\Aniket\Flutter\Projects\Breathing-App-1\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-47
-129            <meta-data
-129-->[:image_picker_android] K:\Aniket\Flutter\Projects\Breathing-App-1\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:75
-130                android:name="android.support.FILE_PROVIDER_PATHS"
-130-->[:image_picker_android] K:\Aniket\Flutter\Projects\Breathing-App-1\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
-131                android:resource="@xml/flutter_image_picker_file_paths" />
-131-->[:image_picker_android] K:\Aniket\Flutter\Projects\Breathing-App-1\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-72
-132        </provider>
-133
-134        <uses-library
-134-->[androidx.window:window:1.0.0-beta04] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
-135            android:name="androidx.window.extensions"
-135-->[androidx.window:window:1.0.0-beta04] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
-136            android:required="false" />
-136-->[androidx.window:window:1.0.0-beta04] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
-137        <uses-library
-137-->[androidx.window:window:1.0.0-beta04] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
-138            android:name="androidx.window.sidecar"
-138-->[androidx.window:window:1.0.0-beta04] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
-139            android:required="false" />
-139-->[androidx.window:window:1.0.0-beta04] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
-140
-141        <receiver
-141-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:40:9-46:20
-142            android:name="com.razorpay.RzpTokenReceiver"
-142-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:41:13-57
-143            android:exported="false" >
-143-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:42:13-37
-144            <intent-filter>
-144-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:43:13-45:29
-145                <action android:name="rzp.device_token.share" />
-145-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:44:17-65
-145-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:44:25-62
-146            </intent-filter>
-147        </receiver>
+121-->[:firebase_core] C:\Users\rai09\Android_ShellCode\Breathing-App\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+122            <meta-data
+122-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:67:13-69:85
+123                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+123-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:68:17-109
+124                android:value="com.google.firebase.components.ComponentRegistrar" />
+124-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:69:17-82
+125            <meta-data
+125-->[com.google.firebase:firebase-firestore:24.1.2] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\f5bbed170b360fd19b200a85558d3766\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:20:13-22:85
+126                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+126-->[com.google.firebase:firebase-firestore:24.1.2] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\f5bbed170b360fd19b200a85558d3766\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:21:17-111
+127                android:value="com.google.firebase.components.ComponentRegistrar" />
+127-->[com.google.firebase:firebase-firestore:24.1.2] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\f5bbed170b360fd19b200a85558d3766\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:22:17-82
+128            <meta-data
+128-->[com.google.firebase:firebase-storage:20.0.1] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:33:13-35:85
+129                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+129-->[com.google.firebase:firebase-storage:20.0.1] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:34:17-107
+130                android:value="com.google.firebase.components.ComponentRegistrar" />
+130-->[com.google.firebase:firebase-storage:20.0.1] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:35:17-82
+131        </service>
+132
+133        <provider
+133-->[:image_picker_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
+134            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+134-->[:image_picker_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-82
+135            android:authorities="com.example.breathing_app.flutter.image_provider"
+135-->[:image_picker_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-74
+136            android:exported="false"
+136-->[:image_picker_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-37
+137            android:grantUriPermissions="true" >
+137-->[:image_picker_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-47
+138            <meta-data
+138-->[:image_picker_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:75
+139                android:name="android.support.FILE_PROVIDER_PATHS"
+139-->[:image_picker_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
+140                android:resource="@xml/flutter_image_picker_file_paths" />
+140-->[:image_picker_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-72
+141        </provider>
+142
+143        <activity
+143-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:23:9-42:20
+144            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity"
+144-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:24:13-109
+145            android:exported="true" >
+145-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:25:13-36
+146            <intent-filter>
+146-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:26:13-41:29
+147                <action android:name="android.intent.action.VIEW" />
+147-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:16:13-65
+147-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:16:21-62
 148
-149        <activity
-149-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:48:9-60:20
-150            android:name="com.razorpay.CheckoutActivity"
-150-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:49:13-57
-151            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-151-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:50:13-83
-152            android:exported="true"
-152-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:51:13-36
-153            android:theme="@style/CheckoutTheme" >
-153-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:52:13-49
-154            <intent-filter>
-154-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:53:13-59:29
-155                <action android:name="android.intent.action.MAIN" />
-155-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:30:13-65
-155-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:30:21-62
-156
+149                <category android:name="android.intent.category.DEFAULT" />
+149-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:29:17-76
+149-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:29:27-73
+150                <category android:name="android.intent.category.BROWSABLE" />
+150-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:30:17-78
+150-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:30:27-75
+151
+152                <!-- Accepts success and cancel URIs that begin with "stripe-auth://link-accounts” -->
+153                <data
+153-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
+154                    android:host="link-accounts"
+155                    android:path="/com.example.breathing_app/success"
+156                    android:scheme="stripe-auth" />
 157                <data
-157-->[:file_picker] K:\Aniket\Flutter\Projects\Breathing-App-1\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
-158                    android:host="rzp.io"
-159                    android:scheme="io.rzp" />
-160            </intent-filter>
-161        </activity>
-162
-163        <meta-data
-163-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:62:9-64:58
-164            android:name="com.razorpay.plugin.googlepay_all"
-164-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:63:13-61
-165            android:value="com.razorpay.RzpGpayMerged" />
-165-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:64:13-55
-166
+157-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
+158                    android:host="link-accounts"
+159                    android:path="/com.example.breathing_app/cancel"
+160                    android:scheme="stripe-auth" />
+161            </intent-filter>
+162        </activity>
+163        <activity
+163-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:43:9-46:57
+164            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetActivity"
+164-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:44:13-101
+165            android:exported="false"
+165-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:45:13-37
+166            android:theme="@style/StripeDefaultTheme" />
+166-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:46:13-54
 167        <activity
-167-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:23:9-27:75
-168            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-168-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:24:13-93
-169            android:excludeFromRecents="true"
-169-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:25:13-46
-170            android:exported="false"
-170-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:26:13-37
-171            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-171-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:27:13-72
-172        <!--
-173            Service handling Google Sign-In user revocation. For apps that do not integrate with
-174            Google Sign-In, this service will never be started.
-175        -->
-176        <service
-176-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:33:9-37:51
-177            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-177-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:34:13-89
-178            android:exported="true"
-178-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:35:13-36
-179            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-179-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:36:13-107
-180            android:visibleToInstantApps="true" />
-180-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:37:13-48
-181
-182        <activity
-182-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:27:9-44:20
-183            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-183-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:28:13-80
-184            android:excludeFromRecents="true"
-184-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:29:13-46
-185            android:exported="true"
-185-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:30:13-36
-186            android:launchMode="singleTask"
-186-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:31:13-44
-187            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-187-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:32:13-72
-188            <intent-filter>
-188-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:33:13-43:29
-189                <action android:name="android.intent.action.VIEW" />
-189-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:13:13-65
-189-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:13:21-62
-190
-191                <category android:name="android.intent.category.DEFAULT" />
-191-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:36:17-76
-191-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:36:27-73
-192                <category android:name="android.intent.category.BROWSABLE" />
-192-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:22:13-74
-192-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:22:23-71
-193
-194                <data
-194-->[:file_picker] K:\Aniket\Flutter\Projects\Breathing-App-1\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
-195                    android:host="firebase.auth"
-196                    android:path="/"
-197                    android:scheme="genericidp" />
-198            </intent-filter>
-199        </activity>
+167-->[com.stripe:paymentsheet:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\2dd4f2f96e490395b4727968756b43ff\jetified-paymentsheet-20.4.0\AndroidManifest.xml:10:9-13:69
+168            android:name="com.stripe.android.paymentsheet.PaymentSheetActivity"
+168-->[com.stripe:paymentsheet:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\2dd4f2f96e490395b4727968756b43ff\jetified-paymentsheet-20.4.0\AndroidManifest.xml:11:13-80
+169            android:exported="false"
+169-->[com.stripe:paymentsheet:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\2dd4f2f96e490395b4727968756b43ff\jetified-paymentsheet-20.4.0\AndroidManifest.xml:12:13-37
+170            android:theme="@style/StripePaymentSheetDefaultTheme" />
+170-->[com.stripe:paymentsheet:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\2dd4f2f96e490395b4727968756b43ff\jetified-paymentsheet-20.4.0\AndroidManifest.xml:13:13-66
+171        <activity
+171-->[com.stripe:paymentsheet:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\2dd4f2f96e490395b4727968756b43ff\jetified-paymentsheet-20.4.0\AndroidManifest.xml:14:9-17:69
+172            android:name="com.stripe.android.paymentsheet.PaymentOptionsActivity"
+172-->[com.stripe:paymentsheet:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\2dd4f2f96e490395b4727968756b43ff\jetified-paymentsheet-20.4.0\AndroidManifest.xml:15:13-82
+173            android:exported="false"
+173-->[com.stripe:paymentsheet:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\2dd4f2f96e490395b4727968756b43ff\jetified-paymentsheet-20.4.0\AndroidManifest.xml:16:13-37
+174            android:theme="@style/StripePaymentSheetDefaultTheme" />
+174-->[com.stripe:paymentsheet:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\2dd4f2f96e490395b4727968756b43ff\jetified-paymentsheet-20.4.0\AndroidManifest.xml:17:13-66
+175        <activity
+175-->[com.stripe:link:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0f06c7db74265aa65bc07a665445593c\jetified-link-20.4.0\AndroidManifest.xml:10:9-13:44
+176            android:name="com.stripe.android.link.LinkActivity"
+176-->[com.stripe:link:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0f06c7db74265aa65bc07a665445593c\jetified-link-20.4.0\AndroidManifest.xml:11:13-64
+177            android:exported="false"
+177-->[com.stripe:link:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0f06c7db74265aa65bc07a665445593c\jetified-link-20.4.0\AndroidManifest.xml:12:13-37
+178            android:label="@string/link" />
+178-->[com.stripe:link:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0f06c7db74265aa65bc07a665445593c\jetified-link-20.4.0\AndroidManifest.xml:13:13-41
+179        <activity
+179-->[com.stripe:payments-ui-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\df5b98218b84c0ee6719a801de0d5411\jetified-payments-ui-core-20.4.0\AndroidManifest.xml:10:9-13:69
+180            android:name="com.stripe.android.ui.core.cardscan.CardScanActivity"
+180-->[com.stripe:payments-ui-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\df5b98218b84c0ee6719a801de0d5411\jetified-payments-ui-core-20.4.0\AndroidManifest.xml:11:13-80
+181            android:exported="false"
+181-->[com.stripe:payments-ui-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\df5b98218b84c0ee6719a801de0d5411\jetified-payments-ui-core-20.4.0\AndroidManifest.xml:12:13-37
+182            android:theme="@style/StripePaymentSheetDefaultTheme" />
+182-->[com.stripe:payments-ui-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\df5b98218b84c0ee6719a801de0d5411\jetified-payments-ui-core-20.4.0\AndroidManifest.xml:13:13-66
+183        <activity
+183-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:17:9-20:57
+184            android:name="com.stripe.android.view.AddPaymentMethodActivity"
+184-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:18:13-76
+185            android:exported="false"
+185-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:19:13-37
+186            android:theme="@style/StripeDefaultTheme" />
+186-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:20:13-54
+187        <activity
+187-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:21:9-24:57
+188            android:name="com.stripe.android.view.PaymentMethodsActivity"
+188-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:22:13-74
+189            android:exported="false"
+189-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:23:13-37
+190            android:theme="@style/StripeDefaultTheme" />
+190-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:24:13-54
+191        <activity
+191-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:25:9-28:57
+192            android:name="com.stripe.android.view.PaymentFlowActivity"
+192-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:26:13-71
+193            android:exported="false"
+193-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:27:13-37
+194            android:theme="@style/StripeDefaultTheme" />
+194-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:28:13-54
+195        <activity
+195-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:29:9-33:58
+196            android:name="com.stripe.android.view.PaymentAuthWebViewActivity"
+196-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:30:13-78
+197            android:exported="false"
+197-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:31:13-37
+198            android:theme="@style/StripeDefaultTheme"
+198-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:32:13-54
+199            android:windowSoftInputMode="adjustResize" />
+199-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:33:13-55
 200        <activity
-200-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:45:9-62:20
-201            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-201-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:46:13-79
-202            android:excludeFromRecents="true"
-202-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:47:13-46
-203            android:exported="true"
-203-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:48:13-36
-204            android:launchMode="singleTask"
-204-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:49:13-44
-205            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-205-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:50:13-72
-206            <intent-filter>
-206-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:51:13-61:29
-207                <action android:name="android.intent.action.VIEW" />
-207-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:13:13-65
-207-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:13:21-62
-208
-209                <category android:name="android.intent.category.DEFAULT" />
-209-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:36:17-76
-209-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:36:27-73
-210                <category android:name="android.intent.category.BROWSABLE" />
-210-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:22:13-74
-210-->[com.razorpay:checkout:1.6.19] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:22:23-71
-211
-212                <data
-212-->[:file_picker] K:\Aniket\Flutter\Projects\Breathing-App-1\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
-213                    android:host="firebase.auth"
-214                    android:path="/"
-215                    android:scheme="recaptcha" />
-216            </intent-filter>
-217        </activity> <!-- Needs to be explicitly declared on P+ -->
-218        <uses-library
-218-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
-219            android:name="org.apache.http.legacy"
-219-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
-220            android:required="false" />
-220-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
-221
-222        <activity
-222-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\1c0769389455a4c14b7a50bc2530cb4a\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-223            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-223-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\1c0769389455a4c14b7a50bc2530cb4a\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-224            android:exported="false"
-224-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\1c0769389455a4c14b7a50bc2530cb4a\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-225            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-225-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\1c0769389455a4c14b7a50bc2530cb4a\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
-226
-227        <provider
-227-->[com.google.firebase:firebase-common:20.1.1] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0f67b2d2737c37bf1274c8f8df4996b1\jetified-firebase-common-20.1.1\AndroidManifest.xml:26:9-31:39
-228            android:name="com.google.firebase.provider.FirebaseInitProvider"
-228-->[com.google.firebase:firebase-common:20.1.1] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0f67b2d2737c37bf1274c8f8df4996b1\jetified-firebase-common-20.1.1\AndroidManifest.xml:27:13-77
-229            android:authorities="com.example.breathing_app.firebaseinitprovider"
-229-->[com.google.firebase:firebase-common:20.1.1] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0f67b2d2737c37bf1274c8f8df4996b1\jetified-firebase-common-20.1.1\AndroidManifest.xml:28:13-72
-230            android:directBootAware="true"
-230-->[com.google.firebase:firebase-common:20.1.1] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0f67b2d2737c37bf1274c8f8df4996b1\jetified-firebase-common-20.1.1\AndroidManifest.xml:29:13-43
-231            android:exported="false"
-231-->[com.google.firebase:firebase-common:20.1.1] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0f67b2d2737c37bf1274c8f8df4996b1\jetified-firebase-common-20.1.1\AndroidManifest.xml:30:13-37
-232            android:initOrder="100" />
-232-->[com.google.firebase:firebase-common:20.1.1] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\0f67b2d2737c37bf1274c8f8df4996b1\jetified-firebase-common-20.1.1\AndroidManifest.xml:31:13-36
-233
-234        <meta-data
-234-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\4a1e8147c3db656939cfc830651ce63e\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
-235            android:name="com.google.android.gms.version"
-235-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\4a1e8147c3db656939cfc830651ce63e\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
-236            android:value="@integer/google_play_services_version" />
-236-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\MY PlayPC\.gradle\caches\transforms-2\files-2.1\4a1e8147c3db656939cfc830651ce63e\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
-237    </application>
-238
-239</manifest>
+200-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:34:9-37:61
+201            android:name="com.stripe.android.view.PaymentRelayActivity"
+201-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:35:13-72
+202            android:exported="false"
+202-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:36:13-37
+203            android:theme="@style/StripeTransparentTheme" />
+203-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:37:13-58
+204        <!--
+205        Set android:launchMode="singleTop" so that the StripeBrowserLauncherActivity instance that
+206        launched the browser Activity will also handle the return URL deep link.
+207        -->
+208        <activity
+208-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:43:9-47:61
+209            android:name="com.stripe.android.payments.StripeBrowserLauncherActivity"
+209-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:44:13-85
+210            android:exported="false"
+210-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:45:13-37
+211            android:launchMode="singleTask"
+211-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:46:13-44
+212            android:theme="@style/StripeTransparentTheme" />
+212-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:47:13-58
+213        <activity
+213-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:48:9-65:20
+214            android:name="com.stripe.android.payments.StripeBrowserProxyReturnActivity"
+214-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:49:13-88
+215            android:exported="true"
+215-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:50:13-36
+216            android:launchMode="singleTask"
+216-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:51:13-44
+217            android:theme="@style/StripeTransparentTheme" >
+217-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:52:13-58
+218            <intent-filter>
+218-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:53:13-64:29
+219                <action android:name="android.intent.action.VIEW" />
+219-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:16:13-65
+219-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:16:21-62
+220
+221                <category android:name="android.intent.category.DEFAULT" />
+221-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:29:17-76
+221-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:29:27-73
+222                <category android:name="android.intent.category.BROWSABLE" />
+222-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:30:17-78
+222-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:30:27-75
+223
+224                <!-- Must match `DefaultReturnUrl#value`. -->
+225                <data
+225-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
+226                    android:host="payment_return_url"
+227                    android:path="/com.example.breathing_app"
+228                    android:scheme="stripesdk" />
+229            </intent-filter>
+230        </activity>
+231        <activity
+231-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:66:9-69:57
+232            android:name="com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity"
+232-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:67:13-114
+233            android:exported="false"
+233-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:68:13-37
+234            android:theme="@style/StripeDefaultTheme" />
+234-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:69:13-54
+235        <activity
+235-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:70:9-73:66
+236            android:name="com.stripe.android.googlepaylauncher.StripeGooglePayActivity"
+236-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:71:13-88
+237            android:exported="false"
+237-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:72:13-37
+238            android:theme="@style/StripeGooglePayDefaultTheme" />
+238-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:73:13-63
+239        <activity
+239-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:74:9-77:66
+240            android:name="com.stripe.android.googlepaylauncher.GooglePayLauncherActivity"
+240-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:75:13-90
+241            android:exported="false"
+241-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:76:13-37
+242            android:theme="@style/StripeGooglePayDefaultTheme" />
+242-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:77:13-63
+243        <activity
+243-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:78:9-81:66
+244            android:name="com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity"
+244-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:79:13-103
+245            android:exported="false"
+245-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:80:13-37
+246            android:theme="@style/StripeGooglePayDefaultTheme" />
+246-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:81:13-63
+247        <activity
+247-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:82:9-85:62
+248            android:name="com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity"
+248-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:83:13-107
+249            android:exported="false"
+249-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:84:13-37
+250            android:theme="@style/PayLauncherDefaultTheme" />
+250-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:85:13-59
+251        <activity
+251-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:86:9-89:61
+252            android:name="com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity"
+252-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:87:13-97
+253            android:exported="false"
+253-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:88:13-37
+254            android:theme="@style/StripeTransparentTheme" />
+254-->[com.stripe:payments-core:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1dd55e5abf38980188962eb3bb2dc2dc\jetified-payments-core-20.4.0\AndroidManifest.xml:89:13-58
+255        <activity
+255-->[com.stripe:stripe-3ds2-android:6.1.5] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\e3701a8bd72cdc5a970830c1c94804d7\jetified-stripe-3ds2-android-6.1.5\AndroidManifest.xml:10:9-13:54
+256            android:name="com.stripe.android.stripe3ds2.views.ChallengeActivity"
+256-->[com.stripe:stripe-3ds2-android:6.1.5] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\e3701a8bd72cdc5a970830c1c94804d7\jetified-stripe-3ds2-android-6.1.5\AndroidManifest.xml:11:13-81
+257            android:exported="false"
+257-->[com.stripe:stripe-3ds2-android:6.1.5] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\e3701a8bd72cdc5a970830c1c94804d7\jetified-stripe-3ds2-android-6.1.5\AndroidManifest.xml:12:13-37
+258            android:theme="@style/Stripe3DS2Theme" />
+258-->[com.stripe:stripe-3ds2-android:6.1.5] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\e3701a8bd72cdc5a970830c1c94804d7\jetified-stripe-3ds2-android-6.1.5\AndroidManifest.xml:13:13-51
+259
+260        <uses-library
+260-->[androidx.window:window:1.0.0-beta04] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+261            android:name="androidx.window.extensions"
+261-->[androidx.window:window:1.0.0-beta04] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+262            android:required="false" />
+262-->[androidx.window:window:1.0.0-beta04] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+263        <uses-library
+263-->[androidx.window:window:1.0.0-beta04] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+264            android:name="androidx.window.sidecar"
+264-->[androidx.window:window:1.0.0-beta04] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+265            android:required="false" />
+265-->[androidx.window:window:1.0.0-beta04] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+266
+267        <activity
+267-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:27:9-44:20
+268            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+268-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:28:13-80
+269            android:excludeFromRecents="true"
+269-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:29:13-46
+270            android:exported="true"
+270-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:30:13-36
+271            android:launchMode="singleTask"
+271-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:31:13-44
+272            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+272-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:32:13-72
+273            <intent-filter>
+273-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:33:13-43:29
+274                <action android:name="android.intent.action.VIEW" />
+274-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:16:13-65
+274-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:16:21-62
+275
+276                <category android:name="android.intent.category.DEFAULT" />
+276-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:29:17-76
+276-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:29:27-73
+277                <category android:name="android.intent.category.BROWSABLE" />
+277-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:30:17-78
+277-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:30:27-75
+278
+279                <data
+279-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
+280                    android:host="firebase.auth"
+281                    android:path="/"
+282                    android:scheme="genericidp" />
+283            </intent-filter>
+284        </activity>
+285        <activity
+285-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:45:9-62:20
+286            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+286-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:46:13-79
+287            android:excludeFromRecents="true"
+287-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:47:13-46
+288            android:exported="true"
+288-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:48:13-36
+289            android:launchMode="singleTask"
+289-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:49:13-44
+290            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+290-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:50:13-72
+291            <intent-filter>
+291-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:51:13-61:29
+292                <action android:name="android.intent.action.VIEW" />
+292-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:16:13-65
+292-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:16:21-62
+293
+294                <category android:name="android.intent.category.DEFAULT" />
+294-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:29:17-76
+294-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:29:27-73
+295                <category android:name="android.intent.category.BROWSABLE" />
+295-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:30:17-78
+295-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:30:27-75
+296
+297                <data
+297-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
+298                    android:host="firebase.auth"
+299                    android:path="/"
+300                    android:scheme="recaptcha" />
+301            </intent-filter>
+302        </activity>
+303
+304        <provider
+304-->[com.google.firebase:firebase-common:20.1.1] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0f67b2d2737c37bf1274c8f8df4996b1\jetified-firebase-common-20.1.1\AndroidManifest.xml:26:9-31:39
+305            android:name="com.google.firebase.provider.FirebaseInitProvider"
+305-->[com.google.firebase:firebase-common:20.1.1] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0f67b2d2737c37bf1274c8f8df4996b1\jetified-firebase-common-20.1.1\AndroidManifest.xml:27:13-77
+306            android:authorities="com.example.breathing_app.firebaseinitprovider"
+306-->[com.google.firebase:firebase-common:20.1.1] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0f67b2d2737c37bf1274c8f8df4996b1\jetified-firebase-common-20.1.1\AndroidManifest.xml:28:13-72
+307            android:directBootAware="true"
+307-->[com.google.firebase:firebase-common:20.1.1] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0f67b2d2737c37bf1274c8f8df4996b1\jetified-firebase-common-20.1.1\AndroidManifest.xml:29:13-43
+308            android:exported="false"
+308-->[com.google.firebase:firebase-common:20.1.1] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0f67b2d2737c37bf1274c8f8df4996b1\jetified-firebase-common-20.1.1\AndroidManifest.xml:30:13-37
+309            android:initOrder="100" />
+309-->[com.google.firebase:firebase-common:20.1.1] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0f67b2d2737c37bf1274c8f8df4996b1\jetified-firebase-common-20.1.1\AndroidManifest.xml:31:13-36
+310
+311        <receiver
+311-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:40:9-46:20
+312            android:name="com.razorpay.RzpTokenReceiver"
+312-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:41:13-57
+313            android:exported="false" >
+313-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:42:13-37
+314            <intent-filter>
+314-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:43:13-45:29
+315                <action android:name="rzp.device_token.share" />
+315-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:44:17-65
+315-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:44:25-62
+316            </intent-filter>
+317        </receiver>
+318
+319        <activity
+319-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:48:9-60:20
+320            android:name="com.razorpay.CheckoutActivity"
+320-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:49:13-57
+321            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+321-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:50:13-83
+322            android:exported="true"
+322-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:51:13-36
+323            android:theme="@style/CheckoutTheme" >
+323-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:52:13-49
+324            <intent-filter>
+324-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:53:13-59:29
+325                <action android:name="android.intent.action.MAIN" />
+325-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:30:13-65
+325-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:30:21-62
+326
+327                <data
+327-->[:file_picker] C:\Users\rai09\Android_ShellCode\Breathing-App\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
+328                    android:host="rzp.io"
+329                    android:scheme="io.rzp" />
+330            </intent-filter>
+331        </activity>
+332
+333        <meta-data
+333-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:62:9-64:58
+334            android:name="com.razorpay.plugin.googlepay_all"
+334-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:63:13-61
+335            android:value="com.razorpay.RzpGpayMerged" />
+335-->[com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\fd1b40863fa5efb4757257466e4f771c\jetified-checkout-1.6.19\AndroidManifest.xml:64:13-55
+336
+337        <activity
+337-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:23:9-27:75
+338            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+338-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:24:13-93
+339            android:excludeFromRecents="true"
+339-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:25:13-46
+340            android:exported="false"
+340-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:26:13-37
+341            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+341-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:27:13-72
+342        <!--
+343            Service handling Google Sign-In user revocation. For apps that do not integrate with
+344            Google Sign-In, this service will never be started.
+345        -->
+346        <service
+346-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:33:9-37:51
+347            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+347-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:34:13-89
+348            android:exported="true"
+348-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:35:13-36
+349            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+349-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:36:13-107
+350            android:visibleToInstantApps="true" /> <!-- Needs to be explicitly declared on P+ -->
+350-->[com.google.android.gms:play-services-auth:20.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\ebb93529c6187a959788b4e7289bc4ef\jetified-play-services-auth-20.1.0\AndroidManifest.xml:37:13-48
+351        <uses-library
+351-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\f1f5361683c579cbb2410275e350d5a6\jetified-play-services-maps-18.0.2\AndroidManifest.xml:39:9-41:40
+352            android:name="org.apache.http.legacy"
+352-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\f1f5361683c579cbb2410275e350d5a6\jetified-play-services-maps-18.0.2\AndroidManifest.xml:40:13-50
+353            android:required="false" />
+353-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\f1f5361683c579cbb2410275e350d5a6\jetified-play-services-maps-18.0.2\AndroidManifest.xml:41:13-37
+354
+355        <activity
+355-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1c0769389455a4c14b7a50bc2530cb4a\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+356            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+356-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1c0769389455a4c14b7a50bc2530cb4a\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+357            android:exported="false"
+357-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1c0769389455a4c14b7a50bc2530cb4a\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+358            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+358-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1c0769389455a4c14b7a50bc2530cb4a\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+359
+360        <meta-data
+360-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\4a1e8147c3db656939cfc830651ce63e\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+361            android:name="com.google.android.gms.version"
+361-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\4a1e8147c3db656939cfc830651ce63e\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+362            android:value="@integer/google_play_services_version" />
+362-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\4a1e8147c3db656939cfc830651ce63e\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+363
+364        <provider
+364-->[androidx.emoji2:emoji2:1.0.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\7485423dd457e7082d510d50f36707ee\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+365            android:name="androidx.startup.InitializationProvider"
+365-->[androidx.emoji2:emoji2:1.0.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\7485423dd457e7082d510d50f36707ee\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+366            android:authorities="com.example.breathing_app.androidx-startup"
+366-->[androidx.emoji2:emoji2:1.0.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\7485423dd457e7082d510d50f36707ee\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+367            android:exported="false" >
+367-->[androidx.emoji2:emoji2:1.0.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\7485423dd457e7082d510d50f36707ee\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+368            <meta-data
+368-->[androidx.emoji2:emoji2:1.0.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\7485423dd457e7082d510d50f36707ee\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+369                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+369-->[androidx.emoji2:emoji2:1.0.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\7485423dd457e7082d510d50f36707ee\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+370                android:value="androidx.startup" />
+370-->[androidx.emoji2:emoji2:1.0.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\7485423dd457e7082d510d50f36707ee\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+371            <meta-data
+371-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1200031033d07961a83d7174a91c7777\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+372                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+372-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1200031033d07961a83d7174a91c7777\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+373                android:value="androidx.startup" />
+373-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\1200031033d07961a83d7174a91c7777\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+374            <meta-data
+374-->[androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cbeaf2cc0975ad203e54405ca12db662\jetified-profileinstaller-1.1.0\AndroidManifest.xml:31:13-33:52
+375                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+375-->[androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cbeaf2cc0975ad203e54405ca12db662\jetified-profileinstaller-1.1.0\AndroidManifest.xml:32:17-85
+376                android:value="androidx.startup" />
+376-->[androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cbeaf2cc0975ad203e54405ca12db662\jetified-profileinstaller-1.1.0\AndroidManifest.xml:33:17-49
+377        </provider>
+378
+379        <receiver
+379-->[androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cbeaf2cc0975ad203e54405ca12db662\jetified-profileinstaller-1.1.0\AndroidManifest.xml:36:9-45:20
+380            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+380-->[androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cbeaf2cc0975ad203e54405ca12db662\jetified-profileinstaller-1.1.0\AndroidManifest.xml:37:13-76
+381            android:directBootAware="false"
+381-->[androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cbeaf2cc0975ad203e54405ca12db662\jetified-profileinstaller-1.1.0\AndroidManifest.xml:38:13-44
+382            android:enabled="true"
+382-->[androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cbeaf2cc0975ad203e54405ca12db662\jetified-profileinstaller-1.1.0\AndroidManifest.xml:39:13-35
+383            android:exported="true"
+383-->[androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cbeaf2cc0975ad203e54405ca12db662\jetified-profileinstaller-1.1.0\AndroidManifest.xml:40:13-36
+384            android:permission="android.permission.DUMP" >
+384-->[androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cbeaf2cc0975ad203e54405ca12db662\jetified-profileinstaller-1.1.0\AndroidManifest.xml:41:13-57
+385            <intent-filter>
+385-->[androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cbeaf2cc0975ad203e54405ca12db662\jetified-profileinstaller-1.1.0\AndroidManifest.xml:42:13-44:29
+386                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+386-->[androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cbeaf2cc0975ad203e54405ca12db662\jetified-profileinstaller-1.1.0\AndroidManifest.xml:43:17-91
+386-->[androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\cbeaf2cc0975ad203e54405ca12db662\jetified-profileinstaller-1.1.0\AndroidManifest.xml:43:25-88
+387            </intent-filter>
+388        </receiver>
+389
+390        <meta-data
+390-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\71f07fbc8454120c2dfc33a113d77f5f\jetified-instantapps-1.1.0\AndroidManifest.xml:10:9-12:33
+391            android:name="aia-compat-api-min-version"
+391-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\71f07fbc8454120c2dfc33a113d77f5f\jetified-instantapps-1.1.0\AndroidManifest.xml:11:13-54
+392            android:value="1" />
+392-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\71f07fbc8454120c2dfc33a113d77f5f\jetified-instantapps-1.1.0\AndroidManifest.xml:12:13-30
+393    </application>
+394
+395</manifest>

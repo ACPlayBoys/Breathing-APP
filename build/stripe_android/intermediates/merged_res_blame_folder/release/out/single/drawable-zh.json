@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\rai09\\Android_ShellCode\\Breathing-App\\build\\stripe_android\\intermediates\\res\\merged\\release\\drawable-zh\\pay_with_googlepay_button_content.xml",
+        "source": "C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\stripe_android-3.1.1\\android\\src\\main\\res\\drawable-zh\\pay_with_googlepay_button_content.xml"
+    },
+    {
+        "merged": "C:\\Users\\rai09\\Android_ShellCode\\Breathing-App\\build\\stripe_android\\intermediates\\res\\merged\\release\\drawable-zh\\stripe_ic_unionpay_template_32.xml",
+        "source": "C:\\Users\\rai09\\.gradle\\caches\\transforms-2\\files-2.1\\1dd55e5abf38980188962eb3bb2dc2dc\\jetified-payments-core-20.4.0\\res\\drawable-zh\\stripe_ic_unionpay_template_32.xml"
+    }
+]

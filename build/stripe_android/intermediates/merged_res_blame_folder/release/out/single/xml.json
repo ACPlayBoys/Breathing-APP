@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\rai09\\Android_ShellCode\\Breathing-App\\build\\stripe_android\\intermediates\\res\\merged\\release\\xml\\standalone_badge_gravity_bottom_start.xml",
+        "source": "C:\\Users\\rai09\\.gradle\\caches\\transforms-2\\files-2.1\\9e5ab0dc38c95b277739423156facf3e\\material-1.6.0\\res\\xml\\standalone_badge_gravity_bottom_start.xml"
+    },
+    {
+        "merged": "C:\\Users\\rai09\\Android_ShellCode\\Breathing-App\\build\\stripe_android\\intermediates\\res\\merged\\release\\xml\\standalone_badge_gravity_bottom_end.xml",
+        "source": "C:\\Users\\rai09\\.gradle\\caches\\transforms-2\\files-2.1\\9e5ab0dc38c95b277739423156facf3e\\material-1.6.0\\res\\xml\\standalone_badge_gravity_bottom_end.xml"
+    },
+    {
+        "merged": "C:\\Users\\rai09\\Android_ShellCode\\Breathing-App\\build\\stripe_android\\intermediates\\res\\merged\\release\\xml\\image_share_filepaths.xml",
+        "source": "C:\\Users\\rai09\\.gradle\\caches\\transforms-2\\files-2.1\\e220a32ca2be066bb9a75eda3346b92d\\browser-1.4.0\\res\\xml\\image_share_filepaths.xml"
+    },
+    {
+        "merged": "C:\\Users\\rai09\\Android_ShellCode\\Breathing-App\\build\\stripe_android\\intermediates\\res\\merged\\release\\xml\\standalone_badge_offset.xml",
+        "source": "C:\\Users\\rai09\\.gradle\\caches\\transforms-2\\files-2.1\\9e5ab0dc38c95b277739423156facf3e\\material-1.6.0\\res\\xml\\standalone_badge_offset.xml"
+    },
+    {
+        "merged": "C:\\Users\\rai09\\Android_ShellCode\\Breathing-App\\build\\stripe_android\\intermediates\\res\\merged\\release\\xml\\standalone_badge.xml",
+        "source": "C:\\Users\\rai09\\.gradle\\caches\\transforms-2\\files-2.1\\9e5ab0dc38c95b277739423156facf3e\\material-1.6.0\\res\\xml\\standalone_badge.xml"
+    },
+    {
+        "merged": "C:\\Users\\rai09\\Android_ShellCode\\Breathing-App\\build\\stripe_android\\intermediates\\res\\merged\\release\\xml\\standalone_badge_gravity_top_start.xml",
+        "source": "C:\\Users\\rai09\\.gradle\\caches\\transforms-2\\files-2.1\\9e5ab0dc38c95b277739423156facf3e\\material-1.6.0\\res\\xml\\standalone_badge_gravity_top_start.xml"
+    }
+]

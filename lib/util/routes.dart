@@ -5,6 +5,8 @@ import 'package:breathing_app/screen/Shopping/wishlist.dart';
 import 'package:breathing_app/screen/home_screen/home_screen.dart';
 import 'package:breathing_app/screen/login_screen/login.dart';
 import 'package:breathing_app/screen/login_screen/otp_screen_login.dart';
+import 'package:breathing_app/screen/payments/Paypal.dart';
+import 'package:breathing_app/screen/payments/Stripe.dart';
 import 'package:breathing_app/screen/reports.dart';
 import 'package:breathing_app/screen/rewards.dart';
 import 'package:breathing_app/screen/scheduling_screen/schedule.dart';
@@ -158,6 +160,47 @@ class Routes {
     CurrentRoute = "home";
     return PageRouteBuilder(
       pageBuilder: (context, animation, secondaryAnimation) => Reports(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        const begin = Offset(0.0, 1.0);
+        const end = Offset.zero;
+        final tween = Tween(begin: begin, end: end);
+        final offsetAnimation = animation.drive(tween);
+
+        return SlideTransition(
+          position: offsetAnimation,
+          child: child,
+        );
+      },
+    );
+  }
+  
+
+  static Route createPaypalRoute(mu,pay) {
+    CurrentRoute = "paypal";
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => Paypal(m: mu, pay: pay,
+       
+      ),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        const begin = Offset(0.0, 1.0);
+        const end = Offset.zero;
+        final tween = Tween(begin: begin, end: end);
+        final offsetAnimation = animation.drive(tween);
+
+        return SlideTransition(
+          position: offsetAnimation,
+          child: child,
+        );
+      },
+    );
+  }
+
+  static Route createStripeRoute(mu,pay) {
+    CurrentRoute = "stripe";
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => StripeScreen(
+        m: mu, pay: pay,
+      ),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         const begin = Offset(0.0, 1.0);
         const end = Offset.zero;

@@ -147,13 +147,17 @@ class _OTPScreenState extends State<OTPScreen> {
               'previousBreatheDate': DateFormat.yMd().format(DateTime.now()),
               'streak': 0,
               'todayTotal': 0,
-              'totalTime': 300
+              'totalTime': 300,
+              'totTimeCompStreak': 0,
+              'minWiseStreak': 0
             });
             Storage.setDeafultGif(context);
             FirebaseFirestore.instance
                 .collection('Users')
                 .doc(credential.user!.uid)
-                .set({'audioType': 'default'}, SetOptions(merge: true));
+                .set({
+              'audioType': 'default',
+            }, SetOptions(merge: true));
             //showToast(context, 'Default Audio Selected');
             _first = true;
             setState(() {

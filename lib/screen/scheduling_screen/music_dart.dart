@@ -10,7 +10,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
-
+import 'package:permission_handler/permission_handler.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 String audioUrl =
@@ -148,44 +148,56 @@ class _MusicState extends State<Music> {
   }
 
   Future selectFile() async {
-    final result = await FilePicker.platform
-        .pickFiles(type: FileType.audio, allowMultiple: false);
-    if (result == null) {
-      return;
-    }
-    setState(() {
-      pickedFile = result.files.single;
-    });
-    showLoaderDialog(context);
-    final path = 'files/$currentUid/${pickedFile!.name}';
-    final file = File(pickedFile!.path!);
-
-    final ref = FirebaseStorage.instance.ref().child(path);
-    uploadTask = ref.putFile(file);
-
-    final snapshot = await uploadTask!.whenComplete(() {});
-    final urlDownload = await snapshot.ref.getDownloadURL();
-    setState(() {
-      print(urlDownload);
-      audioUrl = urlDownload;
-      print(audioUrl);
-    });
-    //
-    _firestore
-        .collection('Users')
-        .doc(currentUid)
-        .set({'audioType': 'userAudio'}, SetOptions(merge: true));
-    _firestore
-        .collection('Users')
-        .doc(currentUid)
-        .collection('audioCollection')
-        .add({
-      'link': urlDownload,
-      'timeStamp': DateTime.now(),
-    });
-
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    Storage.downloadMusic(urlDownload, prefs);
-    Navigator.of(context).pop();
+    Future requestPermission() async {
+      var result = await Permission.storage.request();
+
+      if (result == PermissionStatus.granted) {
+        print("Access Granted");
+        final result = await FilePicker.platform
+            .pickFiles(type: FileType.audio, allowMultiple: false);
+        if (result == null) {
+          return;
+        }
+        setState(() {
+          pickedFile = result.files.single;
+        });
+        showLoaderDialog(context);
+        final path = 'files/$currentUid/${pickedFile!.name}';
+        final file = File(pickedFile!.path!);
+
+        final ref = FirebaseStorage.instance.ref().child(path);
+        uploadTask = ref.putFile(file);
+
+        final snapshot = await uploadTask!.whenComplete(() {});
+        final urlDownload = await snapshot.ref.getDownloadURL();
+        setState(() {
+          print(urlDownload);
+          audioUrl = urlDownload;
+          print(audioUrl);
+        });
+        //
+        _firestore
+            .collection('Users')
+            .doc(currentUid)
+            .set({'audioType': 'userAudio'}, SetOptions(merge: true));
+        _firestore
+            .collection('Users')
+            .doc(currentUid)
+            .collection('audioCollection')
+            .add({
+          'link': urlDownload,
+          'timeStamp': DateTime.now(),
+        });
+
+        Storage.downloadMusic(urlDownload, prefs);
+        Navigator.of(context).pop();
+      } else if (result == PermissionStatus.denied) {
+        print("Access Denied");
+      } else if (result == PermissionStatus.permanentlyDenied) {
+        print("Access denied permanently");
+      }
+      return 0;
+    }
   }
 }

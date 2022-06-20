@@ -37,6 +37,9 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
 
   String currentUid = '';
   String prevDbDate = '';
+  int totalTime = 0;
+  int minWiseStreak = 0;
+  int totTimeCompStreak = 0;
 
   bool isPlaying = false;
   bool canPlay = false;
@@ -224,6 +227,7 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
     // pauseHandler();
     audioPlayer.pause();
     timer();
+    addStreak();
     print('audio Paused');
   }
 
@@ -343,8 +347,6 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
     print('audioSet');
   }
 
-  
-
   Widget buildContainerOnTap({child}) {
     return ClipOval(
       clipBehavior: Clip.antiAlias,
@@ -380,6 +382,9 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
         breatheTime = data['todayTotal'];
         prevDbDate = data['previousBreatheDate'];
         streak = data['streak'];
+        totalTime = data['totalTime'];
+        totTimeCompStreak = data['totTimeCompStreak'];
+        minWiseStreak = data['minWiseStreak'];
         print('breatheTime $breatheTime preDate $prevDbDate streak $streak');
       });
       addStreak();
@@ -393,7 +398,9 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
         DateFormat.M().format(DateTime.now()) +
         DateFormat.d().format(DateTime.now());
 
-    breatheTime = breatheTime + time;
+    setState(() {
+      breatheTime = breatheTime + time;
+    });
     _firestore
         .collection('report')
         .doc(currentUid)
@@ -425,6 +432,14 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
     } else if (prevDbDate != prevDate && prevDbDate != todayDate) {
       stream.set({'previousBreatheDate': todayDate, 'streak': 0},
           SetOptions(merge: true));
+    }
+
+    if (breatheTime >= totalTime) {
+      print(breatheTime);
+      print(totalTime);
+      stream.set({
+        'totTimeCompStreak': (totTimeCompStreak + 1),
+      }, SetOptions(merge: true));
     }
   }
 }

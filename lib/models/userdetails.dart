@@ -102,12 +102,12 @@ class UserDetails {
 
   factory UserDetails.fromMap(Map<String, dynamic> map) {
     return UserDetails(
-      endDate: map['endDate'].toInt() as int,
+      endDate: map['endDate'] as int,
       adminSubscription: map['adminSubscription'] as bool,
       age: map['age'] as String,
       audioType: map['audioType'] as String,
       block: map['block'] as bool,
-      buyDate: map['buyDate'].toInt() as int,
+      buyDate: map['buyDate'] as int,
       buyMonth: map['buyMonth'] as String,
       country: map['country'] as String,
       email: map['email'] as String,
@@ -124,7 +124,8 @@ class UserDetails {
 
   String toJson() => json.encode(toMap());
 
-  factory UserDetails.fromJson(String source) => UserDetails.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory UserDetails.fromJson(String source) =>
+      UserDetails.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
@@ -134,45 +135,45 @@ class UserDetails {
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-  
+
     return other is UserDetails &&
-      other.endDate == endDate &&
-      other.adminSubscription == adminSubscription &&
-      other.age == age &&
-      other.audioType == audioType &&
-      other.block == block &&
-      other.buyDate == buyDate &&
-      other.buyMonth == buyMonth &&
-      other.country == country &&
-      other.email == email &&
-      other.expMonth == expMonth &&
-      other.gender == gender &&
-      other.name == name &&
-      other.rewards == rewards &&
-      other.subMonths == subMonths &&
-      other.subscription == subscription &&
-      other.time == time &&
-      other.uid == uid;
+        other.endDate == endDate &&
+        other.adminSubscription == adminSubscription &&
+        other.age == age &&
+        other.audioType == audioType &&
+        other.block == block &&
+        other.buyDate == buyDate &&
+        other.buyMonth == buyMonth &&
+        other.country == country &&
+        other.email == email &&
+        other.expMonth == expMonth &&
+        other.gender == gender &&
+        other.name == name &&
+        other.rewards == rewards &&
+        other.subMonths == subMonths &&
+        other.subscription == subscription &&
+        other.time == time &&
+        other.uid == uid;
   }
 
   @override
   int get hashCode {
     return endDate.hashCode ^
-      adminSubscription.hashCode ^
-      age.hashCode ^
-      audioType.hashCode ^
-      block.hashCode ^
-      buyDate.hashCode ^
-      buyMonth.hashCode ^
-      country.hashCode ^
-      email.hashCode ^
-      expMonth.hashCode ^
-      gender.hashCode ^
-      name.hashCode ^
-      rewards.hashCode ^
-      subMonths.hashCode ^
-      subscription.hashCode ^
-      time.hashCode ^
-      uid.hashCode;
+        adminSubscription.hashCode ^
+        age.hashCode ^
+        audioType.hashCode ^
+        block.hashCode ^
+        buyDate.hashCode ^
+        buyMonth.hashCode ^
+        country.hashCode ^
+        email.hashCode ^
+        expMonth.hashCode ^
+        gender.hashCode ^
+        name.hashCode ^
+        rewards.hashCode ^
+        subMonths.hashCode ^
+        subscription.hashCode ^
+        time.hashCode ^
+        uid.hashCode;
   }
 }

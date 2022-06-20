@@ -13,14 +13,22 @@ import 'package:image_picker/image_picker.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:path_provider/path_provider.dart';
 
-class Upload extends StatelessWidget {
+class Upload extends StatefulWidget {
+  Upload({Key? key}) : super(key: key);
+
+  @override
+  State<Upload> createState() => _UploadState();
+}
+
+class _UploadState extends State<Upload> {
   var selectedValue;
 
   int framecount = 3;
+
   bool selected = false;
 
-  Upload({Key? key}) : super(key: key);
   final String path = "asset/images/schedule/";
+
   @override
   Widget build(BuildContext context) {
     var y = MediaQuery.of(context).size.height;
@@ -42,209 +50,79 @@ class Upload extends StatelessWidget {
             height: y / 4,
             fit: BoxFit.fitWidth,
           ).centered().pOnly(bottom: y / 30).px(x / 24),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Container(
-                width: x / 8,
-                height: x / 8,
-                child: Storage.gifPath[0].isEmptyOrNull
-                    ? Icon(
-                        Icons.add,
-                        color: Colors.blue,
-                      )
-                    : CircleAvatar(
-                        radius: x / 8,
-                        backgroundImage:
-                            Image.file(File(Storage.gifPath[0])).image,
-                      ),
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.blue),
-                    borderRadius: BorderRadius.circular(x / 6)),
-              ).onInkTap(() {
-                if (selected)
-                  showPicker(context, 0);
-                else
-                  _getMultiFromGallery(0);
-              }),
-              Container(
-                width: x / 8,
-                height: x / 8,
-                child: Storage.gifPath[1].isEmptyOrNull
-                    ? Icon(
-                        Icons.add,
-                        color: Colors.blue,
-                      )
-                    : CircleAvatar(
-                        radius: x / 8,
-                        backgroundImage:
-                            Image.file(File(Storage.gifPath[1])).image,
-                      ),
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.blue),
-                    borderRadius: BorderRadius.circular(x / 6)),
-              ).onInkTap(() {
-                showPicker(context, 1);
-              }),
-              Container(
-                width: x / 8,
-                height: x / 8,
-                child: Storage.gifPath[2].isEmptyOrNull
-                    ? Icon(
-                        Icons.add,
-                        color: Colors.blue,
-                      )
-                    : CircleAvatar(
-                        radius: x / 8,
-                        backgroundImage:
-                            Image.file(File(Storage.gifPath[2])).image,
-                      ),
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.blue),
-                    borderRadius: BorderRadius.circular(x / 6)),
-              ).onInkTap(() {
-                showPicker(context, 2);
-              }),
-              Container(
-                width: x / 8,
-                height: x / 8,
-                child: Storage.gifPath[3].isEmptyOrNull
-                    ? Icon(
-                        Icons.add,
-                        color: Colors.blue,
-                      )
-                    : CircleAvatar(
-                        radius: x / 8,
-                        backgroundImage:
-                            Image.file(File(Storage.gifPath[3])).image,
-                      ),
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.blue),
-                    borderRadius: BorderRadius.circular(x / 6)),
-              ).onInkTap(() {
-                showPicker(context, 3);
-              }),
-              Container(
-                width: x / 8,
-                height: x / 8,
-                child: Storage.gifPath[4].isEmptyOrNull
-                    ? Icon(
-                        Icons.add,
-                        color: Colors.blue,
-                      )
-                    : CircleAvatar(
-                        radius: x / 8,
-                        backgroundImage:
-                            Image.file(File(Storage.gifPath[4])).image,
-                      ),
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.blue),
-                    borderRadius: BorderRadius.circular(x / 6)),
-              ).onInkTap(() {
-                showPicker(context, 4);
-              }),
-            ],
-          ).px(x / 8).pOnly(bottom: y / 45),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Container(
-                width: x / 8,
-                height: x / 8,
-                child: Storage.gifPath[5].isEmptyOrNull
-                    ? Icon(
-                        Icons.add,
-                        color: Colors.blue,
-                      )
-                    : CircleAvatar(
-                        radius: x / 8,
-                        backgroundImage:
-                            Image.file(File(Storage.gifPath[5])).image,
-                      ),
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.blue),
-                    borderRadius: BorderRadius.circular(x / 6)),
-              ).onInkTap(() {
-                showPicker(context, 5);
-              }),
-              Container(
-                width: x / 8,
-                height: x / 8,
-                child: Storage.gifPath[6].isEmptyOrNull
-                    ? Icon(
-                        Icons.add,
-                        color: Colors.blue,
-                      )
-                    : CircleAvatar(
-                        radius: x / 8,
-                        backgroundImage:
-                            Image.file(File(Storage.gifPath[6])).image,
-                      ),
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.blue),
-                    borderRadius: BorderRadius.circular(x / 6)),
-              ).onInkTap(() {
-                showPicker(context, 6);
-              }),
-              Container(
-                width: x / 8,
-                height: x / 8,
-                child: Storage.gifPath[7].isEmptyOrNull
-                    ? Icon(
-                        Icons.add,
-                        color: Colors.blue,
-                      )
-                    : CircleAvatar(
-                        radius: x / 8,
-                        backgroundImage:
-                            Image.file(File(Storage.gifPath[7])).image,
-                      ),
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.blue),
-                    borderRadius: BorderRadius.circular(x / 6)),
-              ).onInkTap(() {
-                showPicker(context, 7);
-              }),
-              Container(
-                width: x / 8,
-                height: x / 8,
-                child: Storage.gifPath[8].isEmptyOrNull
-                    ? Icon(
-                        Icons.add,
-                        color: Colors.blue,
-                      )
-                    : CircleAvatar(
-                        radius: x / 8,
-                        backgroundImage:
-                            Image.file(File(Storage.gifPath[8])).image,
-                      ),
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.blue),
-                    borderRadius: BorderRadius.circular(x / 6)),
-              ).onInkTap(() {
-                showPicker(context, 8);
-              }),
-              Container(
-                width: x / 8,
-                height: x / 8,
-                child: Storage.gifPath[9].isEmptyOrNull
-                    ? Icon(
-                        Icons.add,
-                        color: Colors.blue,
-                      )
-                    : CircleAvatar(
-                        radius: x / 8,
-                        backgroundImage:
-                            Image.file(File(Storage.gifPath[9])).image,
-                      ),
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.blue),
-                    borderRadius: BorderRadius.circular(x / 6)),
-              ).onInkTap(() {
-                showPicker(context, 9);
-              }),
-            ],
-          ).px(x / 8).pOnly(bottom: y / 45),
+          Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  alignment: WrapAlignment.center,
+                  runAlignment: WrapAlignment.center,
+                  children: Storage.gifPath.isNotEmpty
+                      ? List<Widget>.generate(
+                          Storage.gifPath.length + 1,
+                          (index) => Storage.gifPath.length == index
+                              ? Storage.gifPath.length < 10
+                                  ? Container(
+                                      width: x / 8,
+                                      height: x / 8,
+                                      child: Icon(
+                                        Icons.add,
+                                        color: Colors.blue,
+                                      ),
+                                      decoration: BoxDecoration(
+                                          border:
+                                              Border.all(color: Colors.blue),
+                                          borderRadius:
+                                              BorderRadius.circular(x / 6)),
+                                    ).onInkTap(() async {
+                                      print(selected);
+                                      if (selected)
+                                        showPicker(context, index);
+                                      else
+                                        (await _getMultiFromGallery(0));
+                                    })
+                                  : Container()
+                              : Container(
+                                  width: x / 8,
+                                  height: x / 8,
+                                  child: Storage.gifPath[index].isEmptyOrNull
+                                      ? Icon(
+                                          Icons.add,
+                                          color: Colors.blue,
+                                        )
+                                      : CircleAvatar(
+                                          radius: x / 8,
+                                          backgroundImage: Image.file(
+                                                  File(Storage.gifPath[index]))
+                                              .image,
+                                        ),
+                                  decoration: BoxDecoration(
+                                      border: Border.all(color: Colors.blue),
+                                      borderRadius:
+                                          BorderRadius.circular(x / 6)),
+                                ).onInkTap(() async {
+                                  if (selected)
+                                    showPicker(context, index);
+                                  else
+                                    await _getMultiFromGallery(0);
+                                }).px2())
+                      : List<Widget>.generate(
+                          1,
+                          (index) => Container(
+                                width: x / 8,
+                                height: x / 8,
+                                child: Icon(
+                                  Icons.add,
+                                  color: Colors.blue,
+                                ),
+                                decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.blue),
+                                    borderRadius: BorderRadius.circular(x / 6)),
+                              ).onInkTap(() async {
+                                if (selected)
+                                  showPicker(context, 0);
+                                else
+                                  await _getMultiFromGallery(0);
+                              })))
+              .px(x / 8)
+              .centered(),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -459,7 +337,10 @@ class Upload extends StatelessWidget {
     );
     print(pickedFile!.path);
     if (pickedFile != null) {
-      Storage.gifPath[i] = pickedFile.path;
+      if (i == Storage.gifPath.length)
+        Storage.gifPath.add(pickedFile.path);
+      else
+        Storage.gifPath[i] = pickedFile.path;
     }
   }
 
@@ -506,10 +387,12 @@ class Upload extends StatelessWidget {
     if (pickedFile != null) {
       int i = 0;
       for (XFile file in pickedFile) {
-        Storage.gifPath[i] = file.path;
+        Storage.gifPath.add(file.path);
         i++;
       }
-      selected = true;
+      setState(() {
+        selected = true;
+      });
     }
   }
 
