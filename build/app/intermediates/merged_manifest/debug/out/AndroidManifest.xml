@@ -68,7 +68,7 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="breathing_app"
+        android:label="Breathe"
         android:requestLegacyExternalStorage="true" >
         <activity
             android:name="com.example.breathing_app.MainActivity"

@@ -114,7 +114,7 @@
 68-->[androidx.core:core:1.7.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\3f6d9ef3b65bfee01861f2e5d3bab0bd\core-1.7.0\AndroidManifest.xml:24:18-86
 69        android:debuggable="true"
 70        android:icon="@mipmap/ic_launcher"
-71        android:label="breathing_app"
+71        android:label="Breathe"
 72        android:requestLegacyExternalStorage="true" >
 73        <activity
 74            android:name="com.example.breathing_app.MainActivity"
