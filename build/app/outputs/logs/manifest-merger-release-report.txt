@@ -102,6 +102,7 @@ MERGED from [:image_picker_android] C:\Users\rai09\Android_ShellCode\Breathing-A
 MERGED from [:flutter_plugin_android_lifecycle] C:\Users\rai09\Android_ShellCode\Breathing-App\build\flutter_plugin_android_lifecycle\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
 MERGED from [:path_provider_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\path_provider_android\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
 MERGED from [:smart_auth] C:\Users\rai09\Android_ShellCode\Breathing-App\build\smart_auth\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
+MERGED from [:google_sign_in_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\google_sign_in_android\intermediates\library_manifest\release\AndroidManifest.xml:2:1-9:12
 MERGED from [:webview_flutter_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\webview_flutter_android\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
 MERGED from [:shared_preferences_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\shared_preferences_android\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
 MERGED from [:permission_handler_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\permission_handler_android\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
@@ -281,6 +282,8 @@ MERGED from [:path_provider_android] C:\Users\rai09\Android_ShellCode\Breathing-
 MERGED from [:path_provider_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\path_provider_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
 MERGED from [:smart_auth] C:\Users\rai09\Android_ShellCode\Breathing-App\build\smart_auth\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
 MERGED from [:smart_auth] C:\Users\rai09\Android_ShellCode\Breathing-App\build\smart_auth\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:google_sign_in_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\google_sign_in_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:google_sign_in_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\google_sign_in_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
 MERGED from [:webview_flutter_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\webview_flutter_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
 MERGED from [:webview_flutter_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\webview_flutter_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
 MERGED from [:shared_preferences_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\shared_preferences_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
@@ -674,7 +677,9 @@ ADDED from [:image_picker_android] C:\Users\rai09\Android_ShellCode\Breathing-Ap
 	android:name
 		ADDED from [:image_picker_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:14:17-67
 uses-permission#android.permission.INTERNET
-ADDED from [com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:9:5-67
+ADDED from [:google_sign_in_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\google_sign_in_android\intermediates\library_manifest\release\AndroidManifest.xml:7:5-67
+MERGED from [com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:9:5-67
+MERGED from [com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:9:5-67
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\f5bbed170b360fd19b200a85558d3766\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:14:5-67
@@ -686,7 +691,7 @@ MERGED from [com.razorpay:checkout:1.6.19] C:\Users\rai09\.gradle\caches\transfo
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\f1f5361683c579cbb2410275e350d5a6\jetified-play-services-maps-18.0.2\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\f1f5361683c579cbb2410275e350d5a6\jetified-play-services-maps-18.0.2\AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from [com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:9:22-64
+		ADDED from [:google_sign_in_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\google_sign_in_android\intermediates\library_manifest\release\AndroidManifest.xml:7:22-64
 intent#action:name:android.intent.action.VIEW+data:scheme:http
 ADDED from [com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:15:9-19:18
 action#android.intent.action.VIEW

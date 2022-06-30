@@ -27,6 +27,7 @@ class _StripeScreenState extends State<StripeScreen> {
   late User u;
   final GlobalKey<ScaffoldState> _payScaffoldKey = GlobalKey<ScaffoldState>();
   final String path = "asset/images/home/";
+  final String path2 = "asset/images/payment/";
 
   Map<String, dynamic>? paymentIData;
 
@@ -69,8 +70,9 @@ class _StripeScreenState extends State<StripeScreen> {
             child: Row(
               children: [
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 50),
-                  width: 300,
+                  alignment: Alignment.center,
+                  width: x * 0.9,
+                  margin: EdgeInsets.symmetric(horizontal: x * 0.05),
                   child: Row(
                     children: [
                       'Product Name'.text.xl.make(),
@@ -87,8 +89,9 @@ class _StripeScreenState extends State<StripeScreen> {
             child: Row(
               children: [
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 50),
-                  width: 300,
+                  alignment: Alignment.center,
+                  width: x * 0.9,
+                  margin: EdgeInsets.symmetric(horizontal: x * 0.05),
                   child: Row(
                     children: [
                       'Total Amount'.text.xl.make(),
@@ -107,18 +110,18 @@ class _StripeScreenState extends State<StripeScreen> {
               decoration: BoxDecoration(
                   border: Border.all(color: Colors.blue),
                   borderRadius: BorderRadius.circular(y / 16)),
-              margin: EdgeInsets.symmetric(horizontal: 70, vertical: 50),
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               width: MediaQuery.of(context).size.width,
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               alignment: Alignment.bottomCenter,
+              margin:
+                  EdgeInsets.symmetric(horizontal: x / 16, vertical: y / 16),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   'Pay With'.text.xl3.bold.make(),
                   Container(
-                    width: 100,
-                    height: 40,
-                    child: Image.network(
-                        'https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/Stripe_logo%2C_revised_2016.png?alt=media&token=d217f811-d30f-4ee8-8a24-835c242aec56'),
+                    height: y / 16,
+                    child: Image.asset(path2 + 'stripe.png'),
                   ),
                 ],
               ),
@@ -207,11 +210,16 @@ class _StripeScreenState extends State<StripeScreen> {
             .collection('payments')
             .doc(paymentIData!['id'])
             .set(paymentMap, SetOptions(merge: true));
+        FirebaseFirestore.instance
+            .collection('Users')
+            .doc(u.uid)
+            .collection('myItems')
+            .add(widget.m.toMap());
         Navigator.push(
             context,
             MaterialPageRoute(
                 builder: (_) => MusicScreen(
-                      m: widget.m,
+                      m: widget.m,isBought:false
                     )));
       }
       setState(() {

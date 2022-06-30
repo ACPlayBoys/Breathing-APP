@@ -1,5 +1,6 @@
 import 'package:breathing_app/dummy.dart';
 import 'package:breathing_app/screen/Shopping/music_page.dart';
+import 'package:breathing_app/screen/Shopping/my_items.dart';
 import 'package:breathing_app/screen/Shopping/shopping.dart';
 import 'package:breathing_app/screen/Shopping/wishlist.dart';
 import 'package:breathing_app/screen/home_screen/home_screen.dart';
@@ -102,10 +103,10 @@ class Routes {
     );
   }
 
-  static Route createMusicRoute(m) {
+  static Route createMusicRoute(m,isbought) {
     return PageRouteBuilder(
       pageBuilder: (context, animation, secondaryAnimation) => MusicScreen(
-        m: m,
+        m: m,isBought: isbought,
       ),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         const begin = Offset(0.0, 1.0);
@@ -124,6 +125,23 @@ class Routes {
   static Route createShoppingRoute() {
     return PageRouteBuilder(
       pageBuilder: (context, animation, secondaryAnimation) => Shopping(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        const begin = Offset(0.0, 1.0);
+        const end = Offset.zero;
+        final tween = Tween(begin: begin, end: end);
+        final offsetAnimation = animation.drive(tween);
+
+        return SlideTransition(
+          position: offsetAnimation,
+          child: child,
+        );
+      },
+    );
+  }
+
+  static Route createMyItemsRoute() {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => MyItems(),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         const begin = Offset(0.0, 1.0);
         const end = Offset.zero;

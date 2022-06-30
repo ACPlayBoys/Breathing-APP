@@ -59,7 +59,7 @@ class _SendOTPState extends State<SendOTP> {
                 child: TextFormField(
                   onChanged: ((value) {
                     curemail = value;
-                    cnfEmail = value;
+                    cnfEmail = curemail;
                   }),
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.only(left: 10, right: 20),
@@ -103,10 +103,9 @@ class _SendOTPState extends State<SendOTP> {
                     });
                     sendotp(context);
                   }),
-                  
-                    SizedBox(
-                      height: y / 16,
-                    ),
+                  SizedBox(
+                    height: y / 16,
+                  ),
                   Row(children: <Widget>[
                     Expanded(
                       child: new Container(
@@ -117,26 +116,26 @@ class _SendOTPState extends State<SendOTP> {
                             thickness: 1,
                           )),
                     ),
-                    Text("OR"),
-                    Expanded(
-                      child: new Container(
-                          margin:
-                              const EdgeInsets.only(left: 15.0, right: 10.0),
-                          child: Divider(
-                            color: Color.fromARGB(88, 0, 0, 0),
-                            thickness: 1,
-                          )),
-                    ),
+                    // Text("OR"),
+                    // Expanded(
+                    //   child: new Container(
+                    //       margin:
+                    //           const EdgeInsets.only(left: 15.0, right: 10.0),
+                    //       child: Divider(
+                    //         color: Color.fromARGB(88, 0, 0, 0),
+                    //         thickness: 1,
+                    //       )),
+                    // ),
                   ]).pOnly(top: y / 64),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(path + "apple.png").p8(),
-                      Image.asset(path + "google.png").p8(),
-                      Image.asset(path + "fb.png").p8(),
-                      Image.asset(path + "twitter.png").p8(),
-                    ],
-                  ).pOnly(bottom: y / 64),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.center,
+                  //   children: [
+                  //     Image.asset(path + "apple.png").p8(),
+                  //     Image.asset(path + "google.png").p8(),
+                  //     Image.asset(path + "fb.png").p8(),
+                  //     Image.asset(path + "twitter.png").p8(),
+                  //   ],
+                  // ).pOnly(bottom: y / 64),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

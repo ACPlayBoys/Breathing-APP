@@ -383,7 +383,6 @@ kotlin.sequences.GeneratorSequence$iterator$1:
     public final void setNextState(int)
 com.google.common.collect.TreeRangeMap$SubRangeMap$SubRangeMapAsMap$4
 com.nimbusds.jose.proc.JWSKeySelector
-com.google.android.gms.internal.auth.zzx
 androidx.core.database.CursorWindowCompat
 org.bouncycastle.asn1.ocsp.ResponseBytes:
     public void <init>(org.bouncycastle.asn1.ASN1ObjectIdentifier,org.bouncycastle.asn1.ASN1OctetString)
@@ -566,8 +565,6 @@ androidx.compose.runtime.collection.IdentityArraySet:
 androidx.activity.result.contract.ActivityResultContracts$TakePicturePreview
 io.flutter.plugins.firebase.firestore.R$string
 androidx.browser.trusted.TrustedWebActivityIntent
-com.google.common.util.concurrent.AbstractFuture$Listener
-com.google.android.gms.internal.auth.zzgm
 com.bumptech.glide.request.target.CustomViewTarget$1
 androidx.core.app.NotificationCompat$BubbleMetadata$Builder
 com.google.android.gms.internal.common.zzah
@@ -631,7 +628,6 @@ com.google.protobuf.MapEntryLite$1
 com.google.android.material.textfield.MaterialAutoCompleteTextView:
     public void <init>(android.content.Context)
     private static final int MAX_ITEMS_MEASURED
-com.google.android.gms.internal.auth.zzeg
 androidx.compose.foundation.text.selection.BaseTextPreparedSelection:
     public static synthetic androidx.compose.foundation.text.selection.BaseTextPreparedSelection apply$default(androidx.compose.foundation.text.selection.BaseTextPreparedSelection,java.lang.Object,boolean,kotlin.jvm.functions.Function1,int,java.lang.Object)
     public final androidx.compose.ui.text.AnnotatedString getOriginalText()
@@ -644,8 +640,8 @@ androidx.transition.Styleable$TransitionManager
 androidx.compose.animation.AnimatedContentKt$AnimatedContent$5$1$1$1
 com.google.android.gms.wallet.wobs.zzg
 com.google.common.collect.MultimapBuilder$MultimapBuilderWithKeys$1
-com.google.android.gms.internal.auth.zzca
 com.google.common.primitives.Doubles$DoubleArrayAsList
+io.flutter.plugins.googlesignin.R$style
 androidx.compose.runtime.ComposerImpl:
     public static synthetic void getDefaultsInvalid$annotations()
     public static synthetic void getInserting$annotations()
@@ -902,7 +898,6 @@ androidx.transition.ViewUtilsBase:
 com.google.common.reflect.MutableTypeToInstanceMap$UnmodifiableEntry$1
 com.google.common.cache.LocalCache$KeySet
 com.google.common.primitives.Ints$LexicographicalComparator
-com.google.android.gms.internal.auth.zzw
 com.google.common.collect.ImmutableList:
     public static com.google.common.collect.ImmutableList of(java.lang.Object,java.lang.Object)
     public static com.google.common.collect.ImmutableList of(java.lang.Object,java.lang.Object,java.lang.Object)
@@ -1047,7 +1042,6 @@ androidx.core.content.res.ResourcesCompat$ThemeCompat$ImplApi23:
 com.google.common.graph.AbstractNetwork$1$1$1
 com.google.android.material.navigation.NavigationBarMenuView
 android.support.v4.media.session.MediaControllerCompat$TransportControlsBase
-com.google.android.gms.internal.auth.zzgl
 com.google.android.gms.wallet.wobs.WalletObjects:
     public abstract void createWalletObjects(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.wallet.CreateWalletObjectsRequest,int)
 androidx.compose.material.FloatingActionButtonElevation
@@ -1484,7 +1478,6 @@ androidx.compose.foundation.lazy.LazyDslKt:
     public static final void itemsIndexed(androidx.compose.foundation.lazy.LazyListScope,java.lang.Object[],kotlin.jvm.functions.Function2,kotlin.jvm.functions.Function5)
     public static synthetic void itemsIndexed$default(androidx.compose.foundation.lazy.LazyListScope,java.lang.Object[],kotlin.jvm.functions.Function2,kotlin.jvm.functions.Function5,int,java.lang.Object)
 org.bouncycastle.asn1.BERTags
-com.google.android.gms.internal.auth.zzef
 androidx.collection.CircularIntArray
 androidx.compose.material.ExposedDropdownMenuKt$expandable$1$1$1
 com.google.firebase.auth.internal.zzag:
@@ -2904,7 +2897,6 @@ androidx.core.view.WindowInsetsControllerCompat$Impl:
     void addOnControllableInsetsChangedListener(androidx.core.view.WindowInsetsControllerCompat$OnControllableInsetsChangedListener)
     void removeOnControllableInsetsChangedListener(androidx.core.view.WindowInsetsControllerCompat$OnControllableInsetsChangedListener)
 com.google.android.gms.maps.internal.zzbg
-com.google.android.gms.internal.auth.zzgo
 com.google.common.base.CommonPattern
 io.flutter.plugins.flutter_plugin_android_lifecycle.R$color
 com.google.common.collect.StandardRowSortedTable$1
@@ -3038,7 +3030,6 @@ org.bouncycastle.math.ec.rfc7748.X448:
 com.google.android.gms.internal.auth.zzz
 androidx.core.app.NotificationCompat$BigPictureStyle$Api23Impl
 com.google.android.material.transition.FadeModeEvaluators$4
-com.google.android.gms.internal.auth.zzei
 kotlin.sequences.IndexingSequence$iterator$1
 io.flutter.plugins.firebase.core.R$raw
 org.bouncycastle.asn1.cryptopro.Gost2814789KeyWrapParameters
@@ -3061,9 +3052,6 @@ com.google.common.collect.Tables$TransposeTable$1
 androidx.compose.foundation.text.TextFieldScrollKt:
     public static synthetic androidx.compose.ui.Modifier textFieldScrollable$default(androidx.compose.ui.Modifier,androidx.compose.foundation.text.TextFieldScrollerPosition,androidx.compose.foundation.interaction.MutableInteractionSource,boolean,int,java.lang.Object)
 androidx.emoji2.text.flatbuffer.Utf8Safe$UnpairedSurrogateException
-com.google.common.util.concurrent.internal.InternalFutureFailureAccess:
-    protected void <init>()
-    protected abstract java.lang.Throwable tryInternalFastPathGetFailure()
 androidx.slidingpanelayout.R$integer
 com.google.android.gms.common.SupportErrorDialogFragment:
     public static com.google.android.gms.common.SupportErrorDialogFragment newInstance(android.app.Dialog)
@@ -3255,7 +3243,6 @@ androidx.core.provider.FontsContractCompat$FontFamilyResult:
 kotlin.Deprecated
 androidx.compose.material.BackdropScaffoldKt$BackdropStack$1$1$placeables$1
 io.github.ponnamkarthik.toast.fluttertoast.BuildConfig
-com.google.android.gms.internal.auth.zzcc
 androidx.browser.trusted.TokenContents
 androidx.compose.ui.tooling.preview.PreviewParameter
 com.google.common.collect.ImmutableRangeMap$SerializedForm
@@ -3568,14 +3555,7 @@ org.bouncycastle.math.ec.custom.sec.SecP160R1FieldElement:
 kotlinx.coroutines.CompletionHandlerKt
 com.google.android.gms.common.internal.zzak
 com.google.android.gms.auth.api.signin.GoogleSignInOptions$Builder:
-    private final java.lang.String zaa(java.lang.String)
     public com.google.android.gms.auth.api.signin.GoogleSignInOptions$Builder addExtension(com.google.android.gms.auth.api.signin.GoogleSignInOptionsExtension)
-    public com.google.android.gms.auth.api.signin.GoogleSignInOptions$Builder requestEmail()
-    public com.google.android.gms.auth.api.signin.GoogleSignInOptions$Builder requestIdToken(java.lang.String)
-    public com.google.android.gms.auth.api.signin.GoogleSignInOptions$Builder requestServerAuthCode(java.lang.String)
-    public com.google.android.gms.auth.api.signin.GoogleSignInOptions$Builder requestServerAuthCode(java.lang.String,boolean)
-    public com.google.android.gms.auth.api.signin.GoogleSignInOptions$Builder setAccountName(java.lang.String)
-    public com.google.android.gms.auth.api.signin.GoogleSignInOptions$Builder setHostedDomain(java.lang.String)
 com.squareup.okhttp.internal.io.RealConnection
 androidx.core.transition.TransitionKt$doOnCancel$$inlined$addListener$default$1
 com.google.rpc.context.AttributeContext$Response$HeadersDefaultEntryHolder
@@ -3815,7 +3795,6 @@ androidx.viewpager2.widget.ViewPager2$SmoothScrollToPosition
 androidx.media.MediaBrowserServiceCompatApi26
 com.google.common.collect.LinkedListMultimap$KeyList
 com.google.android.gms.auth.api.signin.GoogleSignInResult:
-    public void <init>(com.google.android.gms.auth.api.signin.GoogleSignInAccount,com.google.android.gms.common.api.Status)
     public boolean isSuccess()
 org.bouncycastle.crypto.params.Argon2Parameters$Builder
 com.google.android.gms.internal.auth.zzy
@@ -3855,6 +3834,7 @@ androidx.compose.ui.draw.BlurKt
 com.google.common.primitives.Doubles
 com.google.protobuf.DescriptorProtos$MethodDescriptorProtoOrBuilder
 com.google.android.gms.internal.firebase-auth-api.zzzk
+io.flutter.plugins.googlesignin.R$attr
 com.google.common.hash.Java8Compatibility
 com.google.crypto.tink.shaded.protobuf.DoubleArrayList:
     public static com.google.crypto.tink.shaded.protobuf.DoubleArrayList emptyList()
@@ -4059,7 +4039,6 @@ com.google.android.gms.maps.GoogleMap$OnMapLongClickListener
 com.nimbusds.jose.shaded.json.writer.BeansMapper:
     public void <init>(com.nimbusds.jose.shaded.json.writer.JsonReader)
     public abstract java.lang.Object getValue(java.lang.Object,java.lang.String)
-com.google.android.gms.internal.auth.zzeh
 android.support.v4.media.MediaBrowserCompat$ItemCallback:
     public void <init>()
     final java.lang.Object mItemCallbackObj
@@ -4097,7 +4076,6 @@ androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.
     public static final int MAX_BRANCHING_FACTOR_MINUS_ONE
     public static final int ENTRY_SIZE
     public static final int MAX_SHIFT
-com.google.android.gms.internal.auth.zzgn
 com.google.common.escape.CharEscaper
 androidx.vectordrawable.graphics.drawable.AnimatorInflaterCompat$PathDataEvaluator:
     void <init>(androidx.core.graphics.PathParser$PathDataNode[])
@@ -4396,7 +4374,6 @@ androidx.transition.Styleable$PatternPathMotion
 com.google.common.math.Stats
 androidx.legacy.v4.R$styleable
 androidx.asynclayoutinflater.R$style
-com.google.android.gms.internal.auth.zzcb
 com.google.common.collect.RowSortedTable
 io.grpc.inprocess.InProcessTransport
 com.google.android.gms.auth.api.identity.BeginSignInRequest$PasswordRequestOptions
@@ -4598,6 +4575,7 @@ io.grpc.internal.DelayedStream:
     public io.grpc.Attributes getAttributes()
     public void setMessageCompression(boolean)
     io.grpc.internal.ClientStream getRealStream()
+io.flutter.plugins.googlesignin.R$integer
 com.google.common.collect.Collections2$OrderedPermutationCollection
 com.google.common.collect.Lists$TransformingSequentialList
 com.nimbusds.jose.shaded.json.JSONUtil:
@@ -4654,7 +4632,6 @@ androidx.core.app.BundleCompat$BundleCompatBaseImpl:
     private void <init>()
     private static final java.lang.String TAG
 com.google.android.gms.maps.internal.zzbe
-com.google.android.gms.internal.auth.zzgq
 androidx.compose.material.SwipeableKt$rememberSwipeableStateFor$2$invoke$$inlined$onDispose$1
 kotlinx.coroutines.flow.FlowKt__BuildersKt$asFlow$$inlined$unsafeFlow$10
 kotlin.sequences.EmptySequence:
@@ -4706,7 +4683,6 @@ com.google.common.math.Quantiles$Scale
 androidx.lifecycle.viewmodel.compose.ViewModelKt:
     public static final synthetic androidx.lifecycle.ViewModel viewModel(androidx.lifecycle.ViewModelStoreOwner,java.lang.String,androidx.lifecycle.ViewModelProvider$Factory,androidx.compose.runtime.Composer,int,int)
     static synthetic androidx.lifecycle.ViewModel get$default(androidx.lifecycle.ViewModelStoreOwner,java.lang.Class,java.lang.String,androidx.lifecycle.ViewModelProvider$Factory,int,java.lang.Object)
-com.google.android.gms.internal.auth.zzt
 kotlinx.coroutines.sync.MutexImpl$TryLockDesc$PrepareOp
 androidx.emoji2.text.flatbuffer.Utf8:
     public static void setDefault(androidx.emoji2.text.flatbuffer.Utf8)
@@ -4732,7 +4708,6 @@ androidx.compose.ui.graphics.AndroidImageBitmap:
 com.google.android.gms.common.internal.service.zah
 com.google.crypto.tink.hybrid.EciesAeadHkdfPrivateKeyManager$3
 kotlinx.coroutines.flow.FlowKt__TransformKt$filterIsInstance$$inlined$filter$1$2
-com.google.android.gms.internal.auth.zzek
 org.bouncycastle.pqc.crypto.lms.LMSKeyGenerationParameters
 com.google.firebase.firestore.index.package-info
 com.google.crypto.tink.proto.HkdfPrf
@@ -4743,7 +4718,6 @@ kotlinx.coroutines.selects.UnbiasedSelectBuilderImpl$invoke$3
 com.google.common.graph.AbstractNetwork$1$1
 androidx.compose.ui.tooling.preview.datasource.LoremIpsumKt
 io.grpc.internal.MigratingThreadDeframer$Op
-com.google.android.gms.internal.auth.zzce
 com.squareup.okhttp.CertificatePinner$1
 kotlin.collections.ArraysKt___ArraysKt$asSequence$$inlined$Sequence$2
 com.nimbusds.jose.CompletableJWSObjectSigning
@@ -5069,7 +5043,6 @@ org.bouncycastle.math.ec.custom.sec.SecT131R1Curve:
 com.google.crypto.tink.proto.Chacha20Poly1305
 androidx.constraintlayout.core.widgets.HelperWidget:
     public void copy(androidx.constraintlayout.core.widgets.ConstraintWidget,java.util.HashMap)
-com.google.android.gms.internal.auth.zzgp
 com.google.protobuf.ProtobufArrayList:
     void <init>()
 androidx.emoji2.text.flatbuffer.FlexBuffers$Vector
@@ -5434,7 +5407,30 @@ com.google.android.material.timepicker.TimePickerView:
     static final java.lang.String GENERIC_VIEW_ACCESSIBILITY_CLASS_NAME
 com.google.android.material.behavior.SwipeDismissBehavior$1:
     private static final int INVALID_POINTER_ID
-com.google.android.gms.auth.GoogleAuthUtil
+com.google.android.gms.auth.GoogleAuthUtil:
+    public static android.os.Bundle removeAccount(android.content.Context,android.accounts.Account)
+    public static java.lang.Boolean requestGoogleAccountsAccess(android.content.Context)
+    public static java.lang.String getAccountId(android.content.Context,java.lang.String)
+    public static java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String)
+    public static java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)
+    public static java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)
+    public static java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)
+    public static java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)
+    public static java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,android.content.Intent)
+    public static java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,android.content.Intent)
+    public static java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)
+    public static java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)
+    public static java.util.List getAccountChangeEvents(android.content.Context,int,java.lang.String)
+    private void <init>()
+    public static void invalidateToken(android.content.Context,java.lang.String)
+    private static com.google.android.gms.auth.TokenData zzf(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)
+    public static final java.lang.String GOOGLE_ACCOUNT_TYPE
+    public static final java.lang.String WORK_ACCOUNT_TYPE
+    public static final java.lang.String KEY_SUPPRESS_PROGRESS_SCREEN
+    public static final int CHANGE_TYPE_ACCOUNT_ADDED
+    public static final int CHANGE_TYPE_ACCOUNT_REMOVED
+    public static final int CHANGE_TYPE_ACCOUNT_RENAMED_FROM
+    public static final int CHANGE_TYPE_ACCOUNT_RENAMED_TO
 kotlin.jvm.internal.MutablePropertyReference1Impl:
     public void <init>(java.lang.Object,java.lang.Class,java.lang.String,java.lang.String,int)
     public void set(java.lang.Object,java.lang.Object)
@@ -5833,7 +5829,6 @@ com.google.android.material.expandable.ExpandableTransformationWidget
 androidx.core.animation.AnimatorKt$doOnEnd$$inlined$addListener$default$1
 androidx.compose.material.icons.rounded.StarKt
 androidx.core.view.accessibility.AccessibilityManagerCompat$TouchExplorationStateChangeListenerWrapper
-com.google.android.gms.internal.auth.zzej
 androidx.concurrent.futures.CallbackToFutureAdapter$SafeFuture$1
 kotlin.collections.ShortIterator
 androidx.compose.ui.text.android.animation.SegmentBreaker
@@ -5956,7 +5951,6 @@ com.nimbusds.jose.shaded.ow2asm.Frame:
     private static final int DOUBLE
     private static final int NULL
     private static final int UNINITIALIZED_THIS
-com.google.android.gms.internal.auth.zzcd
 androidx.navigation.ActivityNavArgsLazyKt
 com.google.crypto.tink.proto.EcdsaPrivateKey$1
 com.google.accompanist.flowlayout.FlowKt:
@@ -6180,7 +6174,6 @@ com.google.common.util.concurrent.ClosingFuture$ValueAndCloser
 com.google.common.util.concurrent.ListenableScheduledFuture
 com.google.android.material.timepicker.TimePickerTextInputPresenter$1
 com.google.android.gms.maps.internal.zzbc
-com.google.android.gms.internal.auth.zzgs
 com.google.common.hash.Murmur3_32HashFunction
 org.bouncycastle.i18n.LocalizedMessage
 androidx.lifecycle.CoroutineLiveDataKt:
@@ -6232,6 +6225,7 @@ com.bumptech.glide.load.engine.executor.GlideExecutor:
     private static final java.lang.String DEFAULT_SOURCE_UNLIMITED_EXECUTOR_NAME
     private static final java.lang.String DEFAULT_ANIMATION_EXECUTOR_NAME
     private static final int MAXIMUM_AUTOMATIC_THREAD_COUNT
+io.flutter.plugins.googlesignin.R
 com.google.android.gms.internal.common.zzt
 androidx.emoji2.text.flatbuffer.Table$1
 com.google.android.material.internal.NavigationMenuPresenter$NavigationMenuViewAccessibilityDelegate
@@ -6287,7 +6281,6 @@ androidx.compose.ui.graphics.BlockGraphicsLayerModifier:
 androidx.compose.material.DrawerKt$Scrim$2
 com.google.crypto.tink.config.TinkConfig
 android.support.v4.media.MediaBrowserCompat$MediaBrowserImplApi21$1
-com.google.android.gms.internal.auth.zzem
 kotlinx.coroutines.flow.FlowKt__ChannelsKt$asFlow$$inlined$unsafeFlow$1
 com.google.protobuf.OptionOrBuilder
 com.google.android.gms.internal.maps.zzt
@@ -6544,7 +6537,6 @@ androidx.compose.ui.layout.DefaultIntrinsicMeasurable:
     public final androidx.compose.ui.layout.IntrinsicMinMax getMinMax()
     public final androidx.compose.ui.layout.IntrinsicWidthHeight getWidthHeight()
 kotlinx.coroutines.channels.AbstractChannel$onReceiveCatching$1
-com.google.android.gms.internal.auth.zzcg
 com.google.protobuf.GeneratedMessageLite$SerializedForm
 org.bouncycastle.crypto.agreement.jpake.JPAKEUtil
 androidx.compose.ui.layout.Placeable$PlacementScope$Companion:
@@ -6663,7 +6655,6 @@ com.google.android.gms.maps.GoogleMap$OnCameraMoveStartedListener
 com.google.longrunning.WaitOperationRequest
 kotlin.coroutines.SafeContinuation$Companion:
     private static synthetic void getRESULT$annotations()
-com.google.android.gms.internal.auth.zzv
 kotlin.TuplesKt:
     public static final java.util.List toList(kotlin.Pair)
     public static final java.util.List toList(kotlin.Triple)
@@ -7088,7 +7079,6 @@ com.bumptech.glide.load.model.stream.HttpUriLoader
 androidx.compose.foundation.gestures.TransformableKt$transformable$2
 com.bumptech.glide.load.engine.CallbackException:
     private static final long serialVersionUID
-com.google.android.gms.internal.auth.zzel
 androidx.legacy.coreutils.R$styleable
 com.google.android.material.floatingactionbutton.FloatingActionButton:
     public void <init>(android.content.Context)
@@ -7142,7 +7132,6 @@ androidx.compose.ui.unit.IntOffset:
     public static final long div-Bjo55l4(long,float)
     public static final long rem-Bjo55l4(long,int)
 kotlin.RequiresOptIn
-com.google.android.gms.internal.auth.zzgr
 androidx.compose.foundation.text.TextDelegate:
     public final androidx.compose.ui.text.MultiParagraphIntrinsics getParagraphIntrinsics$foundation_release()
     public final void setParagraphIntrinsics$foundation_release(androidx.compose.ui.text.MultiParagraphIntrinsics)
@@ -7322,7 +7311,6 @@ androidx.compose.material.OutlinedTextFieldKt:
     private static final androidx.compose.ui.text.input.TextFieldValue OutlinedTextField$lambda-2(androidx.compose.runtime.MutableState)
     private static final void OutlinedTextField$lambda-3(androidx.compose.runtime.MutableState,androidx.compose.ui.text.input.TextFieldValue)
     public static final synthetic void access$OutlinedTextField$lambda-3(androidx.compose.runtime.MutableState,androidx.compose.ui.text.input.TextFieldValue)
-com.google.android.gms.internal.auth.zzcf
 com.google.android.gms.security.ProviderInstaller:
     public void <init>()
     public static void installIfNeededAsync(android.content.Context,com.google.android.gms.security.ProviderInstaller$ProviderInstallListener)
@@ -7497,7 +7485,6 @@ androidx.compose.ui.graphics.Outline$Generic:
     public void <init>(androidx.compose.ui.graphics.Path)
     public androidx.compose.ui.geometry.Rect getBounds()
 androidx.constraintlayout.compose.GeneratedValue
-com.google.android.gms.auth.zzg
 androidx.media.R$drawable
 kotlin.collections.builders.SerializedMap
 com.google.common.collect.ByFunctionOrdering:
@@ -7572,9 +7559,7 @@ com.google.common.base.Ascii
 androidx.constraintlayout.core.state.Registry
 com.google.android.gms.common.internal.GmsClientSupervisor:
     public static void setUseHandlerThreadForCallbacks()
-    public void unbindService(android.content.ComponentName,android.content.ServiceConnection,java.lang.String)
     public void unbindService(java.lang.String,android.content.ServiceConnection,java.lang.String)
-    public boolean bindService(android.content.ComponentName,android.content.ServiceConnection,java.lang.String)
     public boolean bindService(java.lang.String,android.content.ServiceConnection,java.lang.String)
 androidx.compose.foundation.layout.Arrangement$Absolute$SpaceAround$1
 org.bouncycastle.pqc.crypto.newhope.ChaCha20
@@ -7594,7 +7579,6 @@ com.google.api.SystemParameterOrBuilder
 androidx.compose.material.ModalBottomSheetKt$ModalBottomSheetLayout$2
 androidx.compose.material.icons.sharp.MailOutlineKt
 com.google.api.ConfigChange$1
-com.google.android.gms.internal.auth.zzgu
 com.google.android.material.timepicker.TimePickerTextInputPresenter$3
 kotlin.ranges.IntProgressionIterator:
     public final int getStep()
@@ -7681,7 +7665,8 @@ org.bouncycastle.crypto.engines.CAST5Engine:
     protected static final int RED_ROUNDS
     protected static final int BLOCK_SIZE
 androidx.compose.material.SwipeableState$animateTo$$inlined$collect$1
-com.google.android.gms.internal.auth.zzeo
+com.google.android.gms.internal.auth.zzeo:
+    public final synthetic bridge com.google.android.gms.internal.auth.zzdl zza()
 com.google.common.cache.CacheLoader$1
 com.google.android.gms.internal.firebase-auth-api.zzjr:
     static void <clinit>()
@@ -7715,7 +7700,6 @@ io.grpc.PartialForwardingClientCall:
     public void setMessageCompression(boolean)
     public boolean isReady()
     public io.grpc.Attributes getAttributes()
-com.google.android.gms.internal.auth.zzci
 androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.immutableList.AbstractPersistentList:
     public androidx.compose.runtime.external.kotlinx.collections.immutable.PersistentList addAll(int,java.util.Collection)
     public androidx.compose.runtime.external.kotlinx.collections.immutable.PersistentList retainAll(java.util.Collection)
@@ -8016,13 +8000,11 @@ org.bouncycastle.math.ec.custom.sec.SecP384R1Field:
     private static final long M
     private static final int P11
     private static final int PExt23
-com.google.android.gms.internal.auth.zzgt
 org.bouncycastle.crypto.digests.Kangaroo$KangarooBase
 com.google.common.collect.Maps$ValueDifferenceImpl
 org.bouncycastle.crypto.digests.SHAKEDigest:
     protected int doFinal(byte[],int,byte,int)
     protected int doFinal(byte[],int,int,byte,int)
-com.google.android.gms.auth.zzh
 com.google.common.collect.ImmutableRangeSet$ComplementRanges
 com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool:
     public abstract long getMaxSize()
@@ -8323,7 +8305,6 @@ com.google.firestore.v1.DocumentDelete:
 org.bouncycastle.crypto.digests.RIPEMD320Digest:
     private static final int DIGEST_LENGTH
 com.example.breathing_app.R$style
-com.google.android.gms.internal.auth.zzen
 com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1
 kotlin.UShortArray
 com.google.crypto.tink.proto.KeysetInfo$Builder:
@@ -8466,7 +8447,6 @@ com.google.crypto.tink.proto.HashType:
     public static final int SHA384_VALUE
     public static final int SHA256_VALUE
     public static final int SHA512_VALUE
-com.google.android.gms.internal.auth.zzch
 com.nimbusds.jose.shaded.json.writer.BeansMapper$BeanNoConv
 com.google.android.gms.common.internal.zag:
     public static com.google.android.gms.common.internal.zag zac(androidx.fragment.app.Fragment,android.content.Intent,int)
@@ -8511,7 +8491,10 @@ androidx.compose.foundation.gestures.PressGestureScopeImpl:
     public long toSp-kPz2Gy4(float)
     public long toSp-kPz2Gy4(int)
     public java.lang.Object awaitRelease(kotlin.coroutines.Continuation)
-com.google.android.gms.internal.auth.zzab
+com.google.android.gms.internal.auth.zzab:
+    public final com.google.android.gms.tasks.Task zzb(com.google.android.gms.auth.AccountChangeEventsRequest)
+    public final com.google.android.gms.tasks.Task zzd(android.accounts.Account)
+    public final com.google.android.gms.tasks.Task zze(java.lang.String)
 com.google.api.Control
 com.google.protobuf.DescriptorProtos$ServiceOptions$Builder
 org.bouncycastle.crypto.util.PublicKeyFactory$GOST3410_2012Converter
@@ -8840,7 +8823,6 @@ com.google.common.base.CaseFormat$StringConverter
 androidx.fragment.app.FragmentTransition:
     static boolean supportsTransition()
     private void <init>()
-com.google.android.gms.internal.auth.zzeq
 androidx.compose.ui.focus.FocusOrderModifier$DefaultImpls
 com.google.android.material.bottomappbar.BottomAppBar$1
 androidx.compose.material.SwitchKt$SwitchImpl$1$1$invokeSuspend$$inlined$collect$1
@@ -8949,7 +8931,6 @@ kotlinx.coroutines.flow.internal.SafeCollector_commonKt:
     public static final kotlinx.coroutines.flow.Flow unsafeFlow(kotlin.jvm.functions.Function2)
 com.nimbusds.jose.jwk.JWKSelector
 com.google.firestore.v1.StructuredQuery$FilterOrBuilder
-com.google.android.gms.internal.auth.zzck
 androidx.compose.material.BottomDrawerState
 androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.immutableSet.TrieNodeKt
 androidx.compose.material.MenuKt$DropdownMenuContent$scale$2
@@ -9356,7 +9337,6 @@ androidx.core.app.unusedapprestrictions.IUnusedAppRestrictionsBackportService$De
 androidx.compose.ui.semantics.NodeLocationHolder:
     public static final synthetic androidx.compose.ui.semantics.NodeLocationHolder$ComparisonStrategy access$getComparisonStrategy$cp()
     public final androidx.compose.ui.node.LayoutNode getSubtreeRoot$ui_release()
-com.google.android.gms.internal.auth.zzgx
 com.google.android.gms.common.GooglePlayServicesUtil:
     public static int isGooglePlayServicesAvailable(android.content.Context)
     public static int isGooglePlayServicesAvailable(android.content.Context,int)
@@ -9634,7 +9614,6 @@ io.flutter.plugins.imagepicker.ImagePickerCache:
     private static final java.lang.String SHARED_PREFERENCE_PENDING_IMAGE_URI_PATH_KEY
     static final java.lang.String SHARED_PREFERENCES_NAME
 com.google.api.MetricDescriptor$ValueType
-com.google.android.gms.internal.auth.zzep
 com.google.protobuf.FieldOrBuilder
 com.google.android.gms.common.zzy
 androidx.compose.material.SliderKt$sliderSemantics$1$1
@@ -9692,7 +9671,6 @@ androidx.compose.ui.input.nestedscroll.NestedScrollSource:
     private final int value
 kotlin.jvm.internal.MutablePropertyReference:
     public void <init>(java.lang.Object)
-com.google.android.gms.internal.auth.zzgv
 com.google.common.collect.MapMakerInternalMap$KeyIterator
 io.flutter.plugins.webviewflutter.BuildConfig
 androidx.core.app.ActivityRecreator:
@@ -9933,7 +9911,6 @@ com.google.firebase.R$drawable
 androidx.compose.material.SliderKt$rangeSliderPressDragModifier$1$1$1$1$2
 io.grpc.Context$CanIgnoreReturnValue
 com.google.common.cache.CacheBuilder$OneWeigher
-com.google.android.gms.internal.auth.zzcj
 com.google.android.material.internal.ParcelableSparseArray
 androidx.compose.animation.ExperimentalAnimationApi
 com.google.common.graph.Traverser$Traversal$1
@@ -10262,13 +10239,11 @@ com.google.api.CustomHttpPattern$1
 androidx.transition.ChangeTransform$1
 kotlinx.coroutines.channels.TickerMode
 com.google.android.gms.maps.internal.zzbo
-com.google.android.gms.internal.auth.zzgw
 com.bumptech.glide.GenericTransitionOptions:
     public static com.bumptech.glide.GenericTransitionOptions withNoTransition()
     public static com.bumptech.glide.GenericTransitionOptions with(int)
     public static com.bumptech.glide.GenericTransitionOptions with(com.bumptech.glide.request.transition.ViewPropertyTransition$Animator)
     public static com.bumptech.glide.GenericTransitionOptions with(com.bumptech.glide.request.transition.TransitionFactory)
-com.google.android.gms.auth.zzk
 com.google.android.gms.wallet.zzx
 io.grpc.internal.OobChannel$4
 com.google.firebase.database.collection.LLRBNode$NodeVisitor
@@ -10538,7 +10513,6 @@ com.bumptech.glide.load.resource.bitmap.CenterInside:
     private static final java.lang.String ID
 androidx.core.content.res.ResourcesCompat$ThemeCompat$ImplApi29:
     private void <init>()
-com.google.android.gms.internal.auth.zzes
 com.google.android.material.bottomappbar.BottomAppBar$3
 com.google.android.gms.auth.api.credentials.Credentials:
     public static com.google.android.gms.auth.api.credentials.CredentialsClient getClient(android.app.Activity)
@@ -10586,7 +10560,6 @@ com.google.common.math.LongMath:
     static final long FLOOR_SQRT_MAX_LONG
     private static final int SIEVE_30
 com.google.firestore.v1.StructuredQuery$UnaryFilter$OperandTypeCase
-com.google.android.gms.internal.auth.zzcm
 com.google.android.gms.maps.GoogleMap$OnMarkerClickListener
 com.google.common.hash.Funnels$ByteArrayFunnel
 androidx.compose.material.ElevationKt:
@@ -11145,7 +11118,6 @@ org.bouncycastle.jcajce.PKIXExtendedParameters:
     public boolean getPolicyQualifiersRejected()
     public static final int PKIX_VALIDITY_MODEL
     public static final int CHAIN_VALIDITY_MODEL
-com.google.android.gms.internal.auth.zzet
 org.bouncycastle.asn1.ASN1Object:
     protected static boolean hasEncodedTagValue(java.lang.Object,int)
 com.google.crypto.tink.shaded.protobuf.GeneratedMessageLite$1
@@ -11217,7 +11189,6 @@ androidx.compose.animation.core.ComplexDouble:
 androidx.browser.browseractions.BrowserServiceFileProvider$1
 com.google.firebase.auth.internal.zzx:
     public static com.google.firebase.auth.FirebaseUser zzk(com.google.firebase.FirebaseApp,com.google.firebase.auth.FirebaseUser)
-com.google.android.gms.internal.auth.zzgz
 kotlinx.coroutines.channels.BroadcastChannel$DefaultImpls
 com.google.android.gms.internal.firebase-auth-api.zzsg
 com.google.crypto.tink.shaded.protobuf.CodedInputStreamReader:
@@ -11497,7 +11468,6 @@ com.google.android.gms.common.internal.zab:
 com.google.android.gms.common.api.ResultTransform
 androidx.compose.foundation.layout.RequiredMinIntrinsicHeightModifier
 io.grpc.util.AdvancedTlsX509KeyManager$LoadFilePathExecution
-com.google.android.gms.internal.auth.zzer
 com.google.android.gms.wallet.PaymentsClient:
     void <init>(android.app.Activity,com.google.android.gms.wallet.Wallet$WalletOptions)
     public com.google.android.gms.tasks.Task getPaymentCardRecognitionIntent(com.google.android.gms.wallet.PaymentCardRecognitionIntentRequest)
@@ -11532,7 +11502,6 @@ com.google.crypto.tink.CleartextKeysetHandle:
     public static final com.google.crypto.tink.KeysetHandle parseFrom(byte[])
     public static com.google.crypto.tink.proto.Keyset getKeyset(com.google.crypto.tink.KeysetHandle)
     public static com.google.crypto.tink.KeysetHandle fromKeyset(com.google.crypto.tink.proto.Keyset)
-com.google.android.gms.auth.zzd
 com.google.android.gms.common.internal.AccountAccessor:
     public final boolean equals(java.lang.Object)
     public final android.accounts.Account zzb()
@@ -11591,7 +11560,6 @@ androidx.compose.runtime.BroadcastFrameClock:
     public void <init>()
     public final void cancel(java.util.concurrent.CancellationException)
 androidx.viewpager2.adapter.FragmentStateAdapter$3
-com.google.android.gms.internal.auth.zzcl
 androidx.compose.foundation.lazy.LazyDslKt$itemsIndexed$3
 com.google.common.cache.LocalCache$AccessQueue
 androidx.compose.animation.core.TweenSpec:
@@ -11972,7 +11940,6 @@ io.grpc.ManagedChannelProvider$NewChannelBuilderResult
 com.google.android.gms.internal.firebase-auth-api.zzhh:
     static void <clinit>()
     static final synthetic int[] zza
-com.google.android.gms.internal.auth.zzgy
 androidx.compose.material.MenuKt
 io.grpc.util.AdvancedTlsX509TrustManager$Closeable
 com.google.android.gms.common.util.HexDumpUtils
@@ -12038,7 +12005,6 @@ androidx.lifecycle.PausingDispatcherKt:
 androidx.documentfile.provider.TreeDocumentFile
 kotlin.reflect.KProperty$Getter
 com.bumptech.glide.util.FixedPreloadSizeProvider
-com.google.android.gms.internal.auth.zzco
 com.google.android.gms.maps.internal.ICameraUpdateFactoryDelegate
 androidx.core.transition.TransitionKt$doOnPause$$inlined$addListener$default$1
 kotlin.collections.ArraysKt___ArraysKt$asSequence$$inlined$Sequence$8
@@ -12207,7 +12173,6 @@ org.bouncycastle.pqc.crypto.util.PrivateKeyInfoFactory:
     private void <init>()
     public static org.bouncycastle.asn1.pkcs.PrivateKeyInfo createPrivateKeyInfo(org.bouncycastle.crypto.params.AsymmetricKeyParameter)
 androidx.navigation.Navigation$findViewNavController$2
-com.google.android.gms.auth.zze
 androidx.recyclerview.widget.NestedAdapterWrapper$Callback
 com.bumptech.glide.load.engine.executor.GlideExecutor$Builder:
     public com.bumptech.glide.load.engine.executor.GlideExecutor$Builder setThreadTimeoutMillis(long)
@@ -12226,7 +12191,6 @@ org.bouncycastle.jcajce.util.ProviderJcaJceHelper:
     public java.security.KeyStore createKeyStore(java.lang.String)
 org.jetbrains.annotations.Nullable
 com.google.android.gms.common.api.GoogleApi:
-    public void <init>(android.app.Activity,com.google.android.gms.common.api.Api,com.google.android.gms.common.api.Api$ApiOptions,com.google.android.gms.common.api.internal.StatusExceptionMapper)
     public void <init>(android.content.Context,com.google.android.gms.common.api.Api,com.google.android.gms.common.api.Api$ApiOptions,android.os.Looper,com.google.android.gms.common.api.internal.StatusExceptionMapper)
     public com.google.android.gms.common.api.internal.BaseImplementation$ApiMethodImpl doBestEffortWrite(com.google.android.gms.common.api.internal.BaseImplementation$ApiMethodImpl)
     public com.google.android.gms.common.api.internal.ListenerHolder registerListener(java.lang.Object,java.lang.String)
@@ -12245,7 +12209,6 @@ com.nimbusds.jose.crypto.impl.AAD:
     public void <init>()
 com.google.protobuf.DescriptorProtos$MethodOptions$IdempotencyLevel$IdempotencyLevelVerifier
 androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer$2
-com.google.android.gms.auth.TokenData
 com.google.firestore.v1.DeleteDocumentRequest$Builder
 com.google.android.gms.internal.common.zzak
 androidx.compose.ui.graphics.AndroidTileMode_androidKt
@@ -12696,6 +12659,8 @@ com.google.api.AuthProvider
 org.bouncycastle.asn1.cryptopro.GOST28147Parameters:
     public static org.bouncycastle.asn1.cryptopro.GOST28147Parameters getInstance(org.bouncycastle.asn1.ASN1TaggedObject,boolean)
 org.bouncycastle.pqc.crypto.mceliece.McElieceCipher
+io.flutter.plugins.googlesignin.Executors:
+    private void <init>()
 com.google.android.gms.common.server.response.zag
 com.google.android.gms.wallet.zzu
 com.google.common.collect.ArrayTable$ArrayMap$2
@@ -12733,7 +12698,6 @@ androidx.constraintlayout.compose.Dimension$Companion:
     public final androidx.constraintlayout.compose.Dimension percent(float)
 com.google.crypto.tink.signature.SignaturePemKeysetReader$PemKey
 org.bouncycastle.pqc.jcajce.provider.xmss.XMSSMTSignatureSpi$withShake128
-com.google.android.gms.internal.auth.zzev
 kotlinx.coroutines.internal.ArrayQueue:
     public final void clear()
 org.bouncycastle.jcajce.PBKDF2KeyWithParameters
@@ -12949,7 +12913,6 @@ androidx.core.app.NotificationManagerCompat$NotifyTask
 android.support.customtabs.trusted.ITrustedWebActivityService$Stub
 com.google.firebase.firestore.proto.UnknownDocumentOrBuilder
 androidx.compose.ui.text.android.LayoutCompat$BreakStrategy
-com.google.android.gms.internal.auth.zzcn
 com.stripe.payments.model.R$interpolator
 com.google.common.xml.package-info
 androidx.compose.ui.input.key.KeyInputModifier:
@@ -13437,7 +13400,6 @@ org.bouncycastle.util.Pack:
     public static void intToLittleEndian(int[],int,int,byte[],int)
     public static void littleEndianToLong(byte[],int,long[],int,int)
 androidx.constraintlayout.compose.Dimension$Companion$ratio$1
-com.google.android.gms.internal.auth.zzeu
 com.google.protobuf.DescriptorProtos$EnumValueOptionsOrBuilder
 com.google.android.gms.tasks.zzy
 com.google.protobuf.CodedInputStream$UnsafeDirectNioDecoder:
@@ -14098,6 +14060,7 @@ androidx.compose.ui.graphics.vector.ImageVectorKt
 com.google.android.material.appbar.HeaderBehavior:
     private static final int INVALID_POINTER
 io.grpc.InternalChannelz$SocketOptions
+io.flutter.plugins.googlesignin.BuildConfig
 androidx.constraintlayout.motion.widget.OnSwipe
 kotlin.collections.MapsKt__MapsJVMKt:
     private static final java.util.Map buildMapInternal(kotlin.jvm.functions.Function1)
@@ -14178,7 +14141,10 @@ com.google.firebase.auth.UserProfileChangeRequest$Builder:
 androidx.appcompat.app.AppCompatDelegateImpl$AutoNightModeManager:
     boolean isListening()
 com.google.cloud.audit.AuthorizationInfo
-com.google.android.gms.internal.auth.zzex
+com.google.android.gms.internal.auth.zzex:
+    public final int hashCode()
+    public final java.lang.String toString()
+    public final boolean equals(java.lang.Object)
 kotlin.collections.ArraysKt___ArraysJvmKt$asList$4
 com.google.android.material.color.HarmonizedColorsOptions
 io.grpc.internal.ForwardingReadableBuffer:
@@ -14455,7 +14421,6 @@ com.google.crypto.tink.subtle.StreamingAeadEncryptingStream
 kotlin.jvm.functions.Function11:
     public abstract java.lang.Object invoke(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
 androidx.legacy.v4.R$style
-com.google.android.gms.internal.auth.zzcr
 androidx.transition.R$string
 androidx.navigation.NavigatorProvider:
     public static final java.lang.String getNameForNavigator$navigation_common_release(java.lang.Class)
@@ -14492,7 +14457,6 @@ com.google.common.primitives.package-info
 androidx.compose.material.internal.ComposableSingletons$ExposedDropdownMenuPopupKt
 android.support.v4.media.MediaBrowserCompat$MediaBrowserImplBase$6
 com.google.android.gms.maps.model.IndoorBuilding
-com.google.android.gms.internal.auth.zzcp
 org.bouncycastle.pqc.crypto.lms.HSSKeyPairGenerator
 androidx.core.view.MenuKt$children$1
 com.google.android.gms.internal.firebase-auth-api.zzkn:
@@ -14905,8 +14869,6 @@ com.google.android.gms.auth.api.signin.GoogleSignInAccount:
     public static com.google.android.gms.auth.api.signin.GoogleSignInAccount fromAccount(android.accounts.Account)
     private static com.google.android.gms.auth.api.signin.GoogleSignInAccount zae(android.accounts.Account,java.util.Set)
     public varargs com.google.android.gms.auth.api.signin.GoogleSignInAccount requestExtraScopes(com.google.android.gms.common.api.Scope[])
-    public java.util.Set getGrantedScopes()
-    public boolean isExpired()
 kotlinx.serialization.internal.SerializationConstructorMarker:
     private void <init>()
 androidx.compose.ui.graphics.vector.PathNode$RelativeHorizontalTo:
@@ -15107,7 +15069,6 @@ com.google.common.util.concurrent.SimpleTimeLimiter$1
 com.google.firebase.storage.internal.StorageReferenceUri:
     public void <init>(android.net.Uri)
 androidx.annotation.ColorRes
-com.google.android.gms.internal.auth.zzew
 androidx.constraintlayout.core.motion.utils.Utils
 com.google.android.gms.wallet.callback.IntermediatePaymentData
 android.support.v4.media.MediaBrowserCompat$MediaBrowserImplBase$5
@@ -15118,7 +15079,6 @@ com.google.common.io.CharSource$CharSequenceCharSource
 kotlin.jvm.functions.Function10:
     public abstract java.lang.Object invoke(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
 com.google.protobuf.Int64Value
-com.google.android.gms.internal.auth.zzcq
 androidx.compose.foundation.layout.AspectRatioModifier
 io.grpc.Context$1CurrentContextExecutor
 androidx.compose.material.SliderKt$rangeSliderPressDragModifier$1$1
@@ -15503,7 +15463,6 @@ org.intellij.lang.annotations.JdkConstants
 org.bouncycastle.pqc.crypto.sphincs.Horst
 org.bouncycastle.jcajce.PKIXCRLStoreSelector$Builder:
     public org.bouncycastle.jcajce.PKIXCRLStoreSelector$Builder setDeltaCRLIndicatorEnabled(boolean)
-com.google.android.gms.internal.auth.zzha
 androidx.compose.ui.graphics.vector.GroupComponent:
     public final java.util.List getClipPathData()
     public final float getRotation()
@@ -16208,10 +16167,22 @@ io.grpc.Grpc$TransportAttr
 com.google.common.primitives.Chars$LexicographicalComparator
 com.nimbusds.jose.util.AbstractRestrictedResourceRetriever
 com.google.android.instantapps.R$string
+io.flutter.plugins.googlesignin.GoogleSignInPlugin:
+    public static void registerWith(io.flutter.plugin.common.PluginRegistry$Registrar)
+    public void setUpRegistrar(io.flutter.plugin.common.PluginRegistry$Registrar)
+    private static final java.lang.String CHANNEL_NAME
+    private static final java.lang.String METHOD_INIT
+    private static final java.lang.String METHOD_SIGN_IN_SILENTLY
+    private static final java.lang.String METHOD_SIGN_IN
+    private static final java.lang.String METHOD_GET_TOKENS
+    private static final java.lang.String METHOD_SIGN_OUT
+    private static final java.lang.String METHOD_DISCONNECT
+    private static final java.lang.String METHOD_IS_SIGNED_IN
+    private static final java.lang.String METHOD_CLEAR_AUTH_CACHE
+    private static final java.lang.String METHOD_REQUEST_SCOPES
 io.flutter.plugins.pathprovider.R$styleable
 androidx.compose.ui.ExperimentalComposeUiApi
 androidx.fragment.R
-com.google.android.gms.internal.auth.zzez
 kotlin.collections.ArraysKt___ArraysJvmKt$asList$2
 com.google.android.material.bottomnavigation.BottomNavigationView$OnNavigationItemReselectedListener
 androidx.compose.material.SwitchKt
@@ -16324,7 +16295,6 @@ androidx.compose.foundation.lazy.LazyListLayoutInfo:
 org.bouncycastle.asn1.StreamUtil:
     void <init>()
 androidx.core.transition.TransitionKt$addListener$5
-com.google.android.gms.internal.auth.zzct
 androidx.asynclayoutinflater.R$dimen
 androidx.core.view.ViewCompat$FocusDirection
 org.bouncycastle.pqc.crypto.xmss.DigestUtil:
@@ -16415,10 +16385,6 @@ com.google.crypto.tink.shaded.protobuf.Reader:
     public static final int TAG_UNKNOWN
 androidx.security.crypto.EncryptedFile$EncryptedFileOutputStream
 com.google.crypto.tink.shaded.protobuf.Internal$MapAdapter$EntryAdapter
-com.google.android.gms.auth.api.signin.GoogleSignInClient:
-    void <init>(android.app.Activity,com.google.android.gms.auth.api.signin.GoogleSignInOptions)
-    public android.content.Intent getSignInIntent()
-    public com.google.android.gms.tasks.Task silentSignIn()
 androidx.compose.foundation.text.selection.SelectionContainerKt$SelectionContainer$2
 org.bouncycastle.asn1.DERNumericString:
     public static org.bouncycastle.asn1.DERNumericString getInstance(java.lang.Object)
@@ -16743,7 +16709,11 @@ androidx.compose.ui.text.AnnotatedString$Range:
     public static synthetic androidx.compose.ui.text.AnnotatedString$Range copy$default(androidx.compose.ui.text.AnnotatedString$Range,java.lang.Object,int,int,java.lang.String,int,java.lang.Object)
     public final java.lang.String component4()
     public final androidx.compose.ui.text.AnnotatedString$Range copy(java.lang.Object,int,int,java.lang.String)
-com.google.android.gms.internal.auth.zzey
+com.google.android.gms.internal.auth.zzey:
+    static void <clinit>()
+    public int hashCode()
+    public boolean equals(java.lang.Object)
+    private static final com.google.android.gms.internal.auth.zzeg zza
 kotlin.collections.ArraysKt___ArraysJvmKt$asList$3
 io.flutter.plugins.sharedpreferences.R$dimen
 com.google.common.primitives.UnsignedBytes$LexicographicalComparatorHolder$PureJavaComparator
@@ -17089,7 +17059,6 @@ org.bouncycastle.crypto.macs.Zuc256Mac:
     private static final int TOPBIT
 com.google.crypto.tink.hybrid.HybridEncryptFactory
 kotlinx.coroutines.debug.internal.DebugProbesKt
-com.google.android.gms.internal.auth.zzcs
 android.annotation.SuppressLint
 androidx.compose.ui.platform.LocalSoftwareKeyboardController:
     public static synthetic void getCurrent$annotations()
@@ -18448,7 +18417,6 @@ com.google.firebase.firestore.core.TargetIdGenerator:
 org.bouncycastle.crypto.agreement.ECVKOAgreement:
     public int getFieldSize()
 com.google.android.gms.maps.model.zzm
-com.google.android.gms.internal.auth.zzhc
 androidx.transition.R$id:
     private void <init>()
     public static final int action_container
@@ -18666,13 +18634,29 @@ com.google.common.hash.Funnels$UnencodedCharsFunnel
 androidx.core.content.PackageManagerCompat$UnusedAppRestrictionsStatus
 androidx.core.content.ContextCompat$Api16Impl:
     private void <init>()
-com.google.android.gms.internal.auth.zzcv
 org.bouncycastle.jce.exception.ExtException
 com.google.common.io.FileBackedOutputStream$MemoryOutput
 com.google.crypto.tink.proto.HmacPrfParams$1
 com.google.protobuf.Internal$MapAdapter$EntryAdapter
 io.flutter.plugins.webviewflutter.R$color
-com.google.android.gms.auth.zzl
+com.google.android.gms.auth.zzl:
+    public static android.os.Bundle removeAccount(android.content.Context,android.accounts.Account)
+    static synthetic com.google.android.gms.common.logging.Logger zzc()
+    public static java.lang.Boolean requestGoogleAccountsAccess(android.content.Context)
+    public static java.lang.String getAccountId(android.content.Context,java.lang.String)
+    public static java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String)
+    public static java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)
+    public static java.util.List getAccountChangeEvents(android.content.Context,int,java.lang.String)
+    void <init>()
+    public static void invalidateToken(android.content.Context,java.lang.String)
+    static void zze(android.content.Intent)
+    public static final java.lang.String GOOGLE_ACCOUNT_TYPE
+    public static final java.lang.String WORK_ACCOUNT_TYPE
+    public static final java.lang.String KEY_SUPPRESS_PROGRESS_SCREEN
+    public static final int CHANGE_TYPE_ACCOUNT_ADDED
+    public static final int CHANGE_TYPE_ACCOUNT_REMOVED
+    public static final int CHANGE_TYPE_ACCOUNT_RENAMED_FROM
+    public static final int CHANGE_TYPE_ACCOUNT_RENAMED_TO
 androidx.webkit.internal.SafeBrowsingResponseImpl:
     public void proceed(boolean)
     public void backToSafety(boolean)
@@ -18742,7 +18726,6 @@ androidx.annotation.RequiresApi
 androidx.concurrent.futures.AbstractResolvableFuture$AtomicHelper
 com.google.api.Service$1
 androidx.constraintlayout.compose.ConstraintSet$DefaultImpls
-com.google.common.util.concurrent.AbstractFuture$Failure
 com.bumptech.glide.load.engine.executor.GlideExecutor$DefaultThreadFactory:
     private static final int DEFAULT_PRIORITY
 com.google.crypto.tink.hybrid.HybridDecryptFactory
@@ -19091,8 +19074,6 @@ com.google.common.cache.LocalCache$WeakAccessEntry
 kotlin.collections.unsigned.UArraysKt___UArraysKt$withIndex$3
 androidx.constraintlayout.utils.widget.ImageFilterView$1
 androidx.annotation.TransitionRes
-com.google.android.gms.common.api.GoogleApi$Settings$Builder:
-    public com.google.android.gms.common.api.GoogleApi$Settings$Builder setLooper(android.os.Looper)
 org.bouncycastle.asn1.cryptopro.GOST3410ParamSetParameters:
     public static org.bouncycastle.asn1.cryptopro.GOST3410ParamSetParameters getInstance(org.bouncycastle.asn1.ASN1TaggedObject,boolean)
     public static org.bouncycastle.asn1.cryptopro.GOST3410ParamSetParameters getInstance(java.lang.Object)
@@ -19232,7 +19213,6 @@ kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt:
     private static final kotlin.coroutines.Continuation createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt(kotlin.coroutines.Continuation,kotlin.jvm.functions.Function1)
     public void <init>()
 org.bouncycastle.pqc.math.linearalgebra.GF2mMatrix
-com.google.android.gms.internal.auth.zzhb
 com.google.gson.internal.bind.TypeAdapters$34
 androidx.compose.ui.KeyedComposedModifier2
 com.google.common.annotations.GwtCompatible
@@ -19422,7 +19402,6 @@ org.bouncycastle.math.ec.custom.sec.SecT233FieldElement:
     public int getK3()
 com.google.common.collect.Multimaps$TransformedEntriesMultimap$1
 com.google.common.math.BigIntegerMath$1
-com.google.android.gms.internal.auth.zzcu
 androidx.compose.material.SliderKt$RangeSlider$2$gestureEndAction$1$1$1
 com.google.firebase.firestore.proto.MaybeDocument$Builder:
     public com.google.firebase.firestore.proto.MaybeDocument$DocumentTypeCase getDocumentTypeCase()
@@ -19550,7 +19529,6 @@ org.bouncycastle.asn1.ocsp.ServiceLocator
 androidx.compose.foundation.layout.BoxScopeInstance$align$$inlined$debugInspectorInfo$1
 androidx.transition.ChangeTransform$3
 com.google.crypto.tink.subtle.StreamingAeadDecryptingStream
-com.google.android.gms.auth.zzm
 com.google.common.util.concurrent.Monitor$Guard
 com.google.android.material.transition.MaterialContainerTransform$1
 androidx.emoji2.text.MetadataListReader$OffsetInfo:
@@ -19832,7 +19810,6 @@ org.bouncycastle.crypto.params.DESedeParameters:
 androidx.constraintlayout.motion.widget.MotionLayout$DevModeDraw:
     private static final int DEBUG_PATH_TICKS_PER_MS
 androidx.appcompat.widget.ActivityChooserView$Callbacks
-com.google.android.gms.internal.auth.zzhe
 androidx.core.view.MarginLayoutParamsCompat:
     public static boolean isMarginRelative(android.view.ViewGroup$MarginLayoutParams)
     public static int getLayoutDirection(android.view.ViewGroup$MarginLayoutParams)
@@ -19842,6 +19819,7 @@ androidx.core.view.MarginLayoutParamsCompat:
 com.google.gson.internal.sql.SqlTypesSupport$2
 io.flutter.view.TextureRegistry$SurfaceTextureEntry:
     public abstract void release()
+io.flutter.plugins.googlesignin.R$styleable
 io.flutter.app.FlutterPluginRegistry
 com.google.rpc.ResourceInfo$Builder
 androidx.core.content.res.FontResourcesParserCompat$ProviderResourceEntry:
@@ -20235,7 +20213,6 @@ org.bouncycastle.crypto.paddings.X923Padding:
 androidx.compose.ui.text.InternalTextApi
 com.google.common.cache.CacheLoader$UnsupportedLoadingOperationException
 com.google.android.material.timepicker.TimePickerControls
-com.google.android.gms.internal.auth.zzcx
 com.google.api.ResourceDescriptor$History$1
 kotlinx.coroutines.flow.FlowKt__DelayKt$sample$2$1$2
 androidx.compose.material.icons.twotone.PhoneKt
@@ -20563,7 +20540,6 @@ kotlinx.coroutines.CompletedContinuation:
     public final java.lang.Throwable component5()
 org.bouncycastle.pqc.crypto.mceliece.Conversions
 com.google.firebase.database.collection.R$color
-com.google.android.gms.internal.auth.zzhd
 com.google.api.Context$1
 androidx.compose.ui.layout.OnSizeChangedModifier:
     public final kotlin.jvm.functions.Function1 getOnSizeChanged()
@@ -20929,7 +20905,6 @@ androidx.compose.ui.unit.Density:
     public abstract androidx.compose.ui.geometry.Rect toRect(androidx.compose.ui.unit.DpRect)
     public abstract long toDpSize-k-rfVVM(long)
 org.bouncycastle.pqc.crypto.mceliece.McElieceKeyPairGenerator
-com.google.android.gms.internal.auth.zzcw
 com.google.common.collect.FilteredEntryMultimap$ValuePredicate
 org.bouncycastle.crypto.util.PublicKeyFactory$ECConverter
 com.bumptech.glide.load.model.LazyHeaders$Builder:
@@ -21389,7 +21364,6 @@ com.google.firebase.auth.FirebaseAuth:
 com.google.android.gms.safetynet.SafetyNetApi$zzb
 com.google.android.gms.maps.LocationSource$OnLocationChangedListener
 androidx.constraintlayout.core.motion.utils.HyperSpline
-com.google.android.gms.internal.auth.zzfa
 androidx.compose.ui.platform.AndroidComposeView$pointerIconService$1:
     public androidx.compose.ui.input.pointer.PointerIcon getCurrent()
 androidx.transition.ChangeScroll
@@ -21421,7 +21395,9 @@ org.bouncycastle.pqc.jcajce.provider.gmss.BCGMSSPublicKey
 com.razorpay.R$xml
 android.support.v4.media.MediaBrowserCompat$MediaBrowserImplApi21$3
 androidx.compose.material.TabRowKt$ScrollableTabRow$2$1
-com.google.android.gms.internal.auth.zzhg
+com.google.android.gms.internal.auth.zzhg:
+    static void <clinit>()
+    static final synthetic int[] zza
 org.bouncycastle.crypto.agreement.jpake.JPAKERound2Payload
 androidx.compose.material.ModalBottomSheetKt$Scrim$dismissModifier$1$1
 androidx.compose.animation.AnimatedVisibilityKt$AnimatedVisibility$9
@@ -21548,7 +21524,6 @@ org.bouncycastle.math.ec.custom.sec.SecP128R1Field:
     private static final int PExt7s1
 com.google.crypto.tink.proto.AesGcmHkdfStreamingParams
 com.google.common.escape.ArrayBasedEscaperMap
-com.google.common.util.concurrent.AbstractFuture$Waiter
 androidx.compose.foundation.layout.AlignmentLineKt$alignmentLineOffsetMeasure$1
 io.perfmark.TaskCloseable
 com.google.firestore.v1.TransactionOptions$ReadWriteOrBuilder
@@ -21575,6 +21550,7 @@ androidx.compose.ui.text.input.TextFieldValue:
 com.google.gson.internal.bind.MapTypeAdapterFactory
 org.bouncycastle.asn1.x509.X509DefaultEntryConverter
 com.google.firebase.firestore.proto.MutationQueueOrBuilder
+io.flutter.plugins.googlesignin.GoogleSignInPlugin$IDelegate
 com.google.android.material.transformation.TransformationChildCard:
     public void <init>(android.content.Context)
     public void <init>(android.content.Context,android.util.AttributeSet)
@@ -21707,7 +21683,6 @@ io.flutter.embedding.engine.systemchannels.NavigationChannel:
 androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.persistentOrderedMap.PersistentOrderedMapBuilderValues
 androidx.activity.PipHintTrackerKt$trackPipAnimationHintView$flow$1$attachStateChangeListener$1
 com.google.protobuf.ValueOrBuilder
-com.google.android.gms.internal.auth.zzcz
 javax.annotation.WillNotClose
 androidx.legacy.coreui.R$string
 androidx.compose.ui.graphics.SweepGradient
@@ -21724,14 +21699,6 @@ com.google.android.gms.wallet.AutoResolvableVoidResult
 com.google.common.collect.CompactHashMap$ValuesView
 org.bouncycastle.util.encoders.UrlBase64
 com.google.gson.internal.ConstructorConstructor$4
-com.google.common.util.concurrent.AbstractFuture$TrustedFuture:
-    void <init>()
-    public final java.lang.Object get()
-    public final java.lang.Object get(long,java.util.concurrent.TimeUnit)
-    public final boolean isDone()
-    public final boolean isCancelled()
-    public final void addListener(java.lang.Runnable,java.util.concurrent.Executor)
-    public final boolean cancel(boolean)
 com.google.common.collect.Multimaps$Keys$1
 com.google.android.gms.internal.auth.zzat
 com.google.android.gms.internal.common.zzm
@@ -21913,7 +21880,8 @@ androidx.compose.ui.input.pointer.PointerEventKt:
     public static final boolean positionChanged(androidx.compose.ui.input.pointer.PointerInputChange)
     static synthetic long positionChangeInternal$default(androidx.compose.ui.input.pointer.PointerInputChange,boolean,int,java.lang.Object)
     public static final boolean anyChangeConsumed(androidx.compose.ui.input.pointer.PointerInputChange)
-com.google.android.gms.internal.auth.zzhh
+com.google.android.gms.internal.auth.zzhh:
+    private void <init>()
 androidx.transition.Styleable$Transition
 io.grpc.InternalKnownTransport
 com.google.crypto.tink.proto.RsaSsaPssKeyFormat$Builder
@@ -22038,7 +22006,9 @@ kotlinx.coroutines.channels.LinkedListChannel:
 com.google.apphosting.datastore.testing.DatastoreTestTrace$FirestoreV1Action
 com.google.gson.internal.bind.JsonTreeReader
 fman.ge.smart_auth.R$anim
-com.google.android.gms.auth.GoogleAuthException
+com.google.android.gms.auth.GoogleAuthException:
+    public void <init>()
+    public void <init>(java.lang.Throwable)
 com.razorpay.f
 androidx.compose.animation.core.VectorizedRepeatableSpec
 com.google.firestore.v1.UpdateDocumentRequest
@@ -22377,7 +22347,6 @@ com.google.android.gms.common.internal.IAccountAccessor$Stub:
     protected final boolean zza(int,android.os.Parcel,android.os.Parcel,int)
 kotlinx.coroutines.flow.internal.ChannelFlowKt:
     public static final kotlinx.coroutines.flow.internal.ChannelFlow asChannelFlow(kotlinx.coroutines.flow.Flow)
-com.google.android.gms.internal.auth.zzhf
 androidx.annotation.InspectableProperty
 org.bouncycastle.x509.PKIXAttrCertChecker:
     public abstract java.util.Set getSupportedExtensions()
@@ -22529,7 +22498,6 @@ androidx.compose.foundation.lazy.layout.LazyLayoutKt:
     private static final int MaxItemsToRetainForReuse
 androidx.appcompat.widget.ActivityChooserView
 org.bouncycastle.jce.interfaces.ECPointEncoder
-com.google.android.gms.internal.auth.zzcy
 org.bouncycastle.crypto.signers.ISO9796d2Signer:
     public void <init>(org.bouncycastle.crypto.AsymmetricBlockCipher,org.bouncycastle.crypto.Digest)
     public void updateWithRecoveredMessage(byte[])
@@ -23220,7 +23188,8 @@ androidx.compose.foundation.lazy.LazyGridKt$LazyVerticalGrid$1
 org.bouncycastle.pqc.crypto.gmss.GMSSStateAwareSigner$1
 com.google.common.collect.ForwardingMultiset$StandardElementSet
 com.google.android.material.bottomappbar.BottomAppBar$FabAnimationMode
-com.google.android.gms.internal.auth.zzfc
+com.google.android.gms.internal.auth.zzfc:
+    private void <init>()
 androidx.media.MediaSessionManagerImplApi28$RemoteUserInfoImplApi28
 androidx.compose.material.icons.filled.LocationOnKt
 androidx.fragment.app.FragmentTabHost$SavedState$1
@@ -23842,7 +23811,8 @@ org.bouncycastle.asn1.ASN1Boolean:
     public static org.bouncycastle.asn1.ASN1Boolean getInstance(int)
     private static final byte FALSE_VALUE
     private static final byte TRUE_VALUE
-com.google.android.gms.internal.auth.zzhj
+com.google.android.gms.internal.auth.zzhj:
+    public static boolean zzd()
 androidx.compose.material.internal.ExposedDropdownMenuPopupKt$ExposedDropdownMenuPopup$popupLayout$1$1$1
 com.google.common.collect.FilteredSetMultimap
 android.support.v4.media.session.MediaSessionCompatApi23$Callback
@@ -23863,7 +23833,6 @@ com.google.android.material.resources.TextAppearanceConfig:
     public static void setShouldLoadFontSynchronously(boolean)
 io.flutter.plugins.firebase.storage.R
 androidx.constraintlayout.compose.MotionLayoutKt$MotionLayoutCore$2
-com.google.android.gms.internal.auth.zzfb
 com.google.common.util.concurrent.AbstractExecutionThreadService$1
 androidx.compose.ui.graphics.LinearGradient
 com.nimbusds.jose.shaded.json.parser.JSONParserReader
@@ -24423,7 +24392,6 @@ androidx.transition.GhostViewHolder
 com.google.type.Color$1
 com.google.apphosting.datastore.testing.DatastoreTestTrace$FirestoreV1Action$BatchGetDocumentsOrBuilder
 com.google.common.collect.ForwardingSortedMultiset
-com.google.android.gms.internal.auth.zzhi
 com.google.firebase.storage.R$string
 com.google.android.material.timepicker.ClickActionDelegate
 com.google.firestore.v1.Document$Builder:
@@ -25113,7 +25081,6 @@ androidx.compose.ui.platform.InspectorValueInfo:
     public java.lang.Object getValueOverride()
     public kotlin.sequences.Sequence getInspectableElements()
     private androidx.compose.ui.platform.InspectorInfo _values
-com.google.android.gms.internal.auth.zzhl
 com.google.common.collect.TreeRangeSet$SubRangeSetRangesByLowerBound$2
 kotlin.LateinitKt
 io.grpc.okhttp.internal.framed.Http2:
@@ -25261,7 +25228,6 @@ com.google.android.gms.wallet.PaymentDataRequest:
     public boolean isUiRequired()
 com.razorpay.R$anim
 com.google.android.gms.maps.zzah
-com.google.android.gms.internal.auth.zzff
 com.google.firebase.auth.internal.zzau
 com.google.android.material.textfield.TextInputLayout$BoxBackgroundMode
 androidx.appcompat.view.menu.CascadingMenuPopup:
@@ -25427,7 +25393,8 @@ org.bouncycastle.crypto.util.PrivateKeyInfoFactory:
 androidx.compose.foundation.gestures.DragGestureDetectorKt$detectVerticalDragGestures$5$1
 androidx.compose.foundation.lazy.LazyGridKt$LazyVerticalGrid$2
 org.bouncycastle.asn1.bc.LinkedCertificate
-com.google.android.gms.internal.auth.zzfd
+com.google.android.gms.internal.auth.zzfd:
+    private void <init>()
 com.google.errorprone.annotations.DoNotMock
 com.google.common.collect.MapMakerInternalMap$StrongKeyDummyValueEntry
 androidx.compose.animation.core.MutatorMutex$mutateWith$2
@@ -25678,8 +25645,6 @@ com.google.common.collect.StandardTable$Column
 com.google.android.material.color.HarmonizedColors
 com.bumptech.glide.util.Preconditions:
     private void <init>()
-com.google.android.gms.common.UserRecoverableException:
-    public android.content.Intent getIntent()
 androidx.constraintlayout.compose.ConstraintLayoutBaseScope$VerticalAnchor:
     public static synthetic androidx.constraintlayout.compose.ConstraintLayoutBaseScope$VerticalAnchor copy$default(androidx.constraintlayout.compose.ConstraintLayoutBaseScope$VerticalAnchor,java.lang.Object,int,int,java.lang.Object)
     public final java.lang.Object component1$compose_release()
@@ -26044,10 +26009,10 @@ com.google.firestore.v1.DocumentProto
 com.google.thirdparty.publicsuffix.PublicSuffixType
 androidx.constraintlayout.compose.DerivedConstraintSet$DefaultImpls
 com.google.android.gms.maps.zzai
-com.google.android.gms.internal.auth.zzfe
 com.google.apphosting.datastore.testing.DatastoreTestTrace$FirestoreV1Action$RemoveListen$Builder
 com.google.rpc.context.AttributeContext$RequestOrBuilder
-com.google.android.gms.common.BlockingServiceConnection
+com.google.android.gms.common.BlockingServiceConnection:
+    public android.os.IBinder getServiceWithTimeout(long,java.util.concurrent.TimeUnit)
 com.google.crypto.tink.proto.ChaCha20Poly1305KeyOrBuilder
 kotlin.text.MatchResult$Destructured
 androidx.core.view.ContentInfoCompat$BuilderCompat31Impl:
@@ -26100,7 +26065,8 @@ com.google.android.material.internal.BaselineLayout:
     public void <init>(android.content.Context)
     public void <init>(android.content.Context,android.util.AttributeSet,int)
 org.bouncycastle.pqc.jcajce.provider.xmss.XMSSMTKeyPairGeneratorSpi
-com.google.android.gms.internal.auth.zzhk
+com.google.android.gms.internal.auth.zzhk:
+    public abstract boolean zzb()
 androidx.compose.foundation.text.KeyboardActions:
     public void <init>()
 kotlin.collections.CollectionsKt___CollectionsKt$elementAt$1
@@ -26192,7 +26158,6 @@ org.bouncycastle.asn1.DERGeneralString:
     public byte[] getOctets()
 com.google.android.gms.maps.model.StreetViewPanoramaLink
 com.google.protobuf.DescriptorProtos$FileDescriptorSet$Builder
-com.google.android.gms.internal.auth.zzda
 com.nimbusds.jose.shaded.json.writer.CompessorMapper
 androidx.core.view.WindowCompat$Impl16:
     private void <init>()
@@ -26583,7 +26548,6 @@ androidx.compose.foundation.text.selection.Selection$AnchorInfo:
     private final androidx.compose.ui.text.style.ResolvedTextDirection direction
     private final int offset
     private final long selectableId
-com.google.common.util.concurrent.ListenableFuture
 kotlinx.coroutines.CancelFutureOnCompletion
 androidx.compose.ui.platform.InspectableValue
 com.google.common.util.concurrent.AggregateFutureState$AtomicHelper
@@ -26805,7 +26769,6 @@ org.bouncycastle.asn1.DERGraphicString:
     public static org.bouncycastle.asn1.DERGraphicString getInstance(java.lang.Object)
     public static org.bouncycastle.asn1.DERGraphicString getInstance(org.bouncycastle.asn1.ASN1TaggedObject,boolean)
     public byte[] getOctets()
-com.google.android.gms.internal.auth.zzdb
 androidx.compose.material.BackdropScaffoldKt$BackdropScaffold$1$1$2$1$1$1
 kotlin.jvm.JvmPackageName
 com.google.android.gms.maps.zzaj
@@ -26824,7 +26787,6 @@ org.bouncycastle.math.raw.Interleave:
     private static final long M32
     private static final long M64
     private static final long M64R
-com.google.android.gms.internal.auth.zzfh
 androidx.browser.trusted.splashscreens.SplashScreenParamKey
 io.flutter.embedding.engine.dart.DartExecutor$DartEntrypoint:
     public static io.flutter.embedding.engine.dart.DartExecutor$DartEntrypoint createDefault()
@@ -28217,7 +28179,8 @@ androidx.compose.runtime.tooling.CompositionData:
 kotlin.sequences.TransformingSequence$iterator$1:
     public final java.util.Iterator getIterator()
 androidx.compose.foundation.selection.ToggleableKt$toggleable$4$1
-com.google.android.gms.internal.auth.zzhm
+com.google.android.gms.internal.auth.zzhm:
+    public final boolean zzb()
 dagger.internal.InjectedFieldSignature
 io.grpc.inprocess.InProcessChannelBuilder$1InProcessChannelTransportFactoryBuilder
 com.google.common.cache.LocalCache$EntrySet
@@ -28537,7 +28500,6 @@ com.bumptech.glide.GlideBuilder:
     public com.bumptech.glide.GlideBuilder setLogRequestOrigins(boolean)
     public com.bumptech.glide.GlideBuilder setImageDecoderEnabledForBitmaps(boolean)
     com.bumptech.glide.GlideBuilder setEngine(com.bumptech.glide.load.engine.Engine)
-com.google.android.gms.internal.auth.zzfg
 androidx.compose.ui.focus.FocusManagerImpl:
     public void <init>()
 androidx.appcompat.view.StandaloneActionMode:
@@ -28724,6 +28686,7 @@ androidx.compose.ui.text.TextLayoutResult:
     public final boolean isLineEllipsized(int)
 com.google.common.util.concurrent.ClosingFuture$Combiner
 org.bouncycastle.pqc.crypto.qtesla.QTesla3p$QTesla3PPolynomial
+io.flutter.plugins.googlesignin.R$drawable
 io.grpc.internal.FailingClientTransport:
     public void ping(io.grpc.internal.ClientTransport$PingCallback,java.util.concurrent.Executor)
     public com.google.common.util.concurrent.ListenableFuture getStats()
@@ -28816,10 +28779,8 @@ androidx.collection.SparseArrayCompat:
     public void setValueAt(int,java.lang.Object)
 org.bouncycastle.pqc.crypto.xmss.XMSSMTPrivateKeyParameters$Builder:
     public org.bouncycastle.pqc.crypto.xmss.XMSSMTPrivateKeyParameters$Builder withPrivateKey(byte[])
-com.google.android.gms.internal.auth.zzfj
 firebase.com.protolitewrapper.BuildConfig
 com.squareup.okhttp.internal.http.HttpEngine$NetworkInterceptorChain
-com.google.android.gms.auth.api.signin.internal.zbg
 androidx.core.app.NotificationCompat:
     static android.app.Notification[] getNotificationArrayFromBundle(android.os.Bundle,java.lang.String)
     public static int getActionCount(android.app.Notification)
@@ -29098,7 +29059,6 @@ io.grpc.internal.ReadableBuffers$BufferInputStream:
     public java.io.InputStream detach()
 org.bouncycastle.crypto.agreement.kdf.GSKKDFParameters
 io.flutter.plugins.pathprovider.R$color
-com.google.android.gms.internal.auth.zzdd
 com.google.android.gms.internal.firebase-auth-api.zztw:
     public final void zzb(java.lang.String)
 com.google.protobuf.StringValue$1
@@ -29629,7 +29589,6 @@ androidx.security.crypto.MasterKey:
 com.google.android.material.internal.NavigationMenuPresenter
 androidx.compose.material.icons.filled.SettingsKt
 androidx.fragment.app.FragmentManager$RestoreBackStackState
-com.google.android.gms.auth.api.signin.internal.zbf
 androidx.compose.foundation.layout.LayoutWeightImpl:
     public boolean any(kotlin.jvm.functions.Function1)
 androidx.compose.ui.text.TextRangeKt:
@@ -29637,7 +29596,6 @@ androidx.compose.ui.text.TextRangeKt:
 androidx.loader.app.LoaderManagerImpl$LoaderViewModel:
     void removeLoader(int)
     boolean hasRunningLoaders()
-com.google.common.util.concurrent.AbstractFuture$SynchronizedHelper
 kotlinx.coroutines.sync.MutexImpl$LockSelect
 androidx.compose.material.icons.outlined.MenuKt
 org.bouncycastle.asn1.pkcs.PBKDF2Params:
@@ -29736,7 +29694,6 @@ org.bouncycastle.pqc.jcajce.provider.mceliece.McEliecePointchevalCipherSpi$McEli
 androidx.compose.foundation.lazy.LazyListScope:
     public abstract void item(java.lang.Object,kotlin.jvm.functions.Function3)
     public abstract void stickyHeader(java.lang.Object,kotlin.jvm.functions.Function3)
-com.google.android.gms.internal.auth.zzfi
 com.google.common.util.concurrent.SmoothRateLimiter$SmoothWarmingUp
 com.google.firebase.auth.ActionCodeSettings$Builder:
     private void <init>()
@@ -30099,7 +30056,6 @@ androidx.compose.runtime.ActualJvm_jvmKt:
     public static final java.lang.Object synchronized(java.lang.Object,kotlin.jvm.functions.Function0)
 com.google.android.material.transition.platform.MaterialVisibility
 com.google.firebase.auth.internal.R
-com.google.android.gms.internal.auth.zzdc
 org.bouncycastle.crypto.digests.SHA512tDigest:
     public void <init>(byte[])
     private static int readDigestLength(byte[])
@@ -30750,7 +30706,6 @@ androidx.compose.material.BackdropScaffoldKt$rememberBackdropScaffoldState$3
 androidx.compose.ui.geometry.CornerRadius$Companion:
     public static synthetic void getZero-kKHJgLs$annotations()
 com.google.protobuf.DescriptorProtos$GeneratedCodeInfo$Builder
-com.google.android.gms.internal.auth.zzdf
 com.google.common.collect.AbstractMultimap$Entries
 androidx.core.os.ParcelCompat
 com.google.android.material.datepicker.MaterialDatePicker$InputMode
@@ -30768,8 +30723,6 @@ com.google.protobuf.FieldType:
     public boolean isScalar()
     public boolean isValidForField(java.lang.reflect.Field)
 com.google.crypto.tink.shaded.protobuf.CodedOutputStream$UnsafeDirectNioEncoder
-com.google.android.gms.internal.auth.zzfl
-com.google.common.util.concurrent.AbstractFuture$Failure$1
 com.google.android.gms.maps.zzan
 com.bumptech.glide.load.model.StringLoader$StreamFactory:
     public void teardown()
@@ -31779,7 +31732,6 @@ com.google.crypto.tink.proto.AesCmacParams:
     static synthetic void access$200(com.google.crypto.tink.proto.AesCmacParams)
 com.google.apphosting.datastore.testing.DatastoreTestTrace$FirestoreV1Action$ListDocuments
 com.google.android.gms.internal.identity.zza
-com.google.android.gms.internal.auth.zzfk
 com.google.protobuf.ApiProto
 kotlinx.coroutines.flow.FlowKt__MigrationKt$switchMap$$inlined$flatMapLatest$1
 com.google.android.gms.maps.zzao
@@ -31806,10 +31758,10 @@ androidx.constraintlayout.compose.ConstrainedLayoutReference:
 org.bouncycastle.crypto.util.JournalingSecureRandom
 android.support.v4.media.MediaBrowserCompat$MediaBrowserImplBase
 com.google.android.gms.internal.firebase-auth-api.zzrt
-com.google.common.util.concurrent.AbstractFuture$AtomicHelper
 com.google.android.material.datepicker.CompositeDateValidator$3
 androidx.compose.ui.viewinterop.AndroidViewHolder$update$1
 androidx.compose.runtime.RecomposerKt$withRunningRecomposer$2$1
+io.flutter.plugins.googlesignin.R$layout
 androidx.compose.ui.text.ExperimentalTextApi
 com.nimbusds.jose.shaded.json.annotate.JsonSmartAnnotation
 io.flutter.plugins.firebase.storage.R$dimen
@@ -31879,7 +31831,6 @@ androidx.core.app.SharedElementCallback:
 io.grpc.stub.MetadataUtils$HeaderAttachingClientInterceptor
 com.nimbusds.jose.jwk.gen.ECKeyGenerator
 io.flutter.plugins.imagepicker.R$xml
-com.google.android.gms.internal.auth.zzde
 com.razorpay.razorpay_flutter.R$layout
 com.google.common.util.concurrent.ClosingFuture$Combiner5$1
 androidx.compose.material.SnackbarHostKt$animatedOpacity$2
@@ -31980,6 +31931,7 @@ androidx.compose.ui.platform.InspectableModifier$End:
 androidx.compose.ui.graphics.MatrixKt:
     private static final float dot-p89u6pk(float[],int,float[],int)
     public static final synthetic float access$dot-p89u6pk(float[],int,float[],int)
+io.flutter.plugins.googlesignin.R$string
 com.google.android.gms.common.config.zze
 org.bouncycastle.util.io.SimpleOutputStream
 com.razorpay.AnalyticsUtil:
@@ -32258,7 +32210,6 @@ com.google.android.gms.common.api.internal.zab
 androidx.webkit.internal.WebMessagePortImpl
 com.google.android.gms.maps.zzap
 com.example.breathing_app.R$raw
-com.google.android.gms.internal.auth.zzfn
 com.google.android.gms.common.util.Clock$-CC
 androidx.compose.foundation.layout.ColumnKt:
     public static final void Column(androidx.compose.ui.Modifier,androidx.compose.foundation.layout.Arrangement$Vertical,androidx.compose.ui.Alignment$Horizontal,kotlin.jvm.functions.Function3,androidx.compose.runtime.Composer,int,int)
@@ -32337,7 +32288,8 @@ com.google.protobuf.SourceContext
 androidx.compose.ui.graphics.vector.VectorApplier:
     public static final int $stable
 com.google.gson.internal.Excluder
-com.google.android.gms.common.api.internal.IStatusCallback$Stub
+com.google.android.gms.common.api.internal.IStatusCallback$Stub:
+    public static com.google.android.gms.common.api.internal.IStatusCallback asInterface(android.os.IBinder)
 androidx.compose.material.ScaffoldKt$ScaffoldLayout$2
 androidx.compose.ui.text.intl.LocaleList:
     public void <init>(java.lang.String)
@@ -32457,7 +32409,6 @@ android.support.v4.media.MediaBrowserCompat$MediaItem:
     public java.lang.String getMediaId()
     public static final int FLAG_BROWSABLE
     public static final int FLAG_PLAYABLE
-com.google.android.gms.internal.auth.zzdh
 com.bumptech.glide.util.LruCache:
     public synchronized void setSizeMultiplier(float)
     protected synchronized int getCount()
@@ -34306,7 +34257,6 @@ com.bumptech.glide.load.engine.ResourceRecycler$ResourceRecyclerCallback:
     static final int RECYCLE_RESOURCE
 com.google.firebase.auth.ActionCodeResult$Operation
 com.google.android.gms.maps.zzaq
-com.google.android.gms.internal.auth.zzfm
 kotlinx.parcelize.TypeParceler$Container
 androidx.compose.foundation.shape.AbsoluteRoundedCornerShapeKt
 org.bouncycastle.asn1.ocsp.TBSRequest:
@@ -34515,16 +34465,12 @@ kotlin.LazyKt:
     private void <init>()
 io.grpc.InternalInstrumented:
     public abstract com.google.common.util.concurrent.ListenableFuture getStats()
-com.google.android.gms.internal.auth.zzdg
 com.google.common.collect.Maps$FilteredEntryMap$KeySet
 kotlinx.serialization.internal.NoOpEncoder
 org.bouncycastle.crypto.util.DERMacData$Builder
 com.google.android.gms.internal.auth-api-phone.zzo
 androidx.compose.material.SwipeableKt$swipeable$3$3
 com.google.common.util.concurrent.SettableFuture:
-    public static com.google.common.util.concurrent.SettableFuture create()
-    private void <init>()
-    public boolean setException(java.lang.Throwable)
     public boolean setFuture(com.google.common.util.concurrent.ListenableFuture)
 com.google.gson.FieldNamingPolicy$5
 com.google.common.collect.MapMakerInternalMap$SerializationProxy
@@ -34542,7 +34488,6 @@ com.google.common.base.Platform:
     static com.google.common.base.CharMatcher precomputeCharMatcher(com.google.common.base.CharMatcher)
     static com.google.common.base.Optional getEnumIfPresent(java.lang.Class,java.lang.String)
     static java.lang.String nullToEmpty(java.lang.String)
-    static java.lang.String emptyToNull(java.lang.String)
     static com.google.common.base.CommonPattern compilePattern(java.lang.String)
     static boolean patternCompilerIsPcreLike()
     private static void logPatternCompilerError(java.util.ServiceConfigurationError)
@@ -34936,14 +34881,12 @@ com.google.common.collect.Sets$FilteredSet
 com.google.crypto.tink.proto.EcPointFormat
 androidx.compose.foundation.ExperimentalFoundationApi
 kotlinx.coroutines.flow.FlowKt__TransformKt$mapNotNull$$inlined$unsafeTransform$1
-com.google.android.gms.internal.auth.zzdj
 okio.Utf8
 kotlinx.coroutines.channels.TickerChannelsKt
 io.grpc.EquivalentAddressGroup$Attr
 com.google.android.gms.maps.OnMapsSdkInitializedCallback
 com.google.crypto.tink.subtle.SubtleUtil$1
 com.google.android.gms.maps.zzar
-com.google.android.gms.internal.auth.zzfp
 com.google.android.gms.auth.api.proxy.ProxyRequest
 com.nimbusds.jose.shaded.json.writer.CollectionMapper$MapType
 androidx.savedstate.R$id:
@@ -35722,7 +35665,6 @@ androidx.core.content.ContextCompat$Api28Impl:
     private void <init>()
 org.bouncycastle.crypto.engines.DESedeEngine:
     protected static final int BLOCK_SIZE
-com.google.android.gms.internal.auth.zzfo
 androidx.core.provider.RequestExecutor:
     private void <init>()
     static java.util.concurrent.Executor createHandlerExecutor(android.os.Handler)
@@ -35842,7 +35784,6 @@ androidx.compose.ui.graphics.vector.VectorComponent:
     public final kotlin.jvm.functions.Function0 getInvalidateCallback$ui_release()
 androidx.compose.ui.input.pointer.PointerEventTimeoutCancellationException:
     public static final int $stable
-com.google.android.gms.internal.auth.zzdi
 com.google.common.base.CharMatcher$BitSetMatcher
 kotlin.text.SystemProperties
 com.google.android.gms.internal.auth-api-phone.zzm
@@ -36031,7 +35972,8 @@ com.google.common.base.VerifyException:
 org.bouncycastle.jcajce.BCFKSLoadStoreParameter$Builder
 com.google.api.Distribution$Exemplar$Builder
 com.google.android.material.tabs.TabLayout$TabIndicatorGravity
-com.google.android.gms.auth.GooglePlayServicesAvailabilityException
+com.google.android.gms.auth.GooglePlayServicesAvailabilityException:
+    public int getConnectionStatusCode()
 androidx.compose.ui.graphics.colorspace.Adaptation:
     public static final synthetic androidx.compose.ui.graphics.colorspace.Adaptation access$getCiecat02$cp()
 io.flutter.plugins.flutter_plugin_android_lifecycle.R$attr
@@ -36131,7 +36073,6 @@ androidx.dynamicanimation.R$layout
 com.google.android.gms.maps.model.CameraPosition
 com.nimbusds.jose.jwk.RSAKey$Builder
 com.google.common.base.CharMatcher$ForPredicate
-com.google.android.gms.internal.auth.zzfr
 com.google.protobuf.WireFormat$FieldType$1:
     public boolean isPackable()
 androidx.annotation.ContentView
@@ -36339,7 +36280,9 @@ androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.
 com.google.android.gms.common.util.DataUtils
 com.google.common.collect.AbstractBiMap$BiMapEntry
 io.grpc.ClientInterceptors$1$1
-com.google.android.gms.internal.auth.zzdl
+com.google.android.gms.internal.auth.zzdl:
+    public abstract com.google.android.gms.internal.auth.zzdl zza()
+    public synthetic bridge java.lang.Object clone()
 com.google.common.collect.TreeMultiset$AvlNode
 com.google.common.collect.TreeTraverser$PostOrderNode
 kotlin.collections.ArraysKt___ArraysKt$withIndex$4
@@ -36449,55 +36392,10 @@ org.bouncycastle.math.ec.custom.sec.SecT283FieldElement:
     public int getK2()
     public int getK3()
 com.google.common.util.concurrent.AbstractFuture:
-    private void removeWaiter(com.google.common.util.concurrent.AbstractFuture$Waiter)
-    protected void <init>()
-    private java.lang.Object getDoneValue(java.lang.Object)
-    private static java.lang.Object getFutureValue(com.google.common.util.concurrent.ListenableFuture)
-    private static java.lang.Object getUninterruptibly(java.util.concurrent.Future)
-    private static void complete(com.google.common.util.concurrent.AbstractFuture)
-    private void releaseWaiters()
-    private com.google.common.util.concurrent.AbstractFuture$Listener clearListeners(com.google.common.util.concurrent.AbstractFuture$Listener)
-    private void addPendingString(java.lang.StringBuilder)
-    private void addDoneString(java.lang.StringBuilder)
-    private void appendResultObject(java.lang.StringBuilder,java.lang.Object)
-    private void appendUserObject(java.lang.StringBuilder,java.lang.Object)
-    private static void executeListener(java.lang.Runnable,java.util.concurrent.Executor)
-    private static java.util.concurrent.CancellationException cancellationExceptionWithCause(java.lang.String,java.lang.Throwable)
-    static synthetic com.google.common.util.concurrent.AbstractFuture$AtomicHelper access$200()
-    static synthetic boolean access$300()
-    static synthetic java.lang.Object access$400(com.google.common.util.concurrent.AbstractFuture)
-    static synthetic java.lang.Object access$500(com.google.common.util.concurrent.ListenableFuture)
-    static synthetic void access$600(com.google.common.util.concurrent.AbstractFuture)
-    static synthetic com.google.common.util.concurrent.AbstractFuture$Waiter access$800(com.google.common.util.concurrent.AbstractFuture)
-    static synthetic com.google.common.util.concurrent.AbstractFuture$Waiter access$802(com.google.common.util.concurrent.AbstractFuture,com.google.common.util.concurrent.AbstractFuture$Waiter)
-    static synthetic com.google.common.util.concurrent.AbstractFuture$Listener access$900(com.google.common.util.concurrent.AbstractFuture)
-    static synthetic com.google.common.util.concurrent.AbstractFuture$Listener access$902(com.google.common.util.concurrent.AbstractFuture,com.google.common.util.concurrent.AbstractFuture$Listener)
-    static synthetic java.lang.Object access$402(com.google.common.util.concurrent.AbstractFuture,java.lang.Object)
-    static void <clinit>()
-    public java.lang.Object get(long,java.util.concurrent.TimeUnit)
-    public java.lang.Object get()
-    public boolean isDone()
-    public boolean isCancelled()
-    public boolean cancel(boolean)
-    protected void interruptTask()
     protected final boolean wasInterrupted()
-    public void addListener(java.lang.Runnable,java.util.concurrent.Executor)
-    protected boolean set(java.lang.Object)
-    protected boolean setException(java.lang.Throwable)
     protected boolean setFuture(com.google.common.util.concurrent.ListenableFuture)
-    protected void afterDone()
-    protected final java.lang.Throwable tryInternalFastPathGetFailure()
     final void maybePropagateCancellationTo(java.util.concurrent.Future)
-    public java.lang.String toString()
-    protected java.lang.String pendingToString()
-    private volatile java.lang.Object value
-    private volatile com.google.common.util.concurrent.AbstractFuture$Listener listeners
-    private volatile com.google.common.util.concurrent.AbstractFuture$Waiter waiters
-    private static final boolean GENERATE_CANCELLATION_CAUSES
-    private static final java.util.logging.Logger log
     private static final long SPIN_THRESHOLD_NANOS
-    private static final com.google.common.util.concurrent.AbstractFuture$AtomicHelper ATOMIC_HELPER
-    private static final java.lang.Object NULL
 com.google.common.base.CommonMatcher
 androidx.compose.animation.AnimatedVisibilityScope$animateEnterExit$2
 com.google.protobuf.SchemaUtil:
@@ -37042,9 +36940,6 @@ kotlinx.coroutines.channels.BroadcastKt$broadcast$$inlined$CoroutineExceptionHan
 kotlinx.coroutines.flow.FlowKt__LimitKt$take$$inlined$unsafeFlow$1
 com.google.firebase.firestore.proto.TargetOuterClass
 kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$lastOrNull$1
-com.google.android.gms.auth.api.signin.internal.zbn:
-    public final synchronized com.google.android.gms.auth.api.signin.GoogleSignInAccount zba()
-    public final synchronized com.google.android.gms.auth.api.signin.GoogleSignInOptions zbb()
 androidx.profileinstaller.ProfileTranscoder:
     private void <init>()
     private static final int HOT
@@ -37087,7 +36982,6 @@ com.google.protobuf.Mixin
 androidx.browser.customtabs.CustomTabsService$FilePurpose
 com.google.common.cache.LongAddable
 com.google.common.eventbus.Dispatcher$ImmediateDispatcher
-com.google.android.gms.internal.auth.zzfq
 androidx.webkit.R$dimen
 com.google.api.Page
 com.google.common.collect.TreeTraverser$2
@@ -37217,7 +37111,6 @@ kotlin.collections.unsigned.UArraysKt
 androidx.compose.material.TextFieldColorsWithIcons$DefaultImpls
 com.google.crypto.tink.shaded.protobuf.TextFormatEscaper$2
 androidx.core.os.UserHandleCompat$Api24Impl
-com.google.android.gms.internal.auth.zzdk
 kotlin.collections.IndexedValue:
     public static synthetic kotlin.collections.IndexedValue copy$default(kotlin.collections.IndexedValue,int,java.lang.Object,int,java.lang.Object)
     public final int component1()
@@ -37226,7 +37119,6 @@ kotlin.collections.IndexedValue:
 org.bouncycastle.pqc.crypto.rainbow.util.ComputeInField
 com.nimbusds.jwt.proc.DefaultJWTClaimsVerifier
 com.google.protobuf.Internal$ListAdapter
-com.google.common.util.concurrent.AbstractFuture$Cancellation
 com.google.api.HttpRule$Builder
 com.google.firebase.firestore.core.ActivityScope:
     public void <init>()
@@ -37439,7 +37331,6 @@ com.google.common.util.concurrent.AbstractService$6
 com.nimbusds.jose.JWSSignerOption
 org.bouncycastle.util.io.pem.PemGenerationException
 kotlinx.coroutines.internal.ThreadLocalKt
-com.google.common.util.concurrent.AbstractFuture$SafeAtomicHelper
 com.nimbusds.jose.jwk.JWKMatcher$Builder
 dagger.Reusable
 androidx.compose.ui.modifier.ModifierLocalProviderKt
@@ -37663,7 +37554,6 @@ androidx.fragment.app.FragmentManager:
     private static final java.lang.String EXTRA_CREATED_FILLIN_INTENT
 io.flutter.embedding.engine.FlutterEngineGroup
 com.google.gson.FieldNamingPolicy$1
-com.google.android.gms.common.api.internal.IStatusCallback
 com.nimbusds.jose.crypto.utils.ConstantTimeUtils:
     private void <init>()
 com.google.common.eventbus.Subscribe
@@ -37720,7 +37610,9 @@ com.google.firebase.auth.PhoneAuthOptions$Builder:
     public com.google.firebase.auth.PhoneAuthOptions$Builder requireSmsValidation(boolean)
     public com.google.firebase.auth.PhoneAuthOptions$Builder setMultiFactorHint(com.google.firebase.auth.PhoneMultiFactorInfo)
     public com.google.firebase.auth.PhoneAuthOptions$Builder setMultiFactorSession(com.google.firebase.auth.MultiFactorSession)
-com.google.android.gms.internal.auth.zzdn
+com.google.android.gms.internal.auth.zzdn:
+    public java.lang.Object set(int,java.lang.Object)
+    public void add(int,java.lang.Object)
 com.google.api.Logging$1
 com.google.common.collect.ConcurrentHashMultiset$FieldSettersHolder
 com.google.gson.internal.bind.TypeAdapters$26
@@ -37738,7 +37630,6 @@ com.squareup.okhttp.ConnectionSpec
 com.google.common.collect.SetMultimap
 com.google.common.collect.Iterables$8
 io.flutter.embedding.engine.FlutterEngineGroup$1
-com.google.android.gms.internal.auth.zzft
 com.google.protobuf.WireFormat$FieldType$3:
     public boolean isPackable()
 com.google.android.gms.common.api.zac
@@ -37765,12 +37656,6 @@ androidx.recyclerview.widget.StaggeredGridLayoutManager:
     public static final int GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS
     static final int INVALID_OFFSET
     private static final float MAX_SCROLL_FACTOR
-com.google.android.gms.auth.api.signin.internal.zbm:
-    public static android.content.Intent zba(android.content.Context,com.google.android.gms.auth.api.signin.GoogleSignInOptions)
-    public static android.content.Intent zbb(android.content.Context,com.google.android.gms.auth.api.signin.GoogleSignInOptions)
-    public static android.content.Intent zbc(android.content.Context,com.google.android.gms.auth.api.signin.GoogleSignInOptions)
-    public static com.google.android.gms.auth.api.signin.GoogleSignInResult zbd(android.content.Intent)
-    public static com.google.android.gms.common.api.OptionalPendingResult zbe(com.google.android.gms.common.api.GoogleApiClient,android.content.Context,com.google.android.gms.auth.api.signin.GoogleSignInOptions,boolean)
 kotlinx.coroutines.flow.FlowKt__MergeKt$flatMapMerge$$inlined$map$1$2$1
 org.bouncycastle.crypto.prng.drbg.HashSP800DRBG:
     public int getBlockSize()
@@ -38184,7 +38069,6 @@ com.google.android.gms.maps.internal.zzam
 com.google.common.collect.Iterables$7
 org.bouncycastle.crypto.digests.Kangaroo
 com.google.common.collect.RangeMap
-com.google.android.gms.internal.auth.zzfu
 com.google.android.material.datepicker.DateFormatTextWatcher
 org.bouncycastle.jce.X509LDAPCertStoreParameters$Builder
 androidx.compose.ui.viewinterop.AndroidViewHolder:
@@ -38206,10 +38090,6 @@ com.nimbusds.jose.crypto.MACVerifier:
     public java.util.Set getDeferredCriticalHeaderParams()
 androidx.webkit.ServiceWorkerClientCompat
 com.google.android.gms.common.server.response.FastSafeParcelableJsonResponse
-com.google.android.gms.internal.auth.zza:
-    protected final android.os.Parcel zza()
-    protected final android.os.Parcel zzb(int,android.os.Parcel)
-    protected final void zzc(int,android.os.Parcel)
 com.google.longrunning.ListOperationsResponse$1
 androidx.versionedparcelable.VersionedParcelStream$FieldBuffer
 org.bouncycastle.math.ec.WNafUtil:
@@ -38507,7 +38387,6 @@ androidx.compose.foundation.BackgroundKt$background$$inlined$debugInspectorInfo$
 androidx.constraintlayout.compose.MotionRenderDebug
 org.bouncycastle.i18n.MissingEntryException
 androidx.constraintlayout.motion.widget.MotionScene$1
-com.google.android.gms.internal.auth.zzfs
 com.google.protobuf.WireFormat$FieldType$2:
     public boolean isPackable()
 com.google.gson.internal.LinkedTreeMap$EntrySet$1
@@ -38566,9 +38445,9 @@ androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.
     protected final int getPathLastIndex()
 com.google.common.hash.LongAddables$1
 kotlinx.coroutines.sync.CancelSemaphoreAcquisitionHandler
-com.google.android.gms.internal.auth.zzdm
 org.bouncycastle.pqc.crypto.newhope.Precomp
 androidx.legacy.v4.R
+io.flutter.plugins.googlesignin.R$anim
 kotlin.collections.ArraysKt___ArraysKt$withIndex$5
 com.google.common.collect.DiscreteDomain$IntegerDomain
 io.grpc.util.TransmitStatusRuntimeExceptionInterceptor$SerializingServerCall
@@ -39367,7 +39246,8 @@ com.google.firestore.v1.Target$DocumentsTarget$Builder:
     public com.google.firestore.v1.Target$DocumentsTarget$Builder addDocumentsBytes(com.google.protobuf.ByteString)
 androidx.compose.ui.layout.OnPlacedModifierImpl
 kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$none$1
-com.google.android.gms.internal.auth.zzdp
+com.google.android.gms.internal.auth.zzdp:
+    void <init>()
 com.google.crypto.tink.shaded.protobuf.ProtobufArrayList:
     void <init>()
 com.google.android.gms.maps.internal.IMapFragmentDelegate
@@ -39933,7 +39813,6 @@ kotlin.random.AbstractPlatformRandom:
 org.bouncycastle.crypto.macs.BlockCipherMac
 androidx.slidingpanelayout.widget.SlidingPaneLayout$DisableLayerRunnable
 com.google.rpc.BadRequest
-com.google.android.gms.internal.auth.zzfw
 androidx.profileinstaller.Encoding:
     private void <init>()
     static final int SIZEOF_BYTE
@@ -40043,7 +39922,6 @@ com.nimbusds.jose.shaded.json.JSONObject:
     private static final long serialVersionUID
 androidx.core.R$integer
 kotlin.collections.ArraysKt___ArraysKt$asIterable$$inlined$Iterable$6
-com.google.android.gms.internal.auth.zzdo
 org.bouncycastle.math.ec.custom.djb.Curve25519FieldElement:
     public java.lang.String getFieldName()
 org.bouncycastle.pqc.crypto.ExchangePair
@@ -40247,11 +40125,12 @@ org.bouncycastle.pqc.asn1.RainbowPrivateKey:
 kotlinx.coroutines.flow.FlowKt__ReduceKt$reduce$1
 com.google.crypto.tink.subtle.Ed25519$XYZT
 androidx.compose.foundation.shape.AbsoluteRoundedCornerShape
-com.google.common.util.concurrent.AbstractFuture$1
 androidx.compose.material.SwipeableState$special$$inlined$filter$1
 androidx.compose.material.TabKt$TabBaselineLayout$2
 com.google.common.collect.TreeMultiset
-com.google.android.gms.common.api.OptionalPendingResult
+com.google.android.gms.common.api.OptionalPendingResult:
+    public abstract com.google.android.gms.common.api.Result get()
+    public abstract boolean isDone()
 androidx.versionedparcelable.R
 kotlin.text.Regex:
     public void <init>(java.lang.String,java.util.Set)
@@ -40363,7 +40242,8 @@ org.bouncycastle.math.ec.custom.sec.SecT233K1Curve:
     public int getK2()
     public int getK3()
     private static final int SECT233K1_DEFAULT_COORDS
-com.google.common.util.concurrent.internal.InternalFutures
+com.google.common.util.concurrent.internal.InternalFutures:
+    private void <init>()
 io.grpc.CallCredentials:
     public abstract void thisUsesUnstableApi()
 com.google.protobuf.DescriptorProtos$FieldOptions$JSType$JSTypeVerifier
@@ -40413,7 +40293,6 @@ androidx.compose.ui.text.intl.Locale:
 com.google.api.Monitoring$MonitoringDestinationOrBuilder
 androidx.annotation.IntDef
 com.google.apphosting.datastore.testing.DatastoreTestTrace$FirestoreV1ActionOrBuilder
-com.google.android.gms.internal.auth.zzfv
 com.google.common.collect.AbstractMapBasedMultimap$1
 kotlinx.serialization.internal.PluginGeneratedSerialDescriptorKt:
     public static final synthetic boolean equalsImpl(kotlinx.serialization.descriptors.SerialDescriptor,java.lang.Object,kotlin.jvm.functions.Function1)
@@ -40549,8 +40428,6 @@ io.grpc.internal.MessageFramer:
     private static final byte UNCOMPRESSED
     private static final byte COMPRESSED
 com.google.common.util.concurrent.AggregateFuture$ReleaseResourcesReason
-com.google.android.gms.auth.api.signin.internal.zbs:
-    public final void zbe(com.google.android.gms.auth.api.signin.internal.zbr,com.google.android.gms.auth.api.signin.GoogleSignInOptions)
 androidx.core.widget.ScrollerCompat
 org.bouncycastle.asn1.BERPrivate:
     void <init>(boolean,int,byte[])
@@ -41829,13 +41706,27 @@ com.google.android.gms.common.annotation.KeepForSdkWithMembers
 com.google.common.cache.LocalCache$WeakValueReference
 com.google.common.collect.Iterables$3
 com.google.common.collect.StandardTable$TableSet
+io.flutter.plugins.googlesignin.GoogleSignInPlugin$Delegate:
+    public void setUpRegistrar(io.flutter.plugin.common.PluginRegistry$Registrar)
+    private static final int REQUEST_CODE_SIGNIN
+    private static final int REQUEST_CODE_RECOVER_AUTH
+    static final int REQUEST_CODE_REQUEST_SCOPE
+    private static final java.lang.String ERROR_REASON_EXCEPTION
+    private static final java.lang.String ERROR_REASON_STATUS
+    private static final java.lang.String ERROR_REASON_SIGN_IN_CANCELED
+    private static final java.lang.String ERROR_REASON_SIGN_IN_REQUIRED
+    private static final java.lang.String ERROR_REASON_NETWORK_ERROR
+    private static final java.lang.String ERROR_REASON_SIGN_IN_FAILED
+    private static final java.lang.String ERROR_FAILURE_TO_RECOVER_AUTH
+    private static final java.lang.String ERROR_USER_RECOVERABLE_AUTH
+    private static final java.lang.String DEFAULT_SIGN_IN
+    private static final java.lang.String DEFAULT_GAMES_SIGN_IN
 com.google.android.gms.maps.internal.zzai
 org.bouncycastle.asn1.x509.DigestInfo:
     public static org.bouncycastle.asn1.x509.DigestInfo getInstance(org.bouncycastle.asn1.ASN1TaggedObject,boolean)
 org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
 com.google.android.gms.common.internal.MethodInvocation:
     public void <init>(int,int,int,long,long,java.lang.String,java.lang.String,int)
-com.google.android.gms.internal.auth.zzfy
 kotlin.annotation.AnnotationTarget
 androidx.appcompat.widget.ActivityChooserModel$ActivityResolveInfo
 com.google.common.collect.DenseImmutableTable
@@ -42099,7 +41990,6 @@ androidx.compose.foundation.text.AndroidCursorHandle_androidKt:
     public static final float getCursorHandleHeight()
     public static final float getCursorHandleWidth()
     private static final float Sqrt2
-com.google.android.gms.internal.auth.zzds
 io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener
 androidx.core.view.MenuItemCompat$1
 androidx.constraintlayout.helper.widget.Carousel$1
@@ -42155,7 +42045,6 @@ org.bouncycastle.crypto.params.ParametersWithSalt
 kotlin.collections.ArraysKt___ArraysKt$asIterable$$inlined$Iterable$4
 dagger.Component
 com.google.android.gms.common.util.Predicate
-com.google.android.gms.internal.auth.zzdq
 androidx.compose.ui.graphics.vector.VectorProperty:
     public static final int $stable
 androidx.core.app.NotificationCompat$CarExtender$UnreadConversation
@@ -43333,7 +43222,6 @@ androidx.constraintlayout.motion.widget.MotionLayout$2
 com.google.gson.JsonElement
 com.google.firebase.database.collection.LLRBNode$ShortCircuitingNodeVisitor
 com.google.android.gms.common.internal.zzn:
-    public void <init>(android.content.ComponentName,int)
     public void <init>(java.lang.String,int,boolean)
 com.google.gson.GsonBuilder
 com.nimbusds.jwt.SignedJWT:
@@ -43462,7 +43350,6 @@ androidx.compose.ui.unit.DpOffset$Companion:
     public final long getZero-RKDOV3M()
 androidx.fragment.app.ListFragment$2
 com.google.common.util.concurrent.ImmediateFuture$ImmediateCancelledFuture
-com.google.android.gms.internal.auth.zzdr
 kotlinx.serialization.json.internal.AbstractJsonTreeDecoder:
     private final java.lang.Object primitive(kotlinx.serialization.json.JsonPrimitive,java.lang.String,kotlin.jvm.functions.Function1)
     protected java.lang.Void decodeTaggedNull(java.lang.String)
@@ -43507,7 +43394,6 @@ com.google.firestore.v1.Precondition:
     public boolean hasUpdateTime()
 com.bumptech.glide.load.engine.prefill.BitmapPreFillRunner
 com.google.api.LaunchStage
-com.google.android.gms.internal.auth.zzfx
 androidx.compose.material.DrawerKt$BottomDrawerScrim$1$1
 kotlinx.coroutines.flow.FlowKt__ErrorsKt$retry$1
 org.bouncycastle.jcajce.spec.ScryptKeySpec:
@@ -43919,7 +43805,10 @@ com.google.firestore.v1.StructuredQuery$Order:
 android.support.v4.media.RatingCompat$Style
 com.google.android.gms.common.internal.zzh
 androidx.constraintlayout.widget.ConstraintSet$WriteJsonEngine
-com.google.android.gms.internal.auth.zzg
+com.google.android.gms.internal.auth.zzg:
+    public abstract com.google.android.gms.tasks.Task zzb(com.google.android.gms.auth.AccountChangeEventsRequest)
+    public abstract com.google.android.gms.tasks.Task zzd(android.accounts.Account)
+    public abstract com.google.android.gms.tasks.Task zze(java.lang.String)
 AndroidMenuKt$DropdownMenuItem$2
 com.google.android.gms.internal.firebase-auth-api.zznv
 androidx.core.view.accessibility.AccessibilityViewCommand$MoveWindowArguments:
@@ -44590,7 +44479,6 @@ org.bouncycastle.crypto.generators.DHParametersHelper:
 androidx.constraintlayout.core.motion.utils.CurveFit$Constant:
     public double getSlope(double,int)
 org.bouncycastle.asn1.ASN1Encoding
-com.google.android.gms.internal.auth.zzdu
 androidx.compose.material.icons.rounded.HomeKt
 com.google.android.material.tabs.TabLayout$PagerAdapterObserver
 org.bouncycastle.asn1.BERSetParser:
@@ -44695,7 +44583,6 @@ org.bouncycastle.x509.X509Attribute:
     public void <init>(java.lang.String,org.bouncycastle.asn1.ASN1EncodableVector)
     public org.bouncycastle.asn1.ASN1Encodable[] getValues()
 org.bouncycastle.jce.ECKeyUtil
-com.google.android.gms.auth.UserRecoverableAuthException
 com.google.common.collect.Lists:
     private void <init>()
     public static java.util.ArrayList newArrayList()
@@ -45235,7 +45122,8 @@ androidx.compose.foundation.layout.CrossAxisAlignment$AlignmentLineCrossAxisAlig
 androidx.browser.customtabs.CustomTabsIntent$ShareState
 androidx.constraintlayout.compose.Dimension$Companion$preferredValue$1
 com.google.android.gms.common.zza
-com.google.android.gms.internal.auth.zzfz
+com.google.android.gms.internal.auth.zzfz:
+    void <init>()
 org.bouncycastle.asn1.DLSequenceParser:
     public org.bouncycastle.asn1.ASN1Encodable readObject()
 kotlin.UShort:
@@ -45361,7 +45249,10 @@ com.google.apphosting.datastore.testing.DatastoreTestTrace$DatastoreAction$Build
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$HideStrategy
 com.google.api.Billing$Builder
 com.google.android.material.bottomsheet.BottomSheetBehavior$StableState
-com.google.android.gms.internal.auth.zzf
+com.google.android.gms.internal.auth.zzf:
+    public abstract android.os.Bundle zzf(android.accounts.Account)
+    public abstract android.os.Bundle zzg(java.lang.String)
+    public abstract com.google.android.gms.auth.AccountChangeEventsResponse zzh(com.google.android.gms.auth.AccountChangeEventsRequest)
 android.support.customtabs.trusted.ITrustedWebActivityService$Default
 com.google.android.material.transition.platform.MaterialContainerTransform$TransitionDrawable$1
 androidx.compose.animation.core.VectorizedSnapSpec:
@@ -45378,7 +45269,6 @@ com.google.crypto.tink.proto.RsaSsaPssPublicKey$Builder
 com.google.crypto.tink.proto.RsaSsaPkcs1PublicKeyOrBuilder
 com.google.common.base.Predicates$InPredicate
 com.google.android.material.tabs.TabLayoutMediator$PagerAdapterObserver
-com.google.android.gms.internal.auth.zzdt
 com.google.protobuf.Mixin$1
 org.bouncycastle.jcajce.PBKDF2Key:
     public char[] getPassword()
@@ -47492,7 +47382,6 @@ com.google.common.math.BigIntegerMath$BigIntegerToDoubleRounder
 io.grpc.internal.AbstractServerStream$Sink
 com.bumptech.glide.util.pool.StateVerifier:
     private static final boolean DEBUG
-com.google.android.gms.internal.auth.zzi
 kotlin.TypeCastException
 org.bouncycastle.crypto.util.PublicKeyFactory$DSTUConverter
 com.google.api.AuthenticationRule$Builder
@@ -47656,6 +47545,7 @@ androidx.compose.foundation.text.ClickableTextKt$ClickableText$1
 io.grpc.internal.DnsNameResolver$SrvRecord
 org.bouncycastle.crypto.engines.AESLightEngine
 androidx.appcompat.app.ActionBar$DisplayOptions
+io.flutter.plugins.googlesignin.R$animator
 androidx.vectordrawable.animated.R$integer
 androidx.compose.material.SnackbarKt$OneRowSnackbar$3
 com.google.android.material.bottomnavigation.BottomNavigationView
@@ -47678,7 +47568,6 @@ org.bouncycastle.math.raw.Nat320:
 androidx.compose.material.DismissState$1
 com.google.common.graph.EndpointPair
 androidx.core.util.Supplier
-com.google.android.gms.internal.auth.zzdw
 com.bumptech.glide.load.model.stream.QMediaStoreUriLoader$Factory:
     public final void teardown()
 android.support.v4.media.session.PlaybackStateCompat$CustomAction:
@@ -48160,7 +48049,6 @@ com.google.android.gms.common.api.internal.ListenerHolder$Notifier
 androidx.compose.material.icons.filled.FavoriteBorderKt
 org.bouncycastle.pqc.jcajce.provider.xmss.XMSSMTSignatureSpi$withShake256
 com.google.android.gms.common.internal.zzi
-com.google.android.gms.internal.auth.zzh
 io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller:
     public java.lang.Class getMessageClass()
     public com.google.protobuf.MessageLite getMessagePrototype()
@@ -48234,7 +48122,6 @@ kotlinx.coroutines.channels.ActorScope$DefaultImpls
 com.google.common.base.Strings:
     private void <init>()
     public static java.lang.String nullToEmpty(java.lang.String)
-    public static java.lang.String emptyToNull(java.lang.String)
     public static java.lang.String padStart(java.lang.String,int,char)
     public static java.lang.String padEnd(java.lang.String,int,char)
     public static java.lang.String repeat(java.lang.String,int)
@@ -48437,7 +48324,6 @@ com.google.firestore.v1.Write$Builder:
     public com.google.firestore.v1.Write$Builder mergeCurrentDocument(com.google.firestore.v1.Precondition)
     public com.google.firestore.v1.Write$Builder clearCurrentDocument()
 com.google.firebase.auth.ActionCodeResult$ActionDataKey
-com.google.android.gms.internal.auth.zzdv
 io.grpc.stub.ClientCalls$1
 com.google.android.gms.actions.NoteIntents
 org.bouncycastle.jcajce.CompositePrivateKey:
@@ -48580,6 +48466,7 @@ org.bouncycastle.pqc.crypto.sphincs.Seed
 androidx.core.graphics.drawable.IconCompat$IconType
 kotlinx.coroutines.sync.SemaphoreImpl$onCancellationRelease$1
 com.google.protobuf.DescriptorProtos$FileOptions$OptimizeMode
+io.flutter.plugins.googlesignin.R$dimen
 androidx.compose.ui.platform.DelegatingSoftwareKeyboardController:
     public final androidx.compose.ui.text.input.TextInputService getTextInputService()
     public void show()
@@ -49104,7 +48991,9 @@ org.bouncycastle.jcajce.spec.DSTU4145ParameterSpec:
     public void <init>(org.bouncycastle.crypto.params.ECDomainParameters)
     private void <init>(org.bouncycastle.crypto.params.ECDomainParameters,java.security.spec.ECParameterSpec,byte[])
 com.google.gson.internal.bind.TypeAdapters$20
-com.google.android.gms.internal.auth.zzc
+com.google.android.gms.internal.auth.zzc:
+    public static void zzb(android.os.Parcel,boolean)
+    public static boolean zze(android.os.Parcel)
 org.bouncycastle.asn1.x509.X509Extension:
     public org.bouncycastle.asn1.ASN1Encodable getParsedValue()
 androidx.core.R$string
@@ -49201,7 +49090,6 @@ androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityAction
     private static final java.lang.String TAG
 com.google.protobuf.StringValue
 androidx.legacy.coreui.R$attr
-com.google.android.gms.internal.auth.zzdy
 com.google.android.gms.maps.model.StreetViewPanoramaLocation
 com.google.crypto.tink.subtle.Ed25519
 com.google.rpc.QuotaFailure$ViolationOrBuilder
@@ -49779,7 +49667,6 @@ org.bouncycastle.x509.extension.X509ExtensionUtil:
     public static java.util.Collection getSubjectAlternativeNames(java.security.cert.X509Certificate)
     private static java.util.Collection getAlternativeNames(byte[])
 io.flutter.plugins.firebase.storage.R$string
-com.google.android.gms.internal.auth.zzdx
 androidx.compose.runtime.CompositionContext:
     public abstract kotlin.coroutines.CoroutineContext getRecomposeCoroutineContext$runtime_release()
     public abstract void invalidateScope$runtime_release(androidx.compose.runtime.RecomposeScopeImpl)
@@ -50015,15 +49902,12 @@ com.google.firebase.firestore.local.SQLiteIndexManager:
     public java.util.Collection getFieldIndexes()
 com.google.api.CustomHttpPattern$Builder
 com.google.type.DayOfWeek$1
-com.google.android.gms.internal.auth.zzb
 org.bouncycastle.crypto.params.SRP6GroupParameters
 com.google.android.gms.common.internal.safeparcel.SafeParcelable$Field
 com.google.longrunning.ListOperationsResponse
 org.bouncycastle.crypto.prng.ThreadedSeedGenerator
 com.google.firebase.firestore.core.UserData$ParseAccumulator:
     public com.google.firebase.firestore.core.UserData$Source getDataSource()
-com.google.android.gms.common.GooglePlayServicesRepairableException:
-    public int getConnectionStatusCode()
 io.grpc.internal.ClientCallImpl:
     public void setMessageCompression(boolean)
     public boolean isReady()
@@ -51604,7 +51488,9 @@ kotlinx.serialization.json.internal.Composer
 com.google.common.collect.LinkedListMultimap$1KeySetImpl
 com.google.android.gms.common.util.ClientLibraryUtils
 com.google.android.material.internal.ViewOverlayApi14
-com.google.common.util.concurrent.OverflowAvoidingLockSupport
+com.google.common.util.concurrent.OverflowAvoidingLockSupport:
+    private void <init>()
+    static final long MAX_NANOSECONDS_THRESHOLD
 io.flutter.plugins.imagepicker.R
 org.bouncycastle.pqc.math.linearalgebra.BigEndianConversions
 androidx.constraintlayout.compose.ConstraintLayoutBaseScope$HorizontalAnchor:
@@ -51681,7 +51567,6 @@ com.google.gson.internal.Streams$AppendableWriter$CurrentWrite
 com.google.crypto.tink.subtle.EciesHkdfRecipientKem
 androidx.emoji2.text.flatbuffer.UnionVector
 org.bouncycastle.util.test.NumberParsing
-com.google.android.gms.internal.auth.zzgb
 kotlin.reflect.TypesJVMKt
 com.google.api.ControlProto
 com.google.gson.internal.bind.TypeAdapters$22
@@ -51819,7 +51704,6 @@ org.bouncycastle.asn1.ocsp.ResponseData:
     public org.bouncycastle.asn1.ASN1Integer getVersion()
     public org.bouncycastle.asn1.ASN1GeneralizedTime getProducedAt()
 com.razorpay.razorpay_flutter.R$id
-com.google.android.gms.internal.auth.zze
 com.google.android.gms.maps.internal.zzz
 androidx.compose.ui.graphics.Float16:
     public static short constructor-impl(double)
@@ -52137,7 +52021,6 @@ androidx.appcompat.widget.Toolbar:
     public void removeMenuProvider(androidx.core.view.MenuProvider)
     private static final java.lang.String TAG
 com.google.common.io.LineReader$1
-com.google.android.gms.common.api.zah
 com.google.android.gms.auth.api.R$dimen
 androidx.asynclayoutinflater.view.AsyncLayoutInflater$InflateThread
 com.google.api.Http$1
@@ -52259,7 +52142,15 @@ com.google.crypto.tink.subtle.Validators$1
 com.google.common.util.concurrent.Service$State$4
 com.google.android.gms.maps.GoogleMap$OnPolylineClickListener
 com.google.android.gms.internal.firebase-auth-api.zznu
-com.google.android.gms.common.api.internal.OptionalPendingResultImpl
+com.google.android.gms.common.api.internal.OptionalPendingResultImpl:
+    public final com.google.android.gms.common.api.Result await()
+    public final com.google.android.gms.common.api.Result get()
+    public final com.google.android.gms.common.api.TransformedResult then(com.google.android.gms.common.api.ResultTransform)
+    public final void cancel()
+    public final void setResultCallback(com.google.android.gms.common.api.ResultCallback)
+    public final void setResultCallback(com.google.android.gms.common.api.ResultCallback,long,java.util.concurrent.TimeUnit)
+    public final boolean isCanceled()
+    public final boolean isDone()
 android.support.v4.media.MediaBrowserCompat$MediaBrowserImplApi26
 com.google.common.math.LongMath$1
 com.google.crypto.tink.proto.HmacPrfKeyFormat
@@ -52563,6 +52454,7 @@ com.google.android.material.elevation.ElevationOverlayProvider:
 androidx.compose.material.NavigationRailKt$NavigationRail$2
 kotlin.coroutines.cancellation.CancellationExceptionKt
 com.nimbusds.jose.EncryptionMethod$Family
+io.flutter.plugins.googlesignin.R$color
 com.bumptech.glide.disklrucache.DiskLruCache:
     private static java.lang.String inputStreamToString(java.io.InputStream)
     static synthetic com.bumptech.glide.disklrucache.DiskLruCache$Editor access$1700(com.bumptech.glide.disklrucache.DiskLruCache,java.lang.String,long)
@@ -52611,7 +52503,6 @@ com.bumptech.glide.load.resource.bitmap.DrawableToBitmapConverter:
     private void <init>()
     private static final java.lang.String TAG
 androidx.concurrent.futures.ResolvableFuture
-com.google.android.gms.internal.auth.zzdz
 com.google.firebase.firestore.util.Function:
     public abstract boolean equals(java.lang.Object)
 android.support.v4.media.session.MediaSessionCompatApi21$CallbackProxy
@@ -52631,9 +52522,7 @@ com.google.android.material.tabs.FadeTabIndicatorInterpolator
 com.google.android.gms.common.api.internal.TaskUtil:
     public static com.google.android.gms.tasks.Task toVoidTaskThatFailsOnFalse(com.google.android.gms.tasks.Task)
     public void <init>()
-    public static boolean trySetResultOrApiException(com.google.android.gms.common.api.Status,java.lang.Object,com.google.android.gms.tasks.TaskCompletionSource)
 android.support.v4.media.MediaBrowserCompat
-com.google.android.gms.internal.auth.zzga
 com.google.firebase.auth.internal.zzo:
     public final java.lang.String getData(int)
 com.google.common.reflect.Types$JavaVersion$4
@@ -52810,7 +52699,10 @@ org.bouncycastle.pqc.jcajce.provider.xmss.XMSSMTSignatureSpi$generic
 com.google.android.gms.internal.firebase-auth-api.zzhb:
     static void <clinit>()
     static final synthetic int[] zza
-com.google.android.gms.internal.auth.zzd
+com.google.android.gms.internal.auth.zzd:
+    public final android.os.Bundle zzf(android.accounts.Account)
+    public final android.os.Bundle zzg(java.lang.String)
+    public final com.google.android.gms.auth.AccountChangeEventsResponse zzh(com.google.android.gms.auth.AccountChangeEventsRequest)
 com.google.common.util.concurrent.Striped$WeakSafeReadWriteLock
 com.google.firestore.v1.ListDocumentsRequest$ConsistencySelectorCase
 com.google.common.collect.HashBiMap$View$1
@@ -53136,7 +53028,6 @@ com.bumptech.glide.load.resource.bitmap.CenterCrop:
     private static final java.lang.String ID
 com.google.android.gms.common.api.PendingResults:
     public static com.google.android.gms.common.api.OptionalPendingResult immediatePendingResult(com.google.android.gms.common.api.Result)
-    public static com.google.android.gms.common.api.OptionalPendingResult immediatePendingResult(com.google.android.gms.common.api.Result,com.google.android.gms.common.api.GoogleApiClient)
     public static com.google.android.gms.common.api.PendingResult canceledPendingResult()
     public static com.google.android.gms.common.api.PendingResult canceledPendingResult(com.google.android.gms.common.api.Result)
     public static com.google.android.gms.common.api.PendingResult immediatePendingResult(com.google.android.gms.common.api.Status)
@@ -53347,7 +53238,6 @@ kotlin.text.StringsKt___StringsKt:
     public static final java.lang.Iterable asIterable(java.lang.CharSequence)
     public static final kotlin.sequences.Sequence asSequence(java.lang.CharSequence)
     public void <init>()
-com.google.android.gms.internal.auth.zzgd
 kotlinx.parcelize.RawValue
 com.google.gson.internal.PreJava9DateFormatProvider
 com.google.common.collect.FluentIterable$2
@@ -53451,7 +53341,6 @@ androidx.constraintlayout.compose.ConstrainScope$pivotX$1
 com.google.android.material.transition.platform.MaterialContainerTransform
 com.google.common.graph.StandardMutableNetwork
 com.google.firebase.firestore.auth.package-info
-com.google.common.util.concurrent.AbstractFuture$Trusted
 androidx.compose.animation.core.RepeatableSpec
 com.google.protobuf.DescriptorProtos$FieldOptionsOrBuilder
 com.google.common.reflect.TypeToken$TypeSet
@@ -53502,7 +53391,6 @@ io.grpc.PartialForwardingServerCallListener
 androidx.compose.material.BadgeKt$Badge$1$1$1
 kotlin.collections.AbstractMutableMap:
     public abstract java.lang.Object put(java.lang.Object,java.lang.Object)
-com.google.android.gms.internal.auth.zzbw
 androidx.compose.material.internal.ExposedDropdownMenuPopupKt$SimpleStack$1$measure$1
 androidx.compose.ui.graphics.vector.PathNode$RelativeArcTo:
     public static synthetic androidx.compose.ui.graphics.vector.PathNode$RelativeArcTo copy$default(androidx.compose.ui.graphics.vector.PathNode$RelativeArcTo,float,float,float,boolean,boolean,float,float,int,java.lang.Object)
@@ -53883,7 +53771,10 @@ androidx.appcompat.widget.AppCompatTextHelper:
     private static final int SANS
     private static final int SERIF
     private static final int MONOSPACE
-com.google.android.gms.internal.auth.zzp
+com.google.android.gms.internal.auth.zzp:
+    public final void zze(com.google.android.gms.internal.auth.zzm,com.google.android.gms.auth.AccountChangeEventsRequest)
+    public final void zzg(com.google.android.gms.internal.auth.zzk,android.accounts.Account)
+    public final void zzh(com.google.android.gms.internal.auth.zzk,java.lang.String)
 com.google.api.CustomHttpPattern
 io.grpc.inprocess.InProcessTransport$6
 androidx.appcompat.widget.TooltipCompatHandler:
@@ -53991,7 +53882,6 @@ io.grpc.NameResolver$Args:
 androidx.collection.ContainerHelpers:
     private void <init>()
 io.grpc.util.TransmitStatusRuntimeExceptionInterceptor$1
-com.google.android.gms.internal.auth.zzgc
 com.google.api.AnnotationsProto
 androidx.core.view.ViewCompat$ScrollAxis
 okio.Okio$3
@@ -54090,7 +53980,6 @@ com.google.firebase.components.Component:
     public static com.google.firebase.components.Component of(java.lang.Class,java.lang.Object)
     private static synthetic java.lang.Object lambda$of$0(java.lang.Object,com.google.firebase.components.ComponentContainer)
     public boolean isLazy()
-com.google.android.gms.internal.auth.zzn
 androidx.compose.material.icons.sharp.CreateKt
 com.google.protobuf.Internal$MapAdapter$IteratorAdapter
 io.grpc.InsecureChannelCredentials
@@ -54192,7 +54081,6 @@ androidx.compose.ui.input.pointer.PointerButtons:
 fman.ge.smart_auth.R$integer
 com.bumptech.glide.request.target.CustomViewTarget$SizeDeterminer:
     private static final int PENDING_SIZE
-com.google.common.util.concurrent.AbstractFuture$UnsafeAtomicHelper
 com.google.common.base.CharMatcher$Or
 com.google.android.material.badge.BadgeUtils$4
 com.google.firebase.storage.UploadTask$TaskSnapshot:
@@ -54386,7 +54274,6 @@ com.google.common.collect.ImmutableSet:
     static final int MAX_TABLE_SIZE
     private static final double DESIRED_LOAD_FACTOR
     private static final int CUTOFF
-com.google.android.gms.internal.auth.zzo
 kotlinx.coroutines.AwaitAll$AwaitAllNode
 org.bouncycastle.pqc.crypto.gmss.GMSSKeyGenerationParameters
 androidx.compose.material.icons.twotone.AccountBoxKt
@@ -54748,7 +54635,6 @@ kotlin.NotImplementedError:
     public synthetic void <init>(java.lang.String,int,kotlin.jvm.internal.DefaultConstructorMarker)
     public void <init>()
 androidx.core.os.TraceKt
-com.google.android.gms.internal.auth.zzgf
 androidx.compose.runtime.SlotTableKt:
     private static final java.util.List keys(int[],int)
     static synthetic java.util.List keys$default(int[],int,int,java.lang.Object)
@@ -54944,7 +54830,6 @@ androidx.recyclerview.widget.RecyclerView$State:
     static final int STEP_START
     static final int STEP_LAYOUT
     static final int STEP_ANIMATIONS
-com.google.android.gms.internal.auth.zzby
 androidx.compose.foundation.CanvasKt$Canvas$2$1
 kotlinx.serialization.json.JsonNull:
     private final synthetic kotlin.Lazy get$cachedSerializer$delegate()
@@ -55128,17 +55013,12 @@ com.google.firebase.R$integer
 com.google.android.gms.auth.api.signin.GoogleSignIn:
     public static com.google.android.gms.auth.api.signin.GoogleSignInAccount getAccountForExtension(android.content.Context,com.google.android.gms.auth.api.signin.GoogleSignInOptionsExtension)
     public static varargs com.google.android.gms.auth.api.signin.GoogleSignInAccount getAccountForScopes(android.content.Context,com.google.android.gms.common.api.Scope,com.google.android.gms.common.api.Scope[])
-    public static com.google.android.gms.auth.api.signin.GoogleSignInAccount getLastSignedInAccount(android.content.Context)
     public static com.google.android.gms.auth.api.signin.GoogleSignInClient getClient(android.app.Activity,com.google.android.gms.auth.api.signin.GoogleSignInOptions)
-    public static com.google.android.gms.tasks.Task getSignedInAccountFromIntent(android.content.Intent)
     private void <init>()
     public static void requestPermissions(android.app.Activity,int,com.google.android.gms.auth.api.signin.GoogleSignInAccount,com.google.android.gms.auth.api.signin.GoogleSignInOptionsExtension)
-    public static varargs void requestPermissions(android.app.Activity,int,com.google.android.gms.auth.api.signin.GoogleSignInAccount,com.google.android.gms.common.api.Scope[])
     public static void requestPermissions(androidx.fragment.app.Fragment,int,com.google.android.gms.auth.api.signin.GoogleSignInAccount,com.google.android.gms.auth.api.signin.GoogleSignInOptionsExtension)
     public static varargs void requestPermissions(androidx.fragment.app.Fragment,int,com.google.android.gms.auth.api.signin.GoogleSignInAccount,com.google.android.gms.common.api.Scope[])
     public static boolean hasPermissions(com.google.android.gms.auth.api.signin.GoogleSignInAccount,com.google.android.gms.auth.api.signin.GoogleSignInOptionsExtension)
-    public static varargs boolean hasPermissions(com.google.android.gms.auth.api.signin.GoogleSignInAccount,com.google.android.gms.common.api.Scope[])
-    private static varargs android.content.Intent zba(android.app.Activity,com.google.android.gms.auth.api.signin.GoogleSignInAccount,com.google.android.gms.common.api.Scope[])
     private static com.google.android.gms.common.api.Scope[] zbb(java.util.List)
 com.google.api.ResourceDescriptor
 com.google.android.gms.safetynet.SafetyNetClient:
@@ -55336,7 +55216,6 @@ com.google.firebase.auth.MultiFactorResolver:
     public abstract com.google.firebase.auth.MultiFactorSession getSession()
     public abstract java.util.List getHints()
 com.squareup.okhttp.OkHttpClient$1
-com.google.android.gms.internal.auth.zzgg
 org.bouncycastle.util.io.pem.PemHeader:
     public void <init>(java.lang.String,java.lang.String)
 com.google.android.gms.common.GoogleSignatureVerifier:
@@ -55506,7 +55385,6 @@ androidx.transition.TransitionUtils:
 com.bumptech.glide.load.data.mediastore.ThumbFetcher$ImageThumbnailQuery:
     private static final java.lang.String PATH_SELECTION
 androidx.media.MediaBrowserServiceCompatApi21$BrowserRoot
-com.google.android.gms.internal.auth.zzr
 com.baseflow.permissionhandler.R$string
 androidx.compose.foundation.interaction.FocusInteraction$Focus:
     public static final int $stable
@@ -55969,7 +55847,6 @@ androidx.browser.customtabs.PostMessageBackend
 com.google.firestore.v1.GetDocumentRequestOrBuilder
 kotlin.jvm.JvmRecord
 com.squareup.okhttp.internal.framed.PushObserver
-com.google.android.gms.internal.auth.zzge
 androidx.compose.ui.unit.TextUnitKt:
     public static final boolean isSpecified--R2X_6o(long)
     public static synthetic void isSpecified--R2X_6o$annotations(long)
@@ -56230,7 +56107,6 @@ org.bouncycastle.crypto.util.PBKDF2Config$Builder
 com.google.firebase.firestore.model.DocumentCollections:
     public void <init>()
 io.flutter.plugins.pathprovider.PathProviderPlugin$PathProviderPlatformThread
-com.google.android.gms.internal.auth.zzbx
 androidx.compose.material.internal.ExposedDropdownMenuPopupKt$SimpleStack$1$measure$2
 com.google.apphosting.datastore.testing.DatastoreTestTrace$FirestoreV1Action$Commit
 com.google.android.gms.internal.base.zap
@@ -56576,7 +56452,6 @@ com.google.android.gms.internal.auth.zzk
 androidx.legacy.coreui.R$layout
 com.squareup.okhttp.internal.http.CacheStrategy$1
 com.stripe.payments.model.R$style
-com.google.android.gms.internal.auth.zzeb
 io.grpc.internal.ManagedChannelImpl$LbHelperImpl:
     public void ignoreRefreshNameResolutionCheck()
     public io.grpc.ManagedChannel createOobChannel(io.grpc.EquivalentAddressGroup,java.lang.String)
@@ -57261,7 +57136,6 @@ androidx.constraintlayout.widget.R$attr
 com.google.android.gms.maps.GoogleMap$OnCircleClickListener
 com.google.common.graph.DirectedGraphConnections$NodeConnection$Succ
 androidx.compose.material.BottomSheetScaffoldKt$rememberBottomSheetState$2
-com.google.android.gms.internal.auth.zzgi
 com.google.crypto.tink.proto.KmsEnvelopeAeadKey$Builder:
     public int getVersion()
     public com.google.crypto.tink.proto.KmsEnvelopeAeadKey$Builder clearVersion()
@@ -57597,7 +57471,8 @@ androidx.compose.ui.graphics.ClipOp:
     public boolean equals(java.lang.Object)
     public final synthetic int unbox-impl()
     private final int value
-com.google.android.gms.internal.auth.zzea
+com.google.android.gms.internal.auth.zzea:
+    private void <init>()
 androidx.compose.material.icons.filled.CloseKt
 org.bouncycastle.crypto.generators.OpenBSDBCrypt
 org.bouncycastle.crypto.agreement.srp.SRP6StandardGroups
@@ -57956,6 +57831,7 @@ androidx.compose.runtime.external.kotlinx.collections.immutable.internal.ForEach
 com.google.common.primitives.Primitives
 io.grpc.okhttp.SslSocketFactoryChannelCredentials$ChannelCredentials
 io.grpc.okhttp.OkHttpChannelBuilder$SslSocketFactoryResult
+io.flutter.plugins.googlesignin.R$id
 com.google.android.material.floatingactionbutton.FloatingActionButtonImpl:
     void initializeBackgroundDrawable(android.content.res.ColorStateList,android.graphics.PorterDuff$Mode,android.content.res.ColorStateList,int)
     void setMinTouchTargetSize(int)
@@ -58555,7 +58431,6 @@ com.google.android.gms.safetynet.SafetyNetStatusCodes
 androidx.core.app.NotificationCompat$1
 com.google.common.collect.Maps$FilteredMapValues
 com.google.common.collect.Sets$5$1$1$1
-com.google.android.gms.internal.auth.zzgh
 com.google.crypto.tink.prf.AesCmacPrfKeyManager
 androidx.compose.ui.graphics.vector.VectorNode:
     public static final int $stable
@@ -58811,7 +58686,6 @@ com.google.android.gms.common.api.internal.StatusPendingResult:
     public void <init>(android.os.Looper)
 com.google.api.HttpProto
 io.flutter.plugin.common.PluginRegistry$Registrar:
-    public abstract android.app.Activity activity()
     public abstract android.content.Context context()
     public abstract android.content.Context activeContext()
     public abstract io.flutter.plugin.common.BinaryMessenger messenger()
@@ -60104,7 +59978,6 @@ com.google.crypto.tink.signature.PublicKeySignWrapper
 com.google.android.gms.common.AccountPicker$AccountChooserOptions$Builder
 io.flutter.plugins.sharedpreferences.R$attr
 androidx.constraintlayout.compose.Dimension$Companion$preferredWrapContent$1
-com.google.android.gms.internal.auth.zzgk
 com.google.android.material.divider.MaterialDivider
 kotlinx.coroutines.flow.FlowKt__TransformKt$map$$inlined$unsafeTransform$1$1
 com.google.android.material.transition.platform.MaterialContainerTransform$FitMode
@@ -60140,7 +60013,8 @@ io.grpc.internal.ThreadOptimizedDeframer:
 androidx.compose.material.icons.filled.RefreshKt
 com.google.android.gms.common.internal.safeparcel.SafeParcelable$VersionField
 com.google.crypto.tink.signature.Ed25519PrivateKeyManager$1
-com.google.common.util.concurrent.AbstractFuture$SetFuture
+com.google.common.util.concurrent.AbstractFuture$SetFuture:
+    void <init>(com.google.common.util.concurrent.AbstractFuture,com.google.common.util.concurrent.ListenableFuture)
 com.nimbusds.jose.shaded.asm.ASMUtil:
     public void <init>()
     public static void autoBoxing(com.nimbusds.jose.shaded.ow2asm.MethodVisitor,java.lang.Class)
@@ -60517,7 +60391,6 @@ androidx.compose.ui.graphics.Float16$Companion:
     public final short getPositiveInfinity-slo4al4()
     public final short getPositiveZero-slo4al4()
 org.bouncycastle.crypto.util.DEROtherInfo
-com.google.android.gms.internal.auth.zzee
 com.google.common.util.concurrent.AbstractService$HasReachedRunningGuard
 org.bouncycastle.math.ec.custom.sec.SecT239FieldElement:
     public java.lang.String getFieldName()
@@ -60572,7 +60445,6 @@ androidx.core.view.WindowInsetsAnimationCompat$Impl21$Impl21OnApplyWindowInsetsL
 com.google.android.gms.identity.intents.AddressConstants$ErrorCodes
 kotlin.collections.RingBuffer$iterator$1
 androidx.multidex.ZipUtil
-com.google.common.util.concurrent.AbstractFuture$UnsafeAtomicHelper$1
 kotlin.jvm.internal.CharCompanionObject:
     public static synthetic void getMIN_VALUE$annotations()
     public static synthetic void getMAX_VALUE$annotations()
@@ -60596,7 +60468,6 @@ androidx.compose.material.ScaffoldKt$ScaffoldLayout$1$1$1$bottomBarPlaceables$1
 androidx.compose.material.CardKt:
     public static final void Card-9VG74zQ(kotlin.jvm.functions.Function0,androidx.compose.ui.Modifier,androidx.compose.ui.graphics.Shape,long,long,androidx.compose.foundation.BorderStroke,float,androidx.compose.foundation.interaction.MutableInteractionSource,androidx.compose.foundation.Indication,boolean,java.lang.String,androidx.compose.ui.semantics.Role,kotlin.jvm.functions.Function2,androidx.compose.runtime.Composer,int,int,int)
 androidx.recyclerview.widget.ConcatAdapter$Config$StableIdMode
-com.google.android.gms.internal.auth.zzec
 androidx.compose.animation.core.TargetBasedAnimation:
     public synthetic void <init>(androidx.compose.animation.core.VectorizedAnimationSpec,androidx.compose.animation.core.TwoWayConverter,java.lang.Object,java.lang.Object,androidx.compose.animation.core.AnimationVector,int,kotlin.jvm.internal.DefaultConstructorMarker)
     public final androidx.compose.animation.core.VectorizedAnimationSpec getAnimationSpec$animation_core_release()
@@ -61086,7 +60957,6 @@ androidx.compose.material.BackdropScaffoldKt$Scrim$dismissModifier$1$1
 com.google.longrunning.CancelOperationRequest$Builder
 kotlin.collections.ReversedList
 com.nimbusds.jwt.JWT
-com.google.android.gms.internal.auth.zzgj
 com.google.android.gms.maps.GoogleMap$OnCameraChangeListener
 androidx.compose.material.SliderColors
 com.google.android.gms.maps.model.PointOfInterest
@@ -61103,7 +60973,6 @@ com.google.android.gms.common.api.internal.PendingResultFacade
 io.grpc.ServerTransportFilter
 com.google.common.primitives.ImmutableDoubleArray$Builder
 io.flutter.plugins.imagepicker.R$style
-com.google.android.gms.internal.auth.zzed
 com.google.firebase.firestore.local.SQLiteTargetCache:
     public void removeTargetData(com.google.firebase.firestore.local.TargetData)
     public boolean containsKey(com.google.firebase.firestore.model.DocumentKey)
@@ -61165,6 +61034,8 @@ com.google.crypto.tink.shaded.protobuf.BinaryReader$SafeHeapReader:
     private final int initialPos
 com.nimbusds.jose.jwk.KeyType:
     private final com.nimbusds.jose.Requirement requirement
+com.google.android.gms.internal.auth.zzeg:
+    private static volatile boolean zzb
 androidx.compose.runtime.ComposerImpl:
     public void sourceInformation(java.lang.String)
     public void sourceInformationMarkerStart(int,java.lang.String)
@@ -61262,6 +61133,8 @@ com.google.android.gms.internal.firebase-auth-api.zzfp:
 io.grpc.internal.InternalSubchannel:
     private final io.grpc.internal.ChannelTracer channelTracer
 androidx.constraintlayout.motion.utils.ViewSpline$ScaleXset
+com.google.android.gms.internal.auth.zzcc:
+    private static volatile boolean zza
 com.google.android.gms.common.internal.BaseGmsClient:
     private int zzf
     private long zzg
@@ -61298,7 +61171,6 @@ com.google.android.material.timepicker.TimeModel:
 androidx.core.view.ViewPropertyAnimatorCompat$2:
     final synthetic androidx.core.view.ViewPropertyAnimatorCompat this$0
 com.google.android.gms.internal.firebase-auth-api.zzme
-com.google.android.gms.auth.api.signin.GoogleSignInResult
 kotlinx.coroutines.scheduling.CoroutineScheduler:
     public static final kotlinx.coroutines.scheduling.CoroutineScheduler$Companion Companion
 androidx.constraintlayout.motion.widget.MotionController:
@@ -61719,6 +61591,7 @@ androidx.constraintlayout.core.motion.utils.SplineSet:
     public void setType(java.lang.String)
     public void setPoint(int,float)
     public void setup(int)
+com.google.android.gms.internal.auth.zzes
 com.google.common.math.LongMath:
     static final byte[] maxLog10ForLeadingZeros
     static final long[] powersOf10
@@ -61828,6 +61701,8 @@ androidx.compose.runtime.ParcelableSnapshotMutableState:
     public static final androidx.compose.runtime.ParcelableSnapshotMutableState$Companion Companion
 androidx.transition.ViewOverlayApi14$OverlayViewGroup:
     static java.lang.reflect.Method sInvalidateChildInParentFastMethod
+com.google.android.gms.auth.zze:
+    public static final com.google.android.gms.common.Feature[] zzj
 androidx.constraintlayout.motion.widget.DesignTool:
     private final androidx.constraintlayout.motion.widget.MotionLayout mMotionLayout
     private java.lang.String mLastStartState
@@ -61854,6 +61729,10 @@ com.google.crypto.tink.shaded.protobuf.CodedInputStream:
     private boolean shouldDiscardUnknownFields
 androidx.compose.ui.semantics.SemanticsOwner:
     public static final int $stable
+com.google.android.gms.internal.auth.zzev:
+    static final java.nio.charset.Charset zzb
+    public static final java.nio.ByteBuffer zzd
+    public static final com.google.android.gms.internal.auth.zzee zze
 com.nimbusds.jose.shaded.ow2asm.MethodTooLargeException:
     private final java.lang.String className
     private final java.lang.String methodName
@@ -61925,6 +61804,7 @@ com.google.android.gms.internal.firebase-auth-api.zzdy:
     public static final com.google.android.gms.internal.firebase-auth-api.zzli zzc
 androidx.fragment.app.FragmentTransitionCompat21$5:
     final synthetic androidx.fragment.app.FragmentTransitionCompat21 this$0
+com.google.android.gms.internal.auth.zzex
 com.google.android.material.transformation.FabTransformationBehavior$4:
     final synthetic com.google.android.material.transformation.FabTransformationBehavior this$0
 androidx.constraintlayout.motion.widget.MotionLayout$3
@@ -61956,8 +61836,6 @@ androidx.compose.ui.graphics.painter.Painter:
     private final kotlin.jvm.functions.Function1 drawLambda
 com.google.firebase.storage.StorageReference$3:
     final synthetic com.google.firebase.storage.StorageReference this$0
-com.google.android.gms.auth.api.signin.GoogleSignInAccount:
-    public static com.google.android.gms.common.util.Clock zaa
 androidx.compose.ui.semantics.SemanticsPropertiesKt:
     private static final androidx.compose.ui.semantics.SemanticsPropertyKey paneTitle$delegate
     private static final androidx.compose.ui.semantics.SemanticsPropertyKey liveRegion$delegate
@@ -62035,6 +61913,8 @@ org.bouncycastle.crypto.util.PBKDF2Config:
 androidx.transition.ChangeBounds$9:
     final synthetic androidx.transition.ChangeBounds this$0
 com.google.crypto.tink.proto.KeyStatusType$1
+com.google.android.gms.internal.auth.zzez:
+    public static final com.google.android.gms.internal.auth.zzfa zza
 androidx.compose.ui.graphics.vector.compat.AndroidVectorResources:
     private static final int STYLEABLE_VECTOR_DRAWABLE_ALPHA
     private static final int STYLEABLE_VECTOR_DRAWABLE_AUTO_MIRRORED
@@ -62050,8 +61930,6 @@ io.grpc.Status:
     static final synthetic boolean $assertionsDisabled
 com.reactnativestripesdk.CardFocusEvent:
     public static final com.reactnativestripesdk.CardFocusEvent$Companion Companion
-com.google.android.gms.auth.api.signin.GoogleSignInClient:
-    private static final com.google.android.gms.auth.api.signin.zbb zbb
 com.google.crypto.tink.subtle.Base64$Encoder:
     static final synthetic boolean $assertionsDisabled
 androidx.core.graphics.TypefaceCompatBaseImpl$1:
@@ -62073,6 +61951,7 @@ androidx.fragment.app.FragmentTransitionCompat21$4:
     final synthetic androidx.fragment.app.FragmentTransitionCompat21 this$0
 com.google.firestore.v1.Write$OperationCase:
     private final int value
+com.google.android.gms.internal.auth.zzey
 androidx.compose.runtime.snapshots.MutableSnapshot:
     public static final int $stable
 com.razorpay.BaseUtils:
@@ -62123,6 +62002,8 @@ androidx.fragment.app.FragmentTransitionImpl$1:
 com.google.android.gms.internal.firebase-auth-api.zzxn:
     private java.lang.String zze
 androidx.navigation.ActivityNavigator$Companion
+com.google.common.util.concurrent.AbstractFuture$Failure:
+    static final com.google.common.util.concurrent.AbstractFuture$Failure FALLBACK_INSTANCE
 com.google.android.gms.internal.firebase-auth-api.zzmn
 androidx.dynamicanimation.animation.DynamicAnimation$14
 com.google.firebase.storage.StreamDownloadTask$TaskSnapshot:
@@ -62242,7 +62123,6 @@ androidx.compose.foundation.layout.CrossAxisAlignment:
     private static final androidx.compose.foundation.layout.CrossAxisAlignment End
 com.google.firebase.storage.StorageReference$2:
     final synthetic com.google.firebase.storage.StorageReference this$0
-com.google.android.gms.auth.api.signin.zba
 androidx.constraintlayout.core.widgets.Guideline:
     protected boolean guidelineUseRtl
     private int mMinimumPosition
@@ -62271,7 +62151,6 @@ androidx.arch.core.executor.DefaultTaskExecutor:
     public void executeOnDiskIO(java.lang.Runnable)
 com.google.firestore.v1.BatchGetDocumentsResponse$ResultCase:
     private final int value
-com.google.android.gms.auth.api.signin.zbb
 androidx.compose.ui.graphics.colorspace.ColorSpace:
     public static final androidx.compose.ui.graphics.colorspace.ColorSpace$Companion Companion
 com.google.android.gms.internal.firebase-auth-api.zzzx:
@@ -62282,6 +62161,8 @@ com.google.firebase.storage.StorageReference$1:
 io.flutter.embedding.engine.loader.FlutterLoader$InitResult:
     final java.lang.String dataDirPath
 com.google.android.gms.auth.api.signin.GoogleSignInApi
+com.google.android.gms.internal.auth.zzcw:
+    final synthetic com.google.android.gms.internal.auth.zzhl zza
 com.bumptech.glide.load.model.LazyHeaders$Builder:
     private boolean copyOnModify
     private boolean isUserAgentDefault
@@ -62327,6 +62208,10 @@ androidx.compose.ui.text.input.TextFieldValue:
     public static final androidx.compose.ui.text.input.TextFieldValue$Companion Companion
 io.grpc.internal.RetriableStream$1DeadlineEntry:
     final synthetic io.grpc.internal.RetriableStream this$0
+com.google.android.gms.internal.auth.zzcz:
+    private static volatile boolean zzf
+    private static final java.util.concurrent.atomic.AtomicReference zzg
+    private static final com.google.android.gms.internal.auth.zzdb zzh
 io.flutter.plugins.webviewflutter.ThreadedInputConnectionProxyAdapterView:
     final android.view.View containerView
     private boolean triggerDelayed
@@ -62601,8 +62486,6 @@ io.grpc.internal.ManagedChannelImpl$ChannelStreamProvider$1RetryStream:
     final synthetic io.grpc.internal.RetryPolicy val$retryPolicy
     final synthetic io.grpc.internal.HedgingPolicy val$hedgingPolicy
     final synthetic io.grpc.internal.RetriableStream$Throttle val$throttle
-com.google.android.gms.common.UserRecoverableException:
-    private final android.content.Intent zza
 com.google.android.gms.internal.firebase-auth-api.zzka
 com.google.firebase.heartbeatinfo.HeartBeatInfoStorage:
     private static com.google.firebase.heartbeatinfo.HeartBeatInfoStorage instance
@@ -62806,6 +62689,19 @@ com.bumptech.glide.load.engine.ActiveResources$1$1:
 com.google.android.gms.common.internal.zzag:
     private static java.lang.String zzc
 kotlinx.serialization.json.JsonElement$Companion
+com.google.android.gms.internal.auth.zzhm:
+    public static final com.google.android.gms.internal.auth.zzcz zza
+    public static final com.google.android.gms.internal.auth.zzcz zzb
+    public static final com.google.android.gms.internal.auth.zzcz zzc
+    public static final com.google.android.gms.internal.auth.zzcz zzd
+    public static final com.google.android.gms.internal.auth.zzcz zze
+    public static final com.google.android.gms.internal.auth.zzcz zzg
+    public static final com.google.android.gms.internal.auth.zzcz zzh
+    public static final com.google.android.gms.internal.auth.zzcz zzi
+    public static final com.google.android.gms.internal.auth.zzcz zzj
+    public static final com.google.android.gms.internal.auth.zzcz zzl
+    public static final com.google.android.gms.internal.auth.zzcz zzm
+    public static final com.google.android.gms.internal.auth.zzcz zzn
 com.google.firebase.firestore.proto.Target$TargetTypeCase:
     private final int value
 com.google.android.gms.internal.firebase-auth-api.zzbi:
@@ -63194,9 +63090,6 @@ com.google.android.gms.internal.firebase-auth-api.zzna:
 com.google.android.gms.common.util.CrashUtils:
     private static final java.lang.String[] zza
 com.google.android.gms.internal.firebase-auth-api.zzya
-com.google.android.gms.auth.api.signin.GoogleSignInOptions:
-    public static final com.google.android.gms.auth.api.signin.GoogleSignInOptions DEFAULT_GAMES_SIGN_IN
-    public static final com.google.android.gms.common.api.Scope zab
 io.grpc.internal.ManagedChannelImpl$1PanicSubchannelPicker:
     final synthetic io.grpc.internal.ManagedChannelImpl this$0
 androidx.compose.ui.graphics.Brush:
@@ -63284,6 +63177,8 @@ org.bouncycastle.asn1.nsri.NSRIObjectIdentifiers:
     public static final org.bouncycastle.asn1.ASN1ObjectIdentifier id_aria128_ocb2
     public static final org.bouncycastle.asn1.ASN1ObjectIdentifier id_aria192_ocb2
     public static final org.bouncycastle.asn1.ASN1ObjectIdentifier id_aria256_ocb2
+com.google.android.gms.auth.GooglePlayServicesAvailabilityException:
+    private final int zza
 androidx.compose.ui.graphics.colorspace.Adaptation:
     private static final androidx.compose.ui.graphics.colorspace.Adaptation Ciecat02
 com.google.android.gms.auth.api.zzb
@@ -63318,9 +63213,6 @@ com.google.android.gms.internal.firebase-auth-api.zzeb:
     final com.google.android.gms.internal.firebase-auth-api.zzbi zza
 androidx.compose.ui.unit.IntRect$Companion
 com.reactnativestripesdk.CardFormCompleteEvent$Companion
-com.google.android.gms.auth.api.signin.internal.zbn:
-    com.google.android.gms.auth.api.signin.GoogleSignInAccount zbb
-    com.google.android.gms.auth.api.signin.GoogleSignInOptions zbc
 com.google.android.gms.internal.firebase-auth-api.zzed:
     public static final com.google.android.gms.internal.firebase-auth-api.zzke zzb
     public static final com.google.android.gms.internal.firebase-auth-api.zzke zzc
@@ -63369,6 +63261,9 @@ io.flutter.embedding.engine.systemchannels.NavigationChannel$1:
 io.grpc.internal.DelayedClientCall$CloseListenerRunnable:
     final synthetic io.grpc.internal.DelayedClientCall this$0
 com.google.android.gms.safetynet.SafetyNetApi
+com.google.android.gms.internal.auth.zzft:
+    private final com.google.android.gms.internal.auth.zzeh zzn
+    private final com.google.android.gms.internal.auth.zzfv zzo
 io.grpc.stub.AbstractAsyncStub:
     static final synthetic boolean $assertionsDisabled
 kotlinx.serialization.descriptors.ClassSerialDescriptorBuilder:
@@ -63377,6 +63272,8 @@ com.google.firebase.auth.ActionCodeUrl:
     private final java.lang.String zzb
     private final java.lang.String zze
     private final java.lang.String zzf
+io.flutter.plugins.googlesignin.BackgroundTaskRunner$1:
+    final synthetic io.flutter.plugins.googlesignin.BackgroundTaskRunner this$0
 androidx.compose.runtime.snapshots.Snapshot:
     public static final int $stable
 androidx.fragment.app.DefaultSpecialEffectsController$2:
@@ -63386,8 +63283,6 @@ androidx.compose.foundation.PlatformMagnifierFactoryApi28Impl$PlatformMagnifierI
     public static final int $stable
 androidx.compose.ui.viewinterop.AndroidViewHolder:
     private boolean hasUpdateBlock
-com.google.android.gms.internal.auth.zza:
-    private final java.lang.String zzb
 androidx.transition.Transition:
     private android.view.ViewGroup mSceneRoot
 androidx.compose.ui.focus.FocusOrder:
@@ -63405,6 +63300,8 @@ androidx.vectordrawable.graphics.drawable.VectorDrawableCompat:
 com.google.android.gms.internal.firebase-auth-api.zztr:
     private void <init>()
     private static final java.lang.String zza
+io.flutter.plugins.googlesignin.BackgroundTaskRunner$2:
+    final synthetic io.flutter.plugins.googlesignin.BackgroundTaskRunner this$0
 com.google.crypto.tink.shaded.protobuf.UninitializedMessageException:
     private final java.util.List missingFields
 io.grpc.internal.GrpcUtil$1:
@@ -63699,6 +63596,8 @@ androidx.compose.ui.input.key.Key:
     private static final long ThumbsDown
     private static final long ProfileSwitch
 androidx.navigation.NavController$Companion
+com.google.android.gms.internal.auth.zzdp:
+    public final com.google.android.gms.internal.auth.zzeg zzd
 androidx.fragment.app.DefaultSpecialEffectsController$8:
     final synthetic androidx.fragment.app.DefaultSpecialEffectsController this$0
 androidx.core.provider.CallbackWithHandler$1:
@@ -63825,6 +63724,8 @@ com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$Disabl
     final synthetic com.google.android.material.floatingactionbutton.FloatingActionButtonImpl this$0
 org.bouncycastle.crypto.params.DHUPrivateParameters:
     private org.bouncycastle.crypto.params.DHPublicKeyParameters ephemeralPublicKey
+io.flutter.plugins.googlesignin.GoogleSignInPlugin$Delegate$5:
+    final synthetic io.flutter.plugins.googlesignin.GoogleSignInPlugin$Delegate this$0
 com.google.firebase.storage.StorageReference:
     static final synthetic boolean $assertionsDisabled
 androidx.fragment.app.DefaultSpecialEffectsController$7:
@@ -63946,6 +63847,7 @@ com.google.android.gms.common.api.internal.BasePendingResult:
     private com.google.android.gms.common.internal.ICancelToken zao
 androidx.constraintlayout.motion.utils.ViewTimeCycle$TranslationXset
 androidx.constraintlayout.core.motion.utils.CurveFit$Constant
+com.google.android.gms.internal.auth.zzdu
 androidx.compose.ui.layout.VerticalAlignmentLine
 androidx.core.app.NotificationCompatJellybean:
     private static final java.lang.Object sActionsLock
@@ -63993,6 +63895,7 @@ androidx.constraintlayout.motion.utils.ViewOscillator$ScaleYset
 androidx.constraintlayout.motion.utils.ViewTimeCycle$AlphaSet
 io.grpc.internal.ApplicationThreadDeframer$CloseableInitializingMessageProducer:
     final synthetic io.grpc.internal.ApplicationThreadDeframer this$0
+com.google.android.gms.internal.auth.zzdt
 androidx.compose.ui.text.font.FontFamily:
     private final boolean canLoadSynchronously
     private static final androidx.compose.ui.text.font.GenericFontFamily SansSerif
@@ -64177,6 +64080,8 @@ androidx.constraintlayout.motion.utils.ViewSpline:
 com.nimbusds.jose.Payload:
     private final com.nimbusds.jose.Payload$Origin origin
     private final com.nimbusds.jwt.SignedJWT signedJWT
+com.google.android.gms.internal.auth.zzc:
+    private static final java.lang.ClassLoader zza
 org.bouncycastle.asn1.x509.X509Extension:
     public static final org.bouncycastle.asn1.ASN1ObjectIdentifier subjectDirectoryAttributes
     public static final org.bouncycastle.asn1.ASN1ObjectIdentifier subjectKeyIdentifier
@@ -64270,8 +64175,6 @@ com.google.crypto.tink.shaded.protobuf.LazyFieldLite:
     private static final com.google.crypto.tink.shaded.protobuf.ExtensionRegistryLite EMPTY_REGISTRY
 com.google.firestore.v1.ListenResponse$ResponseTypeCase:
     private final int value
-com.google.android.gms.common.GooglePlayServicesRepairableException:
-    private final int zza
 com.google.firebase.auth.internal.zzn:
     private final com.google.firebase.auth.MultiFactorInfo zza
 com.google.protobuf.LazyStringArrayList:
@@ -64657,6 +64560,9 @@ io.flutter.Log:
     public static int WARN
 kotlinx.coroutines.JobSupport$addLastAtomic$$inlined$addLastIf$1:
     final synthetic kotlinx.coroutines.internal.LockFreeLinkedListNode $node
+com.google.android.gms.internal.auth.zzeb:
+    private static final java.util.Comparator zza
+    private static final com.google.android.gms.internal.auth.zzea zzd
 androidx.compose.ui.text.style.BaselineShift:
     private static final float Superscript
     private static final float Subscript
@@ -64727,6 +64633,7 @@ io.grpc.Context$DirectExecutor
 androidx.compose.ui.unit.IntRect:
     public static final androidx.compose.ui.unit.IntRect$Companion Companion
     private static final androidx.compose.ui.unit.IntRect Zero
+com.google.android.gms.internal.auth.zzea
 androidx.compose.ui.text.android.style.PlaceholderSpan:
     public static final androidx.compose.ui.text.android.style.PlaceholderSpan$Companion Companion
 com.google.crypto.tink.shaded.protobuf.Internal:
@@ -64911,6 +64818,8 @@ androidx.compose.ui.text.font.FontWeight:
 androidx.compose.ui.unit.DpOffset:
     private static final long Zero
 io.grpc.InternalChannelz$OtherSecurity
+com.google.android.gms.internal.auth.zzee:
+    private static volatile int zzb
 com.google.protobuf.NullValue$1
 androidx.compose.ui.node.OnPositionedDispatcher:
     public static final androidx.compose.ui.node.OnPositionedDispatcher$Companion Companion
@@ -64944,10 +64853,12 @@ kotlinx.serialization.internal.TaggedDecoder:
     public void endStructure(kotlinx.serialization.descriptors.SerialDescriptor)
 androidx.arch.core.executor.TaskExecutor:
     public abstract void executeOnDiskIO(java.lang.Runnable)
+com.google.android.gms.internal.auth.zzed:
+    private final byte[] zzb
 androidx.compose.ui.node.ModifiedLayoutNode$Companion
-androidx.lifecycle.DefaultLifecycleObserver$-CC:
-    public static void $default$onResume(androidx.lifecycle.DefaultLifecycleObserver,androidx.lifecycle.LifecycleOwner)
-io.flutter.view.TextureRegistry$SurfaceTextureEntry$-CC
 io.flutter.plugin.common.BinaryMessenger$-CC:
     public static io.flutter.plugin.common.BinaryMessenger$TaskQueue $default$makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger,io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
     public static void $default$setMessageHandler(io.flutter.plugin.common.BinaryMessenger,java.lang.String,io.flutter.plugin.common.BinaryMessenger$BinaryMessageHandler,io.flutter.plugin.common.BinaryMessenger$TaskQueue)
+io.flutter.view.TextureRegistry$SurfaceTextureEntry$-CC
+androidx.lifecycle.DefaultLifecycleObserver$-CC:
+    public static void $default$onResume(androidx.lifecycle.DefaultLifecycleObserver,androidx.lifecycle.LifecycleOwner)

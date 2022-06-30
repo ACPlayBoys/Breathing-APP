@@ -22,6 +22,7 @@ class Paypal extends StatefulWidget {
 class _PaypalState extends State<Paypal> {
   final GlobalKey<ScaffoldState> _payScaffoldKey = GlobalKey<ScaffoldState>();
   final String path = "asset/images/home/";
+  final String path2 = "asset/images/payment/";
   late User u;
 
   @override
@@ -60,13 +61,17 @@ class _PaypalState extends State<Paypal> {
           SizedBox(
             height: 400,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
+                  margin: EdgeInsets.symmetric(horizontal: x * 0.05),
+                  alignment: Alignment.center,
+                  width: x,
                   child: Row(
                     children: [
                       Container(
-                        margin: EdgeInsets.symmetric(horizontal: 50),
-                        width: 300,
+                        alignment: Alignment.center,
+                        width: x * 0.9,
                         child: Row(
                           children: [
                             'Product Name'.text.xl.make(),
@@ -80,11 +85,14 @@ class _PaypalState extends State<Paypal> {
                 ),
                 Text(''),
                 Container(
+                  margin: EdgeInsets.symmetric(horizontal: x * 0.05),
+                  alignment: Alignment.center,
+                  width: x,
                   child: Row(
                     children: [
                       Container(
-                        margin: EdgeInsets.symmetric(horizontal: 50),
-                        width: 300,
+                        alignment: Alignment.center,
+                        width: x * 0.9,
                         child: Row(
                           children: [
                             'Total Amount'.text.xl.make(),
@@ -96,6 +104,7 @@ class _PaypalState extends State<Paypal> {
                     ],
                   ),
                 ),
+                Spacer(),
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(
@@ -166,7 +175,7 @@ class _PaypalState extends State<Paypal> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (_) => MusicScreen(
-                                            m: widget.m,
+                                            m: widget.m,isBought: false,
                                           )));
                             }
                           },
@@ -176,22 +185,19 @@ class _PaypalState extends State<Paypal> {
                     );
                   },
                   child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: x / 16),
                     decoration: BoxDecoration(
                         border: Border.all(color: Colors.blue),
                         borderRadius: BorderRadius.circular(y / 16)),
-                    margin: EdgeInsets.only(
-                        left: 70, right: 70, bottom: 10, top: 260),
                     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                    width: MediaQuery.of(context).size.width,
                     alignment: Alignment.bottomCenter,
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         'Pay With  '.text.xl3.bold.make(),
                         Container(
-                          width: 100,
-                          height: 40,
-                          child: Image.network(
-                              'https://firebasestorage.googleapis.com/v0/b/internship-df344.appspot.com/o/580b57fcd9996e24bc43c530.png?alt=media&token=e6ce6d25-c484-413e-890e-6abb31967314'),
+                          height: y / 16,
+                          child: Image.asset(path2 + 'paypal.png'),
                         ),
                       ],
                     ),

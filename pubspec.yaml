@@ -1,4 +1,4 @@
-wname: breathing_app
+name: breathing_app
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -52,6 +52,7 @@ dependencies:
   webview_flutter: ^3.0.4
   progress_dialog: ^1.2.4
   flutter_stripe: ^3.1.0
+  google_sign_in: ^5.3.3
 
 dev_dependencies:
   email_auth: ^1.0.0
@@ -79,7 +80,9 @@ flutter:
     - asset/images/on_boarding/
     - asset/images/signup/
     - asset/images/schedule/
+    - asset/images/my_items/
     - asset/images/home/
+    - asset/images/payment/
     - asset/images/shopping/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see

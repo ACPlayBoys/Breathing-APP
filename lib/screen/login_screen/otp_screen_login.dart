@@ -106,7 +106,13 @@ class _LoginOTPScreenState extends State<LoginOTPScreen> {
                 chngBtn2 = 2;
                 setState(() {});
                 await Future.delayed(Duration(milliseconds: 1000));
-                if (DateTime.now().millisecondsSinceEpoch < details.endDate)
+                var diff = (DateTime.now().microsecondsSinceEpoch) -
+                    (DateTime(DateTime.now().year, DateTime.now().month + 1,
+                            DateTime.now().day)
+                        .millisecondsSinceEpoch);
+                var aMonthEpoch = details.buyDate + diff;
+                if (DateTime.now().millisecondsSinceEpoch < details.endDate &&
+                    DateTime.now().millisecondsSinceEpoch < aMonthEpoch)
                   await Navigator.of(context)
                       .push(Routes.createSchedulingRoute());
                 else

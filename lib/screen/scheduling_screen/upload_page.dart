@@ -381,8 +381,8 @@ class _UploadState extends State<Upload> {
 
   _getMultiFromGallery(int i) async {
     List<XFile>? pickedFile = await ImagePicker().pickMultiImage(
-      maxWidth: 800,
-      maxHeight: 800,
+      maxWidth: 140,
+      maxHeight: 60,
     );
     if (pickedFile != null) {
       int i = 0;

@@ -41,8 +41,8 @@ class Storage {
     FirebaseFirestore.instance
         .collection("Gif")
         .doc(FirebaseAuth.instance.currentUser!.uid)
-        .set(gif.toMap())
-        .then((value) => showToast(context, "Default Gif Added"));
+        .set(gif.toMap());
+    // .then((value) => showToast(context, "Default Gif Added"));
 
     downloadGif(gif);
   }
@@ -170,6 +170,7 @@ class Storage {
   }
 
   static final audios = ValueNotifier<List<MusicModel>>([]);
+  static final audios2 = ValueNotifier<List<MusicModel>>([]);
   static List<MusicModel> allmusic = [];
   static void getAllMusic([bool bula = true]) async {
     if (bula) {
@@ -234,6 +235,24 @@ class Storage {
     });
   }
 
+  static void getPurchases() async {
+    audios2.value = [];
+    audios2.notifyListeners();
+    FirebaseFirestore.instance
+        .collection("Users")
+        .doc(FirebaseAuth.instance.currentUser!.uid)
+        .collection("myItems")
+        .get()
+        .then((var docSnapshot) {
+      print(docSnapshot.docs);
+      for (var b in docSnapshot.docs) {
+        print(jsonEncode(b.data()));
+        audios2.value.add(MusicModel.fromJson(jsonEncode(b.data())));
+      }
+      audios2.notifyListeners();
+    });
+  }
+
   static void getPouplar() async {
     audios.value = [];
     audios.notifyListeners();
@@ -264,7 +283,9 @@ class Storage {
   static List<MusicModel> allwhishlist = [];
   static void getWishlist() async {
     whishlist.value = [];
+    audios2.value = [];
     whishlist.notifyListeners();
+    audios2.notifyListeners();
     allwhishlist = [];
     FirebaseFirestore.instance
         .collection("Users")
@@ -276,8 +297,10 @@ class Storage {
       for (var b in docSnapshot.docs) {
         whishlist.value.add(MusicModel.fromJson(jsonEncode(b.data())));
         allwhishlist.add(MusicModel.fromJson(jsonEncode(b.data())));
+        audios2.value.add(MusicModel.fromJson(jsonEncode(b.data())));
       }
       whishlist.notifyListeners();
+      audios2.notifyListeners();
     });
   }
 

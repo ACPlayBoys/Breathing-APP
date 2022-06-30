@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:breathing_app/util/constants.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Schedule extends StatefulWidget {
   Schedule({Key? key}) : super(key: key);
@@ -14,7 +16,7 @@ class Schedule extends StatefulWidget {
 
 class _ScheduleState extends State<Schedule> {
   var selectedValue;
-
+  String uid = '';
   int dd = 0;
 
   int mm = 0;
@@ -39,6 +41,7 @@ class _ScheduleState extends State<Schedule> {
   @override
   void initState() {
     // TODO: implement initState
+    uid = FirebaseAuth.instance.currentUser!.uid;
 
     controllerMM = TextEditingController();
     controllerDD = TextEditingController();
@@ -102,6 +105,15 @@ class _ScheduleState extends State<Schedule> {
                     controllerYY.text = yy.toString();
                     setState(() {});
                     print('confirm ${date}');
+                    FirebaseFirestore.instance.collection('Users').doc(uid).set(
+                        {
+                          'schedDate': dd.toString() +
+                              '/' +
+                              mm.toString() +
+                              '/' +
+                              yy.toString()
+                        },
+                        SetOptions(merge: true));
                   }, currentTime: DateTime.now(), locale: LocaleType.en);
                 },
                 decoration: InputDecoration(
@@ -137,6 +149,15 @@ class _ScheduleState extends State<Schedule> {
                     controllerDD.text = dd.toString();
                     controllerYY.text = yy.toString();
                     setState(() {});
+                    FirebaseFirestore.instance.collection('Users').doc(uid).set(
+                        {
+                          'schedDate': dd.toString() +
+                              '/' +
+                              mm.toString() +
+                              '/' +
+                              yy.toString()
+                        },
+                        SetOptions(merge: true));
                     print('confirm ${date}');
                   }, currentTime: DateTime.now(), locale: LocaleType.en);
                 },
@@ -168,6 +189,15 @@ class _ScheduleState extends State<Schedule> {
                     controllerYY.text = yy.toString();
                     setState(() {});
                     print('confirm ${date}');
+                    FirebaseFirestore.instance.collection('Users').doc(uid).set(
+                        {
+                          'schedDate': dd.toString() +
+                              '/' +
+                              mm.toString() +
+                              '/' +
+                              yy.toString()
+                        },
+                        SetOptions(merge: true));
                   }, currentTime: DateTime.now(), locale: LocaleType.en);
                 },
               ),
@@ -204,6 +234,8 @@ class _ScheduleState extends State<Schedule> {
                         date.hour.toString() + " : " + date.minute.toString();
                     setState(() {});
                     print('confirm ${date}');
+                    FirebaseFirestore.instance.collection('Users').doc(uid).set(
+                        {'schedStartTime': startTime}, SetOptions(merge: true));
                   }, currentTime: DateTime.now(), locale: LocaleType.en);
                 },
               ).centered(),
@@ -235,6 +267,8 @@ class _ScheduleState extends State<Schedule> {
                         date.hour.toString() + " : " + date.minute.toString();
                     setState(() {});
                     print('confirm ${date}');
+                    FirebaseFirestore.instance.collection('Users').doc(uid).set(
+                        {'schedEndTime': endTime}, SetOptions(merge: true));
                   }, currentTime: DateTime.now(), locale: LocaleType.en);
                 },
               ).centered(),

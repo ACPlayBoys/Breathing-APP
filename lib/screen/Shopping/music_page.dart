@@ -10,6 +10,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gifimage/flutter_gifimage.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:breathing_app/models/musicmodel.dart';
@@ -18,15 +19,15 @@ import 'package:breathing_app/util/constants.dart';
 
 class MusicScreen extends StatefulWidget {
   MusicModel m;
-  MusicScreen({
-    Key? key,
-    required this.m,
-  }) : super(key: key);
+  bool isBought;
+  MusicScreen({Key? key, required this.m, required this.isBought})
+      : super(key: key);
   @override
   State<MusicScreen> createState() => _MusicScreenState();
 }
 
 class _MusicScreenState extends State<MusicScreen> {
+  final _firestore = FirebaseFirestore.instance;
   late User u;
   final String path = "asset/images/shopping/";
   late MusicModel m;
@@ -41,6 +42,7 @@ class _MusicScreenState extends State<MusicScreen> {
   @override
   void initState() {
     //razorpay.on("error", handlerError);
+    u = FirebaseAuth.instance.currentUser!;
 
     m = widget.m;
     list.add(m);
@@ -62,7 +64,6 @@ class _MusicScreenState extends State<MusicScreen> {
                 SetOptions(merge: true)));
     super.initState();
   }
-
 
   @override
   void dispose() {
@@ -159,8 +160,8 @@ class _MusicScreenState extends State<MusicScreen> {
                           ),
                         )
                             .onInkTap(() {
-                              Navigator.of(context)
-                                  .pushReplacement(Routes.createMusicRoute(m));
+                              Navigator.of(context).pushReplacement(
+                                  Routes.createMusicRoute(m, false));
                             })
                             .px(x / 16)
                             .py(y / 128);
@@ -203,14 +204,63 @@ class _MusicScreenState extends State<MusicScreen> {
                                 showToast(context, "Added to Wishlist"));
                       }),
                       GestureDetector(
-                        onTap: () {
-                          Navigator.of(context)
-                              .push(Routes.createPaypalRoute(m,'buy'));
+                        onTap: () async {
+                          SharedPreferences prefs =
+                              await SharedPreferences.getInstance();
+
+                          widget.isBought == false
+                              ? Navigator.of(context)
+                                  .push(Routes.createPaypalRoute(m, 'buy'))
+                              : Storage.downloadMusic(m.link, prefs);
+                          widget.isBought == false
+                              ? {}
+                              : _firestore.collection('Users').doc(u.uid).set(
+                                  {'audioType': 'userAudio'},
+                                  SetOptions(merge: true));
+
+                          widget.isBought == false
+                              ? {}
+                              : _firestore
+                                  .collection('Users')
+                                  .doc(u.uid)
+                                  .collection('audioCollection')
+                                  .add({
+                                  'link': m.link,
+                                  'timeStamp': DateTime.now(),
+                                });
                         },
                         child: Container(
                           width: x / 2.5,
                           height: y / 16,
-                          child: "Buy Now".text.lg.bold.makeCentered().px16(),
+                          child: widget.isBought == false
+                              ? "Buy Now".text.lg.bold.makeCentered().px16()
+                              : m.type == 'music'
+                                  ? "Set Music"
+                                      .text
+                                      .lg
+                                      .bold
+                                      .makeCentered()
+                                      .px16()
+                                  : m.type == 'picture'
+                                      ? "Set Picture"
+                                          .text
+                                          .lg
+                                          .bold
+                                          .makeCentered()
+                                          .px16()
+                                      : m.type == 'animation'
+                                          ? "Set Animation"
+                                              .text
+                                              .lg
+                                              .bold
+                                              .makeCentered()
+                                              .px16()
+                                          : "Set"
+                                              .text
+                                              .lg
+                                              .bold
+                                              .makeCentered()
+                                              .px16(),
                           decoration: BoxDecoration(
                               border: Border.all(color: Colors.blue),
                               borderRadius: BorderRadius.circular(y / 16)),

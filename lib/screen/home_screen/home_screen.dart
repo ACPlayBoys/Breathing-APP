@@ -46,6 +46,8 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
   bool isMute = true;
   bool docExist = false;
   bool checkdone = false;
+  bool isTapped = true;
+  bool isPaused = false;
 
   int breatheTime = 0;
   int time = 0;
@@ -109,102 +111,144 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
           key: _scaffoldKey,
           drawer: MDrawer(),
           body: SafeArea(
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                Row(
-                  children: [
-                    Image.asset(path + "menu.png").onInkTap(() {
-                      _scaffoldKey.currentState?.openDrawer();
-                    }),
-                    Spacer(),
-                    "Breathe In".text.xl3.bold.make(),
-                    Spacer(),
-                    buildContainerOnTap(
-                        child: Icon(CupertinoIcons.volume_off).p4())
-                  ],
-                ).pOnly(top: y / 24, bottom: y / 8).px(x / 24),
-                ValueListenableBuilder(
-                    valueListenable: Storage.giffer,
-                    builder: (context, value, child) {
-                      return value == 0
-                          ? Container(
-                              height: y / 4,
-                              width: y / 4,
-                              child: CircularProgressIndicator())
-                          : GifImage(
-                              height: y / 4,
-                              image: value == 1
-                                  ? NetworkImage(Storage.gifUrl.link)
-                                      as ImageProvider
-                                  : FileImage(File(Storage.gifUrl.link))
-                                      as ImageProvider,
-                              controller: controller,
-                            );
-                    }).centered().pOnly(bottom: y / 8),
-                "Breathing Rate"
-                    .text
-                    .xl2
-                    .bold
-                    .make()
-                    .pOnly(bottom: y / 64)
-                    .centered(),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      child: buildContainer(
-                          child: Image.asset(path + "add.png").p2()),
-                    ).onInkTap(() {
-                      speed > 200 ? speed -= 200 : speed = 200;
-                      if (isPlaying) {
-                        controller.repeat(
-                            min: 0,
-                            max: Storage.gifUrl.frames,
-                            period: Duration(milliseconds: speed));
-                      }
-                      // onSpeedInc();
-                    }).pOnly(right: x / 32),
-                    Container(
-                      child: buildContainer(
-                          child: Image.asset(path + "minus.png").p2()),
-                    ).onInkTap(() {
-                      speed < 2000 ? speed += 200 : speed = 2000;
-                      if (isPlaying) {
-                        controller.repeat(
-                            min: 0,
-                            max: Storage.gifUrl.frames,
-                            period: Duration(milliseconds: speed));
-                      }
-                      // onSpeedDec();
-                    }).pOnly(left: x / 32)
-                  ],
-                ).pOnly(bottom: y / 32),
-                Container(
-                  child: buildContainer(
-                      child: playedTime == 1
-                          ? canPlay
-                              ? Image.asset(!isPlaying
-                                      ? path + "playdeep.png"
-                                      : path + "pausedeep.png")
-                                  .onInkTap(() {
-                                  setState(() {
-                                    isPlaying ? onPause() : onPlay();
-                                    isPlaying = !isPlaying;
-                                  });
-                                }).p8()
-                              : CircularProgressIndicator()
-                          : Image.asset(!isPlaying
-                                  ? path + "playdeep.png"
-                                  : path + "pausedeep.png")
-                              .onInkTap(() {
+              child: SizedBox(
+            width: x,
+            height: y,
+            child: Stack(children: [
+              ValueListenableBuilder(
+                  valueListenable: Storage.giffer,
+                  builder: (context, value, child) {
+                    return value == 0
+                        ? Container(
+                            height: y / 4,
+                            width: y / 4,
+                            child: CircularProgressIndicator())
+                        : GestureDetector(
+                            onTap: () {
                               setState(() {
-                                isPlaying ? onPause() : onPlay();
-                                isPlaying = !isPlaying;
+                                isTapped = true;
+                                print('on tapped true');
+                                isPaused == false
+                                    ? Timer.periodic(Duration(seconds: 10),
+                                        (timer) {
+                                        isTapped = false;
+                                        print('on tapped false');
+                                      })
+                                    : {isTapped = true};
                               });
-                            }).p8()),
-                ).centered()
-              ]))),
+                            },
+                            child: Container(
+                              height: y,
+                              width: x,
+                              child: GifImage(
+                                fit: BoxFit.fill,
+                                alignment: Alignment.center,
+                                image: value == 1
+                                    ? NetworkImage(Storage.gifUrl.link)
+                                        as ImageProvider
+                                    : FileImage(File(Storage.gifUrl.link))
+                                        as ImageProvider,
+                                controller: controller,
+                              ),
+                            ),
+                          );
+                  }).centered().pOnly(bottom: y / 8),
+              Row(
+                children: [
+                  Image.asset(path + "menu.png").onInkTap(() {
+                    onPause();
+                    setState(() {
+                      isPlaying = false;
+                    });
+                    _scaffoldKey.currentState?.openDrawer();
+                  }),
+                  Spacer(),
+                  "Breathe In".text.xl3.bold.make(),
+                  Spacer(),
+                  buildContainerOnTap(
+                      child: Icon(!isMute
+                              ? CupertinoIcons.volume_off
+                              : CupertinoIcons.volume_up)
+                          .p4())
+                ],
+              ).pOnly(top: y / 24, bottom: y / 8).px(x / 24),
+              isTapped == true
+                  ? Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          "Breathing Rate"
+                              .text
+                              .xl2
+                              .bold
+                              .make()
+                              .pOnly(bottom: y / 64)
+                              .centered(),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                child: buildContainer(
+                                    child: Image.asset(path + "add.png").p2()),
+                              ).onInkTap(() {
+                                speed > 200 ? speed -= 200 : speed = 200;
+                                if (isPlaying) {
+                                  controller.repeat(
+                                      min: 0,
+                                      max: Storage.gifUrl.frames,
+                                      period: Duration(milliseconds: speed));
+                                }
+                                // onSpeedInc();
+                              }).pOnly(right: x / 32),
+                              Container(
+                                child: buildContainer(
+                                    child:
+                                        Image.asset(path + "minus.png").p2()),
+                              ).onInkTap(() {
+                                speed < 2000 ? speed += 200 : speed = 2000;
+                                if (isPlaying) {
+                                  controller.repeat(
+                                      min: 0,
+                                      max: Storage.gifUrl.frames,
+                                      period: Duration(milliseconds: speed));
+                                }
+                                // onSpeedDec();
+                              }).pOnly(left: x / 32)
+                            ],
+                          ).pOnly(bottom: y / 32),
+                          Container(
+                            child: buildContainer(
+                                child: playedTime == 1
+                                    ? canPlay
+                                        ? Image.asset(!isPlaying
+                                                ? path + "playdeep.png"
+                                                : path + "pausedeep.png")
+                                            .onInkTap(() {
+                                            setState(() {
+                                              isPlaying ? onPause() : onPlay();
+                                              isPlaying = !isPlaying;
+                                            });
+                                          }).p8()
+                                        : CircularProgressIndicator()
+                                    : Image.asset(!isPlaying
+                                            ? path + "playdeep.png"
+                                            : path + "pausedeep.png")
+                                        .onInkTap(() {
+                                        setState(() {
+                                          isPlaying ? onPause() : onPlay();
+                                          isPlaying = !isPlaying;
+                                        });
+                                      }).p8()),
+                          ).centered(),
+                          SizedBox(
+                            height: y / 16,
+                          )
+                        ],
+                      ),
+                    )
+                  : Container()
+            ]),
+          ))),
     );
   }
 
@@ -225,6 +269,11 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
   onPause() {
     controller.stop();
     // pauseHandler();
+    setState(() {
+      isPaused = true;
+      isTapped = true;
+      print('pausetapped');
+    });
     audioPlayer.pause();
     timer();
     addStreak();
@@ -242,6 +291,12 @@ class _HomeSCreenState extends State<HomeSCreen> with TickerProviderStateMixin {
     audioPlayer.resume();
     setState(() {
       canPlay = false;
+      Timer.periodic(Duration(seconds: 5), (timer) {
+        isTapped = false;
+        print('on tapped false');
+      });
+      isPaused = false;
+      print('play tapped');
       print('depalyed caplay $canPlay');
     });
     Timer(Duration(seconds: 5), () {

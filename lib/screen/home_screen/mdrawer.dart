@@ -15,6 +15,15 @@ class MDrawer extends StatefulWidget {
 class _MDrawerState extends State<MDrawer> {
   final String path = "asset/images/home/";
   final String path2 = "asset/images/signup/";
+  final String path3 = "asset/images/my_items/";
+  String currentUid = '';
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    currentUid = FirebaseAuth.instance.currentUser!.uid;
+  }
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -90,6 +99,20 @@ class _MDrawerState extends State<MDrawer> {
                 ],
               ).onInkTap(() {
                 Navigator.of(context).push(Routes.createShoppingRoute());
+              }).pOnly(
+                left: x / 10,
+                top: y / 64,
+              ),
+              Row(
+                children: [
+                  Image.asset(
+                    path3 + "item.png",
+                    width: x / 16,
+                  ),
+                  "My Items".text.xl2.bold.make().pOnly(left: x / 16),
+                ],
+              ).onInkTap(() {
+                Navigator.of(context).push(Routes.createMyItemsRoute());
               }).pOnly(
                 left: x / 10,
                 top: y / 64,

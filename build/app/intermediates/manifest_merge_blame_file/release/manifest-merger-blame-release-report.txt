@@ -94,8 +94,8 @@
 54    </queries>
 55
 56    <uses-permission android:name="android.permission.INTERNET" />
-56-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:9:5-67
-56-->[com.stripe:financial-connections:20.4.0] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\6f8dcf4b26f8b62f6ecd55c7ca0ca108\jetified-financial-connections-20.4.0\AndroidManifest.xml:9:22-64
+56-->[:google_sign_in_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\google_sign_in_android\intermediates\library_manifest\release\AndroidManifest.xml:7:5-67
+56-->[:google_sign_in_android] C:\Users\rai09\Android_ShellCode\Breathing-App\build\google_sign_in_android\intermediates\library_manifest\release\AndroidManifest.xml:7:22-64
 57    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 57-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:24:5-79
 57-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\rai09\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:24:22-76

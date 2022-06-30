@@ -262,7 +262,7 @@ class _ShoppingState extends State<Shopping> {
                                 playing = false;
                                 player.pause();
                                 Navigator.of(context)
-                                    .push(Routes.createMusicRoute(m));
+                                    .push(Routes.createMusicRoute(m,false));
                               })
                               .px(x / 16)
                               .py(y / 128);

@@ -83,7 +83,8 @@ class _LoginState extends State<Login> {
                     child: TextField(
                       onChanged: (value) {
                         curemail = value.toLowerCase().trim();
-                        cnfemail = value.toLowerCase().trim();
+                        cnfemail = curemail;
+                        chngBtn2 = 55;
                       },
                       decoration: InputDecoration(
                         contentPadding: EdgeInsets.only(left: 10, right: 20),
@@ -114,6 +115,7 @@ class _LoginState extends State<Login> {
                   ).px12().onInkTap(() async {
                     if (cnfemail != curemail) {
                       showToast(context, "Email not mathing");
+
                       return;
                     }
                     if (!curemail.isValidEmail()) {
@@ -121,7 +123,7 @@ class _LoginState extends State<Login> {
                       return;
                     }
 
-                    var email = this.curemail;
+                    var email = curemail;
                     try {
                       chngBtn2 = 1;
                       setState(() {});
@@ -133,9 +135,15 @@ class _LoginState extends State<Login> {
                       await Future.delayed(Duration(milliseconds: 500));
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'user-not-found') {
+                        setState(() {
+                          chngBtn2 = 55;
+                        });
                         showToast(context, 'No user found for that email.');
                         print('No user found for that email.');
                       } else if (e.code == 'wrong-password') {
+                        setState(() {
+                          chngBtn2 = 55;
+                        });
                         showToast(
                             context, 'Wrong password provided for that user.');
                         print('Wrong password provided for that user.');

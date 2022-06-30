@@ -119,7 +119,7 @@ class _WishListState extends State<WishList> {
                         )
                             .onInkTap(() {
                               Navigator.of(context)
-                                  .push(Routes.createMusicRoute(m));
+                                  .push(Routes.createMusicRoute(m,false));
                             })
                             .px(x / 16)
                             .py(y / 128);

@@ -1,15 +1,32 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:breathing_app/util/constants.dart';
 import 'package:breathing_app/util/routes.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-class Breathe extends StatelessWidget {
-  var selectedValue;
-
+class Breathe extends StatefulWidget {
   Breathe({Key? key}) : super(key: key);
+
+  @override
+  State<Breathe> createState() => _BreatheState();
+}
+
+class _BreatheState extends State<Breathe> {
+  var selectedValue1;
+  var selectedValue2;
+  String uid = '';
+
   final String path = "asset/images/schedule/";
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    uid = FirebaseAuth.instance.currentUser!.uid;
+  }
+
   @override
   Widget build(BuildContext context) {
     var y = MediaQuery.of(context).size.height;
@@ -53,9 +70,17 @@ class Breathe extends StatelessWidget {
               child: DropdownButton(
                 isDense: true,
                 isExpanded: true,
-                value: selectedValue,
+                // hint: Text(selectedValue),
+                value: selectedValue1,
                 items: drop1,
-                onChanged: (Object? value) {},
+                onChanged: (Object? value) {
+                  setState(() {
+                    selectedValue1 = value;
+                  });
+                  FirebaseFirestore.instance.collection('Users').doc(uid).set(
+                      {'breatheRateFrom': selectedValue2},
+                      SetOptions(merge: true));
+                },
               ).centered(),
             ),
             "To".text.xl.bold.color(Color(0xff999999)).make(),
@@ -69,9 +94,17 @@ class Breathe extends StatelessWidget {
               child: DropdownButton(
                 isDense: true,
                 isExpanded: true,
-                value: selectedValue,
+                // hint: Text(selectedValue),
+                value: selectedValue2,
                 items: drop2,
-                onChanged: (Object? value) {},
+                onChanged: (Object? value) {
+                  setState(() {
+                    selectedValue2 = value;
+                  });
+                  FirebaseFirestore.instance.collection('Users').doc(uid).set(
+                      {'breatheRateTo': selectedValue2},
+                      SetOptions(merge: true));
+                },
               ).centered(),
             ),
           ],
